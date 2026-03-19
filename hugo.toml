@@ -1,3 +1,4 @@
 baseURL = 'https://orapha.dev/'
 locale = 'pt-br'
-title = 'O Rapha Dev'
+title = 'orapha.dev'
+theme = 'hextra'
