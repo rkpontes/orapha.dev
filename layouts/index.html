@@ -1,0 +1,35 @@
+{{ define "main" }}
+  {{- $pages := .Site.RegularPages.ByDate.Reverse -}}
+  <div class='hx:mx-auto hx:flex hextra-max-page-width'>
+    {{ partial "sidebar.html" (dict "context" . "disableSidebar" true "displayPlaceholder" true) }}
+    {{ partial "toc.html" (dict "Params" (dict "toc" false)) }}
+    <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main id="content" class="hx:w-full hx:min-w-0 hx:max-w-6xl hx:px-6 hx:pt-4 hx:md:px-12">
+        <br class="hx:mt-1.5 hx:text-sm" />
+        {{ if .Title }}<h1 class="hx:text-center hx:mt-2 hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">{{ .Title }}</h1>{{ end }}
+        <div class="hx:mb-16"></div>
+        {{- range $pages }}
+          <article class="hx:mb-12 hx:border-b hx:border-neutral-200 hx:pb-10 hx:last:border-b-0 hx:dark:border-neutral-800">
+            <h2 class="hx:text-2xl hx:font-semibold hx:tracking-tight">
+              <a class="hx:text-inherit hover:hx:text-[color:hsl(var(--primary-hue),100%,50%)]" href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h2>
+            {{ if .Params.tags }}
+              <div class="hx:mt-2 hx:text-sm hx:leading-7">
+                {{ partial "tags.html" (dict "context" .) }}
+              </div>
+            {{ end }}
+            {{ with .Params.description }}
+              <p class="hx:mt-4 hx:text-base hx:leading-7 hx:text-neutral-700 hx:dark:text-neutral-300">{{ . }}</p>
+            {{ end }}
+            <div class="hx:mt-4 hx:flex hx:items-center hx:justify-between hx:gap-4 hx:text-sm hx:text-neutral-500">
+              <span>{{ partial "utils/format-date" .Date }}</span>
+              <a class="hx:font-medium hx:text-[color:hsl(var(--primary-hue),100%,50%)]" href="{{ .RelPermalink }}">Ler post</a>
+            </div>
+          </article>
+        {{ else }}
+          <p class="hx:text-neutral-600 hx:dark:text-neutral-400">Nenhum post publicado ainda.</p>
+        {{ end }}
+      </main>
+    </article>
+  </div>
+{{ end }}

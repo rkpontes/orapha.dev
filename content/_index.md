@@ -1,6 +1,3 @@
 ---
-title: "Orapha"
-layout: "hextra-home"
+title: Blog
 ---
-
-Bem-vindo ao blog.

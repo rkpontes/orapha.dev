@@ -1,4 +1,0 @@
-baseURL = 'https://orapha.dev/'
-locale = 'pt-br'
-title = 'orapha.dev'
-theme = 'hextra'
