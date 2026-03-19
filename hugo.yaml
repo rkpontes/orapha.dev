@@ -46,7 +46,7 @@ menu:
       weight: 0
       params:
         type: theme-toggle
-    - name: About
+    - name: Sobre
       pageRef: /about
       weight: 1
     - name: GitHub ↗

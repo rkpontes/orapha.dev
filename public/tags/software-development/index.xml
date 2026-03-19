@@ -3,17 +3,17 @@
      xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>orapha.dev</title>
-    <link>https://www.orapha.dev/</link>
+    <link>http://localhost:1313/</link>
     <description>Meu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Thu, 19 Mar 2026 02:12:27 GMT</lastBuildDate>
-    <atom:link href="https://www.orapha.dev/index.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Thu, 19 Mar 2026 15:30:38 GMT</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/>
     
       <item>
         <title>Agent Engineering + Agentic Flow Engineering: uma visão mais organizada</title>
-        <link>https://www.orapha.dev/2026/03/19/agent-engineering-e-agentic-flow-engineering/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2026/03/19/agent-engineering-e-agentic-flow-engineering/</guid>
+        <link>http://localhost:1313/2026/03/19/agent-engineering-e-agentic-flow-engineering/</link>
+        <guid isPermaLink="true">http://localhost:1313/2026/03/19/agent-engineering-e-agentic-flow-engineering/</guid>
         <pubDate>Thu, 19 Mar 2026 01:00:00 GMT</pubDate>
         <description>&lt;p&gt;Os dois textos abaixo falam, no fundo, da mesma transição: sair da IA usada como assistente isolado e começar a tratá-la como sistema organizado. Um deles enfatiza a estrutura de times de agentes, com papéis, capacidades e colaboração. O outro enfatiza algo ainda mais importante em produção: o fluxo, a orquestração, a governança, a tolerância a falhas e a observabilidade.&lt;/p&gt;
 &lt;p&gt;Juntando os dois, dá para resumir a ideia central assim:&lt;/p&gt;</description>
@@ -236,8 +236,8 @@ Agentic Flow Engineering organiza como o sistema realmente funciona.</p>
     
       <item>
         <title>Ensinando o Copilot a falar a linguagem do seu repositório</title>
-        <link>https://www.orapha.dev/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</guid>
+        <link>http://localhost:1313/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</link>
+        <guid isPermaLink="true">http://localhost:1313/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</guid>
         <pubDate>Wed, 29 Oct 2025 14:46:13 GMT</pubDate>
         <description>&lt;p&gt;Trabalhando há mais de 14 anos com desenvolvimento de software, sempre me pego pensando sobre as tendências e novidades das tecnologias que podem ser usadas para &lt;strong&gt;reduzir atrito no dia a dia do dev&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Vocês sabiam que existe a possibilidade de adicionar **instruções personalizadas diretamente no seu repositório para agentes de IA?**Basicamente, você pode “ensinar” o Copilot sobre as regras, padrões e estilos do seu projeto, e ele vai gerar sugestões muito mais alinhadas ao que você e sua equipe realmente precisam.&lt;/p&gt;</description>
@@ -397,8 +397,8 @@ Com instruções específicas, você cria arquivos dentro de .github/instruction
     
       <item>
         <title>Como estruturo minhas Entities no Flutter e por que isso mudou meu jeito de programar</title>
-        <link>https://www.orapha.dev/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</guid>
+        <link>http://localhost:1313/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</link>
+        <guid isPermaLink="true">http://localhost:1313/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</guid>
         <pubDate>Mon, 17 Mar 2025 18:22:49 GMT</pubDate>
         <description>&lt;p&gt;Fala, dev!&lt;/p&gt;
 &lt;p&gt;Se você já precisou consumir múltiplas APIs em um app Flutter, sabe que a bagunça pode começar rápido. No começo, parece simples: você pega os dados da API, joga direto no modelo e pronto! Mas aí vem aquele momento em que precisa integrar uma segunda API, lidar com mudanças inesperadas no backend ou até mesmo otimizar o carregamento dos dados. E de repente… BOOM💥! Seu código vira um verdadeiro Frankenstein, difícil de entender e ainda mais difícil de manter.&lt;/p&gt;</description>
@@ -575,8 +575,8 @@ Com instruções específicas, você cria arquivos dentro de .github/instruction
     
       <item>
         <title>As Preocupações Morais no Desenvolvimento de Tecnologias</title>
-        <link>https://www.orapha.dev/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</guid>
+        <link>http://localhost:1313/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</link>
+        <guid isPermaLink="true">http://localhost:1313/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</guid>
         <pubDate>Fri, 02 Aug 2024 02:30:50 GMT</pubDate>
         <description>&lt;p&gt;Pessoal, antes de começar este artigo, gostaria de me apresentar: sou um Engenheiro de Software com uma mente curiosa, sempre viajando em reflexões que quero compartilhar com vocês. Recentemente, assisti a um filme sobre o cientista que desenvolveu a bomba atômica, e isso despertou uma série de pensamentos que eu não havia considerado antes. Decidi escrever este artigo porque acredito que minhas preocupações podem “abrir os olhos” de muitos de vocês que estão me lendo.&lt;/p&gt;</description>
         <content:encoded><![CDATA[<p>Pessoal, antes de começar este artigo, gostaria de me apresentar: sou um Engenheiro de Software com uma mente curiosa, sempre viajando em reflexões que quero compartilhar com vocês. Recentemente, assisti a um filme sobre o cientista que desenvolveu a bomba atômica, e isso despertou uma série de pensamentos que eu não havia considerado antes. Decidi escrever este artigo porque acredito que minhas preocupações podem “abrir os olhos” de muitos de vocês que estão me lendo.</p>
@@ -621,8 +621,8 @@ Com instruções específicas, você cria arquivos dentro de .github/instruction
     
       <item>
         <title>Unlocking the Secrets of SOLID: A Beginner’s Guide</title>
-        <link>https://www.orapha.dev/2024/06/15/unlocking-the-secrets-of-solid-a-beginners-guide/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2024/06/15/unlocking-the-secrets-of-solid-a-beginners-guide/</guid>
+        <link>http://localhost:1313/2024/06/15/unlocking-the-secrets-of-solid-a-beginners-guide/</link>
+        <guid isPermaLink="true">http://localhost:1313/2024/06/15/unlocking-the-secrets-of-solid-a-beginners-guide/</guid>
         <pubDate>Sat, 15 Jun 2024 22:22:56 GMT</pubDate>
         <description>&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1024/0*nXVTBCTQzQWg7Ui-.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;SOLID, an acronym for five fundamental principles of software design, is your treasure map to creating robust, flexible, and maintainable systems. If you’ve ever come across “spaghetti” code or feel lost amidst complex classes, don’t worry! In this guide, we’ll unravel each SOLID principle in a simple and fun way, using real-life examples to make learning easier.&lt;/p&gt;
@@ -799,8 +799,8 @@ Com instruções específicas, você cria arquivos dentro de .github/instruction
     
       <item>
         <title>Code Generators in Flutter: What’s Cheap and What’s Expensive?</title>
-        <link>https://www.orapha.dev/2024/06/15/code-generators-in-flutter-whats-cheap-and-what-s-expensive/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2024/06/15/code-generators-in-flutter-whats-cheap-and-what-s-expensive/</guid>
+        <link>http://localhost:1313/2024/06/15/code-generators-in-flutter-whats-cheap-and-what-s-expensive/</link>
+        <guid isPermaLink="true">http://localhost:1313/2024/06/15/code-generators-in-flutter-whats-cheap-and-what-s-expensive/</guid>
         <pubDate>Sat, 15 Jun 2024 16:50:54 GMT</pubDate>
         <description>&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1024/0*pDAKNdFlzpFh6Mkg.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;In the dynamic world of Flutter development, tools and libraries emerge every day, promising to make developers’ lives easier and speed up the process of creating applications. Among them, code generators stand out for their ability to automate repetitive tasks and generate boilerplate code, freeing up time for what really matters: business logic and user experience.&lt;/p&gt;
@@ -901,8 +901,8 @@ Com instruções específicas, você cria arquivos dentro de .github/instruction
     
       <item>
         <title>Increase security in your Flutter applications</title>
-        <link>https://www.orapha.dev/2024/05/18/increase-security-in-your-flutter-applications/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2024/05/18/increase-security-in-your-flutter-applications/</guid>
+        <link>http://localhost:1313/2024/05/18/increase-security-in-your-flutter-applications/</link>
+        <guid isPermaLink="true">http://localhost:1313/2024/05/18/increase-security-in-your-flutter-applications/</guid>
         <pubDate>Sat, 18 May 2024 00:01:19 GMT</pubDate>
         <description>&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/696/0*TRlO7z09Bs7U1b8I.jpg&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;In today’s digital world, application security is an absolute priority. Developing a robust and secure Flutter app is crucial to protecting user data and maintaining trust in your product. If you are starting your Flutter application security journey, I recommend starting by reading my previous article, where I explore essential practices in Gray Box mode to ensure the security of your application (&lt;a href=&#34;https://raphaelkennedy.medium.com/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode-09dd58651727&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link to article&lt;/a&gt;).&lt;/p&gt;
@@ -953,8 +953,8 @@ Study, learn and let’s build a safer digital future, application by applicatio
     
       <item>
         <title>Ensuring the Security of Your Flutter Application: Essential Practices in Gray Box Mode</title>
-        <link>https://www.orapha.dev/2024/05/03/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2024/05/03/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode/</guid>
+        <link>http://localhost:1313/2024/05/03/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode/</link>
+        <guid isPermaLink="true">http://localhost:1313/2024/05/03/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode/</guid>
         <pubDate>Fri, 03 May 2024 22:06:42 GMT</pubDate>
         <description>&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1024/1*YGD5-p1GoR6sEgUPjeW-1w.jpeg&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Image generated for openart.ai&lt;/em&gt;&lt;/p&gt;
@@ -1041,8 +1041,8 @@ Study, learn and let’s build a safer digital future, application by applicatio
     
       <item>
         <title>How to Integrate Flutter Modular with Flutter Bloc (Cubit) in a Simple Way and Using Custom States…</title>
-        <link>https://www.orapha.dev/2024/05/03/how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2024/05/03/how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states/</guid>
+        <link>http://localhost:1313/2024/05/03/how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states/</link>
+        <guid isPermaLink="true">http://localhost:1313/2024/05/03/how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states/</guid>
         <pubDate>Fri, 03 May 2024 16:43:03 GMT</pubDate>
         <description>&lt;h3&gt;How to Integrate Flutter Modular with Flutter Bloc (Cubit) in a Simple Way and Using Custom States (Classes)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states-classes&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states-classes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href=&#34;https://medium.com/@lugpontes/como-integrar-flutter-modular-com-flutter-bloc-cubit-de-forma-simples-e-usando-estados-daf72985b24a?postPublishedType=repub&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ARTICLE IN PORTUGUESE&lt;/a&gt;&lt;/p&gt;
@@ -1344,8 +1344,8 @@ Study, learn and let’s build a safer digital future, application by applicatio
     
       <item>
         <title>Sobre</title>
-        <link>https://www.orapha.dev/about/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/about/</guid>
+        <link>http://localhost:1313/about/</link>
+        <guid isPermaLink="true">http://localhost:1313/about/</guid>
         <pubDate>Mon, 01 Jan 0001 00:00:00 GMT</pubDate>
         <description>&lt;h2&gt;Quem sou&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;quem-sou&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#quem-sou&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Sou Raphael Pontes, engenheiro de software sênior, com mais de uma década de experiência construindo produtos, participando de startups, liderando iniciativas técnicas e entregando software em contextos bem diferentes, do freela ao produto em operação.&lt;/p&gt;
