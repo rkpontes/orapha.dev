@@ -24,7 +24,7 @@ Mohit Sewak, Ph.D.
 
 11 min de leitura
 
-> **[Imagem do artigo original]**
+> <img src="https://miro.medium.com/v2/resize:fit:2000/format:webp/1*oMj6SIARgBJZYz57DP2iXg.png">
 >
 > *A era da implantação de modelos “nus” acabou. Precisamos construir os invólucros rigorosos que tornam a IA probabilística segura.*
 
@@ -46,7 +46,7 @@ A vantagem competitiva e a defensabilidade ética da IA moderna não residem mai
 
 ## II. O que está em jogo: por que sua IA educada é, na verdade, uma ameaça
 
-> **[Imagem do artigo original]**
+> <img src="https://miro.medium.com/v2/resize:fit:2000/format:webp/1*eWgy7ezcdN9lo0QbPDeEFw.png">
 >
 > *Um vocabulário educado não impedirá um agente autônomo de causar estragos quando ele tiver as chaves das suas contas.*
 
@@ -66,7 +66,7 @@ E se você ainda está se agarrando ao `vibe coding`, considere isto: quase 50% 
 
 ## III. Mergulho profundo 1: medindo a fera (de benchmarks à auditoria comportamental)
 
-> **[Imagem do artigo original]**
+> <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Pciku8PIxTpWfQOKpdfCEA.png">
 >
 > *Benchmarks estáticos são o teste teórico de direção. Auditoria comportamental é jogar a IA em uma estrada digital congelada.*
 
@@ -84,7 +84,7 @@ O Petri caça desalinhamento latente. Ele cria ambientes corporativos virtuais e
 
 ## IV. Mergulho profundo 2: a arquitetura do harness (cercas determinísticas)
 
-> **[Imagem do artigo original]**
+> <img src="https://miro.medium.com/v2/resize:fit:2000/format:webp/1*UWcL9n-7v54ve62ud8ke1g.png">
 >
 > *Não esperamos que a IA nunca dê um golpe selvagem; construímos um ringue em que o golpe selvagem não possa atingir a plateia.*
 
@@ -100,7 +100,7 @@ Isso se parece exatamente com engenharia de software rigorosa. Um harness de IA 
 
 ## V. Mergulho profundo 3: operacionalizando agência (o Model Context Protocol)
 
-> **[Imagem do artigo original]**
+> <img src="https://miro.medium.com/v2/resize:fit:2000/format:webp/1*I2P3wgI76VOr_KjY3pnE6w.png">
 >
 > *O Model Context Protocol (MCP) atua como as proteções físicas de segurança que transformam o caos probabilístico em processos repetíveis.*
 
@@ -116,7 +116,7 @@ O salvador aqui é o `Model Context Protocol` (`MCP`). O MCP é o padrão univer
 
 ## VI. Debates e limitações (a metáfora e o imposto)
 
-> **[Imagem do artigo original]**
+> <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*_EAbVR0dcwyjYWGvJpSCjQ.png">
 >
 > *Modelos de linguagem avançados não são animais de carga. Devemos evitar a complacência psicológica de achar que um harness oferece controle absoluto.*
 
@@ -132,7 +132,7 @@ Mas modelos de linguagem avançados não são cavalos. Eles são motores aliení
 
 ## VII. O caminho adiante / implicações para líderes
 
-> **[Imagem do artigo original]**
+> <img src="https://miro.medium.com/v2/resize:fit:2000/format:webp/1*BdK-AQ4SqfbKoT5u2LdKDg.png">
 >
 > *Responsabilidade não pode ser terceirizada para um algoritmo. Líderes e reguladores devem supervisionar todo o sistema sociotécnico interconectado.*
 
@@ -152,7 +152,7 @@ A regulação precisa se adaptar. Já não podemos mais exigir simples checagens
 
 ## VIII. Conclusão
 
-> **[Imagem do artigo original]**
+> <img src="https://miro.medium.com/v2/resize:fit:2000/format:webp/1*4TWrT8qj12LhVZk0NQIO0g.png">
 >
 > *É hora de parar de rezar para os deuses probabilísticos da geração de texto, colocar os capacetes e começar a construir as cercas.*
 
@@ -166,7 +166,7 @@ Agora, se me dão licença, meu chá masala está esfriando, e há um saco de pa
 
 ## IX. Referências
 
-> **[Imagem do artigo original]**
+> <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*IuIWTgOJa7vWRbvZQoQpPg.png">
 >
 > *A pesquisa fundamental por trás de AI Harness Engineering e Sociotechnical Alignment.*
 

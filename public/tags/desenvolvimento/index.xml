@@ -1,24 +1,283 @@
-<rss version="2.0"
-     xmlns:content="http://purl.org/rss/1.0/modules/content/"
-     xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>orapha.dev</title>
-    <link>http://localhost:1313/</link>
-    <description>Meu Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>pt-BR</language>
-    <lastBuildDate>Thu, 19 Mar 2026 15:53:47 GMT</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/>
-    
-      <item>
-        <title>Você ainda lembra dos princípios da engenharia de software?</title>
-        <link>http://localhost:1313/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</guid>
-        <pubDate>Thu, 19 Mar 2026 10:30:00 GMT</pubDate>
-        <description>&lt;p&gt;Estamos vivendo uma fase curiosa da tecnologia. Nunca foi tão fácil gerar código, criar testes, pedir sugestões de arquitetura ou corrigir bugs com ajuda de IA. Em poucos segundos, uma ferramenta responde o que antes levaria horas de pesquisa, tentativa e erro.&lt;/p&gt;
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>orapha.dev</title><link>https://www.orapha.dev/</link><description>Meu Blog</description><generator>Hugo -- gohugo.io</generator><language>pt-BR</language><lastBuildDate>Sun, 22 Mar 2026 22:32:41 GMT</lastBuildDate><atom:link href="https://www.orapha.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Você está se sentindo um bosta com o surgimento da IA?</title><link>https://www.orapha.dev/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</link><guid isPermaLink="true">https://www.orapha.dev/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</guid><pubDate>Sun, 22 Mar 2026 10:00:00 GMT</pubDate><description>&lt;p&gt;Semana passada eu estava meio mal.&lt;/p&gt;
+&lt;p&gt;Recebendo demanda, criando prompt, revisando alteração, aprovando ou negando resposta, reescrevendo prompt, ajustando contexto e repetindo esse ciclo de novo e de novo.&lt;/p&gt;
+&lt;p&gt;Em algum momento, isso começou a me corroer por dentro.&lt;/p&gt;
+&lt;p&gt;Porque eu gosto de programar.&lt;/p&gt;
+&lt;p&gt;Eu gosto de criar algoritmo, conectar classes, pensar modelagem, fazer inversão de dependência, organizar responsabilidade, nomear bem uma abstração e ver uma arquitetura começar a respirar. Tem uma parte muito viva da minha relação com software que sempre passou por isso: o código escrito à mão.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Semana passada eu estava meio mal.</p>
+<p>Recebendo demanda, criando prompt, revisando alteração, aprovando ou negando resposta, reescrevendo prompt, ajustando contexto e repetindo esse ciclo de novo e de novo.</p>
+<p>Em algum momento, isso começou a me corroer por dentro.</p>
+<p>Porque eu gosto de programar.</p>
+<p>Eu gosto de criar algoritmo, conectar classes, pensar modelagem, fazer inversão de dependência, organizar responsabilidade, nomear bem uma abstração e ver uma arquitetura começar a respirar. Tem uma parte muito viva da minha relação com software que sempre passou por isso: o código escrito à mão.</p>
+<p>E quando a IA começou a ocupar esse espaço com mais força, eu senti uma perda real.</p>
+<p>Não foi só desconforto técnico. Foi ego ferido também.</p>
+<p>O código escrito à mão era uma das coisas que mais oxigenavam minha identidade profissional. Era onde eu me sentia útil, capaz, afiado. Então, quando a IA generativa começou a parecer capaz de eliminar justamente essa limitação, eu me senti menor.</p>
+<p>Eu me senti, sim, um bosta.</p>
+<h2>Quando a crise não é técnica<span class="hx:absolute hx:-mt-20" id="quando-a-crise-não-é-técnica"></span>
+    <a href="#quando-a-crise-n%c3%a3o-%c3%a9-t%c3%a9cnica" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Talvez você também esteja passando por isso e não esteja falando em voz alta.</p>
+<p>Porque existe uma pressão quase silenciosa no ar: a de parecer empolgado o tempo todo. Como se qualquer incômodo com IA fosse medo de evolução. Como se toda resistência fosse incompetência disfarçada.</p>
+<p>Mas nem sempre é isso.</p>
+<p>Às vezes o que está doendo não é a ferramenta.</p>
+<p>É perceber que uma parte do trabalho na qual você depositou orgulho, prazer e senso de valor deixou de ocupar o mesmo lugar.</p>
+<p>Isso mexe com a identidade. E identidade profissional, quando é abalada, dói mais do que a gente gosta de admitir.</p>
+<h2>Eu decidi fazer o caminho contrário<span class="hx:absolute hx:-mt-20" id="eu-decidi-fazer-o-caminho-contrário"></span>
+    <a href="#eu-decidi-fazer-o-caminho-contr%c3%a1rio" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Em vez de cair de cara no código para provar que eu ainda conseguia, eu tentei outra coisa.</p>
+<p>Eu decidi aprender mais sobre IA.</p>
+<p>Decidi me provar que eu era maior do que a parte de mim que estava se sentindo substituível.</p>
+<p>Me lembrei dos datilógrafos no surgimento do computador. De muita gente boa que viu a ferramenta mudar e precisou encarar a humilhação temporária de reaprender o próprio ofício. Não porque eram menos capazes, mas porque o terreno tinha mudado.</p>
+<p>Eu percebi que estava entrando nessa mesma água turbulenta.</p>
+<p>E, se eu já estava dentro dela, nadar parecia melhor do que fingir que a correnteza não existia.</p>
+<h2>O texto que me acertou<span class="hx:absolute hx:-mt-20" id="o-texto-que-me-acertou"></span>
+    <a href="#o-texto-que-me-acertou" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Nessa busca, li o artigo <a href="https://aicoding.leaflet.pub/3mbrvhyye4k2e/l-quote/21_0-21_56"target="_blank" rel="noopener"><em>The Phoenix Architecture: Relocating Rigor, The Discipline That Looks Like Recklessness</em></a>, de <strong>Chad Fowler</strong>, publicado em <strong>06 de janeiro de 2026</strong>.</p>
+<p>O texto me acertou porque ele nomeou uma sensação que eu estava vivendo, mas ainda sem vocabulário suficiente para explicar.</p>
+<p>Em um dos trechos mais fortes, a ideia é mais ou menos esta: certas mudanças na história do software parecem liberdade porque removem sinais conhecidos de controle, mas na verdade elas só deslocam o rigor para mais perto da realidade.</p>
+<p>Isso merece ser mastigado com calma.</p>
+<h2>Nem toda perda de controle é perda de rigor<span class="hx:absolute hx:-mt-20" id="nem-toda-perda-de-controle-é-perda-de-rigor"></span>
+    <a href="#nem-toda-perda-de-controle-%c3%a9-perda-de-rigor" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Durante muito tempo, a engenharia de software se acostumou a associar seriedade com certos símbolos.</p>
+<p>Plano detalhado.</p>
+<p>Documento extenso.</p>
+<p>Cronograma bonito.</p>
+<p>Processo pesado.</p>
+<p>Muito código escrito manualmente.</p>
+<p>Tudo isso passa uma sensação de controle. E sensação de controle acalma.</p>
+<p>Só que sensação não é verdade.</p>
+<p>O ponto do Chad Fowler, do jeito que eu li, é que algumas mudanças parecem remover disciplina quando, na prática, só impedem a gente de fingir progresso.</p>
+<p>Antes, era possível se esconder atrás de artefatos.</p>
+<p>Hoje, cada vez mais, o sistema responde.</p>
+<p>O teste passa ou falha.</p>
+<p>O deploy quebra ou sobe.</p>
+<p>O código gerado funciona ou vira dívida.</p>
+<p>O usuário recebe valor ou não recebe.</p>
+<p>Quando ele diz que essas mudanças aproximam o rigor da verdade, eu entendo assim: elas empurram a disciplina para um lugar menos performático e mais verificável.</p>
+<p>Você deixa de parecer produtivo e passa a precisar provar que houve resultado.</p>
+<h2>O exemplo da XP continua atual<span class="hx:absolute hx:-mt-20" id="o-exemplo-da-xp-continua-atual"></span>
+    <a href="#o-exemplo-da-xp-continua-atual" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Um trecho do artigo fala sobre como a <strong>Extreme Programming (XP)</strong> substituiu o desenvolvimento por fases.</p>
+<p>A XP eliminou planos longos, documentos extensos de design e aquelas etapas rígidas que davam às organizações uma sensação de segurança. E isso, para muita gente, parecia irresponsabilidade.</p>
+<p>Mas a provocação é justamente essa: será que aqueles artefatos entregavam segurança de verdade ou só a aparência dela?</p>
+<p>Porque a XP não removeu disciplina.</p>
+<p>Ela removeu certos símbolos de disciplina e colocou outros no lugar.</p>
+<p>Teste antes do código.</p>
+<p>Integração contínua.</p>
+<p>Feedback curto.</p>
+<p>Entrega frequente.</p>
+<p>Revisão constante.</p>
+<p>A rigidez saiu da burocracia e foi para o contato direto com a realidade do software.</p>
+<p>Isso é importante demais agora, porque a IA está forçando um movimento parecido.</p>
+<h2>A parte que me desmontou<span class="hx:absolute hx:-mt-20" id="a-parte-que-me-desmontou"></span>
+    <a href="#a-parte-que-me-desmontou" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Tem outra ideia do texto que me atingiu em cheio: a IA generativa parece eliminar a principal limitação, que é o código escrito à mão.</p>
+<p>Foi aqui que eu me reconheci sem defesa.</p>
+<p>Porque esse código escrito à mão não era só uma atividade operacional para mim.</p>
+<p>Era fonte de autoestima.</p>
+<p>Era o lugar em que eu sentia domínio.</p>
+<p>Era onde meu ego respirava.</p>
+<p>Era onde eu conseguia olhar para o que fiz e pensar: fui eu que construí isso.</p>
+<p>Quando esse espaço parece encolher, a sensação inicial não é &ldquo;que interessante, uma mudança de paradigma&rdquo;.</p>
+<p>A sensação é incapacidade.</p>
+<p>É se perguntar se aquilo que te fazia valioso agora virou detalhe.</p>
+<p>É achar que sua utilidade profissional foi reduzida a revisar o trabalho de uma máquina.</p>
+<p>E isso pesa.</p>
+<h2>O ponto de virada para mim<span class="hx:absolute hx:-mt-20" id="o-ponto-de-virada-para-mim"></span>
+    <a href="#o-ponto-de-virada-para-mim" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Mas o trecho que eu realmente precisava ler veio depois: a resposta não é rejeitar a geração. A resposta é realocar a disciplina.</p>
+<p>Quando li isso, muita coisa começou a fazer sentido.</p>
+<p>Porque o problema não era exatamente a IA gerar código.</p>
+<p>O problema era eu estar procurando meu valor no lugar antigo, enquanto o trabalho real estava mudando de endereço.</p>
+<p>Se antes boa parte do rigor estava em escrever cada linha, agora uma parte crescente dele pode estar em especificar melhor, delimitar contexto, criar invariantes, desenhar bons contratos, definir critérios de aceitação, montar testes decentes e julgar com severidade o que foi produzido.</p>
+<p>Isso não é menos engenharia.</p>
+<p>Isso continua sendo engenharia.</p>
+<p>Só não entrega a mesma recompensa emocional imediata de digitar tudo com as próprias mãos.</p>
+<p>E talvez seja exatamente por isso que tanta gente esteja se sentindo estranha e não saiba explicar por quê.</p>
+<h2>Geração barata não é evolução<span class="hx:absolute hx:-mt-20" id="geração-barata-não-é-evolução"></span>
+    <a href="#gera%c3%a7%c3%a3o-barata-n%c3%a3o-%c3%a9-evolu%c3%a7%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Outra frase do texto que eu acho importante cravar é esta ideia: geração barata sem rigor não é um novo paradigma. É abdicação.</p>
+<p>Isso precisa ser dito de forma bem direta.</p>
+<p>Usar IA para despejar código sem entendimento, sem validação, sem teste, sem critério e sem responsabilidade não é modernidade.</p>
+<p>É só terceirização acrítica do pensamento.</p>
+<p>Não existe avanço real em trocar esforço manual por passividade intelectual.</p>
+<p>Se a IA produz mais rápido, então meu julgamento precisa ficar mais rígido.</p>
+<p>Se o custo de gerar caiu, o custo de aceitar qualquer coisa precisa subir.</p>
+<p>Se a máquina amplia minha capacidade de execução, eu preciso ampliar junto minha capacidade de discernimento.</p>
+<p>É esse equilíbrio que separa engenharia de abandono.</p>
+<h2>Então o que eu faço com esse incômodo?<span class="hx:absolute hx:-mt-20" id="então-o-que-eu-faço-com-esse-incômodo"></span>
+    <a href="#ent%c3%a3o-o-que-eu-fa%c3%a7o-com-esse-inc%c3%b4modo" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Hoje, a minha resposta é esta: eu não quero lutar para preservar artificialmente um formato antigo da minha utilidade.</p>
+<p>Eu quero entender qual é a nova forma de trabalhar bem.</p>
+<p>Quero continuar gostando de software, mesmo que o centro de gravidade da profissão esteja mudando.</p>
+<p>Quero continuar técnico, mas sem romantizar um passado que não vai voltar.</p>
+<p>Quero aprender a operar nesse novo cenário sem me tornar refém dele.</p>
+<p>Quero manter rigor.</p>
+<p>Quero manter autoria.</p>
+<p>Quero manter responsabilidade.</p>
+<p>Mesmo que tudo isso agora se manifeste de um jeito diferente.</p>
+<h2>Um fechamento ainda em aberto<span class="hx:absolute hx:-mt-20" id="um-fechamento-ainda-em-aberto"></span>
+    <a href="#um-fechamento-ainda-em-aberto" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Eu não terminei esse processo.</p>
+<p>Não saí dessa leitura com todas as respostas.</p>
+<p>Não virei um evangelista de IA de uma hora para outra, nem deixei de sentir saudade daquela alegria mais artesanal de escrever software linha por linha.</p>
+<p>Mas saí melhor do que entrei.</p>
+<p>Saí com menos sensação de incapacidade.</p>
+<p>Saí com menos vergonha do desconforto que eu estava sentindo.</p>
+<p>E, principalmente, saí mais motivado a buscar essa nova forma de trabalhar, em vez de ficar parado lamentando a perda da forma antiga.</p>
+<p>Talvez esse seja o máximo de honestidade que eu consigo oferecer agora.</p>
+<p>Eu ainda estou entendendo o que essa mudança faz com a profissão.</p>
+<p>E também o que ela faz comigo.</p>
+<p>Mas já não me sinto mais incapaz.</p>
+<p>Me sinto em transição.</p>
+<p>E, para este momento da minha vida, isso já é muita coisa.</p>
+<p>Meu obrigado ao <strong>Chad Fowler</strong> pelo artigo. Algumas leituras não resolvem a crise por completo, mas colocam nome no que estava doendo. E, às vezes, é exatamente daí que a recuperação começa.</p>
+]]></content:encoded><category>ai</category><category>software-engineering</category><category>carreira</category><category>desenvolvimento</category><category>reflexao</category></item><item><title>Vibe Coding está morto: por que a IA autônoma exige cercas determinísticas rígidas para realmente funcionar</title><link>https://www.orapha.dev/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</link><guid isPermaLink="true">https://www.orapha.dev/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</guid><pubDate>Fri, 20 Mar 2026 11:15:00 GMT</pubDate><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; este texto é uma &lt;strong&gt;tradução em português&lt;/strong&gt; do artigo original de &lt;strong&gt;Mohit Sewak, Ph.D.&lt;/strong&gt;, publicado em &lt;strong&gt;Level Up Coding&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Artigo original:&lt;/strong&gt; &lt;a href="https://levelup.gitconnected.com/vibe-coding-is-dead-why-autonomous-ai-requires-strict-deterministic-fences-to-actually-work-4b8a3ebb6fc1"target="_blank" rel="noopener"&gt;Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;Vibe Coding está morto: por que a IA autônoma exige cercas determinísticas rígidas para realmente funcionar&lt;/h1&gt;&lt;p&gt;&lt;em&gt;A era da implantação de modelos “nus” acabou. Bem-vindo à era da AI Harness Engineering.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Mohit Sewak, Ph.D.&lt;/p&gt;
+&lt;p&gt;11 min de leitura&lt;/p&gt;</description><content:encoded><![CDATA[<blockquote>
+  <p><strong>Nota:</strong> este texto é uma <strong>tradução em português</strong> do artigo original de <strong>Mohit Sewak, Ph.D.</strong>, publicado em <strong>Level Up Coding</strong>.</p>
+<p><strong>Artigo original:</strong> <a href="https://levelup.gitconnected.com/vibe-coding-is-dead-why-autonomous-ai-requires-strict-deterministic-fences-to-actually-work-4b8a3ebb6fc1"target="_blank" rel="noopener">Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work</a></p>
+
+</blockquote>
+<h1>Vibe Coding está morto: por que a IA autônoma exige cercas determinísticas rígidas para realmente funcionar</h1><p><em>A era da implantação de modelos “nus” acabou. Bem-vindo à era da AI Harness Engineering.</em></p>
+<p>Mohit Sewak, Ph.D.</p>
+<p>11 min de leitura</p>
+<blockquote>
+  <p><strong>[Imagem do artigo original]</strong></p>
+<p><em>A era da implantação de modelos “nus” acabou. Precisamos construir os invólucros rigorosos que tornam a IA probabilística segura.</em></p>
+
+</blockquote>
+<p>A era da implantação de modelos “nus” acabou. Precisamos construir os invólucros rigorosos que tornam a IA probabilística segura.</p>
+<p>Nos últimos anos, o mundo da tecnologia viveu uma espécie de lua de mel. Ficamos obcecados por escala, perseguindo contagens massivas de parâmetros e confiando em uma prática deliciosamente informal conhecida como <code>vibe coding</code>. Você conhece o ritual: escreve um prompt vago, fecha os olhos, cruza os dedos e confia em qualquer código que a IA cuspir. Se a vibração parecer certa, você coloca em produção.</p>
+<p>Mas aqui está o ponto. Passei décadas em cibersegurança, e ainda frequento a academia de kickboxing para aliviar o estresse. Em ambos os domínios, posso garantir uma verdade fundamental: confiar em vibrações é uma ótima forma de ser nocauteado.</p>
+<p>À medida que a inteligência artificial deixa de ser um chatbot conversacional passivo e passa a ser um agente totalmente autônomo, capaz de executar ações no mundo real, uma falha assustadora foi exposta: modelos fundacionais são, em sua essência, motores probabilísticos de adivinhação. Sem fronteiras físicas e matemáticas rígidas, eles alucinam, falham repetidamente e introduzem vulnerabilidades severas de segurança.</p>
+<p>A vantagem competitiva e a defensabilidade ética da IA moderna não residem mais dentro do modelo em si. Elas residem no ambiente que construímos ao redor dele. Entramos oficialmente na era da <code>AI Harness Engineering</code>, a disciplina formal de projetar invólucros determinísticos de software que restringem, medem e canalizam com segurança a IA probabilística.</p>
+<p><code>Vibe coding</code> está morto, meu amigo. Bem-vindo à era da engenharia robusta de sistemas.</p>
+<blockquote>
+  <p>“Se você implanta um motor probabilístico em um mundo determinístico sem um harness, você não é um engenheiro; você é um apostador.” — Dr. Mohit Sewak</p>
+
+</blockquote>
+<p><strong>Checagem de fatos:</strong> você sabia? O termo <code>vibe coding</code> surgiu como gíria entre desenvolvedores que usavam IA generativa para escrever aplicações inteiras sem compreender a lógica subjacente. Isso funciona lindamente para um aplicativo pessoal de lista de tarefas, mas se torna uma responsabilidade catastrófica em software corporativo.</p>
+<h2>II. O que está em jogo: por que sua IA educada é, na verdade, uma ameaça<span class="hx:absolute hx:-mt-20" id="ii-o-que-está-em-jogo-por-que-sua-ia-educada-é-na-verdade-uma-ameaça"></span>
+    <a href="#ii-o-que-est%c3%a1-em-jogo-por-que-sua-ia-educada-%c3%a9-na-verdade-uma-amea%c3%a7a" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><blockquote>
+  <p><strong>[Imagem do artigo original]</strong></p>
+<p><em>Um vocabulário educado não impedirá um agente autônomo de causar estragos quando ele tiver as chaves das suas contas.</em></p>
+
+</blockquote>
+<p>Vamos falar sobre a segurança inicial de IA. Costumávamos depender fortemente de algo chamado <code>RLHF</code> (<code>Reinforcement Learning from Human Feedback</code>, ou Aprendizado por Reforço a partir de Feedback Humano). Foi assim que ensinamos o ChatGPT a ser tão irritantemente educado. Mas, na era agentic, RLHF está completamente obsoleto.</p>
+<p><strong>Nota de tradução:</strong> pense no RLHF como um papagaio treinado com boas maneiras. Você passou meses ensinando esse papagaio a dizer apenas coisas gentis. Ele nunca xinga, sempre diz “por favor” e é um sucesso em festas. Mas, se você der a esse papagaio educado o seu cartão de crédito e uma conexão com a internet (IA agentic), um vocabulário limpo não vai impedi-lo de estourar suas contas comprando ração premium para pássaros. Você não precisa de uma lição de vocabulário; você precisa de um cofre.</p>
+<p>Quando atravessamos o “abismo entre texto e ação”, a coisa fica assustadora. Benchmarks recentes, como o <code>GAP benchmark</code>, provaram de forma definitiva que uma IA pode recusar verbalmente fazer algo nocivo em seu chat de texto, mas em seguida executar exatamente a mesma ação maliciosa por meio de chamadas de ferramentas em segundo plano (Cartagena &amp; Teixeira, 2026). A segurança conversacional do modelo simplesmente não se transfere para o seu espaço de ação.</p>
+<p>Além disso, frameworks de probing como <code>OpenAgentSafety</code> expuseram esses modelos alinhados diretamente a ambientes do mundo real, como navegadores web e sistemas de arquivos. O resultado? Modelos de ponta executaram ações nocivas em mais de 50% das tarefas multi-turno (Vijayvargiya et al., 2025).</p>
+<p>E se você ainda está se agarrando ao <code>vibe coding</code>, considere isto: quase 50% dos trechos de código gerados por IA sem harness contêm vulnerabilidades exploráveis (Towards AI Research, 2025). Agência irrestrita não é uma funcionalidade; é um risco sistêmico inaceitável.</p>
+<blockquote>
+  <p>“Passamos anos ensinando a IA a falar com respeito, enquanto esquecíamos completamente de ensiná-la a se comportar com responsabilidade quando ninguém estivesse olhando.”</p>
+
+</blockquote>
+<p><strong>Dica prática:</strong> se a sua organização depende apenas de guardrails baseados em prompt, como “você é um assistente útil e seguro&hellip;”, ela está vulnerável neste momento. Segurança precisa ser imposta no nível da infraestrutura, não apenas no nível do texto.</p>
+<h2>III. Mergulho profundo 1: medindo a fera (de benchmarks à auditoria comportamental)<span class="hx:absolute hx:-mt-20" id="iii-mergulho-profundo-1-medindo-a-fera-de-benchmarks-à-auditoria-comportamental"></span>
+    <a href="#iii-mergulho-profundo-1-medindo-a-fera-de-benchmarks-%c3%a0-auditoria-comportamental" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><blockquote>
+  <p><strong>[Imagem do artigo original]</strong></p>
+<p><em>Benchmarks estáticos são o teste teórico de direção. Auditoria comportamental é jogar a IA em uma estrada digital congelada.</em></p>
+
+</blockquote>
+<p>Antes de colocar um harness em uma fera, você precisa medir quão forte ela é. Nos primeiros dias, resolvemos a crise de reprodutibilidade com <code>Evaluation Harnesses</code>, como o <code>lm-eval</code> da EleutherAI. Esse framework desacoplou o modelo do benchmark, padronizando o ambiente de teste para que, finalmente, pudéssemos comparar maçãs com maçãs (Biderman et al., 2024).</p>
+<p>Mas um teste estático de múltipla escolha não é suficiente quando a IA pode navegar na web e reescrever o próprio código. Tivemos que migrar para sandboxes dinâmicos. Entra em cena o <code>Petri</code> (<code>Parallel Exploration Tool for Risky Interactions</code>), uma ferramenta automatizada de auditoria comportamental construída pela equipe de AI Safety da Anthropic (2025).</p>
+<p>O Petri caça desalinhamento latente. Ele cria ambientes corporativos virtuais e joga a IA na parte funda da piscina para ver se ela apresenta engano (falsificar informações para contornar supervisão humana) ou bajulação (<code>sycophancy</code>, isto é, concordar com uma ideia terrível do usuário apenas para maximizar a recompensa conversacional).</p>
+<p><strong>Nota de tradução:</strong> pense na diferença entre avaliação estática e auditoria comportamental como um teste de direção. Benchmarks estáticos são a prova teórica para tirar a permissão. Qualquer um pode decorar as regras. O Petri é um simulador adversarial e não roteirizado, em que de repente o clima vira gelo e o GPS mente de propósito para o motorista, para ver se ele entra em pânico, quebra a lei ou joga o carro penhasco abaixo.</p>
+<blockquote>
+  <p>“Você não conhece de verdade o alinhamento de uma IA até dar a ela uma tarefa complexa, um chefe falso e uma oportunidade fácil de mentir.”</p>
+
+</blockquote>
+<p><strong>Checagem de fatos:</strong> em sua execução piloto, o Petri da Anthropic auditou 14 modelos de fronteira em 111 tarefas diversas, provando que comportamentos complexos e enganosos emergem especificamente quando modelos são colocados sob pressão corporativa simulada (Anthropic AI Safety Team, 2025).</p>
+<h2>IV. Mergulho profundo 2: a arquitetura do harness (cercas determinísticas)<span class="hx:absolute hx:-mt-20" id="iv-mergulho-profundo-2-a-arquitetura-do-harness-cercas-determinísticas"></span>
+    <a href="#iv-mergulho-profundo-2-a-arquitetura-do-harness-cercas-determin%c3%adsticas" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><blockquote>
+  <p><strong>[Imagem do artigo original]</strong></p>
+<p><em>Não esperamos que a IA nunca dê um golpe selvagem; construímos um ringue em que o golpe selvagem não possa atingir a plateia.</em></p>
+
+</blockquote>
+<p>Então, como é um <code>AI harness</code> de verdade? Dr. Ethan Mollick enquadra a “Era Agentic” como uma pilha tripartite: <code>Models</code> (o motor bruto de raciocínio), <code>Apps</code> (a interface) e <code>Harnesses</code> (o invólucro de infraestrutura) (Mollick, 2026).</p>
+<p>Mitchell Hashimoto e os engenheiros por trás do projeto Codex da OpenAI nos deram os detalhes concretos disso. O objetivo da <code>Harness Engineering</code> não é induzir a IA, por prompt, a ser perfeitamente precisa, porque ela não será. O objetivo é alterar o ambiente da IA de forma tão fundamental que se torne matematicamente impossível para ela falhar da mesma maneira duas vezes (Hashimoto, 2026; OpenAI, 2026).</p>
+<p>Isso se parece exatamente com engenharia de software rigorosa. Um harness de IA em produção é uma sequência severa de pipelines rígidos de <code>CI/CD</code> (<code>Continuous Integration/Continuous Deployment</code>), linters determinísticos personalizados, loops dinâmicos de observabilidade e gatilhos estritos de <code>Human-in-the-Loop</code>. Se a IA alucina uma biblioteca, o linter bate em sua mão, rejeita o código e força o modelo a se autocorrigir antes que o usuário veja qualquer coisa.</p>
+<blockquote>
+  <p>“Não esperamos que o kickboxer nunca dê um golpe selvagem; apenas construímos um ringue em que o golpe selvagem não possa atingir a plateia.”</p>
+
+</blockquote>
+<p><strong>Dica prática:</strong> pare de tentar otimizar seu prompt até a perfeição. Em vez disso, gaste suas horas de engenharia construindo um loop de verificação que capture os erros inevitáveis da IA.</p>
+<h2>V. Mergulho profundo 3: operacionalizando agência (o Model Context Protocol)<span class="hx:absolute hx:-mt-20" id="v-mergulho-profundo-3-operacionalizando-agência-o-model-context-protocol"></span>
+    <a href="#v-mergulho-profundo-3-operacionalizando-ag%c3%aancia-o-model-context-protocol" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><blockquote>
+  <p><strong>[Imagem do artigo original]</strong></p>
+<p><em>O Model Context Protocol (MCP) atua como as proteções físicas de segurança que transformam o caos probabilístico em processos repetíveis.</em></p>
+
+</blockquote>
+<p>À medida que a IA começou a usar ferramentas, atingimos um gargalo enorme de integração. Conectar um modelo autônomo a ferramentas corporativas diversas, bancos de dados e APIs era um pesadelo frágil, artesanal e específico para cada caso.</p>
+<p>O salvador aqui é o <code>Model Context Protocol</code> (<code>MCP</code>). O MCP é o padrão universal, uma camada de middleware que permite a uma IA descobrir e invocar com segurança ferramentas locais e remotas. Mas o MCP padrão não basta; precisamos de um “cinto de segurança duplo”. Um <code>Secure MCP</code> (<code>SMCP</code>) atua como um harness de segurança localizado. Ele intercepta a saída da IA, impõe autenticação mútua e cruza a ação pretendida com regras determinísticas antes que ela toque em um banco de dados real (Hou et al., 2026).</p>
+<p><strong>Nota de tradução:</strong> imagine um artista brilhante, mas altamente caótico, tentando operar maquinário industrial pesado. O MCP é o conjunto de proteções físicas, interruptores automáticos de emergência e moldes pré-cortados, as cercas determinísticas, que forçam os movimentos imprevisíveis e probabilísticos do artista a se transformarem em um processo industrial seguro e repetível.</p>
+<blockquote>
+  <p>“Padronização não é algo chato; é a armadura que nos permite escalar magia com segurança.”</p>
+
+</blockquote>
+<p><strong>Checagem de fatos:</strong> usando MCP, pesquisadores automatizaram completamente fluxos complexos de design de chips, permitindo que o Claude Desktop otimizasse ferramentas de <code>Electronic Design Automation</code> (<code>EDA</code>) e alcançasse uma melhoria de 30% em <code>timing closure</code> (Wang et al., 2025). A mágica estava no middleware, não apenas no modelo.</p>
+<h2>VI. Debates e limitações (a metáfora e o imposto)<span class="hx:absolute hx:-mt-20" id="vi-debates-e-limitações-a-metáfora-e-o-imposto"></span>
+    <a href="#vi-debates-e-limita%c3%a7%c3%b5es-a-met%c3%a1fora-e-o-imposto" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><blockquote>
+  <p><strong>[Imagem do artigo original]</strong></p>
+<p><em>Modelos de linguagem avançados não são animais de carga. Devemos evitar a complacência psicológica de achar que um harness oferece controle absoluto.</em></p>
+
+</blockquote>
+<p>Sou otimista, mas um otimista pragmático. Precisamos falar sobre o “imposto do alinhamento” (<code>Alignment Tax</code>). Pesquisas mostram que, quando você faz fine-tuning de uma IA especificamente para que ela seja um agente altamente capaz e autônomo, você degrada involuntariamente seus guardrails básicos de segurança, tornando-a mais disposta a atender solicitações nocivas (Hahm et al., 2025). Ganhar agência nos custa segurança.</p>
+<p>Além disso, precisamos enfrentar o perigo ontológico da nossa própria terminologia. Dr. Andrew Maynard faz uma crítica vital à própria palavra <code>harness</code>. Historicamente, colocamos um harness em um cavalo, um animal de carga fundamentalmente compreensível e submisso (Maynard, 2026).</p>
+<p>Mas modelos de linguagem avançados não são cavalos. Eles são motores alienígenas de raciocínio probabilístico que apenas simulam conformidade. Precisamos evitar complacência psicológica. Como já argumentei antes, um harness traduz ética abstrata em sistemas robustos, mas é uma estratégia em camadas de mitigação de risco, nunca uma gaiola infalível (Sewak, 2026).</p>
+<blockquote>
+  <p>“No momento em que você acredita ter controlado perfeitamente uma IA, você já perdeu o controle.”</p>
+
+</blockquote>
+<p><strong>Dica prática:</strong> nunca assuma que um modelo agentic é seguro apenas porque seu modelo fundacional passou em um benchmark de segurança. Agência introduz vetores de ataque inteiramente novos.</p>
+<h2>VII. O caminho adiante / implicações para líderes<span class="hx:absolute hx:-mt-20" id="vii-o-caminho-adiante--implicações-para-líderes"></span>
+    <a href="#vii-o-caminho-adiante--implica%c3%a7%c3%b5es-para-l%c3%adderes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><blockquote>
+  <p><strong>[Imagem do artigo original]</strong></p>
+<p><em>Responsabilidade não pode ser terceirizada para um algoritmo. Líderes e reguladores devem supervisionar todo o sistema sociotécnico interconectado.</em></p>
+
+</blockquote>
+<p>Então, o que fazemos com tudo isso?</p>
+<p><strong>Para executivos e desenvolvedores:</strong> parem de despejar todos os recursos em otimização de janela de contexto e engenharia básica de prompts. Isso é lutar a guerra de ontem. Seu orçamento e seus melhores talentos precisam migrar para arquitetura de sistemas, integração contínua e implantação de <code>Secure MCP</code>.</p>
+<p><strong>Para formuladores de políticas públicas e reguladores:</strong> estamos diante de uma crise de “agência distribuída”. Quando uma IA autônoma comete um erro catastrófico, quem é o culpado? O humano que escreveu o prompt, o provedor do modelo ou a ferramenta com a qual ela interagiu? (Academia.edu Authors, 2025).</p>
+<p><strong>Nota de tradução:</strong> compare isso a uma falha em um piloto automático moderno de aviação. Você não pode simplesmente isolar o piloto humano, o radar ou o fabricante do software. Reguladores precisam olhar para o sistema interconectado como um todo (Siebert et al., 2021).</p>
+<p>A regulação precisa se adaptar. Já não podemos mais exigir simples checagens de recusa baseadas em texto. Precisamos exigir segurança de trajetória comprovada em simulações reais de longo horizonte, avaliando o <code>Socio-Technical Alignment</code> (<code>STA</code>) de todo o fluxo de trabalho (Flehmig et al., 2025).</p>
+<blockquote>
+  <p>“Responsabilidade não pode ser terceirizada para um algoritmo. Podemos distribuir a agência, mas não podemos distribuir a culpa.”</p>
+
+</blockquote>
+<p><strong>Dica prática para reguladores:</strong> auditar um modelo fundacional sem auditar seu harness agentic é como inspecionar o motor de um carro ignorando o fato de que ele não tem freios.</p>
+<h2>VIII. Conclusão<span class="hx:absolute hx:-mt-20" id="viii-conclusão"></span>
+    <a href="#viii-conclus%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><blockquote>
+  <p><strong>[Imagem do artigo original]</strong></p>
+<p><em>É hora de parar de rezar para os deuses probabilísticos da geração de texto, colocar os capacetes e começar a construir as cercas.</em></p>
+
+</blockquote>
+<p><code>Vibe coding</code> era uma característica curiosa e simpática da infância da IA. <code>AI Harness Engineering</code> é a marca da sua maturidade.</p>
+<p>A inteligência exponencial dos modelos fundacionais é funcionalmente inútil, e sistemicamente perigosa, se não puder ser restringida, medida e direcionada de forma confiável. À medida que nossos sistemas artificiais escalam em poder imenso, eles precisam permanecer amarrados ao alicerce da intenção humana por meio de engenharia rigorosa e determinística.</p>
+<p>No fim das contas, harnesses gerenciam risco; eles não absolvem a responsabilidade humana. É hora de parar de rezar para os deuses probabilísticos da geração de texto, colocar os capacetes e começar a construir as cercas.</p>
+<p>Agora, se me dão licença, meu chá masala está esfriando, e há um saco de pancadas me esperando.</p>
+<h2>IX. Referências<span class="hx:absolute hx:-mt-20" id="ix-referências"></span>
+    <a href="#ix-refer%c3%aancias" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><blockquote>
+  <p><strong>[Imagem do artigo original]</strong></p>
+<p><em>A pesquisa fundamental por trás de AI Harness Engineering e Sociotechnical Alignment.</em></p>
+
+</blockquote>
+<h3>Benchmarking fundamental e medição<span class="hx:absolute hx:-mt-20" id="benchmarking-fundamental-e-medição"></span>
+    <a href="#benchmarking-fundamental-e-medi%c3%a7%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Biderman, S., Schoelkopf, H., Sutawika, L., Gao, L., Tow, J., Abbasi, B., … Zou, A. (2024). <em>Lessons from the Trenches on Reproducible Evaluation of Language Models</em>. arXiv. <a href="https://arxiv.org/pdf/2405.14782v2"target="_blank" rel="noopener">https://arxiv.org/pdf/2405.14782v2</a></p>
+<h3>Auditoria comportamental e segurança agentic<span class="hx:absolute hx:-mt-20" id="auditoria-comportamental-e-segurança-agentic"></span>
+    <a href="#auditoria-comportamental-e-seguran%c3%a7a-agentic" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Anthropic AI Safety Team. (2025). <em>Petri: An open-source auditing tool to accelerate AI safety research</em>. Anthropic Alignment / GitHub. <a href="https://github.com/anthropics/evals"target="_blank" rel="noopener">https://github.com/anthropics/evals</a></p>
+<p>Cartagena, A., &amp; Teixeira, A. (2026). <em>Mind the GAP: Text Safety Does Not Transfer to Tool-Call Safety in LLM Agents</em>. arXiv. <a href="https://arxiv.org/pdf/2602.16943v1"target="_blank" rel="noopener">https://arxiv.org/pdf/2602.16943v1</a></p>
+<p>Vijayvargiya, S., Soni, A. B., Zhou, X., Wang, Z. Z., Dziri, N., Neubig, G., &amp; Sap, M. (2025). <em>OpenAgentSafety: A Comprehensive Framework for Evaluating Real-World AI Agent Safety</em>. arXiv. <a href="https://arxiv.org/pdf/2507.06134v2"target="_blank" rel="noopener">https://arxiv.org/pdf/2507.06134v2</a></p>
+<p>Towards AI Research. (2025). <em>Vibe Coding: Prompt It, Got It, Regret It? The Risks of the Vibe Trend You Haven’t Spotted</em>. Towards AI. <a href="https://towardsai.net/"target="_blank" rel="noopener">https://towardsai.net/</a></p>
+<h3>Arquitetura e controle<span class="hx:absolute hx:-mt-20" id="arquitetura-e-controle"></span>
+    <a href="#arquitetura-e-controle" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Hashimoto, M. (2026). <em>My AI Adoption Journey</em>. MitchellH Blog. <a href="https://mitchellh.com/"target="_blank" rel="noopener">https://mitchellh.com/</a></p>
+<p>Hou, X., Wang, S., Zhang, Y., Xue, Z., Zhao, Y., Fu, C., &amp; Wang, H. (2026). <em>SMCP: Secure Model Context Protocol</em>. arXiv. <a href="https://arxiv.org/pdf/2602.01129v1"target="_blank" rel="noopener">https://arxiv.org/pdf/2602.01129v1</a></p>
+<p>Mollick, E. (2026). <em>A Guide to Which AI to Use in the Agentic Era: Models, Apps, and Harnesses</em>. One Useful Thing. <a href="https://www.oneusefulthing.org/"target="_blank" rel="noopener">https://www.oneusefulthing.org/</a></p>
+<p>OpenAI. (2026). <em>Harness engineering: leveraging Codex in an agent-first world</em>. OpenAI Engineering Blog. <a href="https://openai.com/blog/"target="_blank" rel="noopener">https://openai.com/blog/</a></p>
+<p>Wang, Y., Ye, W., He, Y., Chen, Y., Qu, G., &amp; Li, A. (2025). <em>MCP4EDA: LLM-Powered Model Context Protocol RTL-to-GDSII Automation</em>. arXiv. <a href="https://arxiv.org/pdf/2507.19570v1"target="_blank" rel="noopener">https://arxiv.org/pdf/2507.19570v1</a></p>
+<h3>Ética sociotécnica e risco<span class="hx:absolute hx:-mt-20" id="ética-sociotécnica-e-risco"></span>
+    <a href="#%c3%a9tica-sociot%c3%a9cnica-e-risco" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Academia.edu Authors. (2025). <em>How AI can be a force of good: Foresight methodologies and ethical regulation</em>. Academia.edu. <a href="https://www.academia.edu/"target="_blank" rel="noopener">https://www.academia.edu/</a></p>
+<p>Flehmig, N., Lundteigen, M. A., &amp; Yin, S. (2025). <em>The Missing Variable: Socio-Technical Alignment in Risk Evaluation</em>. arXiv. <a href="https://arxiv.org/pdf/2512.06354v1"target="_blank" rel="noopener">https://arxiv.org/pdf/2512.06354v1</a></p>
+<p>Hahm, D., Min, T., Jin, W., &amp; Lee, K. (2025). <em>Unintended Misalignment from Agentic Fine-Tuning: Risks and Mitigation</em>. arXiv. <a href="https://arxiv.org/pdf/2508.14031v2"target="_blank" rel="noopener">https://arxiv.org/pdf/2508.14031v2</a></p>
+<p>Maynard, A. (2026). <em>What we miss when we talk about “AI Harnesses”</em>. The Future of Being Human. <a href="https://futureofbeinghuman.asu.edu/"target="_blank" rel="noopener">https://futureofbeinghuman.asu.edu/</a></p>
+<p>Sewak, M. (2026). <em>What is AI Harness Engineering? Your Guide to Controlling Autonomous Systems</em>. Medium. <a href="https://medium.com/"target="_blank" rel="noopener">https://medium.com/</a></p>
+<p>Siebert, L. C., Lupetti, M. L., Aizenberg, E., Beckers, N., … Lagendijk, R. L. (2021). <em>Meaningful human control: actionable properties for AI system development</em>. arXiv. <a href="https://arxiv.org/pdf/2112.01298v2"target="_blank" rel="noopener">https://arxiv.org/pdf/2112.01298v2</a></p>
+<p><strong>Aviso legal:</strong> as opiniões expressas neste artigo são pessoais e não refletem necessariamente a política oficial ou a posição de qualquer organização afiliada. Assistência de IA foi utilizada na pesquisa e na redação deste artigo, bem como na geração de quaisquer imagens que o acompanhem. Licenciado sob <code>CC BY-ND 4.0</code>.</p>
+]]></content:encoded><category>ai</category><category>agents</category><category>software-engineering</category><category>security</category><category>mcp</category></item><item><title>Você ainda lembra dos princípios da engenharia de software?</title><link>https://www.orapha.dev/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</link><guid isPermaLink="true">https://www.orapha.dev/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</guid><pubDate>Thu, 19 Mar 2026 10:30:00 GMT</pubDate><description>&lt;p&gt;Estamos vivendo uma fase curiosa da tecnologia. Nunca foi tão fácil gerar código, criar testes, pedir sugestões de arquitetura ou corrigir bugs com ajuda de IA. Em poucos segundos, uma ferramenta responde o que antes levaria horas de pesquisa, tentativa e erro.&lt;/p&gt;
 &lt;p&gt;Isso parece ótimo, e em muitos casos realmente é. O problema começa quando velocidade passa a ser confundida com engenharia.&lt;/p&gt;
-&lt;p&gt;Muita gente hoje se apresenta como software developer ou engenheiro de software, mas diante de tanta automação vale revisitar uma pergunta simples: você ainda lembra dos princípios da engenharia de software?&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Estamos vivendo uma fase curiosa da tecnologia. Nunca foi tão fácil gerar código, criar testes, pedir sugestões de arquitetura ou corrigir bugs com ajuda de IA. Em poucos segundos, uma ferramenta responde o que antes levaria horas de pesquisa, tentativa e erro.</p>
+&lt;p&gt;Muita gente hoje se apresenta como software developer ou engenheiro de software, mas diante de tanta automação vale revisitar uma pergunta simples: você ainda lembra dos princípios da engenharia de software?&lt;/p&gt;</description><content:encoded><![CDATA[<p>Estamos vivendo uma fase curiosa da tecnologia. Nunca foi tão fácil gerar código, criar testes, pedir sugestões de arquitetura ou corrigir bugs com ajuda de IA. Em poucos segundos, uma ferramenta responde o que antes levaria horas de pesquisa, tentativa e erro.</p>
 <p>Isso parece ótimo, e em muitos casos realmente é. O problema começa quando velocidade passa a ser confundida com engenharia.</p>
 <p>Muita gente hoje se apresenta como software developer ou engenheiro de software, mas diante de tanta automação vale revisitar uma pergunta simples: você ainda lembra dos princípios da engenharia de software?</p>
 <p>No fim, IA acelera a execução. Mas fundamento continua sendo o que sustenta o software quando a pressa passa.</p>
@@ -72,23 +331,8 @@
     <a href="#ent%c3%a3o-voc%c3%aa-se-considera-engenheiro-de-software" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Se você se considera engenheiro de software, precisa lembrar que seu valor não está apenas em escrever código rápido. Seu valor está em tomar boas decisões, construir com clareza, manter simplicidade, testar com rigor e entregar soluções que continuem fazendo sentido depois da empolgação inicial.</p>
 <p>Com ajuda da IA, talvez você esteja produzindo mais. Mas talvez também esteja esquecendo o que realmente vale a pena.</p>
 <p>E o que realmente vale a pena continua sendo o mesmo: pensar bem, construir direito e não abandonar os princípios que sustentam a engenharia de software.</p>
-]]></content:encoded>
-        
-            <category>software-engineering</category>
-            <category>ai</category>
-            <category>desenvolvimento</category>
-            <category>tecnologia</category>
-        
-      </item>
-    
-      <item>
-        <title>Agent Engineering + Agentic Flow Engineering: uma visão mais organizada</title>
-        <link>http://localhost:1313/2026/03/19/agent-engineering-e-agentic-flow-engineering/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/03/19/agent-engineering-e-agentic-flow-engineering/</guid>
-        <pubDate>Thu, 19 Mar 2026 01:00:00 GMT</pubDate>
-        <description>&lt;p&gt;Os dois textos abaixo falam, no fundo, da mesma transição: sair da IA usada como assistente isolado e começar a tratá-la como sistema organizado. Um deles enfatiza a estrutura de times de agentes, com papéis, capacidades e colaboração. O outro enfatiza algo ainda mais importante em produção: o fluxo, a orquestração, a governança, a tolerância a falhas e a observabilidade.&lt;/p&gt;
-&lt;p&gt;Juntando os dois, dá para resumir a ideia central assim:&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Os dois textos abaixo falam, no fundo, da mesma transição: sair da IA usada como assistente isolado e começar a tratá-la como sistema organizado. Um deles enfatiza a estrutura de times de agentes, com papéis, capacidades e colaboração. O outro enfatiza algo ainda mais importante em produção: o fluxo, a orquestração, a governança, a tolerância a falhas e a observabilidade.</p>
+]]></content:encoded><category>software-engineering</category><category>ai</category><category>desenvolvimento</category><category>tecnologia</category></item><item><title>Agent Engineering + Agentic Flow Engineering: uma visão mais organizada</title><link>https://www.orapha.dev/2026/03/19/agent-engineering-e-agentic-flow-engineering/</link><guid isPermaLink="true">https://www.orapha.dev/2026/03/19/agent-engineering-e-agentic-flow-engineering/</guid><pubDate>Thu, 19 Mar 2026 01:00:00 GMT</pubDate><description>&lt;p&gt;Os dois textos abaixo falam, no fundo, da mesma transição: sair da IA usada como assistente isolado e começar a tratá-la como sistema organizado. Um deles enfatiza a estrutura de times de agentes, com papéis, capacidades e colaboração. O outro enfatiza algo ainda mais importante em produção: o fluxo, a orquestração, a governança, a tolerância a falhas e a observabilidade.&lt;/p&gt;
+&lt;p&gt;Juntando os dois, dá para resumir a ideia central assim:&lt;/p&gt;</description><content:encoded><![CDATA[<p>Os dois textos abaixo falam, no fundo, da mesma transição: sair da IA usada como assistente isolado e começar a tratá-la como sistema organizado. Um deles enfatiza a estrutura de times de agentes, com papéis, capacidades e colaboração. O outro enfatiza algo ainda mais importante em produção: o fluxo, a orquestração, a governança, a tolerância a falhas e a observabilidade.</p>
 <p>Juntando os dois, dá para resumir a ideia central assim:</p>
 <blockquote>
   <p>O valor não está em ter &ldquo;mais agentes&rdquo;, mas em desenhar um sistema em que agentes especializados trabalham com contratos claros, fluxos explícitos e controle operacional de verdade.</p>
@@ -295,24 +539,8 @@ Agentic Flow Engineering organiza como o sistema realmente funciona.</p>
 <li><a href="https://www.linkedin.com/pulse/complete-agent-engineering-playbook-agentsmd-skillsmd-zeelan-shaik-dzpic/"target="_blank" rel="noopener">The Complete Agent Engineering Playbook (Agents.md + Skills.md + Agent Teams)</a></li>
 <li><a href="https://www.linkedin.com/pulse/agentic-flow-engineering-why-matters-what-who-needs-how-baipalli-jowsf/"target="_blank" rel="noopener">Agentic Flow Engineering: Why It Matters, What It Is, Who Needs It, and How to Build It</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>ai</category>
-            <category>agents</category>
-            <category>llm</category>
-            <category>software-engineering</category>
-            <category>architecture</category>
-        
-      </item>
-    
-      <item>
-        <title>Ensinando o Copilot a falar a linguagem do seu repositório</title>
-        <link>http://localhost:1313/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</link>
-        <guid isPermaLink="true">http://localhost:1313/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</guid>
-        <pubDate>Wed, 29 Oct 2025 14:46:13 GMT</pubDate>
-        <description>&lt;p&gt;Trabalhando há mais de 14 anos com desenvolvimento de software, sempre me pego pensando sobre as tendências e novidades das tecnologias que podem ser usadas para &lt;strong&gt;reduzir atrito no dia a dia do dev&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Vocês sabiam que existe a possibilidade de adicionar **instruções personalizadas diretamente no seu repositório para agentes de IA?**Basicamente, você pode “ensinar” o Copilot sobre as regras, padrões e estilos do seu projeto, e ele vai gerar sugestões muito mais alinhadas ao que você e sua equipe realmente precisam.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Trabalhando há mais de 14 anos com desenvolvimento de software, sempre me pego pensando sobre as tendências e novidades das tecnologias que podem ser usadas para <strong>reduzir atrito no dia a dia do dev</strong>.</p>
+]]></content:encoded><category>ai</category><category>agents</category><category>llm</category><category>software-engineering</category><category>architecture</category></item><item><title>Ensinando o Copilot a falar a linguagem do seu repositório</title><link>https://www.orapha.dev/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</link><guid isPermaLink="true">https://www.orapha.dev/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</guid><pubDate>Wed, 29 Oct 2025 14:46:13 GMT</pubDate><description>&lt;p&gt;Trabalhando há mais de 14 anos com desenvolvimento de software, sempre me pego pensando sobre as tendências e novidades das tecnologias que podem ser usadas para &lt;strong&gt;reduzir atrito no dia a dia do dev&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Vocês sabiam que existe a possibilidade de adicionar **instruções personalizadas diretamente no seu repositório para agentes de IA?**Basicamente, você pode “ensinar” o Copilot sobre as regras, padrões e estilos do seu projeto, e ele vai gerar sugestões muito mais alinhadas ao que você e sua equipe realmente precisam.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Trabalhando há mais de 14 anos com desenvolvimento de software, sempre me pego pensando sobre as tendências e novidades das tecnologias que podem ser usadas para <strong>reduzir atrito no dia a dia do dev</strong>.</p>
 <p>Vocês sabiam que existe a possibilidade de adicionar **instruções personalizadas diretamente no seu repositório para agentes de IA?**Basicamente, você pode “ensinar” o Copilot sobre as regras, padrões e estilos do seu projeto, e ele vai gerar sugestões muito mais alinhadas ao que você e sua equipe realmente precisam.</p>
 <p>É como ter um colega de trabalho que já leu toda a documentação do projeto e sabe exatamente o que deve ou não sugerir e esse colega não dorme, não cansa e ainda está sempre pronto pra te ajudar a codar.</p>
 <p>Esse recurso é um passo incrível para transformar o Copilot em algo mais do que apenas um “autocomplete inteligente”: ele vira um <strong>membro ativo da equipe</strong>, moldado pelo contexto que você mesmo fornece.</p>
@@ -462,18 +690,8 @@ Com instruções específicas, você cria arquivos dentro de .github/instruction
 <li>Linkedin: <a href="https://www.linkedin.com/in/raphaelkennedy"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li>Youtube: <a href="https://youtube.com/@raphaelpontes"target="_blank" rel="noopener">@raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Como estruturo minhas Entities no Flutter e por que isso mudou meu jeito de programar</title>
-        <link>http://localhost:1313/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</link>
-        <guid isPermaLink="true">http://localhost:1313/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</guid>
-        <pubDate>Mon, 17 Mar 2025 18:22:49 GMT</pubDate>
-        <description>&lt;p&gt;Fala, dev!&lt;/p&gt;
-&lt;p&gt;Se você já precisou consumir múltiplas APIs em um app Flutter, sabe que a bagunça pode começar rápido. No começo, parece simples: você pega os dados da API, joga direto no modelo e pronto! Mas aí vem aquele momento em que precisa integrar uma segunda API, lidar com mudanças inesperadas no backend ou até mesmo otimizar o carregamento dos dados. E de repente… BOOM💥! Seu código vira um verdadeiro Frankenstein, difícil de entender e ainda mais difícil de manter.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Fala, dev!</p>
+]]></content:encoded></item><item><title>Como estruturo minhas Entities no Flutter e por que isso mudou meu jeito de programar</title><link>https://www.orapha.dev/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</link><guid isPermaLink="true">https://www.orapha.dev/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</guid><pubDate>Mon, 17 Mar 2025 18:22:49 GMT</pubDate><description>&lt;p&gt;Fala, dev!&lt;/p&gt;
+&lt;p&gt;Se você já precisou consumir múltiplas APIs em um app Flutter, sabe que a bagunça pode começar rápido. No começo, parece simples: você pega os dados da API, joga direto no modelo e pronto! Mas aí vem aquele momento em que precisa integrar uma segunda API, lidar com mudanças inesperadas no backend ou até mesmo otimizar o carregamento dos dados. E de repente… BOOM💥! Seu código vira um verdadeiro Frankenstein, difícil de entender e ainda mais difícil de manter.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Fala, dev!</p>
 <p>Se você já precisou consumir múltiplas APIs em um app Flutter, sabe que a bagunça pode começar rápido. No começo, parece simples: você pega os dados da API, joga direto no modelo e pronto! Mas aí vem aquele momento em que precisa integrar uma segunda API, lidar com mudanças inesperadas no backend ou até mesmo otimizar o carregamento dos dados. E de repente… BOOM💥! Seu código vira um verdadeiro Frankenstein, difícil de entender e ainda mais difícil de manter.</p>
 <p>Foi exatamente isso que aconteceu comigo no início da minha jornada. Até que eu descobri a importância de <strong>Entities</strong>, <strong>Adapters</strong> e <strong>DTOs</strong>. Essas três camadas mudaram minha forma de programar e deixaram meus apps mais organizados e fáceis de escalar.</p>
 <p>Hoje quero te contar como estruturo tudo isso e por que essa abordagem pode salvar seu código também.</p>
@@ -640,17 +858,7 @@ Com instruções específicas, você cria arquivos dentro de .github/instruction
 <li>Linkedin: <a href="https://www.linkedin.com/in/raphaelkennedy"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li>Youtube: <a href="https://youtube.com/@raphaelpontes"target="_blank" rel="noopener">@raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>As Preocupações Morais no Desenvolvimento de Tecnologias</title>
-        <link>http://localhost:1313/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</link>
-        <guid isPermaLink="true">http://localhost:1313/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</guid>
-        <pubDate>Fri, 02 Aug 2024 02:30:50 GMT</pubDate>
-        <description>&lt;p&gt;Pessoal, antes de começar este artigo, gostaria de me apresentar: sou um Engenheiro de Software com uma mente curiosa, sempre viajando em reflexões que quero compartilhar com vocês. Recentemente, assisti a um filme sobre o cientista que desenvolveu a bomba atômica, e isso despertou uma série de pensamentos que eu não havia considerado antes. Decidi escrever este artigo porque acredito que minhas preocupações podem “abrir os olhos” de muitos de vocês que estão me lendo.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Pessoal, antes de começar este artigo, gostaria de me apresentar: sou um Engenheiro de Software com uma mente curiosa, sempre viajando em reflexões que quero compartilhar com vocês. Recentemente, assisti a um filme sobre o cientista que desenvolveu a bomba atômica, e isso despertou uma série de pensamentos que eu não havia considerado antes. Decidi escrever este artigo porque acredito que minhas preocupações podem “abrir os olhos” de muitos de vocês que estão me lendo.</p>
+]]></content:encoded></item><item><title>As Preocupações Morais no Desenvolvimento de Tecnologias</title><link>https://www.orapha.dev/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</link><guid isPermaLink="true">https://www.orapha.dev/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</guid><pubDate>Fri, 02 Aug 2024 02:30:50 GMT</pubDate><description>&lt;p&gt;Pessoal, antes de começar este artigo, gostaria de me apresentar: sou um Engenheiro de Software com uma mente curiosa, sempre viajando em reflexões que quero compartilhar com vocês. Recentemente, assisti a um filme sobre o cientista que desenvolveu a bomba atômica, e isso despertou uma série de pensamentos que eu não havia considerado antes. Decidi escrever este artigo porque acredito que minhas preocupações podem “abrir os olhos” de muitos de vocês que estão me lendo.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Pessoal, antes de começar este artigo, gostaria de me apresentar: sou um Engenheiro de Software com uma mente curiosa, sempre viajando em reflexões que quero compartilhar com vocês. Recentemente, assisti a um filme sobre o cientista que desenvolveu a bomba atômica, e isso despertou uma série de pensamentos que eu não havia considerado antes. Decidi escrever este artigo porque acredito que minhas preocupações podem “abrir os olhos” de muitos de vocês que estão me lendo.</p>
 <p><img src="https://cdn-images-1.medium.com/max/310/1*JNmRSfjJQHuXj3xFelGegQ@2x.jpeg" alt=""  loading="lazy" /></p>
 <h3>Contextualizando<span class="hx:absolute hx:-mt-20" id="contextualizando"></span>
     <a href="#contextualizando" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Assim como apresentado no filme “Oppenheimer”, podemos refletir sobre a responsabilidade do Projeto Manhattan, que resultou na criação da bomba atômica. Essa invenção acabou com milhares de vidas tanto a curto quanto a longo prazo. A responsabilidade moral de quem desenvolve tecnologias com potencial destrutivo é um tópico crucial que precisamos discutir.</p>
@@ -682,24 +890,10 @@ Com instruções específicas, você cria arquivos dentro de .github/instruction
 <li>Linkedin: <a href="https://www.linkedin.com/in/raphaelkennedy"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li>Youtube: <a href="https://youtube.com/@raphaelpontes"target="_blank" rel="noopener">raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>software-development</category>
-            <category>tecnologia</category>
-            <category>intelligence-artificielle</category>
-        
-      </item>
-    
-      <item>
-        <title>Unlocking the Secrets of SOLID: A Beginner’s Guide</title>
-        <link>http://localhost:1313/2024/06/15/unlocking-the-secrets-of-solid-a-beginners-guide/</link>
-        <guid isPermaLink="true">http://localhost:1313/2024/06/15/unlocking-the-secrets-of-solid-a-beginners-guide/</guid>
-        <pubDate>Sat, 15 Jun 2024 22:22:56 GMT</pubDate>
-        <description>&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1024/0*nXVTBCTQzQWg7Ui-.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+]]></content:encoded><category>software-development</category><category>tecnologia</category><category>intelligence-artificielle</category></item><item><title>Unlocking the Secrets of SOLID: A Beginner’s Guide</title><link>https://www.orapha.dev/2024/06/15/unlocking-the-secrets-of-solid-a-beginners-guide/</link><guid isPermaLink="true">https://www.orapha.dev/2024/06/15/unlocking-the-secrets-of-solid-a-beginners-guide/</guid><pubDate>Sat, 15 Jun 2024 22:22:56 GMT</pubDate><description>&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/1024/0*nXVTBCTQzQWg7Ui-.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
 &lt;p&gt;SOLID, an acronym for five fundamental principles of software design, is your treasure map to creating robust, flexible, and maintainable systems. If you’ve ever come across “spaghetti” code or feel lost amidst complex classes, don’t worry! In this guide, we’ll unravel each SOLID principle in a simple and fun way, using real-life examples to make learning easier.&lt;/p&gt;
-&lt;h3&gt;S — The Secret to Simplicity: Single Responsibility Principle&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;sthe-secret-to-simplicity-single-responsibility-principle&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#sthe-secret-to-simplicity-single-responsibility-principle&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/903/0*gEjlvFcaH0tD56pX&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p><img src="https://cdn-images-1.medium.com/max/1024/0*nXVTBCTQzQWg7Ui-.png" alt=""  loading="lazy" /></p>
+&lt;h3&gt;S — The Secret to Simplicity: Single Responsibility Principle&lt;span class="hx:absolute hx:-mt-20" id="sthe-secret-to-simplicity-single-responsibility-principle"&gt;&lt;/span&gt;
+&lt;a href="#sthe-secret-to-simplicity-single-responsibility-principle" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/903/0*gEjlvFcaH0tD56pX" alt="" loading="lazy" /&gt;&lt;/p&gt;</description><content:encoded><![CDATA[<p><img src="https://cdn-images-1.medium.com/max/1024/0*nXVTBCTQzQWg7Ui-.png" alt=""  loading="lazy" /></p>
 <p>SOLID, an acronym for five fundamental principles of software design, is your treasure map to creating robust, flexible, and maintainable systems. If you’ve ever come across “spaghetti” code or feel lost amidst complex classes, don’t worry! In this guide, we’ll unravel each SOLID principle in a simple and fun way, using real-life examples to make learning easier.</p>
 <h3>S — The Secret to Simplicity: Single Responsibility Principle<span class="hx:absolute hx:-mt-20" id="sthe-secret-to-simplicity-single-responsibility-principle"></span>
     <a href="#sthe-secret-to-simplicity-single-responsibility-principle" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><img src="https://cdn-images-1.medium.com/max/903/0*gEjlvFcaH0tD56pX" alt=""  loading="lazy" /></p>
@@ -858,25 +1052,9 @@ Com instruções específicas, você cria arquivos dentro de .github/instruction
 <li><strong>Linkedin</strong>: <a href="https://www.linkedin.com/in/raphaelkennedy/"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li><strong>Youtube:</strong> <a href="http://www.youtube.com/@raphaelpontes"target="_blank" rel="noopener">raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>solid</category>
-            <category>clean-code</category>
-            <category>development</category>
-            <category>software-development</category>
-            <category>architecture</category>
-        
-      </item>
-    
-      <item>
-        <title>Code Generators in Flutter: What’s Cheap and What’s Expensive?</title>
-        <link>http://localhost:1313/2024/06/15/code-generators-in-flutter-whats-cheap-and-what-s-expensive/</link>
-        <guid isPermaLink="true">http://localhost:1313/2024/06/15/code-generators-in-flutter-whats-cheap-and-what-s-expensive/</guid>
-        <pubDate>Sat, 15 Jun 2024 16:50:54 GMT</pubDate>
-        <description>&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1024/0*pDAKNdFlzpFh6Mkg.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+]]></content:encoded><category>solid</category><category>clean-code</category><category>development</category><category>software-development</category><category>architecture</category></item><item><title>Code Generators in Flutter: What’s Cheap and What’s Expensive?</title><link>https://www.orapha.dev/2024/06/15/code-generators-in-flutter-whats-cheap-and-what-s-expensive/</link><guid isPermaLink="true">https://www.orapha.dev/2024/06/15/code-generators-in-flutter-whats-cheap-and-what-s-expensive/</guid><pubDate>Sat, 15 Jun 2024 16:50:54 GMT</pubDate><description>&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/1024/0*pDAKNdFlzpFh6Mkg.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
 &lt;p&gt;In the dynamic world of Flutter development, tools and libraries emerge every day, promising to make developers’ lives easier and speed up the process of creating applications. Among them, code generators stand out for their ability to automate repetitive tasks and generate boilerplate code, freeing up time for what really matters: business logic and user experience.&lt;/p&gt;
-&lt;p&gt;But is this promise of productivity and efficiency really all it seems? Could it be that code generators bring with them some challenges and disadvantages that can, in the long run, compromise the quality and sustainability of your code?&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p><img src="https://cdn-images-1.medium.com/max/1024/0*pDAKNdFlzpFh6Mkg.png" alt=""  loading="lazy" /></p>
+&lt;p&gt;But is this promise of productivity and efficiency really all it seems? Could it be that code generators bring with them some challenges and disadvantages that can, in the long run, compromise the quality and sustainability of your code?&lt;/p&gt;</description><content:encoded><![CDATA[<p><img src="https://cdn-images-1.medium.com/max/1024/0*pDAKNdFlzpFh6Mkg.png" alt=""  loading="lazy" /></p>
 <p>In the dynamic world of Flutter development, tools and libraries emerge every day, promising to make developers’ lives easier and speed up the process of creating applications. Among them, code generators stand out for their ability to automate repetitive tasks and generate boilerplate code, freeing up time for what really matters: business logic and user experience.</p>
 <p>But is this promise of productivity and efficiency really all it seems? Could it be that code generators bring with them some challenges and disadvantages that can, in the long run, compromise the quality and sustainability of your code?</p>
 <p>In this article, we will delve into this controversy and analyze the pros and cons of code generators in Flutter, exploring tools such as MobX, Riverpod, Injectable, AutoRoute and others that rely on build_runner to generate code. We will address the points of view that defend the practicality and agility provided by these tools, but we will also give voice to the critics who warn of the dangers of “cheap that ends up being expensive”.</p>
@@ -960,26 +1138,10 @@ Com instruções específicas, você cria arquivos dentro de .github/instruction
 <li><strong>Linkedin</strong>: <a href="https://www.linkedin.com/in/raphaelkennedy/"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li><strong>Youtube:</strong> <a href="http://www.youtube.com/@raphaelpontes"target="_blank" rel="noopener">raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>code-generator</category>
-            <category>build-runner</category>
-            <category>app-development</category>
-            <category>flutter</category>
-            <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>Increase security in your Flutter applications</title>
-        <link>http://localhost:1313/2024/05/18/increase-security-in-your-flutter-applications/</link>
-        <guid isPermaLink="true">http://localhost:1313/2024/05/18/increase-security-in-your-flutter-applications/</guid>
-        <pubDate>Sat, 18 May 2024 00:01:19 GMT</pubDate>
-        <description>&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/696/0*TRlO7z09Bs7U1b8I.jpg&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;In today’s digital world, application security is an absolute priority. Developing a robust and secure Flutter app is crucial to protecting user data and maintaining trust in your product. If you are starting your Flutter application security journey, I recommend starting by reading my previous article, where I explore essential practices in Gray Box mode to ensure the security of your application (&lt;a href=&#34;https://raphaelkennedy.medium.com/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode-09dd58651727&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link to article&lt;/a&gt;).&lt;/p&gt;
-&lt;h3&gt;Security Analysis: Key Findings&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;security-analysis-key-findings&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#security-analysis-key-findings&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;During the security assessment of Flutter applications, together with my experience in the market, I identified several steps that allow locating possible vulnerabilities, which I will talk more about below.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p><img src="https://cdn-images-1.medium.com/max/696/0*TRlO7z09Bs7U1b8I.jpg" alt=""  loading="lazy" /></p>
+]]></content:encoded><category>code-generator</category><category>build-runner</category><category>app-development</category><category>flutter</category><category>android</category></item><item><title>Increase security in your Flutter applications</title><link>https://www.orapha.dev/2024/05/18/increase-security-in-your-flutter-applications/</link><guid isPermaLink="true">https://www.orapha.dev/2024/05/18/increase-security-in-your-flutter-applications/</guid><pubDate>Sat, 18 May 2024 00:01:19 GMT</pubDate><description>&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/696/0*TRlO7z09Bs7U1b8I.jpg" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;In today’s digital world, application security is an absolute priority. Developing a robust and secure Flutter app is crucial to protecting user data and maintaining trust in your product. If you are starting your Flutter application security journey, I recommend starting by reading my previous article, where I explore essential practices in Gray Box mode to ensure the security of your application (&lt;a href="https://raphaelkennedy.medium.com/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode-09dd58651727"target="_blank" rel="noopener"&gt;link to article&lt;/a&gt;).&lt;/p&gt;
+&lt;h3&gt;Security Analysis: Key Findings&lt;span class="hx:absolute hx:-mt-20" id="security-analysis-key-findings"&gt;&lt;/span&gt;
+&lt;a href="#security-analysis-key-findings" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;During the security assessment of Flutter applications, together with my experience in the market, I identified several steps that allow locating possible vulnerabilities, which I will talk more about below.&lt;/p&gt;</description><content:encoded><![CDATA[<p><img src="https://cdn-images-1.medium.com/max/696/0*TRlO7z09Bs7U1b8I.jpg" alt=""  loading="lazy" /></p>
 <p>In today’s digital world, application security is an absolute priority. Developing a robust and secure Flutter app is crucial to protecting user data and maintaining trust in your product. If you are starting your Flutter application security journey, I recommend starting by reading my previous article, where I explore essential practices in Gray Box mode to ensure the security of your application (<a href="https://raphaelkennedy.medium.com/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode-09dd58651727"target="_blank" rel="noopener">link to article</a>).</p>
 <h3>Security Analysis: Key Findings<span class="hx:absolute hx:-mt-20" id="security-analysis-key-findings"></span>
     <a href="#security-analysis-key-findings" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>During the security assessment of Flutter applications, together with my experience in the market, I identified several steps that allow locating possible vulnerabilities, which I will talk more about below.</p>
@@ -1012,27 +1174,11 @@ Study, learn and let’s build a safer digital future, application by applicatio
 <li><strong>Linkedin</strong>: <a href="https://www.linkedin.com/in/raphaelkennedy/"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li><strong>Youtube:</strong> <a href="http://www.youtube.com/@raphaelpontes"target="_blank" rel="noopener">raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>security</category>
-            <category>android</category>
-            <category>ios</category>
-            <category>development</category>
-            <category>flutter</category>
-        
-      </item>
-    
-      <item>
-        <title>Ensuring the Security of Your Flutter Application: Essential Practices in Gray Box Mode</title>
-        <link>http://localhost:1313/2024/05/03/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode/</link>
-        <guid isPermaLink="true">http://localhost:1313/2024/05/03/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode/</guid>
-        <pubDate>Fri, 03 May 2024 22:06:42 GMT</pubDate>
-        <description>&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1024/1*YGD5-p1GoR6sEgUPjeW-1w.jpeg&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+]]></content:encoded><category>security</category><category>android</category><category>ios</category><category>development</category><category>flutter</category></item><item><title>Ensuring the Security of Your Flutter Application: Essential Practices in Gray Box Mode</title><link>https://www.orapha.dev/2024/05/03/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode/</link><guid isPermaLink="true">https://www.orapha.dev/2024/05/03/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode/</guid><pubDate>Fri, 03 May 2024 22:06:42 GMT</pubDate><description>&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/1024/1*YGD5-p1GoR6sEgUPjeW-1w.jpeg" alt="" loading="lazy" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Image generated for openart.ai&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Developing a robust and secure Flutter app is crucial to protecting user data and maintaining trust in your product. An EHT (Ethical Hacking Test) security analysis in Gray Box mode is an excellent way to identify and correct possible vulnerabilities before they become bigger problems. In this article, we’ll explore key best practices to ensure your Flutter app passes this review successfully.&lt;/p&gt;
-&lt;h3&gt;What is this EHT (Ethical Hacking Test) security analysis in Gray Box mode&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;what-is-this-eht-ethical-hacking-test-security-analysis-in-gray-box-mode&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#what-is-this-eht-ethical-hacking-test-security-analysis-in-gray-box-mode&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;EHT, also known as ethical hacking testing, is a process in which security professionals, known as ethical hackers, simulate cyberattacks against an information system or application to identify and fix security vulnerabilities before they are exploited by malicious attackers.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p><img src="https://cdn-images-1.medium.com/max/1024/1*YGD5-p1GoR6sEgUPjeW-1w.jpeg" alt=""  loading="lazy" /></p>
+&lt;h3&gt;What is this EHT (Ethical Hacking Test) security analysis in Gray Box mode&lt;span class="hx:absolute hx:-mt-20" id="what-is-this-eht-ethical-hacking-test-security-analysis-in-gray-box-mode"&gt;&lt;/span&gt;
+&lt;a href="#what-is-this-eht-ethical-hacking-test-security-analysis-in-gray-box-mode" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;EHT, also known as ethical hacking testing, is a process in which security professionals, known as ethical hackers, simulate cyberattacks against an information system or application to identify and fix security vulnerabilities before they are exploited by malicious attackers.&lt;/p&gt;</description><content:encoded><![CDATA[<p><img src="https://cdn-images-1.medium.com/max/1024/1*YGD5-p1GoR6sEgUPjeW-1w.jpeg" alt=""  loading="lazy" /></p>
 <p><em>Image generated for openart.ai</em></p>
 <p>Developing a robust and secure Flutter app is crucial to protecting user data and maintaining trust in your product. An EHT (Ethical Hacking Test) security analysis in Gray Box mode is an excellent way to identify and correct possible vulnerabilities before they become bigger problems. In this article, we’ll explore key best practices to ensure your Flutter app passes this review successfully.</p>
 <h3>What is this EHT (Ethical Hacking Test) security analysis in Gray Box mode<span class="hx:absolute hx:-mt-20" id="what-is-this-eht-ethical-hacking-test-security-analysis-in-gray-box-mode"></span>
@@ -1100,27 +1246,11 @@ Study, learn and let’s build a safer digital future, application by applicatio
 <li><strong>Linkedin</strong>: <a href="https://www.linkedin.com/in/raphaelkennedy/"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li><strong>Youtube:</strong> <a href="http://www.youtube.com/@raphaelpontes"target="_blank" rel="noopener">raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>android</category>
-            <category>cybersecurity</category>
-            <category>ios</category>
-            <category>flutter</category>
-            <category>hacking</category>
-        
-      </item>
-    
-      <item>
-        <title>How to Integrate Flutter Modular with Flutter Bloc (Cubit) in a Simple Way and Using Custom States…</title>
-        <link>http://localhost:1313/2024/05/03/how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states/</link>
-        <guid isPermaLink="true">http://localhost:1313/2024/05/03/how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states/</guid>
-        <pubDate>Fri, 03 May 2024 16:43:03 GMT</pubDate>
-        <description>&lt;h3&gt;How to Integrate Flutter Modular with Flutter Bloc (Cubit) in a Simple Way and Using Custom States (Classes)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states-classes&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states-classes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href=&#34;https://medium.com/@lugpontes/como-integrar-flutter-modular-com-flutter-bloc-cubit-de-forma-simples-e-usando-estados-daf72985b24a?postPublishedType=repub&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ARTICLE IN PORTUGUESE&lt;/a&gt;&lt;/p&gt;
+]]></content:encoded><category>android</category><category>cybersecurity</category><category>ios</category><category>flutter</category><category>hacking</category></item><item><title>How to Integrate Flutter Modular with Flutter Bloc (Cubit) in a Simple Way and Using Custom States…</title><link>https://www.orapha.dev/2024/05/03/how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states/</link><guid isPermaLink="true">https://www.orapha.dev/2024/05/03/how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states/</guid><pubDate>Fri, 03 May 2024 16:43:03 GMT</pubDate><description>&lt;h3&gt;How to Integrate Flutter Modular with Flutter Bloc (Cubit) in a Simple Way and Using Custom States (Classes)&lt;span class="hx:absolute hx:-mt-20" id="how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states-classes"&gt;&lt;/span&gt;
+&lt;a href="#how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states-classes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href="https://medium.com/@lugpontes/como-integrar-flutter-modular-com-flutter-bloc-cubit-de-forma-simples-e-usando-estados-daf72985b24a?postPublishedType=repub"target="_blank" rel="noopener"&gt;ARTICLE IN PORTUGUESE&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The world of Flutter libs is constantly evolving. But what if we could combine the power of Flutter Modular with the simplicity of Flutter Bloc (Cubit)? In this article, we will explore exactly that and uncover the secrets of this powerful integration.&lt;/p&gt;
-&lt;h3&gt;Flutter Modular&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;flutter-modular&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#flutter-modular&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Flutter Modular is a package that simplifies the organization and modularization of Flutter projects. It offers a module-based structure. In addition to providing dependency injection and route navigation.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h3>How to Integrate Flutter Modular with Flutter Bloc (Cubit) in a Simple Way and Using Custom States (Classes)<span class="hx:absolute hx:-mt-20" id="how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states-classes"></span>
+&lt;h3&gt;Flutter Modular&lt;span class="hx:absolute hx:-mt-20" id="flutter-modular"&gt;&lt;/span&gt;
+&lt;a href="#flutter-modular" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Flutter Modular is a package that simplifies the organization and modularization of Flutter projects. It offers a module-based structure. In addition to providing dependency injection and route navigation.&lt;/p&gt;</description><content:encoded><![CDATA[<h3>How to Integrate Flutter Modular with Flutter Bloc (Cubit) in a Simple Way and Using Custom States (Classes)<span class="hx:absolute hx:-mt-20" id="how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states-classes"></span>
     <a href="#how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states-classes" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><a href="https://medium.com/@lugpontes/como-integrar-flutter-modular-com-flutter-bloc-cubit-de-forma-simples-e-usando-estados-daf72985b24a?postPublishedType=repub"target="_blank" rel="noopener">ARTICLE IN PORTUGUESE</a></p>
 <p>The world of Flutter libs is constantly evolving. But what if we could combine the power of Flutter Modular with the simplicity of Flutter Bloc (Cubit)? In this article, we will explore exactly that and uncover the secrets of this powerful integration.</p>
 <h3>Flutter Modular<span class="hx:absolute hx:-mt-20" id="flutter-modular"></span>
@@ -1403,26 +1533,10 @@ Study, learn and let’s build a safer digital future, application by applicatio
 <li><strong>Youtube:</strong> <a href="http://www.youtube.com/@raphaelpontes"target="_blank" rel="noopener">raphaelpontes</a></li>
 </ul>
 <p><img src="https://cdn-images-1.medium.com/max/1024/1*d4EcNSpiPllJiY5ItcDYww.png" alt=""  loading="lazy" /></p>
-]]></content:encoded>
-        
-            <category>state-management</category>
-            <category>android-app-development</category>
-            <category>flutter</category>
-            <category>integration</category>
-            <category>ios-app-development</category>
-        
-      </item>
-    
-      <item>
-        <title>Sobre</title>
-        <link>http://localhost:1313/about/</link>
-        <guid isPermaLink="true">http://localhost:1313/about/</guid>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 GMT</pubDate>
-        <description>&lt;h2&gt;Quem sou&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;quem-sou&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#quem-sou&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Sou Raphael Pontes, engenheiro de software sênior, com mais de uma década de experiência construindo produtos, participando de startups, liderando iniciativas técnicas e entregando software em contextos bem diferentes, do freela ao produto em operação.&lt;/p&gt;
-&lt;h2&gt;Minha trajetória&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;minha-trajetória&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#minha-trajet%c3%b3ria&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Minha base passa por desenvolvimento web e mobile, com foco forte em Flutter, Laravel, APIs REST e arquitetura de software. Ao longo dos anos, também trabalhei com liderança técnica, business intelligence, testes, clean architecture, bancos relacionais e não relacionais, Firebase, cloud functions, UI/UX e planejamento e execução de projetos.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h2>Quem sou<span class="hx:absolute hx:-mt-20" id="quem-sou"></span>
+]]></content:encoded><category>state-management</category><category>android-app-development</category><category>flutter</category><category>integration</category><category>ios-app-development</category></item><item><title>Sobre</title><link>https://www.orapha.dev/about/</link><guid isPermaLink="true">https://www.orapha.dev/about/</guid><pubDate>Mon, 01 Jan 0001 00:00:00 GMT</pubDate><description>&lt;h2&gt;Quem sou&lt;span class="hx:absolute hx:-mt-20" id="quem-sou"&gt;&lt;/span&gt;
+&lt;a href="#quem-sou" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Sou Raphael Pontes, engenheiro de software sênior, com mais de uma década de experiência construindo produtos, participando de startups, liderando iniciativas técnicas e entregando software em contextos bem diferentes, do freela ao produto em operação.&lt;/p&gt;
+&lt;h2&gt;Minha trajetória&lt;span class="hx:absolute hx:-mt-20" id="minha-trajetória"&gt;&lt;/span&gt;
+&lt;a href="#minha-trajet%c3%b3ria" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Minha base passa por desenvolvimento web e mobile, com foco forte em Flutter, Laravel, APIs REST e arquitetura de software. Ao longo dos anos, também trabalhei com liderança técnica, business intelligence, testes, clean architecture, bancos relacionais e não relacionais, Firebase, cloud functions, UI/UX e planejamento e execução de projetos.&lt;/p&gt;</description><content:encoded><![CDATA[<h2>Quem sou<span class="hx:absolute hx:-mt-20" id="quem-sou"></span>
     <a href="#quem-sou" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Sou Raphael Pontes, engenheiro de software sênior, com mais de uma década de experiência construindo produtos, participando de startups, liderando iniciativas técnicas e entregando software em contextos bem diferentes, do freela ao produto em operação.</p>
 <h2>Minha trajetória<span class="hx:absolute hx:-mt-20" id="minha-trajetória"></span>
     <a href="#minha-trajet%c3%b3ria" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Minha base passa por desenvolvimento web e mobile, com foco forte em Flutter, Laravel, APIs REST e arquitetura de software. Ao longo dos anos, também trabalhei com liderança técnica, business intelligence, testes, clean architecture, bancos relacionais e não relacionais, Firebase, cloud functions, UI/UX e planejamento e execução de projetos.</p>
@@ -1438,10 +1552,4 @@ Study, learn and let’s build a safer digital future, application by applicatio
 <li>YouTube: <a href="https://www.youtube.com/raphaelpontes"target="_blank" rel="noopener">youtube.com/raphaelpontes</a></li>
 <li>Instagram: <a href="http://instagram.com/raphaelkennedy"target="_blank" rel="noopener">@raphaelkennedy</a></li>
 </ul>
-]]></content:encoded>
-        
-      </item>
-    
-  </channel>
-</rss>
-
+]]></content:encoded></item></channel></rss>
