@@ -279,7 +279,7 @@ Essa etapa pega o que foi definido antes e executa a implementação seguindo o 
 
 É aqui que muita gente se empolga e acha que acabou o trabalho. Para mim, é justamente o contrário. É aqui que começa a parte mais importante: revisar o que foi feito com rigor e sem passar pano.
 
-Porque uma implementação pode seguir o plano e ainda assim sair ruim. Pode sair com UX torta, estrutura desnecessária, abstração mal colocada ou pedaço pela metade. O próprio exemplo do vídeo que você me passou mostra isso: a aplicação saiu funcional em parte, mas o filtro prometido não estava de fato implementado na interface final.
+Porque uma implementação pode seguir o plano e ainda assim sair ruim. Pode sair com UX torta, estrutura desnecessária, abstração mal colocada ou pedaço pela metade.
 
 Isso é um ótimo lembrete. O processo melhora muito a consistência, mas não elimina revisão humana.
 
