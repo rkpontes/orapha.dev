@@ -150,7 +150,11 @@ No Codex com skills, ficaria equivalente a:
 $speckit-constitution
 ```
 
-Aqui eu não descrevo tela nem endpoint. Eu descrevo regra de qualidade e critério de decisão. Por exemplo:
+Aqui eu não descrevo tela nem endpoint. Eu descrevo regra de qualidade e critério de decisão.
+
+Dependendo do contexto, essa etapa também pode registrar regras operacionais e requisitos transversais do projeto, como política de testes, fluxo de branch e exigências mínimas de segurança. Se isso muda a forma como o trabalho deve ser construído e revisado, faz sentido declarar já na `constitution`.
+
+Por exemplo:
 
 ```text
 Crie princípios focados em clean code. O projeto deve ser pequeno e simples. Não deve ter testes automatizados nesta primeira versão.
@@ -558,3 +562,18 @@ E, para mim, esse é o ponto.
 
 Não se trata de terceirizar o desenvolvimento para a IA.
 Se trata de criar um processo em que eu continuo pensando como engenheiro, mas usando a IA para ganhar braço sem soltar o juízo.
+
+## Série de aprofundamento
+
+Se você quiser acompanhar os textos em que eu aprofundo cada etapa separadamente, esta é a sequência:
+
+- [No Spec-Driven Development, tudo começa pelos princípios](/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/)  
+  Lançamento: 10 de abril de 2026
+- [No Spec-Driven Development, `specify` é onde a ambiguidade começa a morrer](/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/)  
+  Lançamento: 17 de abril de 2026
+- [No Spec-Driven Development, `plan` é onde a especificação vira estratégia de execução](/2026/04/24/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/)  
+  Lançamento: 24 de abril de 2026
+- [No Spec-Driven Development, `tasks` é onde o plano vira unidades concretas de trabalho](/2026/05/01/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/)  
+  Lançamento: 01 de maio de 2026
+- [No Spec-Driven Development, `implement` é onde todo o resto vira código](/2026/05/08/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/)  
+  Lançamento: 08 de maio de 2026
