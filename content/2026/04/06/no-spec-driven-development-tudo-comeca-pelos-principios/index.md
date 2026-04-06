@@ -1,6 +1,6 @@
 ---
 title: "No Spec-Driven Development, tudo começa pelos princípios"
-date: '2026-04-10T10:00:00-03:00'
+date: '2026-04-06T10:00:00-03:00'
 slug: no-spec-driven-development-tudo-comeca-pelos-principios
 tags:
   - ia
