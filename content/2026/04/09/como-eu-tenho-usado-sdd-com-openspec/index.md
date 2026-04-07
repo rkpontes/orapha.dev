@@ -1,6 +1,6 @@
 ---
 title: "Como eu tenho usado Spec-Driven Development com OpenSpec"
-date: '2026-04-07T10:00:00-03:00'
+date: '2026-04-09T10:00:00-03:00'
 slug: como-eu-tenho-usado-sdd-com-openspec
 tags:
   - ia
