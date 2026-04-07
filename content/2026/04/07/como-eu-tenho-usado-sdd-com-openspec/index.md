@@ -20,203 +20,289 @@ quanto mais importante o projeto, mais perigoso é ficar se guiando por prompt s
 
 No começo até funciona. Você pede uma coisa, ajusta ali, muda outra aqui e vai levando.
 
-Mas depois começam a aparecer umas coisas chatas:
+Mas depois começa a degringolar.
 
-o agente decide coisa que você não pediu, a arquitetura vai ficando meio torta, você passa mais tempo refatorando do que construindo… e qualquer mudança vira uma mini negociação.
+O agente decide coisa que você não pediu, a arquitetura vai ficando meio torta, você passa mais tempo refatorando do que construindo… e qualquer mudança vira uma mini negociação.
 
 E foi aqui que a ficha caiu pra mim:
 
-**o problema não é a IA.  
+**o problema não é a IA.
 é a falta de estrutura entre intenção e código.**
-
-Por um tempo, eu tentei resolver isso com Spec-Driven Development usando Spec Kit. Inclusive tem um artigo aqui no blog sobre isso.
-
-- [No Spec-Driven Development, tudo começa pelos princípios](/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos)
-
-A ideia faz sentido demais, e na prática ajuda mesmo a organizar o processo.
-
-Só que tinha uma coisa que começou a me incomodar com o tempo: o volume de tokens.
-
-Cada etapa gerava muito conteúdo, muito detalhamento, muito overhead. E dependendo do fluxo, os tokens iam embora ligeiro demais, parecia água escorrendo.
-
-Pra alguns contextos isso pode até fazer sentido. Mas, no meu dia a dia, começou a pesar mais do que ajudar.
-
-Foi aí que eu comecei a testar o OpenSpec.
-
-O que me chamou atenção nele foi justamente o oposto: mais leve, mais direto, menos verboso.
-
-Ainda tô explorando, mas a expectativa é simples:
-
-manter a estrutura do SDD, sem ver os tokens se acabando no meio do caminho.
-
-Não como mais um processo burocrático, mas como um jeito simples de parar de fazer tudo no improviso.
 
 ---
 
-## O OpenSpec na prática
+## Quando o Spec Kit começou a pesar
 
-Antes de sair usando, você precisa instalar o OpenSpec no seu ambiente.
+Por um tempo, eu tentei resolver isso com Spec-Driven Development usando Spec Kit.
 
-Ele é bem mais simples que outras ferramentas nesse sentido, porque é baseado em Node.
+Inclusive tem um artigo aqui no blog sobre isso:
 
-Você pode instalar globalmente com:
+* [No Spec-Driven Development, tudo começa pelos princípios](/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos)
+
+A ideia é boa. Funciona.
+
+Mas no uso real… começou a incomodar.
+
+Principalmente por um motivo:
+
+👉 **tokens**
+
+Cada etapa gerava muito conteúdo, muito detalhamento, muito overhead.
+
+E dependendo do fluxo, os tokens iam embora ligeiro demais, parecia água escorrendo.
+
+Pra times grandes, talvez isso faça sentido.
+
+Mas no meu dia a dia, começou a ficar pesado demais.
+
+---
+
+## Por que eu fui testar o OpenSpec
+
+Foi aí que eu comecei a testar o OpenSpec.
+
+O que me chamou atenção nele foi justamente o oposto:
+
+* mais leve
+* mais direto
+* menos verboso
+
+A proposta é simples:
+
+manter a estrutura do Spec-Driven Development
+sem transformar isso num processo pesado
+
+E isso, pra mim, fez muito mais sentido.
+
+---
+
+## O OpenSpec na prática (instalação + uso)
+
+Antes de tudo, você instala:
 
 ```bash
 npm install -g @fission-ai/openspec@latest
 ```
 
-Depois disso, entra no diretório do seu projeto e roda:
+Depois, no seu projeto:
 
 ```bash
 openspec init
 ```
 
-Isso já configura o básico e prepara o projeto pra trabalhar com o fluxo do OpenSpec.
+Isso já prepara o ambiente.
 
-A partir daí, você não fica usando CLI direto o tempo todo — você passa a interagir com ele via comandos dentro do agente (tipo Claude Code, Codex, etc).
+Ele cria a estrutura:
 
-E aqui é onde entra a parte interessante.
+* `openspec/specs` → fonte de verdade do sistema
+* `openspec/changes` → mudanças em andamento
 
-O OpenSpec gira basicamente em três comandos:
+Depois disso, você praticamente para de usar CLI.
 
-```
-/opsx:propose
-/opsx:apply
-/opsx:archive
-```
-
-E, sinceramente, só isso já resolve muita coisa.
-
-A ideia é simples: você define o que quer fazer, implementa em cima disso e depois consolida o aprendizado.
-
-Sem ficar criando um monte de etapa só pra parecer organizado.
+Você passa a usar comandos dentro do agente (Claude Code, Codex, etc).
 
 ---
 
-## Como eu tenho usado no dia a dia
+## O fluxo básico (o que você realmente usa)
 
-Quando vou começar uma mudança, eu uso o `/opsx:propose` pra descrever a intenção.
+No dia a dia, você só precisa disso aqui:
 
-Algo tipo:
+```
+/opsx:propose → /opsx:apply → /opsx:archive
+```
+
+Sem complicação.
+
+E o mais interessante:
+
+o OpenSpec não trabalha com “fases travadas”.
+
+Ele trabalha com **ações**.
+
+Você pode voltar, ajustar, refazer, sem ficar preso num fluxo rígido.
+
+---
+
+## Como eu uso no dia a dia
+
+Quando vou começar uma mudança, faço assim:
 
 ```
 /opsx:propose adicionar filtro de status na listagem de pedidos
 ```
 
+A partir disso, ele gera:
 
-A partir disso, o OpenSpec já organiza a coisa pra mim: gera proposta, spec, design e tasks, tudo dentro de uma pasta `change`.
+* proposal (por que isso existe)
+* specs (o que deve acontecer)
+* design (como será feito)
+* tasks (passo a passo)
 
-Isso aqui já resolve um problema grande, que é tirar a decisão da cabeça e colocar em algo explícito, um template.
+Tudo dentro de uma change.
 
-Porque enquanto tá só na cabeça, cada pessoa (ou o próprio agente) interpreta de um jeito.
+E isso aqui resolve um problema enorme:
 
-Depois disso, eu reviso. Não é porque a IA gerou que tá certo.
+👉 tirar a decisão da cabeça e tornar explícito
 
-Aí sim eu parto pro `/opsx:apply`.
+Porque enquanto tá na cabeça, cada um interpreta de um jeito.
 
-Nessa etapa, o agente segue as tasks e vai implementando passo a passo, sem eu precisar ficar guiando linha por linha.
+Depois disso, eu reviso.
 
-E aqui tem uma diferença grande em relação ao jeito tradicional:
+E só depois disso eu rodo:
 
-eu não tô mais pedindo código no escuro.  
-eu tô executando um plano.
+```
+/opsx:apply
+```
 
-Quando termina, eu uso o `/opsx:archive`.
+Aí o agente executa as tasks.
 
-Isso pega tudo que foi feito, transforma em conhecimento permanente e atualiza as specs do projeto.
+Aqui muda completamente o jogo:
 
-Na prática, isso resolve um problema que todo mundo já passou:
+eu não tô mais pedindo código
+eu tô executando um plano
 
-decisão que se perde com o tempo.
+Quando termina:
 
-É tipo aquele dev que constrói um módulo inteiro e depois sai da empresa… e ninguém sabe direito como aquilo funciona.
+```
+/opsx:archive
+```
 
-Aqui, pelo menos, o conhecimento fica registrado.
+Isso consolida tudo e atualiza as specs do projeto.
+
+Ou seja:
+
+👉 o sistema aprende com o que você fez
+
+---
+
+## Onde a doc do OpenSpec entra de verdade
+
+Uma coisa que eu gostei é que o OpenSpec não te força a usar tudo.
+
+Mas se você quiser aprofundar, ele tem mais comandos:
+
+* `/opsx:explore` → entender problema antes de implementar
+* `/opsx:new` → criar change manualmente
+* `/opsx:continue` → criar artefatos passo a passo
+* `/opsx:ff` → gerar tudo de uma vez
+* `/opsx:verify` → validar se implementação bate com spec
+
+Mas aqui vai o ponto importante:
+
+👉 você não precisa disso pra começar
+
+---
+
+## Quando usar cada coisa (sem frescura)
+
+### Use o fluxo simples quando:
+
+* já sabe o que quer fazer
+* é feature direta
+* quer velocidade
+
+👉 `/opsx:propose → apply → archive`
+
+---
+
+### Use `/opsx:explore` quando:
+
+* você não sabe o problema direito
+* é performance, arquitetura, bug estranho
+
+👉 evita sair codando no escuro
+
+---
+
+### `/opsx:ff` vs `/opsx:continue`
+
+* `/opsx:ff` → rápido, cria tudo
+* `/opsx:continue` → mais controle
+
+Minha regra:
+
+se sei o que quero → ff
+se ainda tô pensando → continue
+
+---
+
+### `/opsx:verify` (subestimado)
+
+Esse aqui é forte.
+
+Ele verifica:
+
+* se tudo foi implementado
+* se bate com a spec
+* se a arquitetura faz sentido
+
+Não bloqueia.
+
+Mas evita fechar coisa errada.
 
 ---
 
 ## O que muda na prática
 
-Sem isso, o fluxo é o clássico:
+Sem isso:
 
-chega um card, o dev interpreta do jeito dele, começa a implementar, as dúvidas aparecem no meio do caminho e as decisões vão sendo tomadas no improviso.
+* cada dev interpreta do seu jeito
+* decisões no improviso
+* retrabalho constante
 
-Resultado: inconsistência, retrabalho e conhecimento espalhado.
+Com OpenSpec:
 
-Com o OpenSpec, a coisa fica mais alinhada:
+* intenção clara
+* execução baseada em plano
+* conhecimento registrado
 
-você define a intenção, gera uma spec, implementa em cima disso e depois consolida o que foi feito.
+Resultado:
 
-Resultado: menos ambiguidade, mais previsibilidade e menos retrabalho.
-
----
-
-## Onde ele faz mais sentido
-
-Pelo que eu tenho usado até aqui, o OpenSpec funciona melhor quando:
-
-você já sabe o que tá fazendo, o time é pequeno (ou você tá solo), e você quer velocidade sem abrir mão de controle.
-
-Ele não tenta ser um processo completo de empresa. Ele é mais uma camada de organização.
-
-E isso casa bem com a proposta dele:
-
-leve, rápido e direto.
+* menos ambiguidade
+* mais previsibilidade
+* menos retrabalho
 
 ---
 
 ## Onde você precisa ter cuidado
 
-Também não é mágica.
+Não é mágica.
 
-Se você escrever uma proposta ruim, a implementação vai ser ruim. Ele não resolve pensamento mal feito.
+Se a proposta for ruim → o resultado vai ser ruim.
 
-Outra coisa: pode parecer simples demais pra quem vem de processo mais rígido. Não tem tanta formalidade, nem tanta separação de papel.
+Outra coisa:
 
-E, claro, ainda exige revisão.
+pra quem vem de processo pesado, pode parecer simples demais.
 
-Spec não substitui olhar crítico.
+Mas isso é escolha.
 
----
+E claro:
 
-## O que mudou pra mim
+ainda precisa revisar código.
 
-A principal mudança foi sair do Spec Kit e ir pro OpenSpec.
-
-Não porque o Spec Kit seja ruim. Pelo contrário, ele me ajudou bastante a estruturar a forma de trabalhar com IA.
-
-Mas, no meu uso, começou a ficar pesado demais.
-
-Com o OpenSpec, eu consegui manter o que era mais importante pra mim — alinhar antes de implementar — só que de um jeito mais leve.
-
-Menos overhead, menos verbosidade e mais fluidez no dia a dia.
-
-Se quiser testar, tenta não complicar:
-
-pega uma feature real, roda `/opsx:propose`, revisa, ajusta, roda `/opsx:apply` e depois `/opsx:archive`.
-
-Só isso já muda bastante o jogo.
+Spec não substitui pensamento crítico.
 
 ---
 
 ## Fechando
 
-No fim das contas, OpenSpec não é sobre documentar.
+OpenSpec não é sobre documentar.
 
 É sobre alinhar.
 
-Porque a IA não erra porque é burra.
+Porque no fim:
 
-Ela erra porque a gente não foi claro o suficiente.
+IA não erra porque é burra
+IA erra porque a gente não foi claro
 
-E quando você melhora isso, tudo melhora junto:
+E quando você melhora isso:
 
-o código, o processo e principalmente a frustração.
+* o código melhora
+* o processo melhora
+* a frustração diminui
 
 Pra mim, o ponto é esse.
 
 Não parar de usar IA.
 
 Mas parar de usar IA de qualquer jeito.
-
-Obrigado por ficarem até aqui.
