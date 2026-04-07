@@ -567,17 +567,12 @@ Se trata de criar um processo em que eu continuo pensando como engenheiro, mas u
 
 Se você quiser acompanhar os textos em que eu aprofundo cada etapa separadamente, esta é a sequência:
 
-- [No Spec-Driven Development, tudo começa pelos princípios](/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/)    
-  Lançamento: 06 de abril de 2026
+- [No Spec-Driven Development, tudo começa pelos princípios](/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/)    
   
-- [No Spec-Driven Development, `specify` é onde a ambiguidade começa a morrer](/2026/04/13/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/)  
-  Lançamento: 13 de abril de 2026
+- [No Spec-Driven Development, `specify` é onde a ambiguidade começa a morrer](/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/)  
 
-- [No Spec-Driven Development, `plan` é onde a especificação vira estratégia de execução](/2026/04/20/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/)  
-  Lançamento: 20 de abril de 2026
+- [No Spec-Driven Development, `plan` é onde a especificação vira estratégia de execução](/2026/04/06/3-no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/)  
 
-- [No Spec-Driven Development, `tasks` é onde o plano vira unidades concretas de trabalho](/2026/04/27/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/)  
-  Lançamento: 27 de abril de 2026
+- [No Spec-Driven Development, `tasks` é onde o plano vira unidades concretas de trabalho](/2026/04/06/4-no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/)  
 
-- [No Spec-Driven Development, `implement` é onde todo o resto vira código](/2026/05/04/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/)  
-  Lançamento: 04 de maio de 2026
+- [No Spec-Driven Development, `implement` é onde todo o resto vira código](/2026/04/06/5-no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/)  
