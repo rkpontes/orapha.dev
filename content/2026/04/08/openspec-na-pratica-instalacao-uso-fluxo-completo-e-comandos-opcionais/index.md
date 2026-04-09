@@ -232,16 +232,6 @@ Em alguns contextos/documentações você também vai encontrar o fluxo **OPSX**
 
 O ponto importante: confira qual conjunto de comandos sua integração instalou no `init`.
 
-## Comandos opcionais que valem conhecer
-
-Além do fluxo básico, estes opcionais ajudam bastante:
-
-1. `openspec view` para navegar rápido por mudanças e specs em andamento.
-2. `openspec validate <change>` antes de pedir implementação pesada.
-3. `openspec show <change>` para revisão assíncrona com time/revisor.
-4. `openspec update` quando trocar ferramenta de IA ou atualizar setup.
-5. `openspec archive <change> --yes` para fluxo não interativo em automação.
-
 ## Erros comuns (e como evitar)
 
 1. Pular revisão da proposta e ir direto para implementação.
@@ -278,8 +268,6 @@ openspec archive add-profile-search-filters --yes
 ```
 
 ## Fechando
-
-Se eu tivesse que resumir em uma frase: **OpenSpec não serve para “engessar”, serve para tirar ambiguidade antes do código.**
 
 Quando você instala, inicializa e segue um flow mínimo de proposta, revisão, aplicação e arquivo, a qualidade da execução com agente sobe muito.
 
