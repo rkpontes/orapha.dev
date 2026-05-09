@@ -1,24 +1,641 @@
-<rss version="2.0"
-     xmlns:content="http://purl.org/rss/1.0/modules/content/"
-     xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>orapha.dev</title>
-    <link>https://www.orapha.dev/</link>
-    <description>Meu Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>pt-BR</language>
-    <lastBuildDate>Wed, 08 Apr 2026 15:50:44 GMT</lastBuildDate>
-    <atom:link href="https://www.orapha.dev/index.xml" rel="self" type="application/rss+xml"/>
-    
-      <item>
-        <title>No Spec-Driven Development, `implement` é onde todo o resto vira código</title>
-        <link>https://www.orapha.dev/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</guid>
-        <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;implement&lt;/code&gt; é onde todo o resto vira código&lt;/h1&gt;&lt;p&gt;No texto &lt;a href=&#34;https://www.orapha.dev/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu falei da etapa de &lt;code&gt;constitution&lt;/code&gt;, em que eu defino os princípios que vão governar as decisões do projeto.&lt;/p&gt;
-&lt;p&gt;Depois, em &lt;a href=&#34;https://www.orapha.dev/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/&#34;&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/a&gt;, eu mostrei o ponto em que a demanda ganha comportamento esperado mais claro.&lt;/p&gt;
-&lt;p&gt;Na sequência, em &lt;a href=&#34;https://www.orapha.dev/2026/04/24/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/&#34;&gt;No Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; é onde a especificação vira estratégia de execução&lt;/a&gt;, eu entrei na etapa que organiza a travessia com ordem, dependência e noção de risco.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1>No Spec-Driven Development, <code>implement</code> é onde todo o resto vira código</h1><p>No texto <a href="/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/">No Spec-Driven Development, tudo começa pelos princípios</a>, eu falei da etapa de <code>constitution</code>, em que eu defino os princípios que vão governar as decisões do projeto.</p>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>orapha.dev</title><link>https://www.orapha.dev/</link><description>Meu Blog</description><generator>Hugo -- gohugo.io</generator><language>pt-BR</language><lastBuildDate>Sat, 09 May 2026 15:09:34 GMT</lastBuildDate><atom:link href="https://www.orapha.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Awesome Design: Um catálogo de design systems prontos para usar com agentes de IA</title><link>https://www.orapha.dev/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</link><guid isPermaLink="true">https://www.orapha.dev/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</guid><pubDate>Sat, 09 May 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;Awesome Design: Um catálogo de design systems prontos para usar com agentes de IA&lt;/h1&gt;&lt;p&gt;Tem uma coisa que sempre me incomodou quando trabalho com agentes de código: a inconsistência visual. Você pede para o agente &amp;ldquo;criar uma tela de dashboard&amp;rdquo;, ele entrega algo funcional, mas o visual&amp;hellip; bom, o visual parece que foi feito por quem nunca ouviu falar de design system. Cada tela vira uma ilha, cada componente tem sua própria personalidade, e no final você tem um frankenstein visual que funciona, mas não passa aquela sensação de produto profissional.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>Awesome Design: Um catálogo de design systems prontos para usar com agentes de IA</h1><p>Tem uma coisa que sempre me incomodou quando trabalho com agentes de código: a inconsistência visual. Você pede para o agente &ldquo;criar uma tela de dashboard&rdquo;, ele entrega algo funcional, mas o visual&hellip; bom, o visual parece que foi feito por quem nunca ouviu falar de design system. Cada tela vira uma ilha, cada componente tem sua própria personalidade, e no final você tem um frankenstein visual que funciona, mas não passa aquela sensação de produto profissional.</p>
+<p>Eu já tentei várias abordagens. Já passei links do Figma, já descrevi detalhadamente as cores e tipografia, já até mandei screenshots com anotações. Funciona, mas é trabalhoso. E o pior: a cada novo recurso, a conversa recomeça do zero.</p>
+<p>Foi aí que eu descobri o <a href="https://github.com/voltagent/awesome-design-md"target="_blank" rel="noopener"><strong>Awesome Design</strong></a>.</p>
+<h2>O que é DESIGN.md?<span class="hx:absolute hx:-mt-20" id="o-que-é-designmd"></span>
+    <a href="#o-que-%c3%a9-designmd" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Antes de falar do repositório em si, preciso explicar o conceito. O DESIGN.md é uma ideia que surgiu do <a href="https://stitch.withgoogle.com/docs/design-md/overview/"target="_blank" rel="noopener">Google Stitch</a>. É simplesmente um arquivo markdown que descreve o design system do seu projeto: cores, tipografia, componentes, espaçamento, comportamentos responsivos.</p>
+<p>A sacada é que, como é markdown, os agentes de IA leem muito bem. Não precisa de JSON complexo, não precisa exportar do Figma, não precisa de plugin. É um arquivo texto, na raiz do projeto, que qualquer agente pode consultar.</p>
+<p>A analogia que gosto de usar:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Arquivo</th>
+          <th>Quem lê</th>
+          <th>O que define</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>AGENTS.md</code></td>
+          <td>Agentes de código</td>
+          <td>Como construir o projeto</td>
+      </tr>
+      <tr>
+          <td><code>DESIGN.md</code></td>
+          <td>Agentes de design</td>
+          <td>Como o projeto deve parecer</td>
+      </tr>
+  </tbody>
+</table>
+<h2>O que o Awesome Design oferece?<span class="hx:absolute hx:-mt-20" id="o-que-o-awesome-design-oferece"></span>
+    <a href="#o-que-o-awesome-design-oferece" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>O repositório do VoltAgent é basicamente um catálogo de DESIGN.md files inspirados em sites e produtos reais. E quando digo reais, falo de marcas como:</p>
+<p><strong>Plataformas de IA:</strong></p>
+<ul>
+<li><strong>Claude</strong> — aquele tom terracota quente, layout editorial limpo</li>
+<li><strong>ElevenLabs</strong> — UI cinemática escura, com aquela estética de ondas sonoras</li>
+<li><strong>Ollama</strong> — simplicidade monocromática, foco no terminal</li>
+<li><strong>VoltAgent</strong> — canvas preto-void, acento esmeralda, vibe terminal</li>
+</ul>
+<p><strong>Ferramentas de Dev:</strong></p>
+<ul>
+<li><strong>Cursor</strong> — editor dark com gradientes sleek</li>
+<li><strong>Vercel</strong> — precisão preto e branco, fonte Geist</li>
+<li><strong>Warp</strong> — terminal moderno, UI em blocos</li>
+<li><strong>Supabase</strong> — tema esmeralda dark, código em primeiro lugar</li>
+</ul>
+<p><strong>Produtividade &amp; SaaS:</strong></p>
+<ul>
+<li><strong>Linear</strong> — ultra minimalista, preciso, acento roxo</li>
+<li><strong>Notion</strong> — minimalismo quente, headings em serif</li>
+<li><strong>Figma</strong> — multicolor vibrante, profissional mas divertido</li>
+</ul>
+<p>E a lista continua: Stripe, Spotify, Apple, Tesla, Airbnb, Nike&hellip; são mais de 70 design systems documentados.</p>
+<h2>Como funciona na prática?<span class="hx:absolute hx:-mt-20" id="como-funciona-na-prática"></span>
+    <a href="#como-funciona-na-pr%c3%a1tica" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>A estrutura de cada DESIGN.md segue um padrão que facilita muito a vida:</p>
+<ol>
+<li><strong>Tema Visual &amp; Atmosfera</strong> — o mood, a densidade, a filosofia de design</li>
+<li><strong>Paleta de Cores</strong> — nomes semânticos + hex + função</li>
+<li><strong>Regras de Tipografia</strong> — famílias de fontes, hierarquia completa</li>
+<li><strong>Estilos de Componentes</strong> — botões, cards, inputs, navegação</li>
+<li><strong>Princípios de Layout</strong> — escala de espaçamento, grid, whitespace</li>
+<li><strong>Profundidade &amp; Elevação</strong> — sistema de sombras, hierarquia de superfícies</li>
+<li><strong>Do&rsquo;s and Don&rsquo;ts</strong> — guardrails e anti-patterns</li>
+<li><strong>Comportamento Responsivo</strong> — breakpoints, touch targets</li>
+<li><strong>Guia de Prompts para Agentes</strong> — referências rápidas de cores, prontos para usar</li>
+</ol>
+<p>Além do DESIGN.md, cada site inclui:</p>
+<ul>
+<li><code>preview.html</code> — catálogo visual com swatches, escala tipográfica, botões</li>
+<li><code>preview-dark.html</code> — o mesmo catálogo com superfícies escuras</li>
+</ul>
+<h2>Usando na prática<span class="hx:absolute hx:-mt-20" id="usando-na-prática"></span>
+    <a href="#usando-na-pr%c3%a1tica" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>O fluxo é absurdamente simples:</p>
+<ol>
+<li>Escolhe um design system no catálogo</li>
+<li>Copia o DESIGN.md para a raiz do seu projeto</li>
+<li>Fala pro seu agente: &ldquo;usa esse design system aí&rdquo;</li>
+</ol>
+<p>É isso. Sério.</p>
+<p>O agente vai ler o arquivo, entender as cores, as fontes, os espaçamentos, e aplicar tudo no código que ele gerar. Se você usa Claude, Cursor, GitHub Copilot, ou qualquer outro agente que leia arquivos de contexto, funciona.</p>
+<h2>Por que isso importa?<span class="hx:absolute hx:-mt-20" id="por-que-isso-importa"></span>
+    <a href="#por-que-isso-importa" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Para mim, o valor está em dois lugares:</p>
+<p><strong>Primeiro, consistência.</strong> Quando você tem um DESIGN.md commitado no repo, toda interação com o agente tem uma referência visual compartilhada. Não importa se você está trabalhando na feature hoje ou daqui a três meses — o design system está lá, documentado, versionado.</p>
+<p><strong>Segundo, velocidade.</strong> Em vez de perder 15 minutos descrevendo &ldquo;quero um botão primário azul com borda arredondada e sombra suave&rdquo;, você simplesmente aponta para o DESIGN.md. O agente já sabe exatamente como estilizar.</p>
+<p>E tem um bônus: como cada DESIGN.md é baseado em produtos reais que funcionam, você está essencialmente &ldquo;copiando&rdquo; padrões visuais que já foram testados e validados por empresas que investem milhões em design.</p>
+<h2>Considerações<span class="hx:absolute hx:-mt-20" id="considerações"></span>
+    <a href="#considera%c3%a7%c3%b5es" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>O Awesome Design é um daqueles repositórios que parece simples, mas resolve um problema real. A ideia de usar markdown para design system é elegante porque funciona com o fluxo que já usamos com agentes de código.</p>
+<p>Se você está construindo algo com IA e se importa com a qualidade visual do resultado, vale a pena dar uma olhada. O repositório está em constante crescimento — já são mais de 70 design systems — e aceita contribuições.</p>
+<p>Eu particularmente gosto de ter isso no arsenal. É mais uma ferramenta para quando quero que o agente entregue algo que não só funcione, mas que também <em>pareça</em> bem feito.</p>
+<hr>
+<p><strong>Links:</strong></p>
+<ul>
+<li><a href="https://github.com/voltagent/awesome-design-md"target="_blank" rel="noopener">Awesome Design no GitHub</a></li>
+<li><a href="https://stitch.withgoogle.com/docs/design-md/overview/"target="_blank" rel="noopener">Documentação do DESIGN.md no Google Stitch</a></li>
+<li><a href="https://getdesign.md/"target="_blank" rel="noopener">Site com previews dos design systems</a></li>
+</ul>
+]]></content:encoded><category>ia</category><category>design-systems</category><category>design-md</category><category>frontend</category><category>voltagent</category></item><item><title>Desmistificando o processo de Propose no OpenSpec: O que acontece nos bastidores?</title><link>https://www.orapha.dev/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/</link><guid isPermaLink="true">https://www.orapha.dev/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/</guid><pubDate>Wed, 29 Apr 2026 23:22:42 GMT</pubDate><description>&lt;p&gt;Quando executamos o comando de criação de uma nova proposta (propose) no OpenSpec — como por exemplo, ao iniciar a funcionalidade &lt;code&gt;add-course-enrollment-module&lt;/code&gt; —, o sistema trabalha nos bastidores para gerar uma série de arquivos fundamentais para o sucesso do desenvolvimento.&lt;/p&gt;
+&lt;p&gt;Se você já se perguntou para que serve cada um desses artefatos, este artigo é para você. Vamos explorar a anatomia de cada documento gerado e como eles garantem o alinhamento da equipe: desde a visão de negócios até a codificação.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Quando executamos o comando de criação de uma nova proposta (propose) no OpenSpec — como por exemplo, ao iniciar a funcionalidade <code>add-course-enrollment-module</code> —, o sistema trabalha nos bastidores para gerar uma série de arquivos fundamentais para o sucesso do desenvolvimento.</p>
+<p>Se você já se perguntou para que serve cada um desses artefatos, este artigo é para você. Vamos explorar a anatomia de cada documento gerado e como eles garantem o alinhamento da equipe: desde a visão de negócios até a codificação.</p>
+<hr>
+<h2>1. O Proposal (<code>proposal.md</code>): O &ldquo;Por Quê&rdquo; e o &ldquo;O Quê&rdquo;<span class="hx:absolute hx:-mt-20" id="1-o-proposal-proposalmd-o-por-quê-e-o-o-quê"></span>
+    <a href="#1-o-proposal-proposalmd-o-por-qu%c3%aa-e-o-o-qu%c3%aa" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>O documento de proposal é o ponto de partida da sua jornada. Ele serve como a ponte entre o negócio e a engenharia.</p>
+<ul>
+<li><strong>O que contém:</strong> Motivação da funcionalidade, o escopo exato do que será construído e quais &ldquo;capabilities&rdquo; (capacidades) novas estão sendo introduzidas no sistema. No nosso exemplo, ele mapeia o impacto no projeto e introduz o <code>enrollment-management</code>, <code>payment-gateway-adapter</code>, e o <code>enrollment-command-dispatch</code>.</li>
+<li><strong>Para que serve:</strong> Garantir que todos os envolvidos (desenvolvedores, POs, stakeholders) tenham clareza sobre o valor que está sendo entregue e o tamanho da mudança, antes mesmo de escrevermos a primeira linha de código.</li>
+</ul>
+<h2>2. O Design Document (<code>design.md</code>): O &ldquo;Como&rdquo; em Alto Nível<span class="hx:absolute hx:-mt-20" id="2-o-design-document-designmd-o-como-em-alto-nível"></span>
+    <a href="#2-o-design-document-designmd-o-como-em-alto-n%c3%advel" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Se o <em>Proposal</em> foca no negócio, o <em>Design Document</em> aprofunda no terreno técnico. Aqui moram as decisões de arquitetura e mitigação de riscos.</p>
+<ul>
+<li><strong>O que contém:</strong> Documenta as decisões técnicas que guiarão o desenvolvimento. Por exemplo, a decisão de replicar o padrão já usado em &ldquo;students&rdquo; no frontend, a adoção de comandos determinísticos no BFF, o isolamento do adapter de pagamentos, e a garantia de idempotência via <code>request_id</code> com base em <em>polling</em>.</li>
+<li><strong>Para que serve:</strong> Prevenir dores de cabeça futuras. Ao listar os riscos, suas mitigações e o plano de migração, a equipe técnica tem um mapa dos possíveis obstáculos e como contorná-los sem ferir a arquitetura da aplicação.</li>
+</ul>
+<h2>3. As Specs (<code>specs/*/spec.md</code>): As Regras do Jogo<span class="hx:absolute hx:-mt-20" id="3-as-specs-specsspecmd-as-regras-do-jogo"></span>
+    <a href="#3-as-specs-specsspecmd-as-regras-do-jogo" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Uma das grandes sacadas do OpenSpec é dividir um problema complexo em &ldquo;capabilities&rdquo; (capacidades) menores, gerando especificações dedicadas para cada domínio do sistema:</p>
+<h3><code>specs/enrollment-management/spec.md</code> (Frontend)<span class="hx:absolute hx:-mt-20" id="specsenrollment-managementspecmd-frontend"></span>
+    <a href="#specsenrollment-managementspecmd-frontend" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Focado na experiência do usuário. Define os requisitos da interface: como a tabela de matrículas deve se comportar, regras para ocultar dados sensíveis, as ações permitidas (editar, remover, abrir URL, disparar modais de mensagem) e requisitos não funcionais como responsividade e sincronismo com o backend.</p>
+<h3><code>specs/payment-gateway-adapter/spec.md</code> (Integração)<span class="hx:absolute hx:-mt-20" id="specspayment-gateway-adapterspecmd-integração"></span>
+    <a href="#specspayment-gateway-adapterspecmd-integra%c3%a7%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Focado na comunicação com o parceiro. Define as regras do jogo com a API do Gateway de Pagamento: como criar, consultar, atualizar e cancelar os pagamentos. Além disso, garante o mapeamento correto dos status da API terceira para o domínio interno e formaliza a segurança na manipulação das credenciais.</p>
+<h3><code>specs/enrollment-command-dispatch/spec.md</code> (Backend/BFF)<span class="hx:absolute hx:-mt-20" id="specsenrollment-command-dispatchspecmd-backendbff"></span>
+    <a href="#specsenrollment-command-dispatchspecmd-backendbff" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Focado na robustez interna. Define as responsabilidades no BFF (Backend For Frontend), como a resolução determinística de configurações de provedores, a emissão de comandos de forma versionada, e a aplicação estrita de idempotência e rastreabilidade nos eventos.</p>
+<h2>4. O Plano de Ação (<code>tasks.md</code>): Colocando a Mão na Massa<span class="hx:absolute hx:-mt-20" id="4-o-plano-de-ação-tasksmd-colocando-a-mão-na-massa"></span>
+    <a href="#4-o-plano-de-a%c3%a7%c3%a3o-tasksmd-colocando-a-m%c3%a3o-na-massa" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>A cereja do bolo de todo o processo de planejamento. Depois de entender o contexto, a arquitetura e os requisitos específicos, o OpenSpec compila tudo isso em um checklist acionável.</p>
+<ul>
+<li><strong>O que contém:</strong> Um agrupamento lógico de tarefas. No caso da nossa funcionalidade de matrículas, foram gerados 12 grupos ordenados para a implementação: indo desde o <em>setup</em> inicial, passando pela modelagem do domínio, casos de uso, infraestrutura, desenvolvimento de tela/UI, construção de hooks, configuração de rotas e observabilidade, até fechar com testes e documentação final.</li>
+<li><strong>Para que serve:</strong> É o guia de bolso do desenvolvedor. Ele permite que o time pegue tarefas independentes sabendo exatamente em qual ordem elas devem ser executadas, tornando o avanço previsível e fácil de acompanhar.</li>
+</ul>
+<hr>
+<h3>Conclusão<span class="hx:absolute hx:-mt-20" id="conclusão"></span>
+    <a href="#conclus%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Ter uma ideia brilhante é ótimo, mas transformá-la em software rodando em produção exige método.</p>
+<p>Com o processo de <strong>Propose</strong> do OpenSpec, toda a carga pesada de planejamento, organização arquitetural e divisão de tarefas é feita de forma fluida. O resultado são ciclos de desenvolvimento (sprints) extremamente previsíveis, documentação sempre viva e um <em>time-to-market</em> reduzido de forma inteligente e padronizada.</p>
+<p>Na próxima vez que o OpenSpec gerar esses artefatos, você saberá exatamente a importância de cada peça dessa engrenagem!</p>
+]]></content:encoded><category>openspec</category><category>engenharia-de-software</category><category>spec-driven-development</category><category>arquitetura</category></item><item><title>Da feature ao deploy sem mãos: arquitetura de uma software factory com IA usando Spec-Driven Development</title><link>https://www.orapha.dev/2026/04/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/</link><guid isPermaLink="true">https://www.orapha.dev/2026/04/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/</guid><pubDate>Wed, 15 Apr 2026 23:18:03 GMT</pubDate><description>&lt;h1&gt;Da feature ao deploy sem mãos: arquitetura de uma software factory com IA usando Spec-Driven Development&lt;/h1&gt;&lt;h2&gt;Introdução: como era a indústria de software antes da IA&lt;span class="hx:absolute hx:-mt-20" id="introdução-como-era-a-indústria-de-software-antes-da-ia"&gt;&lt;/span&gt;
+&lt;a href="#introdu%c3%a7%c3%a3o-como-era-a-ind%c3%bastria-de-software-antes-da-ia" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Por décadas, o desenvolvimento de software foi operado como um processo artesanal de alta especialização. Não é um demérito: esse modelo construiu praticamente tudo o que usamos hoje. O problema é que ele depende de sincronização humana constante. Refinamento, implementação, review, QA, segurança e deploy são etapas com interfaces frágeis, muitas vezes baseadas em contexto tácito.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>Da feature ao deploy sem mãos: arquitetura de uma software factory com IA usando Spec-Driven Development</h1><h2>Introdução: como era a indústria de software antes da IA<span class="hx:absolute hx:-mt-20" id="introdução-como-era-a-indústria-de-software-antes-da-ia"></span>
+    <a href="#introdu%c3%a7%c3%a3o-como-era-a-ind%c3%bastria-de-software-antes-da-ia" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Por décadas, o desenvolvimento de software foi operado como um processo artesanal de alta especialização. Não é um demérito: esse modelo construiu praticamente tudo o que usamos hoje. O problema é que ele depende de sincronização humana constante. Refinamento, implementação, review, QA, segurança e deploy são etapas com interfaces frágeis, muitas vezes baseadas em contexto tácito.</p>
+<p>No dia a dia, isso aparece em sintomas conhecidos: card que muda de escopo no meio da execução, PR grande com revisão lenta, bugs descobertos tarde, gargalo em pessoas-chave e dificuldade de prever lead time real. Quando a empresa cresce, esse modelo tende a saturar.</p>
+<p>Em termos industriais, é como uma fábrica que depende de mestres artesãos para cada estação da linha. A qualidade pode ser ótima, mas a variação entre lotes é alta e o throughput não escala linearmente. Em software, variabilidade vira retrabalho; retrabalho vira custo; custo vira lentidão estratégica.</p>
+<p>O ponto central deste artigo é: a IA permite migrar de um modelo artesanal para uma software factory orientada por contrato técnico, sem eliminar engenharia humana, mas mudando seu foco para desenho de sistema, governança e qualidade operacional.</p>
+<h2>O conceito de esteira automatizada com IA<span class="hx:absolute hx:-mt-20" id="o-conceito-de-esteira-automatizada-com-ia"></span>
+    <a href="#o-conceito-de-esteira-automatizada-com-ia" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Da squad para a célula industrial<span class="hx:absolute hx:-mt-20" id="da-squad-para-a-célula-industrial"></span>
+    <a href="#da-squad-para-a-c%c3%a9lula-industrial" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A squad continua existindo como unidade de negócio e decisão. O que muda é a execução operacional: tarefas repetíveis e verificáveis passam para células automatizadas de agentes especializados. Cada célula tem entrada definida, critérios de qualidade e saída rastreável.</p>
+<p>Em uma fábrica moderna, você não espera o controle de qualidade apenas no fim da linha. Você coloca inspeção em cada estação. A esteira com IA aplica essa lógica ao software: spec, código, revisão, teste, segurança e observabilidade são gates encadeados.</p>
+<h3>O que muda se essa ideia funcionar?<span class="hx:absolute hx:-mt-20" id="o-que-muda-se-essa-ideia-funcionar"></span>
+    <a href="#o-que-muda-se-essa-ideia-funcionar" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Se funcionar de verdade, muda o jogo em quatro dimensões:</p>
+<ol>
+<li>Throughput: mais entregas por unidade de tempo sem aumentar equipe no mesmo ritmo.</li>
+<li>Consistência: padrão técnico menos dependente de quem pegou a tarefa.</li>
+<li>Previsibilidade: lead time e taxa de retrabalho mais estáveis.</li>
+<li>Rastreabilidade: decisão e evidência acessíveis do card ao deploy.</li>
+</ol>
+<p>Na prática, o board do PO deixa de ser apenas gestão de intenção e passa a refletir estado real de execução técnica, com telemetria de progresso e risco.</p>
+<h3>Vai acabar os empregos?<span class="hx:absolute hx:-mt-20" id="vai-acabar-os-empregos"></span>
+    <a href="#vai-acabar-os-empregos" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A resposta madura é: não no sentido simplista, mas os papéis mudam. O trabalho repetitivo de tradução e execução tende a cair. Em contrapartida, cresce a demanda por engenharia de plataforma, design de especificação, governança de agentes, segurança de automações, observabilidade e operação do sistema sociotécnico.</p>
+<p>O profissional que só escreve código por tarefa perde espaço. O profissional que projeta sistemas de entrega com qualidade e governança ganha protagonismo.</p>
+<h2>Arquitetura geral do sistema<span class="hx:absolute hx:-mt-20" id="arquitetura-geral-do-sistema"></span>
+    <a href="#arquitetura-geral-do-sistema" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Board como sistema de entrada<span class="hx:absolute hx:-mt-20" id="board-como-sistema-de-entrada"></span>
+    <a href="#board-como-sistema-de-entrada" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>O board (Kanban/Jira/Linear) continua sendo a fonte de verdade de negócio. Cada card deve conter intenção, valor esperado, critérios de aceitação e restrições. Sem isso, a automação só acelera ambiguidade.</p>
+<h3>MCP como camada de integração e contrato<span class="hx:absolute hx:-mt-20" id="mcp-como-camada-de-integração-e-contrato"></span>
+    <a href="#mcp-como-camada-de-integra%c3%a7%c3%a3o-e-contrato" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>O MCP funciona como barramento de contexto entre sistemas e agentes: board, repositório, CI/CD, testes, segurança e documentação. Sem uma camada de contrato comum, cada agente vira um script isolado e a esteira degrada para automação colada.</p>
+<h3>Queue estruturada como buffer operacional<span class="hx:absolute hx:-mt-20" id="queue-estruturada-como-buffer-operacional"></span>
+    <a href="#queue-estruturada-como-buffer-operacional" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A ingestão transforma cards em itens de fila com schema explícito, por exemplo:</p>
+<ul>
+<li>business_goal</li>
+<li>acceptance_criteria</li>
+<li>constraints</li>
+<li>dependencies</li>
+<li>impact_scope</li>
+<li>risk_profile</li>
+<li>definition_of_done</li>
+</ul>
+<p>Essa fila é o equivalente a ordem de produção com instrução técnica clara.</p>
+<h3>Malha de agentes (workers especializados)<span class="hx:absolute hx:-mt-20" id="malha-de-agentes-workers-especializados"></span>
+    <a href="#malha-de-agentes-workers-especializados" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Em vez de um agente generalista, a arquitetura madura usa especialização:</p>
+<ul>
+<li>Spec agent</li>
+<li>Implementation worker</li>
+<li>Review harness</li>
+<li>QA agent</li>
+<li>Security agent</li>
+<li>UX agent</li>
+<li>Orchestrator agent</li>
+</ul>
+<p>Cada agente atua em um domínio, com interface de entrada/saída e políticas de escalonamento.</p>
+<h3>Controle de qualidade e governança<span class="hx:absolute hx:-mt-20" id="controle-de-qualidade-e-governança"></span>
+    <a href="#controle-de-qualidade-e-governan%c3%a7a" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Autonomia sem governança vira risco operacional. O controle inclui:</p>
+<ul>
+<li>políticas (constitution);</li>
+<li>gates automatizados;</li>
+<li>trilhas de auditoria;</li>
+<li>limites de ação por nível de risco;</li>
+<li>escalonamento humano obrigatório em casos críticos.</li>
+</ul>
+<h2>Pipeline etapa por etapa<span class="hx:absolute hx:-mt-20" id="pipeline-etapa-por-etapa"></span>
+    <a href="#pipeline-etapa-por-etapa" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>1) Ingestão de demanda: Board → Queue<span class="hx:absolute hx:-mt-20" id="1-ingestão-de-demanda-board--queue"></span>
+    <a href="#1-ingest%c3%a3o-de-demanda-board--queue" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>O pipeline começa com parsing semântico dos cards, enriquecimento de contexto e normalização de requisitos. Exemplo: melhorar checkout pode virar três entregáveis distintos (latência API, validação antifraude, UX de erro transacional). O objetivo é reduzir ambiguidade antes da primeira linha de código.</p>
+<h3>2) SDD + implementação automatizada<span class="hx:absolute hx:-mt-20" id="2-sdd--implementação-automatizada"></span>
+    <a href="#2-sdd--implementa%c3%a7%c3%a3o-automatizada" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Com a demanda normalizada, o fluxo entra em SDD:</p>
+<ul>
+<li>gera spec da mudança;</li>
+<li>explicita contratos (API, dados, comportamento esperado);</li>
+<li>decompõe tarefas;</li>
+<li>aplica implementação guiada por spec.</li>
+</ul>
+<p>Esse é o ponto onde a fábrica se diferencia de prompt + código. A spec é o artefato de controle de qualidade upstream.</p>
+<h3>3) Code review automatizado<span class="hx:absolute hx:-mt-20" id="3-code-review-automatizado"></span>
+    <a href="#3-code-review-automatizado" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>O review harness audita o PR com foco em aderência à spec, regressão, complexidade e impacto arquitetural. Ele pode aprovar, solicitar mudanças ou abrir bloqueio para revisão humana.</p>
+<p>A ideia não é remover reviewer humano, mas reservar intervenção humana para casos de maior valor ou risco.</p>
+<h3>4) CI/CD para homologação<span class="hx:absolute hx:-mt-20" id="4-cicd-para-homologação"></span>
+    <a href="#4-cicd-para-homologa%c3%a7%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Após aprovação no gate de revisão, a esteira dispara build, checagens estáticas e deploy automático em homologação. Ambientes efêmeros por PR aumentam isolamento e reduzem funciona na minha máquina.</p>
+<h3>5) Testes automatizados com agentes de QA<span class="hx:absolute hx:-mt-20" id="5-testes-automatizados-com-agentes-de-qa"></span>
+    <a href="#5-testes-automatizados-com-agentes-de-qa" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>O QA agent executa smoke tests (sanidade de fluxo crítico), regression suite (estabilidade do legado) e testes baseados em critérios de aceitação da spec.</p>
+<p>Falha não volta como ruído. Volta como item estruturado com causa provável, evidência e recomendação de correção.</p>
+<h3>6) Segurança contínua com agente de cyber<span class="hx:absolute hx:-mt-20" id="6-segurança-contínua-com-agente-de-cyber"></span>
+    <a href="#6-seguran%c3%a7a-cont%c3%adnua-com-agente-de-cyber" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Segurança entra como estação fixa da linha, não etapa final:</p>
+<ul>
+<li>análise de vulnerabilidades;</li>
+<li>validações OWASP Top 10 (incluindo Broken Access Control);</li>
+<li>pentest automatizado para fluxos sensíveis;</li>
+<li>análise de segredos, authz/authn, headers e exposição indevida.</li>
+</ul>
+<p>O ganho é antecipar risco antes do merge/deploy em produção.</p>
+<h3>7) Relatórios e rastreabilidade<span class="hx:absolute hx:-mt-20" id="7-relatórios-e-rastreabilidade"></span>
+    <a href="#7-relat%c3%b3rios-e-rastreabilidade" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Cada etapa produz evidências:</p>
+<ul>
+<li>logs estruturados;</li>
+<li>links de execução;</li>
+<li>outputs de testes;</li>
+<li>findings de segurança;</li>
+<li>decisão de review;</li>
+<li>métricas de tempo e qualidade.</li>
+</ul>
+<p>Sem evidência, não existe operação confiável em escala.</p>
+<h3>8) Feedback loop para o board do PO<span class="hx:absolute hx:-mt-20" id="8-feedback-loop-para-o-board-do-po"></span>
+    <a href="#8-feedback-loop-para-o-board-do-po" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>No fim de cada ciclo, a esteira atualiza o board com status técnico real: aprovado/reprovado por gate, bloqueios, risco residual e próximo passo recomendado.</p>
+<p>Com isso, produto e engenharia operam sobre o mesmo estado de verdade.</p>
+<h2>O papel do Spec-Driven Development (OpenSpec)<span class="hx:absolute hx:-mt-20" id="o-papel-do-spec-driven-development-openspec"></span>
+    <a href="#o-papel-do-spec-driven-development-openspec" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>constitution, propose/specify, apply, archive<span class="hx:absolute hx:-mt-20" id="constitution-proposespecify-apply-archive"></span>
+    <a href="#constitution-proposespecify-apply-archive" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>O OpenSpec organiza a execução em quatro movimentos:</p>
+<ul>
+<li>constitution: princípios, limites e políticas da fábrica;</li>
+<li>propose/specify: desenho da mudança com contratos claros;</li>
+<li>apply: implementação guiada pela spec;</li>
+<li>archive: registro de decisão, trade-offs e evidências.</li>
+</ul>
+<h3>Por que spec é o gabarito da fábrica<span class="hx:absolute hx:-mt-20" id="por-que-spec-é-o-gabarito-da-fábrica"></span>
+    <a href="#por-que-spec-%c3%a9-o-gabarito-da-f%c3%a1brica" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Sem spec, o agente otimiza para plausibilidade. Com spec, ele otimiza para conformidade verificável. Essa diferença é estrutural. A spec vira desenho técnico da peça que permite qualidade repetível, comparação entre lotes e melhoria contínua de processo.</p>
+<h2>O papel dos agentes na operação<span class="hx:absolute hx:-mt-20" id="o-papel-dos-agentes-na-operação"></span>
+    <a href="#o-papel-dos-agentes-na-opera%c3%a7%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Worker de implementação<span class="hx:absolute hx:-mt-20" id="worker-de-implementação"></span>
+    <a href="#worker-de-implementa%c3%a7%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Converte spec em código e artefatos técnicos. Deve operar com escopo limitado, idempotência e checagens locais antes de abrir PR.</p>
+<h3>Harness de revisão<span class="hx:absolute hx:-mt-20" id="harness-de-revisão"></span>
+    <a href="#harness-de-revis%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Atua como auditor técnico automatizado, verificando consistência arquitetural e aderência a contratos. Reduz carga cognitiva do reviewer humano.</p>
+<h3>QA agent<span class="hx:absolute hx:-mt-20" id="qa-agent"></span>
+    <a href="#qa-agent" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Executa estratégia de testes por risco e por impacto, com foco em detectar regressão cedo.</p>
+<h3>Security agent<span class="hx:absolute hx:-mt-20" id="security-agent"></span>
+    <a href="#security-agent" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Analisa superfície de ataque e enforce de baseline de segurança. Em casos críticos, pode bloquear fluxo automaticamente.</p>
+<h3>Orquestrador e políticas de escalonamento<span class="hx:absolute hx:-mt-20" id="orquestrador-e-políticas-de-escalonamento"></span>
+    <a href="#orquestrador-e-pol%c3%adticas-de-escalonamento" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Coordena a linha: prioridade, retries, circuit breakers, rollbacks e handoff humano. Sem orquestração, não há fábrica; há apenas scripts concorrentes.</p>
+<h2>UI/UX como etapa de primeira classe<span class="hx:absolute hx:-mt-20" id="uiux-como-etapa-de-primeira-classe"></span>
+    <a href="#uiux-como-etapa-de-primeira-classe" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Geração de fluxos e wireframes<span class="hx:absolute hx:-mt-20" id="geração-de-fluxos-e-wireframes"></span>
+    <a href="#gera%c3%a7%c3%a3o-de-fluxos-e-wireframes" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Antes da implementação, o UX agent propõe fluxo de navegação, wireframes e alternativas de interação. Isso evita decisões de interface improvisadas durante coding.</p>
+<h3>Definição de estados e contratos de interface<span class="hx:absolute hx:-mt-20" id="definição-de-estados-e-contratos-de-interface"></span>
+    <a href="#defini%c3%a7%c3%a3o-de-estados-e-contratos-de-interface" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Toda tela deveria explicitar estados: loading, empty, success, partial, error e permissões por perfil. Estado mal definido é fonte clássica de retrabalho entre frontend, backend e QA.</p>
+<h3>Gate de consistência de UX antes do código<span class="hx:absolute hx:-mt-20" id="gate-de-consistência-de-ux-antes-do-código"></span>
+    <a href="#gate-de-consist%c3%aancia-de-ux-antes-do-c%c3%b3digo" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A esteira só avança quando há consistência mínima de UX: coerência de jornada, terminologia, acessibilidade e previsibilidade de comportamento. UX deixa de ser acabamento e vira requisito estrutural.</p>
+<h2>Observabilidade e rastreabilidade end-to-end<span class="hx:absolute hx:-mt-20" id="observabilidade-e-rastreabilidade-end-to-end"></span>
+    <a href="#observabilidade-e-rastreabilidade-end-to-end" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Evidências por etapa<span class="hx:absolute hx:-mt-20" id="evidências-por-etapa"></span>
+    <a href="#evid%c3%aancias-por-etapa" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Cada estação precisa emitir evidência consumível por humanos e máquinas. Exemplo: link do run de CI, relatório de cobertura, diff de spec, checklist de segurança.</p>
+<h3>Métricas de throughput, qualidade e risco<span class="hx:absolute hx:-mt-20" id="métricas-de-throughput-qualidade-e-risco"></span>
+    <a href="#m%c3%a9tricas-de-throughput-qualidade-e-risco" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Métricas úteis para operar essa fábrica:</p>
+<ul>
+<li>lead time por tipo de demanda;</li>
+<li>taxa de aprovação automática;</li>
+<li>retrabalho por etapa;</li>
+<li>taxa de escape para produção;</li>
+<li>MTTR por categoria de falha.</li>
+</ul>
+<h3>Rastreabilidade dos entregáveis por etapa<span class="hx:absolute hx:-mt-20" id="rastreabilidade-dos-entregáveis-por-etapa"></span>
+    <a href="#rastreabilidade-dos-entreg%c3%a1veis-por-etapa" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Todo entregável deve ter lineage: card → item da queue → spec → commit → PR → pipeline run → deploy. Isso reduz tempo de diagnóstico e melhora governança.</p>
+<h2>Benefícios, riscos e trade-offs<span class="hx:absolute hx:-mt-20" id="benefícios-riscos-e-trade-offs"></span>
+    <a href="#benef%c3%adcios-riscos-e-trade-offs" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Escala e consistência versus acoplamento ao stack de IA<span class="hx:absolute hx:-mt-20" id="escala-e-consistência-versus-acoplamento-ao-stack-de-ia"></span>
+    <a href="#escala-e-consist%c3%aancia-versus-acoplamento-ao-stack-de-ia" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Quanto mais ganho de escala, maior o risco de lock-in de ferramentas e modelos. Mitigação: contratos abertos, abstração de provedores e versionamento de políticas.</p>
+<h3>Velocidade versus custo de validação<span class="hx:absolute hx:-mt-20" id="velocidade-versus-custo-de-validação"></span>
+    <a href="#velocidade-versus-custo-de-valida%c3%a7%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Automação acelera entrega, mas exige investimento em gates, observabilidade e segurança. Sem isso, você acelera erro com eficiência.</p>
+<h3>Autonomia versus governança<span class="hx:absolute hx:-mt-20" id="autonomia-versus-governança"></span>
+    <a href="#autonomia-versus-governan%c3%a7a" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Dar autonomia aos agentes melhora throughput, mas amplia superfície de risco. O equilíbrio vem de limites claros de ação, trilha de auditoria e escalonamento humano.</p>
+<h2>Futuro: AI-native software development<span class="hx:absolute hx:-mt-20" id="futuro-ai-native-software-development"></span>
+    <a href="#futuro-ai-native-software-development" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Times menores, plataformas mais fortes<span class="hx:absolute hx:-mt-20" id="times-menores-plataformas-mais-fortes"></span>
+    <a href="#times-menores-plataformas-mais-fortes" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A tendência é menos esforço em tarefas operacionais repetíveis e mais investimento em platform engineering. Equipes menores podem entregar mais quando operam uma esteira bem projetada.</p>
+<h3>Engenharia como desenho de sistema sociotécnico<span class="hx:absolute hx:-mt-20" id="engenharia-como-desenho-de-sistema-sociotécnico"></span>
+    <a href="#engenharia-como-desenho-de-sistema-sociot%c3%a9cnico" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>O diferencial competitivo passa a ser projetar o sistema inteiro: pessoas, agentes, políticas, métricas e feedback loops. Código continua central, mas não é mais a única unidade de valor.</p>
+<h2>Conclusão<span class="hx:absolute hx:-mt-20" id="conclusão"></span>
+    <a href="#conclus%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>A software factory com IA não é uma promessa abstrata. É um modelo operacional possível agora para organizações que já têm disciplina de board, PR e CI/CD. O salto vem ao tratar especificação como contrato, agentes como células especializadas e qualidade como propriedade de fluxo.</p>
+<p>Se o desenvolvimento tradicional era uma oficina de alta habilidade, o próximo estágio é uma fábrica de precisão com supervisão humana estratégica. Não se trata de automatizar por automatizar. Trata-se de construir um sistema de entrega que escala sem perder confiabilidade.</p>
+<p>A pergunta não é mais se a IA vai entrar no ciclo de desenvolvimento. A pergunta é: sua engenharia vai operar IA como ferramenta pontual ou como arquitetura de produção?</p>
+]]></content:encoded><category>engenharia-de-software</category><category>ia</category><category>spec-driven-development</category><category>devops</category><category>platform-engineering</category></item><item><title>OpenSpec na prática: instalação, uso, fluxo completo e comandos opcionais</title><link>https://www.orapha.dev/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/</link><guid isPermaLink="true">https://www.orapha.dev/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/</guid><pubDate>Wed, 08 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;OpenSpec na prática: instalação, uso, fluxo completo e comandos opcionais&lt;/h1&gt;&lt;p&gt;Se você já usa agente de código no dia a dia, já percebeu o padrão: quando a intenção está vaga, a saída também fica vaga. Foi por isso que comecei a estudar com mais atenção ferramentas de &lt;strong&gt;Spec-Driven Development (SDD)&lt;/strong&gt; e, nessa jornada, o &lt;strong&gt;OpenSpec&lt;/strong&gt; virou uma opção bem interessante.&lt;/p&gt;
+&lt;p&gt;A proposta dele é simples: antes de sair implementando, você organiza a mudança em artefatos claros (proposta, specs, tarefas e, quando necessário, design), executa com mais previsibilidade e mantém histórico do que mudou no comportamento esperado do sistema.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>OpenSpec na prática: instalação, uso, fluxo completo e comandos opcionais</h1><p>Se você já usa agente de código no dia a dia, já percebeu o padrão: quando a intenção está vaga, a saída também fica vaga. Foi por isso que comecei a estudar com mais atenção ferramentas de <strong>Spec-Driven Development (SDD)</strong> e, nessa jornada, o <strong>OpenSpec</strong> virou uma opção bem interessante.</p>
+<p>A proposta dele é simples: antes de sair implementando, você organiza a mudança em artefatos claros (proposta, specs, tarefas e, quando necessário, design), executa com mais previsibilidade e mantém histórico do que mudou no comportamento esperado do sistema.</p>
+<p>Neste artigo, vou detalhar tudo que você pediu, de forma prática:</p>
+<ol>
+<li>Como instalar o OpenSpec.</li>
+<li>Como iniciar em um projeto novo ou existente.</li>
+<li>Qual flow eu recomendo no uso diário.</li>
+<li>Quais comandos opcionais vale conhecer (CLI e slash commands).</li>
+</ol>
+<h2>O que é o OpenSpec (sem enrolação)<span class="hx:absolute hx:-mt-20" id="o-que-é-o-openspec-sem-enrolação"></span>
+    <a href="#o-que-%c3%a9-o-openspec-sem-enrola%c3%a7%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>O OpenSpec é um framework open source de SDD para trabalho com assistentes de IA. Ele adiciona uma camada de especificação no repositório para reduzir improviso e aumentar previsibilidade.</p>
+<p>A estrutura principal fica dentro de <code>openspec/</code>:</p>
+<ul>
+<li><code>openspec/specs/</code>: fonte de verdade atual do sistema.</li>
+<li><code>openspec/changes/</code>: mudanças propostas em andamento.</li>
+<li><code>openspec/changes/archive/</code>: mudanças já concluídas e arquivadas.</li>
+</ul>
+<p>O valor real está nessa separação: você consegue enxergar claramente o estado atual e o que está sendo proposto, sem misturar tudo em conversa de chat.</p>
+<h2>Pré-requisitos<span class="hx:absolute hx:-mt-20" id="pré-requisitos"></span>
+    <a href="#pr%c3%a9-requisitos" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Antes de instalar, garanta:</p>
+<ul>
+<li><code>Node.js &gt;= 20.19.0</code></li>
+<li>Um gerenciador de pacotes (<code>npm</code>, <code>pnpm</code>, <code>yarn</code> ou <code>bun</code>)</li>
+<li>Um projeto local (pode ser brownfield, sem problema)</li>
+<li>Um agente de código compatível (Codex, Claude Code, Cursor, Copilot etc.)</li>
+</ul>
+<p>Comandos rápidos para validar ambiente:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">node --version
+</span></span><span class="line"><span class="cl">npm --version</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>Instalação do OpenSpec CLI<span class="hx:absolute hx:-mt-20" id="instalação-do-openspec-cli"></span>
+    <a href="#instala%c3%a7%c3%a3o-do-openspec-cli" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Com npm<span class="hx:absolute hx:-mt-20" id="com-npm"></span>
+    <a href="#com-npm" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install -g @fission-ai/openspec@latest</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Com pnpm<span class="hx:absolute hx:-mt-20" id="com-pnpm"></span>
+    <a href="#com-pnpm" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pnpm install -g @fission-ai/openspec@latest</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Com yarn<span class="hx:absolute hx:-mt-20" id="com-yarn"></span>
+    <a href="#com-yarn" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yarn global add @fission-ai/openspec@latest</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Com bun<span class="hx:absolute hx:-mt-20" id="com-bun"></span>
+    <a href="#com-bun" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bun install -g @fission-ai/openspec@latest</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Depois da instalação:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openspec --version</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Se esse comando retornar a versão, a CLI está pronta.</p>
+<h2>Inicializando no projeto<span class="hx:absolute hx:-mt-20" id="inicializando-no-projeto"></span>
+    <a href="#inicializando-no-projeto" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>No diretório raiz do projeto:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> meu-projeto
+</span></span><span class="line"><span class="cl">openspec init</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Na prática, esse comando:</p>
+<ul>
+<li>cria a pasta <code>openspec/</code></li>
+<li>gera instruções para o agente (incluindo <code>AGENTS.md</code> no projeto)</li>
+<li>configura integrações para ferramentas suportadas</li>
+</ul>
+<p>Depois do <code>init</code>, eu gosto de rodar:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openspec list</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Isso já confirma se a estrutura está ativa e se há mudanças abertas.</p>
+<h2>Estrutura gerada e como ler isso<span class="hx:absolute hx:-mt-20" id="estrutura-gerada-e-como-ler-isso"></span>
+    <a href="#estrutura-gerada-e-como-ler-isso" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Um fluxo típico de mudança fica assim:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">openspec/
+</span></span><span class="line"><span class="cl">├── specs/
+</span></span><span class="line"><span class="cl">│   └── auth/
+</span></span><span class="line"><span class="cl">│       └── spec.md
+</span></span><span class="line"><span class="cl">└── changes/
+</span></span><span class="line"><span class="cl">    └── add-2fa/
+</span></span><span class="line"><span class="cl">        ├── proposal.md
+</span></span><span class="line"><span class="cl">        ├── tasks.md
+</span></span><span class="line"><span class="cl">        ├── design.md (opcional)
+</span></span><span class="line"><span class="cl">        └── specs/
+</span></span><span class="line"><span class="cl">            └── auth/
+</span></span><span class="line"><span class="cl">                └── spec.md</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Interpretação prática:</p>
+<ul>
+<li><code>proposal.md</code>: por que mudar e o que vai mudar.</li>
+<li><code>specs/*</code>: deltas de requisito/comportamento.</li>
+<li><code>tasks.md</code>: checklist de implementação.</li>
+<li><code>design.md</code>: decisões técnicas quando necessário.</li>
+</ul>
+<h2>Flow recomendado para usar OpenSpec no dia a dia<span class="hx:absolute hx:-mt-20" id="flow-recomendado-para-usar-openspec-no-dia-a-dia"></span>
+    <a href="#flow-recomendado-para-usar-openspec-no-dia-a-dia" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Esse é o fluxo que considero mais equilibrado entre rigor e velocidade.</p>
+<h3>1) Criar proposta da mudança<span class="hx:absolute hx:-mt-20" id="1-criar-proposta-da-mudança"></span>
+    <a href="#1-criar-proposta-da-mudan%c3%a7a" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>No agente, peça uma proposta OpenSpec para uma feature específica.</p>
+<p>Exemplo com shortcut (quando a ferramenta suporta):</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">/openspec:proposal Add profile search filters</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>2) Revisar e validar antes de implementar<span class="hx:absolute hx:-mt-20" id="2-revisar-e-validar-antes-de-implementar"></span>
+    <a href="#2-revisar-e-validar-antes-de-implementar" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>No terminal:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openspec list
+</span></span><span class="line"><span class="cl">openspec validate add-profile-search-filters
+</span></span><span class="line"><span class="cl">openspec show add-profile-search-filters</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Aqui é onde você corta ambiguidade e evita retrabalho.</p>
+<h3>3) Refinar proposal/specs/tasks<span class="hx:absolute hx:-mt-20" id="3-refinar-proposalspecstasks"></span>
+    <a href="#3-refinar-proposalspecstasks" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Se faltar clareza, peça para o agente ajustar critérios, cenários e tarefas até ficar executável.</p>
+<h3>4) Implementar com base nas tarefas<span class="hx:absolute hx:-mt-20" id="4-implementar-com-base-nas-tarefas"></span>
+    <a href="#4-implementar-com-base-nas-tarefas" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">/openspec:apply add-profile-search-filters</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>A ideia é implementar em cima do <code>tasks.md</code> e não no improviso.</p>
+<h3>5) Arquivar a mudança concluída<span class="hx:absolute hx:-mt-20" id="5-arquivar-a-mudança-concluída"></span>
+    <a href="#5-arquivar-a-mudan%c3%a7a-conclu%c3%adda" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>No agente:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">/openspec:archive add-profile-search-filters</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Ou via CLI:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openspec archive add-profile-search-filters --yes</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Quando você arquiva, a mudança sai do estado “em andamento” e passa a compor o histórico consolidado.</p>
+<h2>Comandos principais (CLI)<span class="hx:absolute hx:-mt-20" id="comandos-principais-cli"></span>
+    <a href="#comandos-principais-cli" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>No uso real, estes são os comandos que mais importam:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openspec init
+</span></span><span class="line"><span class="cl">openspec list
+</span></span><span class="line"><span class="cl">openspec view
+</span></span><span class="line"><span class="cl">openspec show &lt;change&gt;
+</span></span><span class="line"><span class="cl">openspec validate &lt;change&gt;
+</span></span><span class="line"><span class="cl">openspec archive &lt;change&gt; --yes
+</span></span><span class="line"><span class="cl">openspec update</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Resumo rápido:</p>
+<ul>
+<li><code>init</code>: inicializa OpenSpec no repo.</li>
+<li><code>list</code>: lista mudanças abertas.</li>
+<li><code>view</code>: dashboard interativo.</li>
+<li><code>show</code>: exibe proposal/tasks/spec deltas de uma mudança.</li>
+<li><code>validate</code>: valida formato/estrutura das specs.</li>
+<li><code>archive</code>: arquiva mudança concluída.</li>
+<li><code>update</code>: atualiza instruções e bindings para agentes no projeto.</li>
+</ul>
+<h2>Comandos de atalho no agente<span class="hx:absolute hx:-mt-20" id="comandos-de-atalho-no-agente"></span>
+    <a href="#comandos-de-atalho-no-agente" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Dependem da ferramenta, mas o padrão atual do OpenSpec em várias integrações nativas é:</p>
+<ul>
+<li><code>/openspec:proposal</code></li>
+<li><code>/openspec:apply</code></li>
+<li><code>/openspec:archive</code></li>
+</ul>
+<p>Em alguns contextos/documentações você também vai encontrar o fluxo <strong>OPSX</strong> (experimental), com comandos como:</p>
+<ul>
+<li><code>/opsx:new</code></li>
+<li><code>/opsx:continue</code></li>
+<li><code>/opsx:ff</code></li>
+<li><code>/opsx:apply</code></li>
+<li><code>/opsx:archive</code></li>
+</ul>
+<p>O ponto importante: confira qual conjunto de comandos sua integração instalou no <code>init</code>.</p>
+<h2>Erros comuns (e como evitar)<span class="hx:absolute hx:-mt-20" id="erros-comuns-e-como-evitar"></span>
+    <a href="#erros-comuns-e-como-evitar" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ol>
+<li>Pular revisão da proposta e ir direto para implementação.</li>
+<li>Aceitar <code>tasks.md</code> sem conferir ordem e dependências.</li>
+<li>Não validar specs (<code>validate</code>) antes de aplicar.</li>
+<li>Misturar comandos de docs diferentes sem checar sua integração.</li>
+<li>Não arquivar mudança concluída (vira bagunça rápido).</li>
+</ol>
+<h2>Um exemplo de execução ponta a ponta<span class="hx:absolute hx:-mt-20" id="um-exemplo-de-execução-ponta-a-ponta"></span>
+    <a href="#um-exemplo-de-execu%c3%a7%c3%a3o-ponta-a-ponta" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1) Instalar</span>
+</span></span><span class="line"><span class="cl">npm install -g @fission-ai/openspec@latest
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2) Inicializar no projeto</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> meu-projeto
+</span></span><span class="line"><span class="cl">openspec init
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3) Conferir estado</span>
+</span></span><span class="line"><span class="cl">openspec list
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 4) No agente, criar proposta</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># /openspec:proposal Add profile search filters</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 5) Revisar no terminal</span>
+</span></span><span class="line"><span class="cl">openspec validate add-profile-search-filters
+</span></span><span class="line"><span class="cl">openspec show add-profile-search-filters
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 6) No agente, implementar</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># /openspec:apply add-profile-search-filters</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 7) Arquivar mudança</span>
+</span></span><span class="line"><span class="cl">openspec archive add-profile-search-filters --yes</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>Fechando<span class="hx:absolute hx:-mt-20" id="fechando"></span>
+    <a href="#fechando" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Quando você instala, inicializa e segue um flow mínimo de proposta, revisão, aplicação e arquivo, a qualidade da execução com agente sobe muito.</p>
+<p>E o melhor: você mantém rastreabilidade real da intenção técnica, sem depender de memória de chat.</p>
+]]></content:encoded><category>ia</category><category>openspec</category><category>spec-driven-development</category><category>engenharia-de-software</category><category>desenvolvimento</category></item><item><title>No Spec-Driven Development, `implement` é onde todo o resto vira código</title><link>https://www.orapha.dev/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</link><guid isPermaLink="true">https://www.orapha.dev/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</guid><pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;implement&lt;/code&gt; é onde todo o resto vira código&lt;/h1&gt;&lt;p&gt;No texto &lt;a href="https://www.orapha.dev/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/"&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu falei da etapa de &lt;code&gt;constitution&lt;/code&gt;, em que eu defino os princípios que vão governar as decisões do projeto.&lt;/p&gt;
+&lt;p&gt;Depois, em &lt;a href="https://www.orapha.dev/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/"&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/a&gt;, eu mostrei o ponto em que a demanda ganha comportamento esperado mais claro.&lt;/p&gt;
+&lt;p&gt;Na sequência, em &lt;a href="https://www.orapha.dev/2026/04/24/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/"&gt;No Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; é onde a especificação vira estratégia de execução&lt;/a&gt;, eu entrei na etapa que organiza a travessia com ordem, dependência e noção de risco.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>No Spec-Driven Development, <code>implement</code> é onde todo o resto vira código</h1><p>No texto <a href="/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/">No Spec-Driven Development, tudo começa pelos princípios</a>, eu falei da etapa de <code>constitution</code>, em que eu defino os princípios que vão governar as decisões do projeto.</p>
 <p>Depois, em <a href="/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/">No Spec-Driven Development, <code>specify</code> é onde a ambiguidade começa a morrer</a>, eu mostrei o ponto em que a demanda ganha comportamento esperado mais claro.</p>
 <p>Na sequência, em <a href="/2026/04/24/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/">No Spec-Driven Development, <code>plan</code> é onde a especificação vira estratégia de execução</a>, eu entrei na etapa que organiza a travessia com ordem, dependência e noção de risco.</p>
 <p>Depois disso, em <a href="/2026/05/01/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/">No Spec-Driven Development, <code>tasks</code> é onde o plano vira unidades concretas de trabalho</a>, eu falei da quebra que transforma estratégia em blocos executáveis.</p>
@@ -91,24 +708,8 @@ segue adiante</p>
 <p>Eu gosto dessa estrutura justamente porque ela não é rígida no mau sentido. Ela é atômica. Cada parte existe com uma função clara, mas nenhuma delas precisa ser tratada como peça sagrada ou imutável. Se o projeto evolui, a estrutura pode evoluir junto. Se o contexto muda, os princípios podem mudar junto. Se a forma de executar melhora, o fluxo também pode ser ajustado.</p>
 <p>Para mim, esse é um dos pontos mais fortes dessa abordagem: ela organiza o trabalho sem fingir que o projeto vai permanecer igual para sempre.</p>
 <p>Obrigado por ler até aqui.</p>
-]]></content:encoded>
-        
-            <category>ia</category>
-            <category>spec-driven-development</category>
-            <category>implement</category>
-            <category>implementacao</category>
-            <category>engenharia-de-software</category>
-        
-      </item>
-    
-      <item>
-        <title>No Spec-Driven Development, `tasks` é onde o plano vira unidades concretas de trabalho</title>
-        <link>https://www.orapha.dev/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</guid>
-        <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;tasks&lt;/code&gt; é onde o plano vira unidades concretas de trabalho&lt;/h1&gt;&lt;p&gt;No texto &lt;a href=&#34;https://www.orapha.dev/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu foquei na etapa de &lt;code&gt;constitution&lt;/code&gt;, em que eu defino os critérios que vão orientar as decisões do projeto.&lt;/p&gt;
-&lt;p&gt;Depois, em &lt;a href=&#34;https://www.orapha.dev/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/&#34;&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/a&gt;, eu entrei na fase em que a demanda deixa de ser intenção vaga e passa a ter comportamento esperado mais claro.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1>No Spec-Driven Development, <code>tasks</code> é onde o plano vira unidades concretas de trabalho</h1><p>No texto <a href="/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/">No Spec-Driven Development, tudo começa pelos princípios</a>, eu foquei na etapa de <code>constitution</code>, em que eu defino os critérios que vão orientar as decisões do projeto.</p>
+]]></content:encoded><category>ia</category><category>spec-driven-development</category><category>implement</category><category>implementacao</category><category>engenharia-de-software</category></item><item><title>No Spec-Driven Development, `tasks` é onde o plano vira unidades concretas de trabalho</title><link>https://www.orapha.dev/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</link><guid isPermaLink="true">https://www.orapha.dev/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</guid><pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;tasks&lt;/code&gt; é onde o plano vira unidades concretas de trabalho&lt;/h1&gt;&lt;p&gt;No texto &lt;a href="https://www.orapha.dev/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/"&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu foquei na etapa de &lt;code&gt;constitution&lt;/code&gt;, em que eu defino os critérios que vão orientar as decisões do projeto.&lt;/p&gt;
+&lt;p&gt;Depois, em &lt;a href="https://www.orapha.dev/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/"&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/a&gt;, eu entrei na fase em que a demanda deixa de ser intenção vaga e passa a ter comportamento esperado mais claro.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>No Spec-Driven Development, <code>tasks</code> é onde o plano vira unidades concretas de trabalho</h1><p>No texto <a href="/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/">No Spec-Driven Development, tudo começa pelos princípios</a>, eu foquei na etapa de <code>constitution</code>, em que eu defino os critérios que vão orientar as decisões do projeto.</p>
 <p>Depois, em <a href="/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/">No Spec-Driven Development, <code>specify</code> é onde a ambiguidade começa a morrer</a>, eu entrei na fase em que a demanda deixa de ser intenção vaga e passa a ter comportamento esperado mais claro.</p>
 <p>Na sequência, em <a href="/2026/04/24/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/">No Spec-Driven Development, <code>plan</code> é onde a especificação vira estratégia de execução</a>, eu falei da etapa que organiza a travessia do trabalho com ordem, dependência e noção de risco.</p>
 <p>Só que plano, por si só, ainda não é trabalho executável.</p>
@@ -276,25 +877,9 @@ segue adiante</p>
 <p>Para mim, isso importa porque execução boa não depende só de saber para onde ir. Depende também de saber qual pedaço faz sentido atacar agora, com fronteira clara e critério de conclusão minimamente honesto.</p>
 <p>Quando essa quebra está bem feita, a implementação ganha ritmo sem perder coerência.</p>
 <p>No próximo texto, eu quero entrar na etapa de <code>implement</code>, que é quando toda essa cadeia finalmente vira código.</p>
-]]></content:encoded>
-        
-            <category>ia</category>
-            <category>spec-driven-development</category>
-            <category>tasks</category>
-            <category>tarefas</category>
-            <category>engenharia-de-software</category>
-        
-      </item>
-    
-      <item>
-        <title>No Spec-Driven Development, `plan` é onde a especificação vira estratégia de execução</title>
-        <link>https://www.orapha.dev/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</guid>
-        <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; é onde a especificação vira estratégia de execução&lt;/h1&gt;&lt;p&gt;No texto &lt;a href=&#34;https://www.orapha.dev/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu falei da etapa de &lt;code&gt;constitution&lt;/code&gt;, em que eu defino os critérios que vão orientar o projeto.&lt;/p&gt;
-&lt;p&gt;Depois, em &lt;a href=&#34;https://www.orapha.dev/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/&#34;&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/a&gt;, eu entrei na etapa em que a demanda deixa de ser intenção vaga e passa a ter comportamento esperado mais claro.&lt;/p&gt;
-&lt;p&gt;Só que ainda falta uma ponte importante entre entender o problema e sair implementando.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1>No Spec-Driven Development, <code>plan</code> é onde a especificação vira estratégia de execução</h1><p>No texto <a href="/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/">No Spec-Driven Development, tudo começa pelos princípios</a>, eu falei da etapa de <code>constitution</code>, em que eu defino os critérios que vão orientar o projeto.</p>
+]]></content:encoded><category>ia</category><category>spec-driven-development</category><category>tasks</category><category>tarefas</category><category>engenharia-de-software</category></item><item><title>No Spec-Driven Development, `plan` é onde a especificação vira estratégia de execução</title><link>https://www.orapha.dev/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</link><guid isPermaLink="true">https://www.orapha.dev/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</guid><pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; é onde a especificação vira estratégia de execução&lt;/h1&gt;&lt;p&gt;No texto &lt;a href="https://www.orapha.dev/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/"&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu falei da etapa de &lt;code&gt;constitution&lt;/code&gt;, em que eu defino os critérios que vão orientar o projeto.&lt;/p&gt;
+&lt;p&gt;Depois, em &lt;a href="https://www.orapha.dev/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/"&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/a&gt;, eu entrei na etapa em que a demanda deixa de ser intenção vaga e passa a ter comportamento esperado mais claro.&lt;/p&gt;
+&lt;p&gt;Só que ainda falta uma ponte importante entre entender o problema e sair implementando.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>No Spec-Driven Development, <code>plan</code> é onde a especificação vira estratégia de execução</h1><p>No texto <a href="/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/">No Spec-Driven Development, tudo começa pelos princípios</a>, eu falei da etapa de <code>constitution</code>, em que eu defino os critérios que vão orientar o projeto.</p>
 <p>Depois, em <a href="/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/">No Spec-Driven Development, <code>specify</code> é onde a ambiguidade começa a morrer</a>, eu entrei na etapa em que a demanda deixa de ser intenção vaga e passa a ter comportamento esperado mais claro.</p>
 <p>Só que ainda falta uma ponte importante entre entender o problema e sair implementando.</p>
 <p>Essa ponte é a etapa de <code>plan</code>.</p>
@@ -488,27 +1073,11 @@ vamos sair quebrando em prompt e entregar logo</p>
 <p>Porque execução não é só fazer. Execução também é escolher a ordem certa para fazer.</p>
 <p>E, no fim, muita implementação ruim não nasce de especificação ruim. Nasce de sequência ruim.</p>
 <p>No próximo texto, eu quero entrar na etapa de <code>tasks</code>, que é quando esse plano começa a virar unidades concretas de trabalho.</p>
-]]></content:encoded>
-        
-            <category>ia</category>
-            <category>spec-driven-development</category>
-            <category>plan</category>
-            <category>planejamento</category>
-            <category>engenharia-de-software</category>
-        
-      </item>
-    
-      <item>
-        <title>No Spec-Driven Development, `specify` é onde a ambiguidade começa a morrer</title>
-        <link>https://www.orapha.dev/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</guid>
-        <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/h1&gt;&lt;p&gt;No texto &lt;a href=&#34;https://www.orapha.dev/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu foquei na etapa de &lt;code&gt;constitution&lt;/code&gt;, que é onde eu defino os critérios que vão governar o projeto.&lt;/p&gt;
+]]></content:encoded><category>ia</category><category>spec-driven-development</category><category>plan</category><category>planejamento</category><category>engenharia-de-software</category></item><item><title>No Spec-Driven Development, `specify` é onde a ambiguidade começa a morrer</title><link>https://www.orapha.dev/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</link><guid isPermaLink="true">https://www.orapha.dev/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</guid><pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/h1&gt;&lt;p&gt;No texto &lt;a href="https://www.orapha.dev/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/"&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu foquei na etapa de &lt;code&gt;constitution&lt;/code&gt;, que é onde eu defino os critérios que vão governar o projeto.&lt;/p&gt;
 &lt;p&gt;Mas princípio sozinho não entrega sistema.&lt;/p&gt;
 &lt;p&gt;Depois de dizer como o projeto deve pensar, chega a hora de dizer o que ele precisa construir.&lt;/p&gt;
 &lt;p&gt;É aí que entra a etapa de &lt;code&gt;specify&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;E, para mim, essa é uma das partes mais importantes de todo o fluxo. Porque, na prática, é aqui que começa o trabalho de uma nova demanda.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1>No Spec-Driven Development, <code>specify</code> é onde a ambiguidade começa a morrer</h1><p>No texto <a href="/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/">No Spec-Driven Development, tudo começa pelos princípios</a>, eu foquei na etapa de <code>constitution</code>, que é onde eu defino os critérios que vão governar o projeto.</p>
+&lt;p&gt;E, para mim, essa é uma das partes mais importantes de todo o fluxo. Porque, na prática, é aqui que começa o trabalho de uma nova demanda.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>No Spec-Driven Development, <code>specify</code> é onde a ambiguidade começa a morrer</h1><p>No texto <a href="/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/">No Spec-Driven Development, tudo começa pelos princípios</a>, eu foquei na etapa de <code>constitution</code>, que é onde eu defino os critérios que vão governar o projeto.</p>
 <p>Mas princípio sozinho não entrega sistema.</p>
 <p>Depois de dizer como o projeto deve pensar, chega a hora de dizer o que ele precisa construir.</p>
 <p>É aí que entra a etapa de <code>specify</code>.</p>
@@ -695,25 +1264,9 @@ coloca notificação</p>
 <p>Para mim, esse é o ponto onde a ambiguidade começa a perder espaço de verdade.</p>
 <p>Porque, no fundo, especificar bem não é produzir burocracia. É tornar o problema compreensível o suficiente para que implementação, revisão e validação trabalhem sobre a mesma realidade.</p>
 <p>No próximo aprofundamento, o caminho natural é entrar na etapa que pega essa especificação e transforma em plano de execução.</p>
-]]></content:encoded>
-        
-            <category>ia</category>
-            <category>spec-driven-development</category>
-            <category>specify</category>
-            <category>especificacao</category>
-            <category>engenharia-de-software</category>
-        
-      </item>
-    
-      <item>
-        <title>No Spec-Driven Development, tudo começa pelos princípios</title>
-        <link>https://www.orapha.dev/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</guid>
-        <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/h1&gt;&lt;p&gt;No artigo &lt;a href=&#34;https://www.orapha.dev/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/&#34;&gt;Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos&lt;/a&gt;, eu passei pelas etapas do fluxo de forma mais geral.&lt;/p&gt;
+]]></content:encoded><category>ia</category><category>spec-driven-development</category><category>specify</category><category>especificacao</category><category>engenharia-de-software</category></item><item><title>No Spec-Driven Development, tudo começa pelos princípios</title><link>https://www.orapha.dev/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</link><guid isPermaLink="true">https://www.orapha.dev/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</guid><pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/h1&gt;&lt;p&gt;No artigo &lt;a href="https://www.orapha.dev/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/"&gt;Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos&lt;/a&gt;, eu passei pelas etapas do fluxo de forma mais geral.&lt;/p&gt;
 &lt;p&gt;Mas eu achei que valia a pena voltar com calma em cada uma delas, em textos separados, porque tem coisa ali que merece ser dissecada direito.&lt;/p&gt;
-&lt;p&gt;Se a ideia é aprofundar esse fluxo aos poucos, faz sentido abrir justamente pela etapa em que eu defino os princípios do projeto.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1>No Spec-Driven Development, tudo começa pelos princípios</h1><p>No artigo <a href="/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/">Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos</a>, eu passei pelas etapas do fluxo de forma mais geral.</p>
+&lt;p&gt;Se a ideia é aprofundar esse fluxo aos poucos, faz sentido abrir justamente pela etapa em que eu defino os princípios do projeto.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>No Spec-Driven Development, tudo começa pelos princípios</h1><p>No artigo <a href="/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/">Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos</a>, eu passei pelas etapas do fluxo de forma mais geral.</p>
 <p>Mas eu achei que valia a pena voltar com calma em cada uma delas, em textos separados, porque tem coisa ali que merece ser dissecada direito.</p>
 <p>Se a ideia é aprofundar esse fluxo aos poucos, faz sentido abrir justamente pela etapa em que eu defino os princípios do projeto.</p>
 <p>Estou falando da <code>constitution</code>.</p>
@@ -896,23 +1449,7 @@ agora melhora a arquitetura</p>
 <p>É por isso que eu gosto tanto dessa etapa. Antes de discutir tela, endpoint, banco, stack ou tarefa, eu consigo definir o que realmente vai mandar nas decisões.</p>
 <p>Para mim, esse é o momento em que o projeto deixa de ser apenas um pedido e começa a virar um sistema com identidade técnica.</p>
 <p>No próximo aprofundamento, o caminho natural é entrar na etapa de <code>specify</code>, que é quando a conversa sai dos princípios e entra naquilo que de fato precisa ser construído.</p>
-]]></content:encoded>
-        
-            <category>ia</category>
-            <category>spec-driven-development</category>
-            <category>constitution</category>
-            <category>engenharia-de-software</category>
-            <category>principios</category>
-        
-      </item>
-    
-      <item>
-        <title>Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos</title>
-        <link>https://www.orapha.dev/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</guid>
-        <pubDate>Fri, 03 Apr 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos&lt;/h1&gt;&lt;p&gt;Se você já tentou construir software com agente de código, provavelmente já passou por essa montanha-russa. Tem dia que a coisa anda bem demais. Em outro, o agente entrega metade do que você pediu, inventa uma estrutura nada a ver, quebra a build ou até faz algo que parece funcionar, mas com uma base que você mesmo não faria daquele jeito.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1>Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos</h1><p>Se você já tentou construir software com agente de código, provavelmente já passou por essa montanha-russa. Tem dia que a coisa anda bem demais. Em outro, o agente entrega metade do que você pediu, inventa uma estrutura nada a ver, quebra a build ou até faz algo que parece funcionar, mas com uma base que você mesmo não faria daquele jeito.</p>
+]]></content:encoded><category>ia</category><category>spec-driven-development</category><category>constitution</category><category>engenharia-de-software</category><category>principios</category></item><item><title>Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos</title><link>https://www.orapha.dev/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</link><guid isPermaLink="true">https://www.orapha.dev/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</guid><pubDate>Fri, 03 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos&lt;/h1&gt;&lt;p&gt;Se você já tentou construir software com agente de código, provavelmente já passou por essa montanha-russa. Tem dia que a coisa anda bem demais. Em outro, o agente entrega metade do que você pediu, inventa uma estrutura nada a ver, quebra a build ou até faz algo que parece funcionar, mas com uma base que você mesmo não faria daquele jeito.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos</h1><p>Se você já tentou construir software com agente de código, provavelmente já passou por essa montanha-russa. Tem dia que a coisa anda bem demais. Em outro, o agente entrega metade do que você pediu, inventa uma estrutura nada a ver, quebra a build ou até faz algo que parece funcionar, mas com uma base que você mesmo não faria daquele jeito.</p>
 <p>Eu venho pensando bastante sobre isso. E, para mim, o problema quase nunca está só no modelo. Na maior parte das vezes, o problema está no jeito que a gente pede. Pedido solto gera resposta solta. Contexto mal amarrado gera decisão torta. E, quando não existe um jeito claro de dizer o que precisa ser construído e como aquilo vai ser validado, a chance de virar improviso é grande demais.</p>
 <p>Foi por isso que comecei a olhar com mais atenção para <strong>Spec-Driven Development</strong>, ou simplesmente <strong>SDD</strong>. E, dentro disso, uma ferramenta que me chamou atenção foi o <strong>Spec Kit</strong>, um toolkit open source criado justamente para organizar esse fluxo de trabalho com agentes.</p>
 <p>Neste texto, eu quero te mostrar como eu tenho enxergado esse processo na prática. Não como papo bonito, mas como um jeito mais sério de trabalhar com IA no desenvolvimento. A ideia aqui é sair do prompt jogado no chat e entrar em um fluxo com princípios, especificação, plano, tarefas e implementação.</p>
@@ -1558,27 +2095,11 @@ Se trata de criar um processo em que eu continuo pensando como engenheiro, mas u
 <p><a href="/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/">No Spec-Driven Development, <code>implement</code> é onde todo o resto vira código</a></p>
 </li>
 </ul>
-]]></content:encoded>
-        
-            <category>ia</category>
-            <category>spec-driven-development</category>
-            <category>spec-kit</category>
-            <category>engenharia-de-software</category>
-            <category>desenvolvimento</category>
-        
-      </item>
-    
-      <item>
-        <title>Você está se sentindo um bosta com o surgimento da IA?</title>
-        <link>https://www.orapha.dev/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</guid>
-        <pubDate>Sun, 22 Mar 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;Você está se sentindo um bosta com o surgimento da IA?&lt;/h1&gt;&lt;p&gt;Semana passada eu estava meio mal.&lt;/p&gt;
+]]></content:encoded><category>ia</category><category>spec-driven-development</category><category>spec-kit</category><category>engenharia-de-software</category><category>desenvolvimento</category></item><item><title>Você está se sentindo um bosta com o surgimento da IA?</title><link>https://www.orapha.dev/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</link><guid isPermaLink="true">https://www.orapha.dev/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</guid><pubDate>Sun, 22 Mar 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;Você está se sentindo um bosta com o surgimento da IA?&lt;/h1&gt;&lt;p&gt;Semana passada eu estava meio mal.&lt;/p&gt;
 &lt;p&gt;Recebendo demanda, criando prompt, revisando alteração, aprovando ou negando resposta, reescrevendo prompt, ajustando contexto e repetindo esse ciclo de novo e de novo.&lt;/p&gt;
 &lt;p&gt;Em algum momento, isso começou a me corroer por dentro.&lt;/p&gt;
 &lt;p&gt;Porque eu gosto de programar.&lt;/p&gt;
-&lt;p&gt;Eu gosto de criar algoritmo, conectar classes, pensar modelagem, fazer inversão de dependência, organizar responsabilidade, nomear bem uma abstração e ver uma arquitetura começar a respirar. Tem uma parte muito viva da minha relação com software que sempre passou por isso: o código escrito à mão.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1>Você está se sentindo um bosta com o surgimento da IA?</h1><p>Semana passada eu estava meio mal.</p>
+&lt;p&gt;Eu gosto de criar algoritmo, conectar classes, pensar modelagem, fazer inversão de dependência, organizar responsabilidade, nomear bem uma abstração e ver uma arquitetura começar a respirar. Tem uma parte muito viva da minha relação com software que sempre passou por isso: o código escrito à mão.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>Você está se sentindo um bosta com o surgimento da IA?</h1><p>Semana passada eu estava meio mal.</p>
 <p>Recebendo demanda, criando prompt, revisando alteração, aprovando ou negando resposta, reescrevendo prompt, ajustando contexto e repetindo esse ciclo de novo e de novo.</p>
 <p>Em algum momento, isso começou a me corroer por dentro.</p>
 <p>Porque eu gosto de programar.</p>
@@ -1695,30 +2216,13 @@ Se trata de criar um processo em que eu continuo pensando como engenheiro, mas u
 <p>Me sinto em transição.</p>
 <p>E, para este momento da minha vida, isso já é muita coisa.</p>
 <p>Meu obrigado ao <strong>Chad Fowler</strong> pelo artigo. Algumas leituras não resolvem a crise por completo, mas colocam nome no que estava doendo. E, às vezes, é exatamente daí que a recuperação começa.</p>
-]]></content:encoded>
-        
-            <category>ai</category>
-            <category>software-engineering</category>
-            <category>carreira</category>
-            <category>desenvolvimento</category>
-            <category>reflexao</category>
-        
-      </item>
-    
-      <item>
-        <title>Vibe Coding está morto: por que a IA autônoma exige cercas determinísticas rígidas para realmente funcionar</title>
-        <link>https://www.orapha.dev/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</guid>
-        <pubDate>Fri, 20 Mar 2026 11:15:00 GMT</pubDate>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; este texto é uma &lt;strong&gt;tradução em português&lt;/strong&gt; do artigo original de &lt;strong&gt;Mohit Sewak, Ph.D.&lt;/strong&gt;, publicado em &lt;strong&gt;Level Up Coding&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Artigo original:&lt;/strong&gt; &lt;a href=&#34;https://levelup.gitconnected.com/vibe-coding-is-dead-why-autonomous-ai-requires-strict-deterministic-fences-to-actually-work-4b8a3ebb6fc1&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work&lt;/a&gt;&lt;/p&gt;
-
+]]></content:encoded><category>ai</category><category>software-engineering</category><category>carreira</category><category>desenvolvimento</category><category>reflexao</category></item><item><title>Vibe Coding está morto: por que a IA autônoma exige cercas determinísticas rígidas para realmente funcionar</title><link>https://www.orapha.dev/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</link><guid isPermaLink="true">https://www.orapha.dev/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</guid><pubDate>Fri, 20 Mar 2026 11:15:00 GMT</pubDate><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; este texto é uma &lt;strong&gt;tradução em português&lt;/strong&gt; do artigo original de &lt;strong&gt;Mohit Sewak, Ph.D.&lt;/strong&gt;, publicado em &lt;strong&gt;Level Up Coding&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Artigo original:&lt;/strong&gt; &lt;a href="https://levelup.gitconnected.com/vibe-coding-is-dead-why-autonomous-ai-requires-strict-deterministic-fences-to-actually-work-4b8a3ebb6fc1"target="_blank" rel="noopener"&gt;Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1&gt;Vibe Coding está morto: por que a IA autônoma exige cercas determinísticas rígidas para realmente funcionar&lt;/h1&gt;&lt;p&gt;&lt;em&gt;A era da implantação de modelos “nus” acabou. Bem-vindo à era da AI Harness Engineering.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Mohit Sewak, Ph.D.&lt;/p&gt;
-&lt;p&gt;11 min de leitura&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<blockquote>
+&lt;p&gt;11 min de leitura&lt;/p&gt;</description><content:encoded><![CDATA[<blockquote>
   <p><strong>Nota:</strong> este texto é uma <strong>tradução em português</strong> do artigo original de <strong>Mohit Sewak, Ph.D.</strong>, publicado em <strong>Level Up Coding</strong>.</p>
 <p><strong>Artigo original:</strong> <a href="https://levelup.gitconnected.com/vibe-coding-is-dead-why-autonomous-ai-requires-strict-deterministic-fences-to-actually-work-4b8a3ebb6fc1"target="_blank" rel="noopener">Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work</a></p>
 
@@ -1868,25 +2372,9 @@ Se trata de criar um processo em que eu continuo pensando como engenheiro, mas u
 <p>Sewak, M. (2026). <em>What is AI Harness Engineering? Your Guide to Controlling Autonomous Systems</em>. Medium. <a href="https://medium.com/"target="_blank" rel="noopener">https://medium.com/</a></p>
 <p>Siebert, L. C., Lupetti, M. L., Aizenberg, E., Beckers, N., … Lagendijk, R. L. (2021). <em>Meaningful human control: actionable properties for AI system development</em>. arXiv. <a href="https://arxiv.org/pdf/2112.01298v2"target="_blank" rel="noopener">https://arxiv.org/pdf/2112.01298v2</a></p>
 <p><strong>Aviso legal:</strong> as opiniões expressas neste artigo são pessoais e não refletem necessariamente a política oficial ou a posição de qualquer organização afiliada. Assistência de IA foi utilizada na pesquisa e na redação deste artigo, bem como na geração de quaisquer imagens que o acompanhem. Licenciado sob <code>CC BY-ND 4.0</code>.</p>
-]]></content:encoded>
-        
-            <category>ai</category>
-            <category>agents</category>
-            <category>software-engineering</category>
-            <category>security</category>
-            <category>mcp</category>
-        
-      </item>
-    
-      <item>
-        <title>Você ainda lembra dos princípios da engenharia de software?</title>
-        <link>https://www.orapha.dev/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</guid>
-        <pubDate>Thu, 19 Mar 2026 10:30:00 GMT</pubDate>
-        <description>&lt;p&gt;Estamos vivendo uma fase curiosa da tecnologia. Nunca foi tão fácil gerar código, criar testes, pedir sugestões de arquitetura ou corrigir bugs com ajuda de IA. Em poucos segundos, uma ferramenta responde o que antes levaria horas de pesquisa, tentativa e erro.&lt;/p&gt;
+]]></content:encoded><category>ai</category><category>agents</category><category>software-engineering</category><category>security</category><category>mcp</category></item><item><title>Você ainda lembra dos princípios da engenharia de software?</title><link>https://www.orapha.dev/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</link><guid isPermaLink="true">https://www.orapha.dev/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</guid><pubDate>Thu, 19 Mar 2026 10:30:00 GMT</pubDate><description>&lt;p&gt;Estamos vivendo uma fase curiosa da tecnologia. Nunca foi tão fácil gerar código, criar testes, pedir sugestões de arquitetura ou corrigir bugs com ajuda de IA. Em poucos segundos, uma ferramenta responde o que antes levaria horas de pesquisa, tentativa e erro.&lt;/p&gt;
 &lt;p&gt;Isso parece ótimo, e em muitos casos realmente é. O problema começa quando velocidade passa a ser confundida com engenharia.&lt;/p&gt;
-&lt;p&gt;Muita gente hoje se apresenta como software developer ou engenheiro de software, mas diante de tanta automação vale revisitar uma pergunta simples: você ainda lembra dos princípios da engenharia de software?&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Estamos vivendo uma fase curiosa da tecnologia. Nunca foi tão fácil gerar código, criar testes, pedir sugestões de arquitetura ou corrigir bugs com ajuda de IA. Em poucos segundos, uma ferramenta responde o que antes levaria horas de pesquisa, tentativa e erro.</p>
+&lt;p&gt;Muita gente hoje se apresenta como software developer ou engenheiro de software, mas diante de tanta automação vale revisitar uma pergunta simples: você ainda lembra dos princípios da engenharia de software?&lt;/p&gt;</description><content:encoded><![CDATA[<p>Estamos vivendo uma fase curiosa da tecnologia. Nunca foi tão fácil gerar código, criar testes, pedir sugestões de arquitetura ou corrigir bugs com ajuda de IA. Em poucos segundos, uma ferramenta responde o que antes levaria horas de pesquisa, tentativa e erro.</p>
 <p>Isso parece ótimo, e em muitos casos realmente é. O problema começa quando velocidade passa a ser confundida com engenharia.</p>
 <p>Muita gente hoje se apresenta como software developer ou engenheiro de software, mas diante de tanta automação vale revisitar uma pergunta simples: você ainda lembra dos princípios da engenharia de software?</p>
 <p>No fim, IA acelera a execução. Mas fundamento continua sendo o que sustenta o software quando a pressa passa.</p>
@@ -1940,23 +2428,8 @@ Se trata de criar um processo em que eu continuo pensando como engenheiro, mas u
     <a href="#ent%c3%a3o-voc%c3%aa-se-considera-engenheiro-de-software" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Se você se considera engenheiro de software, precisa lembrar que seu valor não está apenas em escrever código rápido. Seu valor está em tomar boas decisões, construir com clareza, manter simplicidade, testar com rigor e entregar soluções que continuem fazendo sentido depois da empolgação inicial.</p>
 <p>Com ajuda da IA, talvez você esteja produzindo mais. Mas talvez também esteja esquecendo o que realmente vale a pena.</p>
 <p>E o que realmente vale a pena continua sendo o mesmo: pensar bem, construir direito e não abandonar os princípios que sustentam a engenharia de software.</p>
-]]></content:encoded>
-        
-            <category>software-engineering</category>
-            <category>ai</category>
-            <category>desenvolvimento</category>
-            <category>tecnologia</category>
-        
-      </item>
-    
-      <item>
-        <title>Agent Engineering + Agentic Flow Engineering: uma visão mais organizada</title>
-        <link>https://www.orapha.dev/2026/03/19/agent-engineering-e-agentic-flow-engineering/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2026/03/19/agent-engineering-e-agentic-flow-engineering/</guid>
-        <pubDate>Thu, 19 Mar 2026 01:00:00 GMT</pubDate>
-        <description>&lt;p&gt;Os dois textos abaixo falam, no fundo, da mesma transição: sair da IA usada como assistente isolado e começar a tratá-la como sistema organizado. Um deles enfatiza a estrutura de times de agentes, com papéis, capacidades e colaboração. O outro enfatiza algo ainda mais importante em produção: o fluxo, a orquestração, a governança, a tolerância a falhas e a observabilidade.&lt;/p&gt;
-&lt;p&gt;Juntando os dois, dá para resumir a ideia central assim:&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Os dois textos abaixo falam, no fundo, da mesma transição: sair da IA usada como assistente isolado e começar a tratá-la como sistema organizado. Um deles enfatiza a estrutura de times de agentes, com papéis, capacidades e colaboração. O outro enfatiza algo ainda mais importante em produção: o fluxo, a orquestração, a governança, a tolerância a falhas e a observabilidade.</p>
+]]></content:encoded><category>software-engineering</category><category>ai</category><category>desenvolvimento</category><category>tecnologia</category></item><item><title>Agent Engineering + Agentic Flow Engineering: uma visão mais organizada</title><link>https://www.orapha.dev/2026/03/19/agent-engineering-e-agentic-flow-engineering/</link><guid isPermaLink="true">https://www.orapha.dev/2026/03/19/agent-engineering-e-agentic-flow-engineering/</guid><pubDate>Thu, 19 Mar 2026 01:00:00 GMT</pubDate><description>&lt;p&gt;Os dois textos abaixo falam, no fundo, da mesma transição: sair da IA usada como assistente isolado e começar a tratá-la como sistema organizado. Um deles enfatiza a estrutura de times de agentes, com papéis, capacidades e colaboração. O outro enfatiza algo ainda mais importante em produção: o fluxo, a orquestração, a governança, a tolerância a falhas e a observabilidade.&lt;/p&gt;
+&lt;p&gt;Juntando os dois, dá para resumir a ideia central assim:&lt;/p&gt;</description><content:encoded><![CDATA[<p>Os dois textos abaixo falam, no fundo, da mesma transição: sair da IA usada como assistente isolado e começar a tratá-la como sistema organizado. Um deles enfatiza a estrutura de times de agentes, com papéis, capacidades e colaboração. O outro enfatiza algo ainda mais importante em produção: o fluxo, a orquestração, a governança, a tolerância a falhas e a observabilidade.</p>
 <p>Juntando os dois, dá para resumir a ideia central assim:</p>
 <blockquote>
   <p>O valor não está em ter &ldquo;mais agentes&rdquo;, mas em desenhar um sistema em que agentes especializados trabalham com contratos claros, fluxos explícitos e controle operacional de verdade.</p>
@@ -2163,24 +2636,8 @@ Agentic Flow Engineering organiza como o sistema realmente funciona.</p>
 <li><a href="https://www.linkedin.com/pulse/complete-agent-engineering-playbook-agentsmd-skillsmd-zeelan-shaik-dzpic/"target="_blank" rel="noopener">The Complete Agent Engineering Playbook (Agents.md + Skills.md + Agent Teams)</a></li>
 <li><a href="https://www.linkedin.com/pulse/agentic-flow-engineering-why-matters-what-who-needs-how-baipalli-jowsf/"target="_blank" rel="noopener">Agentic Flow Engineering: Why It Matters, What It Is, Who Needs It, and How to Build It</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>ai</category>
-            <category>agents</category>
-            <category>llm</category>
-            <category>software-engineering</category>
-            <category>architecture</category>
-        
-      </item>
-    
-      <item>
-        <title>Ensinando o Copilot a falar a linguagem do seu repositório</title>
-        <link>https://www.orapha.dev/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</guid>
-        <pubDate>Wed, 29 Oct 2025 14:46:13 GMT</pubDate>
-        <description>&lt;p&gt;Trabalhando há mais de 14 anos com desenvolvimento de software, sempre me pego pensando sobre as tendências e novidades das tecnologias que podem ser usadas para &lt;strong&gt;reduzir atrito no dia a dia do dev&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Vocês sabiam que existe a possibilidade de adicionar **instruções personalizadas diretamente no seu repositório para agentes de IA?**Basicamente, você pode “ensinar” o Copilot sobre as regras, padrões e estilos do seu projeto, e ele vai gerar sugestões muito mais alinhadas ao que você e sua equipe realmente precisam.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Trabalhando há mais de 14 anos com desenvolvimento de software, sempre me pego pensando sobre as tendências e novidades das tecnologias que podem ser usadas para <strong>reduzir atrito no dia a dia do dev</strong>.</p>
+]]></content:encoded><category>ai</category><category>agents</category><category>llm</category><category>software-engineering</category><category>architecture</category></item><item><title>Ensinando o Copilot a falar a linguagem do seu repositório</title><link>https://www.orapha.dev/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</link><guid isPermaLink="true">https://www.orapha.dev/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</guid><pubDate>Wed, 29 Oct 2025 14:46:13 GMT</pubDate><description>&lt;p&gt;Trabalhando há mais de 14 anos com desenvolvimento de software, sempre me pego pensando sobre as tendências e novidades das tecnologias que podem ser usadas para &lt;strong&gt;reduzir atrito no dia a dia do dev&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Vocês sabiam que existe a possibilidade de adicionar **instruções personalizadas diretamente no seu repositório para agentes de IA?**Basicamente, você pode “ensinar” o Copilot sobre as regras, padrões e estilos do seu projeto, e ele vai gerar sugestões muito mais alinhadas ao que você e sua equipe realmente precisam.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Trabalhando há mais de 14 anos com desenvolvimento de software, sempre me pego pensando sobre as tendências e novidades das tecnologias que podem ser usadas para <strong>reduzir atrito no dia a dia do dev</strong>.</p>
 <p>Vocês sabiam que existe a possibilidade de adicionar **instruções personalizadas diretamente no seu repositório para agentes de IA?**Basicamente, você pode “ensinar” o Copilot sobre as regras, padrões e estilos do seu projeto, e ele vai gerar sugestões muito mais alinhadas ao que você e sua equipe realmente precisam.</p>
 <p>É como ter um colega de trabalho que já leu toda a documentação do projeto e sabe exatamente o que deve ou não sugerir e esse colega não dorme, não cansa e ainda está sempre pronto pra te ajudar a codar.</p>
 <p>Esse recurso é um passo incrível para transformar o Copilot em algo mais do que apenas um “autocomplete inteligente”: ele vira um <strong>membro ativo da equipe</strong>, moldado pelo contexto que você mesmo fornece.</p>
@@ -2330,18 +2787,8 @@ Com instruções específicas, você cria arquivos dentro de .github/instruction
 <li>Linkedin: <a href="https://www.linkedin.com/in/raphaelkennedy"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li>Youtube: <a href="https://youtube.com/@raphaelpontes"target="_blank" rel="noopener">@raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>Como estruturo minhas Entities no Flutter e por que isso mudou meu jeito de programar</title>
-        <link>https://www.orapha.dev/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</guid>
-        <pubDate>Mon, 17 Mar 2025 18:22:49 GMT</pubDate>
-        <description>&lt;p&gt;Fala, dev!&lt;/p&gt;
-&lt;p&gt;Se você já precisou consumir múltiplas APIs em um app Flutter, sabe que a bagunça pode começar rápido. No começo, parece simples: você pega os dados da API, joga direto no modelo e pronto! Mas aí vem aquele momento em que precisa integrar uma segunda API, lidar com mudanças inesperadas no backend ou até mesmo otimizar o carregamento dos dados. E de repente… BOOM💥! Seu código vira um verdadeiro Frankenstein, difícil de entender e ainda mais difícil de manter.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Fala, dev!</p>
+]]></content:encoded></item><item><title>Como estruturo minhas Entities no Flutter e por que isso mudou meu jeito de programar</title><link>https://www.orapha.dev/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</link><guid isPermaLink="true">https://www.orapha.dev/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</guid><pubDate>Mon, 17 Mar 2025 18:22:49 GMT</pubDate><description>&lt;p&gt;Fala, dev!&lt;/p&gt;
+&lt;p&gt;Se você já precisou consumir múltiplas APIs em um app Flutter, sabe que a bagunça pode começar rápido. No começo, parece simples: você pega os dados da API, joga direto no modelo e pronto! Mas aí vem aquele momento em que precisa integrar uma segunda API, lidar com mudanças inesperadas no backend ou até mesmo otimizar o carregamento dos dados. E de repente… BOOM💥! Seu código vira um verdadeiro Frankenstein, difícil de entender e ainda mais difícil de manter.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Fala, dev!</p>
 <p>Se você já precisou consumir múltiplas APIs em um app Flutter, sabe que a bagunça pode começar rápido. No começo, parece simples: você pega os dados da API, joga direto no modelo e pronto! Mas aí vem aquele momento em que precisa integrar uma segunda API, lidar com mudanças inesperadas no backend ou até mesmo otimizar o carregamento dos dados. E de repente… BOOM💥! Seu código vira um verdadeiro Frankenstein, difícil de entender e ainda mais difícil de manter.</p>
 <p>Foi exatamente isso que aconteceu comigo no início da minha jornada. Até que eu descobri a importância de <strong>Entities</strong>, <strong>Adapters</strong> e <strong>DTOs</strong>. Essas três camadas mudaram minha forma de programar e deixaram meus apps mais organizados e fáceis de escalar.</p>
 <p>Hoje quero te contar como estruturo tudo isso e por que essa abordagem pode salvar seu código também.</p>
@@ -2508,17 +2955,7 @@ Com instruções específicas, você cria arquivos dentro de .github/instruction
 <li>Linkedin: <a href="https://www.linkedin.com/in/raphaelkennedy"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li>Youtube: <a href="https://youtube.com/@raphaelpontes"target="_blank" rel="noopener">@raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-      </item>
-    
-      <item>
-        <title>As Preocupações Morais no Desenvolvimento de Tecnologias</title>
-        <link>https://www.orapha.dev/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</guid>
-        <pubDate>Fri, 02 Aug 2024 02:30:50 GMT</pubDate>
-        <description>&lt;p&gt;Pessoal, antes de começar este artigo, gostaria de me apresentar: sou um Engenheiro de Software com uma mente curiosa, sempre viajando em reflexões que quero compartilhar com vocês. Recentemente, assisti a um filme sobre o cientista que desenvolveu a bomba atômica, e isso despertou uma série de pensamentos que eu não havia considerado antes. Decidi escrever este artigo porque acredito que minhas preocupações podem “abrir os olhos” de muitos de vocês que estão me lendo.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Pessoal, antes de começar este artigo, gostaria de me apresentar: sou um Engenheiro de Software com uma mente curiosa, sempre viajando em reflexões que quero compartilhar com vocês. Recentemente, assisti a um filme sobre o cientista que desenvolveu a bomba atômica, e isso despertou uma série de pensamentos que eu não havia considerado antes. Decidi escrever este artigo porque acredito que minhas preocupações podem “abrir os olhos” de muitos de vocês que estão me lendo.</p>
+]]></content:encoded></item><item><title>As Preocupações Morais no Desenvolvimento de Tecnologias</title><link>https://www.orapha.dev/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</link><guid isPermaLink="true">https://www.orapha.dev/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</guid><pubDate>Fri, 02 Aug 2024 02:30:50 GMT</pubDate><description>&lt;p&gt;Pessoal, antes de começar este artigo, gostaria de me apresentar: sou um Engenheiro de Software com uma mente curiosa, sempre viajando em reflexões que quero compartilhar com vocês. Recentemente, assisti a um filme sobre o cientista que desenvolveu a bomba atômica, e isso despertou uma série de pensamentos que eu não havia considerado antes. Decidi escrever este artigo porque acredito que minhas preocupações podem “abrir os olhos” de muitos de vocês que estão me lendo.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Pessoal, antes de começar este artigo, gostaria de me apresentar: sou um Engenheiro de Software com uma mente curiosa, sempre viajando em reflexões que quero compartilhar com vocês. Recentemente, assisti a um filme sobre o cientista que desenvolveu a bomba atômica, e isso despertou uma série de pensamentos que eu não havia considerado antes. Decidi escrever este artigo porque acredito que minhas preocupações podem “abrir os olhos” de muitos de vocês que estão me lendo.</p>
 <p><img src="https://cdn-images-1.medium.com/max/310/1*JNmRSfjJQHuXj3xFelGegQ@2x.jpeg" alt=""  loading="lazy" /></p>
 <h3>Contextualizando<span class="hx:absolute hx:-mt-20" id="contextualizando"></span>
     <a href="#contextualizando" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Assim como apresentado no filme “Oppenheimer”, podemos refletir sobre a responsabilidade do Projeto Manhattan, que resultou na criação da bomba atômica. Essa invenção acabou com milhares de vidas tanto a curto quanto a longo prazo. A responsabilidade moral de quem desenvolve tecnologias com potencial destrutivo é um tópico crucial que precisamos discutir.</p>
@@ -2550,24 +2987,10 @@ Com instruções específicas, você cria arquivos dentro de .github/instruction
 <li>Linkedin: <a href="https://www.linkedin.com/in/raphaelkennedy"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li>Youtube: <a href="https://youtube.com/@raphaelpontes"target="_blank" rel="noopener">raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>software-development</category>
-            <category>tecnologia</category>
-            <category>intelligence-artificielle</category>
-        
-      </item>
-    
-      <item>
-        <title>Unlocking the Secrets of SOLID: A Beginner’s Guide</title>
-        <link>https://www.orapha.dev/2024/06/15/unlocking-the-secrets-of-solid-a-beginners-guide/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2024/06/15/unlocking-the-secrets-of-solid-a-beginners-guide/</guid>
-        <pubDate>Sat, 15 Jun 2024 22:22:56 GMT</pubDate>
-        <description>&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1024/0*nXVTBCTQzQWg7Ui-.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+]]></content:encoded><category>software-development</category><category>tecnologia</category><category>intelligence-artificielle</category></item><item><title>Unlocking the Secrets of SOLID: A Beginner’s Guide</title><link>https://www.orapha.dev/2024/06/15/unlocking-the-secrets-of-solid-a-beginners-guide/</link><guid isPermaLink="true">https://www.orapha.dev/2024/06/15/unlocking-the-secrets-of-solid-a-beginners-guide/</guid><pubDate>Sat, 15 Jun 2024 22:22:56 GMT</pubDate><description>&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/1024/0*nXVTBCTQzQWg7Ui-.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
 &lt;p&gt;SOLID, an acronym for five fundamental principles of software design, is your treasure map to creating robust, flexible, and maintainable systems. If you’ve ever come across “spaghetti” code or feel lost amidst complex classes, don’t worry! In this guide, we’ll unravel each SOLID principle in a simple and fun way, using real-life examples to make learning easier.&lt;/p&gt;
-&lt;h3&gt;S — The Secret to Simplicity: Single Responsibility Principle&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;sthe-secret-to-simplicity-single-responsibility-principle&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#sthe-secret-to-simplicity-single-responsibility-principle&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/903/0*gEjlvFcaH0tD56pX&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p><img src="https://cdn-images-1.medium.com/max/1024/0*nXVTBCTQzQWg7Ui-.png" alt=""  loading="lazy" /></p>
+&lt;h3&gt;S — The Secret to Simplicity: Single Responsibility Principle&lt;span class="hx:absolute hx:-mt-20" id="sthe-secret-to-simplicity-single-responsibility-principle"&gt;&lt;/span&gt;
+&lt;a href="#sthe-secret-to-simplicity-single-responsibility-principle" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/903/0*gEjlvFcaH0tD56pX" alt="" loading="lazy" /&gt;&lt;/p&gt;</description><content:encoded><![CDATA[<p><img src="https://cdn-images-1.medium.com/max/1024/0*nXVTBCTQzQWg7Ui-.png" alt=""  loading="lazy" /></p>
 <p>SOLID, an acronym for five fundamental principles of software design, is your treasure map to creating robust, flexible, and maintainable systems. If you’ve ever come across “spaghetti” code or feel lost amidst complex classes, don’t worry! In this guide, we’ll unravel each SOLID principle in a simple and fun way, using real-life examples to make learning easier.</p>
 <h3>S — The Secret to Simplicity: Single Responsibility Principle<span class="hx:absolute hx:-mt-20" id="sthe-secret-to-simplicity-single-responsibility-principle"></span>
     <a href="#sthe-secret-to-simplicity-single-responsibility-principle" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><img src="https://cdn-images-1.medium.com/max/903/0*gEjlvFcaH0tD56pX" alt=""  loading="lazy" /></p>
@@ -2726,25 +3149,9 @@ Com instruções específicas, você cria arquivos dentro de .github/instruction
 <li><strong>Linkedin</strong>: <a href="https://www.linkedin.com/in/raphaelkennedy/"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li><strong>Youtube:</strong> <a href="http://www.youtube.com/@raphaelpontes"target="_blank" rel="noopener">raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>solid</category>
-            <category>clean-code</category>
-            <category>development</category>
-            <category>software-development</category>
-            <category>architecture</category>
-        
-      </item>
-    
-      <item>
-        <title>Code Generators in Flutter: What’s Cheap and What’s Expensive?</title>
-        <link>https://www.orapha.dev/2024/06/15/code-generators-in-flutter-whats-cheap-and-what-s-expensive/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2024/06/15/code-generators-in-flutter-whats-cheap-and-what-s-expensive/</guid>
-        <pubDate>Sat, 15 Jun 2024 16:50:54 GMT</pubDate>
-        <description>&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1024/0*pDAKNdFlzpFh6Mkg.png&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
+]]></content:encoded><category>solid</category><category>clean-code</category><category>development</category><category>software-development</category><category>architecture</category></item><item><title>Code Generators in Flutter: What’s Cheap and What’s Expensive?</title><link>https://www.orapha.dev/2024/06/15/code-generators-in-flutter-whats-cheap-and-what-s-expensive/</link><guid isPermaLink="true">https://www.orapha.dev/2024/06/15/code-generators-in-flutter-whats-cheap-and-what-s-expensive/</guid><pubDate>Sat, 15 Jun 2024 16:50:54 GMT</pubDate><description>&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/1024/0*pDAKNdFlzpFh6Mkg.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
 &lt;p&gt;In the dynamic world of Flutter development, tools and libraries emerge every day, promising to make developers’ lives easier and speed up the process of creating applications. Among them, code generators stand out for their ability to automate repetitive tasks and generate boilerplate code, freeing up time for what really matters: business logic and user experience.&lt;/p&gt;
-&lt;p&gt;But is this promise of productivity and efficiency really all it seems? Could it be that code generators bring with them some challenges and disadvantages that can, in the long run, compromise the quality and sustainability of your code?&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p><img src="https://cdn-images-1.medium.com/max/1024/0*pDAKNdFlzpFh6Mkg.png" alt=""  loading="lazy" /></p>
+&lt;p&gt;But is this promise of productivity and efficiency really all it seems? Could it be that code generators bring with them some challenges and disadvantages that can, in the long run, compromise the quality and sustainability of your code?&lt;/p&gt;</description><content:encoded><![CDATA[<p><img src="https://cdn-images-1.medium.com/max/1024/0*pDAKNdFlzpFh6Mkg.png" alt=""  loading="lazy" /></p>
 <p>In the dynamic world of Flutter development, tools and libraries emerge every day, promising to make developers’ lives easier and speed up the process of creating applications. Among them, code generators stand out for their ability to automate repetitive tasks and generate boilerplate code, freeing up time for what really matters: business logic and user experience.</p>
 <p>But is this promise of productivity and efficiency really all it seems? Could it be that code generators bring with them some challenges and disadvantages that can, in the long run, compromise the quality and sustainability of your code?</p>
 <p>In this article, we will delve into this controversy and analyze the pros and cons of code generators in Flutter, exploring tools such as MobX, Riverpod, Injectable, AutoRoute and others that rely on build_runner to generate code. We will address the points of view that defend the practicality and agility provided by these tools, but we will also give voice to the critics who warn of the dangers of “cheap that ends up being expensive”.</p>
@@ -2828,26 +3235,10 @@ Com instruções específicas, você cria arquivos dentro de .github/instruction
 <li><strong>Linkedin</strong>: <a href="https://www.linkedin.com/in/raphaelkennedy/"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li><strong>Youtube:</strong> <a href="http://www.youtube.com/@raphaelpontes"target="_blank" rel="noopener">raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>code-generator</category>
-            <category>build-runner</category>
-            <category>app-development</category>
-            <category>flutter</category>
-            <category>android</category>
-        
-      </item>
-    
-      <item>
-        <title>Increase security in your Flutter applications</title>
-        <link>https://www.orapha.dev/2024/05/18/increase-security-in-your-flutter-applications/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2024/05/18/increase-security-in-your-flutter-applications/</guid>
-        <pubDate>Sat, 18 May 2024 00:01:19 GMT</pubDate>
-        <description>&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/696/0*TRlO7z09Bs7U1b8I.jpg&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;In today’s digital world, application security is an absolute priority. Developing a robust and secure Flutter app is crucial to protecting user data and maintaining trust in your product. If you are starting your Flutter application security journey, I recommend starting by reading my previous article, where I explore essential practices in Gray Box mode to ensure the security of your application (&lt;a href=&#34;https://raphaelkennedy.medium.com/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode-09dd58651727&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link to article&lt;/a&gt;).&lt;/p&gt;
-&lt;h3&gt;Security Analysis: Key Findings&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;security-analysis-key-findings&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#security-analysis-key-findings&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;During the security assessment of Flutter applications, together with my experience in the market, I identified several steps that allow locating possible vulnerabilities, which I will talk more about below.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p><img src="https://cdn-images-1.medium.com/max/696/0*TRlO7z09Bs7U1b8I.jpg" alt=""  loading="lazy" /></p>
+]]></content:encoded><category>code-generator</category><category>build-runner</category><category>app-development</category><category>flutter</category><category>android</category></item><item><title>Increase security in your Flutter applications</title><link>https://www.orapha.dev/2024/05/18/increase-security-in-your-flutter-applications/</link><guid isPermaLink="true">https://www.orapha.dev/2024/05/18/increase-security-in-your-flutter-applications/</guid><pubDate>Sat, 18 May 2024 00:01:19 GMT</pubDate><description>&lt;p&gt;&lt;img src="https://cdn-images-1.medium.com/max/696/0*TRlO7z09Bs7U1b8I.jpg" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;In today’s digital world, application security is an absolute priority. Developing a robust and secure Flutter app is crucial to protecting user data and maintaining trust in your product. If you are starting your Flutter application security journey, I recommend starting by reading my previous article, where I explore essential practices in Gray Box mode to ensure the security of your application (&lt;a href="https://raphaelkennedy.medium.com/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode-09dd58651727"target="_blank" rel="noopener"&gt;link to article&lt;/a&gt;).&lt;/p&gt;
+&lt;h3&gt;Security Analysis: Key Findings&lt;span class="hx:absolute hx:-mt-20" id="security-analysis-key-findings"&gt;&lt;/span&gt;
+&lt;a href="#security-analysis-key-findings" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;During the security assessment of Flutter applications, together with my experience in the market, I identified several steps that allow locating possible vulnerabilities, which I will talk more about below.&lt;/p&gt;</description><content:encoded><![CDATA[<p><img src="https://cdn-images-1.medium.com/max/696/0*TRlO7z09Bs7U1b8I.jpg" alt=""  loading="lazy" /></p>
 <p>In today’s digital world, application security is an absolute priority. Developing a robust and secure Flutter app is crucial to protecting user data and maintaining trust in your product. If you are starting your Flutter application security journey, I recommend starting by reading my previous article, where I explore essential practices in Gray Box mode to ensure the security of your application (<a href="https://raphaelkennedy.medium.com/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode-09dd58651727"target="_blank" rel="noopener">link to article</a>).</p>
 <h3>Security Analysis: Key Findings<span class="hx:absolute hx:-mt-20" id="security-analysis-key-findings"></span>
     <a href="#security-analysis-key-findings" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>During the security assessment of Flutter applications, together with my experience in the market, I identified several steps that allow locating possible vulnerabilities, which I will talk more about below.</p>
@@ -2880,436 +3271,4 @@ Study, learn and let’s build a safer digital future, application by applicatio
 <li><strong>Linkedin</strong>: <a href="https://www.linkedin.com/in/raphaelkennedy/"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li><strong>Youtube:</strong> <a href="http://www.youtube.com/@raphaelpontes"target="_blank" rel="noopener">raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>security</category>
-            <category>android</category>
-            <category>ios</category>
-            <category>development</category>
-            <category>flutter</category>
-        
-      </item>
-    
-      <item>
-        <title>Ensuring the Security of Your Flutter Application: Essential Practices in Gray Box Mode</title>
-        <link>https://www.orapha.dev/2024/05/03/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2024/05/03/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode/</guid>
-        <pubDate>Fri, 03 May 2024 22:06:42 GMT</pubDate>
-        <description>&lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1024/1*YGD5-p1GoR6sEgUPjeW-1w.jpeg&#34; alt=&#34;&#34;  loading=&#34;lazy&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Image generated for openart.ai&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Developing a robust and secure Flutter app is crucial to protecting user data and maintaining trust in your product. An EHT (Ethical Hacking Test) security analysis in Gray Box mode is an excellent way to identify and correct possible vulnerabilities before they become bigger problems. In this article, we’ll explore key best practices to ensure your Flutter app passes this review successfully.&lt;/p&gt;
-&lt;h3&gt;What is this EHT (Ethical Hacking Test) security analysis in Gray Box mode&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;what-is-this-eht-ethical-hacking-test-security-analysis-in-gray-box-mode&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#what-is-this-eht-ethical-hacking-test-security-analysis-in-gray-box-mode&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;EHT, also known as ethical hacking testing, is a process in which security professionals, known as ethical hackers, simulate cyberattacks against an information system or application to identify and fix security vulnerabilities before they are exploited by malicious attackers.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p><img src="https://cdn-images-1.medium.com/max/1024/1*YGD5-p1GoR6sEgUPjeW-1w.jpeg" alt=""  loading="lazy" /></p>
-<p><em>Image generated for openart.ai</em></p>
-<p>Developing a robust and secure Flutter app is crucial to protecting user data and maintaining trust in your product. An EHT (Ethical Hacking Test) security analysis in Gray Box mode is an excellent way to identify and correct possible vulnerabilities before they become bigger problems. In this article, we’ll explore key best practices to ensure your Flutter app passes this review successfully.</p>
-<h3>What is this EHT (Ethical Hacking Test) security analysis in Gray Box mode<span class="hx:absolute hx:-mt-20" id="what-is-this-eht-ethical-hacking-test-security-analysis-in-gray-box-mode"></span>
-    <a href="#what-is-this-eht-ethical-hacking-test-security-analysis-in-gray-box-mode" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>EHT, also known as ethical hacking testing, is a process in which security professionals, known as ethical hackers, simulate cyberattacks against an information system or application to identify and fix security vulnerabilities before they are exploited by malicious attackers.</p>
-<p>Gray Box refers to a specific type of security testing where ethical hackers have a limited level of information about the system or application they are testing. In this context, “gray” indicates a mix of available and unknown information to testers.</p>
-<p>In the Gray Box modality, ethical hackers may have partial access to the source code, documentation or other information about the system or application, but do not have complete knowledge about its internal architecture or implementation. This simulates the perspective of an external attacker who has some limited knowledge about the target system.</p>
-<p>During a Gray Box security test, ethical hackers explore available information to identify weaknesses and possible attack vectors. They may use a variety of hacking techniques and tools to attempt to compromise system security, including code analysis, reverse engineering, vulnerability scans, and code injection attacks.</p>
-<p>The ultimate goal of a Gray Box EHT security test is to provide a comprehensive assessment of the security posture of the system or application and recommend corrective measures to mitigate any identified vulnerabilities. This helps organizations strengthen their cyber defenses and protect their information assets against constantly evolving threats.</p>
-<h3>Secure Authentication<span class="hx:absolute hx:-mt-20" id="secure-authentication"></span>
-    <a href="#secure-authentication" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Authentication is a fundamental part of any application that handles sensitive user information. Ensuring this process is secure is crucial to protecting users&rsquo; credentials and personal data from unauthorized access. Here are some best practices to ensure secure authentication in Flutter apps:</p>
-<p><strong>1. Use of Standard Authentication Protocols:</strong></p>
-<p>Opt for standard, widely adopted authentication protocols like OAuth 2.0 to ensure a secure implementation that complies with industry best practices. OAuth 2.0 provides a robust framework for authentication and authorization, allowing users to grant limited access to their information without exposing their credentials.</p>
-<p><strong>2. Password Encryption:</strong></p>
-<p>When dealing with user passwords, use strong encryption techniques to store them securely in the application database. Avoid storing passwords in plain text and opt for secure hashing algorithms such as bcrypt or PBKDF2 to protect passwords from unauthorized access.</p>
-<p><strong>3. Implementation of Access Tokens:</strong></p>
-<p>Use access tokens to authenticate requests between the client and server. Access tokens are generated during the successful authentication process and are included in each subsequent request to verify the user’s identity. Ensure these tokens have adequate expiration times to limit their validity and reduce the risk of replay attacks.</p>
-<p><strong>4. Use of HTTPS:</strong></p>
-<p>Whenever possible, use secure HTTPS connections for all communications between the client and the server. HTTPS encrypts data transmitted between the application and the server, protecting users’ confidential information from interception by third parties.</p>
-<p><strong>5. Two-Factor Authentication (2FA):</strong></p>
-<p>Consider implementing two-factor authentication to provide an additional layer of security during the login process. 2FA requires users to provide not only a password, but also a second authentication factor, such as a code sent via SMS, an authenticator app-generated token, or a fingerprint, significantly increasing the security of the authentication process.</p>
-<p><strong>6. Protection against Brute Force and Brute-Force Attacks:</strong></p>
-<p>Implement measures to protect against brute force attacks, such as locking accounts after a specific number of failed login attempts, introducing delays after each login attempt, and implementing CAPTCHAs or recaptcha verification challenges to distinguish between legitimate users and bots automated.</p>
-<p><strong>7. Activity Monitoring and Recording:</strong></p>
-<p>Implement monitoring and activity logging capabilities to track authentication events and identify suspicious behavior patterns that may indicate unauthorized access attempts. Keep detailed records of all login attempts, including IP addresses, times, and user information, to assist in investigating security incidents.</p>
-<h3>Data Injection Protection<span class="hx:absolute hx:-mt-20" id="data-injection-protection"></span>
-    <a href="#data-injection-protection" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Avoid data injection vulnerabilities such as SQL injection and XSS (Cross-Site Scripting) by using parameterized queries when accessing databases and sanitizing all user data input to prevent malicious scripts.</p>
-<p>Is it possible to inject data into mobile applications?</p>
-<p>Of course, data injection protection is an important consideration in mobile apps, including apps built with Flutter. Although it is most commonly associated with web applications and database systems, data injection can also occur in mobile applications due to interaction with APIs, local and remote databases, and other data entry points.</p>
-<h3>Sensitive Data Encryption<span class="hx:absolute hx:-mt-20" id="sensitive-data-encryption"></span>
-    <a href="#sensitive-data-encryption" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Whenever sensitive data is stored locally or transmitted over the network, use strong encryption algorithms to protect it. This includes data such as credit card information, passwords and other personal data of users.</p>
-<h3>Permissions Check<span class="hx:absolute hx:-mt-20" id="permissions-check"></span>
-    <a href="#permissions-check" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Before accessing sensitive device features such as the camera, microphone, or location, explicitly ask for the user’s permission and verify that permissions have been granted. Do not assume permissions granted without proper authorization.</p>
-<h3>Security Updates<span class="hx:absolute hx:-mt-20" id="security-updates"></span>
-    <a href="#security-updates" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Keep your application up to date with the latest security fixes and patches provided by Flutter and any third-party libraries you are using. Keep an eye out for known vulnerabilities and apply patches regularly.</p>
-<h3>Regular Security Tests<span class="hx:absolute hx:-mt-20" id="regular-security-tests"></span>
-    <a href="#regular-security-tests" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Perform regular security testing on your application, including penetration testing and static code analysis, to identify and fix any vulnerabilities before they can be exploited by attackers.</p>
-<p>Penetration testing, also known as penetration testing or pentest, is a way of evaluating the security of information systems, networks or applications. The main purpose of these tests is to identify and exploit security vulnerabilities that can be exploited by malicious attackers.</p>
-<p>During a penetration test, security experts, known as pentesters, perform a series of cyber attack simulations to test the system’s resistance to different types of threats. These tests are performed in a controlled and ethical manner, with the consent of the system owner, to avoid unintentional interruptions or damage.</p>
-<p>Here are some examples of common techniques used in penetration testing:</p>
-<ol>
-<li>Port and Services Scanning</li>
-<li>Vulnerability Analysis</li>
-<li>Brute Force Attacks</li>
-<li>SQL Injection</li>
-<li>Cross-Site Scripting (XSS)</li>
-<li>Phishing attacks</li>
-<li>Social engineering</li>
-<li>Exploitation of Backdoors and Known Vulnerabilities</li>
-</ol>
-<h3>Developer Education<span class="hx:absolute hx:-mt-20" id="developer-education"></span>
-    <a href="#developer-education" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Continuous developer education is critical to maintaining application security at a high level. This includes providing regular training on the latest security practices, secure development tools and techniques. Additionally, developers should be encouraged to stay up to date with the latest security trends and vulnerabilities that may affect the application.</p>
-<p>Here are some additional practices to promote developer security education:</p>
-<ul>
-<li>Workshops and Seminars: Hold regular mobile app security workshops and seminars where developers can learn about specific security techniques, study case studies, and discuss challenges with their peers.</li>
-<li>Code Reviews and Comments: Encourage developers to review each other’s code for potential security vulnerabilities. Additionally, encourage the inclusion of security-related comments in the code, explaining the reasoning behind implementation decisions.</li>
-<li>Participation in Security Communities: Encourage developers to participate in security communities, online forums, and discussion groups where they can share knowledge, ask questions, and learn from security experts and other security professionals.</li>
-<li>Attack Simulations: Conduct attack simulations and incident response exercises to help developers better understand how attackers might attempt to compromise application security and how to effectively respond to these threats.</li>
-<li>Reference Resources: Provide developers with access to reference resources such as security guides, technical documentation, and secure code examples to help them implement security best practices in their projects.</li>
-</ul>
-<p>By investing in developer security education, you’ll be strengthening your app’s line of defense against cyber threats and ensuring your team is prepared to face security challenges that may arise throughout the app’s lifecycle.</p>
-<p>Ultimately, the security of a Gray Box Flutter application is a shared responsibility between developers, security testers, and the entire team involved in developing and maintaining the application. By taking a proactive approach to security from the early phases of development through implementation and beyond, you will be building a solid foundation for a secure and reliable application.</p>
-<p>Did I help you? <a href="https://buymeacoffee.com/raphaelpontes"target="_blank" rel="noopener">Buy me a coffee</a></p>
-<p>Follow me in</p>
-<ul>
-<li><strong>Linkedin</strong>: <a href="https://www.linkedin.com/in/raphaelkennedy/"target="_blank" rel="noopener">raphaelkennedy</a></li>
-<li><strong>Youtube:</strong> <a href="http://www.youtube.com/@raphaelpontes"target="_blank" rel="noopener">raphaelpontes</a></li>
-</ul>
-]]></content:encoded>
-        
-            <category>android</category>
-            <category>cybersecurity</category>
-            <category>ios</category>
-            <category>flutter</category>
-            <category>hacking</category>
-        
-      </item>
-    
-      <item>
-        <title>How to Integrate Flutter Modular with Flutter Bloc (Cubit) in a Simple Way and Using Custom States…</title>
-        <link>https://www.orapha.dev/2024/05/03/how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/2024/05/03/how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states/</guid>
-        <pubDate>Fri, 03 May 2024 16:43:03 GMT</pubDate>
-        <description>&lt;h3&gt;How to Integrate Flutter Modular with Flutter Bloc (Cubit) in a Simple Way and Using Custom States (Classes)&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states-classes&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states-classes&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;a href=&#34;https://medium.com/@lugpontes/como-integrar-flutter-modular-com-flutter-bloc-cubit-de-forma-simples-e-usando-estados-daf72985b24a?postPublishedType=repub&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ARTICLE IN PORTUGUESE&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The world of Flutter libs is constantly evolving. But what if we could combine the power of Flutter Modular with the simplicity of Flutter Bloc (Cubit)? In this article, we will explore exactly that and uncover the secrets of this powerful integration.&lt;/p&gt;
-&lt;h3&gt;Flutter Modular&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;flutter-modular&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#flutter-modular&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Flutter Modular is a package that simplifies the organization and modularization of Flutter projects. It offers a module-based structure. In addition to providing dependency injection and route navigation.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h3>How to Integrate Flutter Modular with Flutter Bloc (Cubit) in a Simple Way and Using Custom States (Classes)<span class="hx:absolute hx:-mt-20" id="how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states-classes"></span>
-    <a href="#how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states-classes" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><a href="https://medium.com/@lugpontes/como-integrar-flutter-modular-com-flutter-bloc-cubit-de-forma-simples-e-usando-estados-daf72985b24a?postPublishedType=repub"target="_blank" rel="noopener">ARTICLE IN PORTUGUESE</a></p>
-<p>The world of Flutter libs is constantly evolving. But what if we could combine the power of Flutter Modular with the simplicity of Flutter Bloc (Cubit)? In this article, we will explore exactly that and uncover the secrets of this powerful integration.</p>
-<h3>Flutter Modular<span class="hx:absolute hx:-mt-20" id="flutter-modular"></span>
-    <a href="#flutter-modular" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Flutter Modular is a package that simplifies the organization and modularization of Flutter projects. It offers a module-based structure. In addition to providing dependency injection and route navigation.</p>
-<h3>Cubit<span class="hx:absolute hx:-mt-20" id="cubit"></span>
-    <a href="#cubit" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Cubit is a community-developed implementation of the Bloc (Business Logic Component) design pattern in Flutter. It simplifies state management in Flutter apps, making it easier to understand and maintain. If you want to dive deeper into Cubit, check out my other article <a href="https://medium.com/@lugpontes/unlocking-cubit-simplifying-state-management-in-flutter-6c3568104ba9"target="_blank" rel="noopener">here</a>.</p>
-<h3>Installing the libs<span class="hx:absolute hx:-mt-20" id="installing-the-libs"></span>
-    <a href="#installing-the-libs" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This process is essential to ensure you have access to Cubit and Modular functionality in your application.</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">flutter pub add flutter_modular flutter_bloc</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<h3>Modular + Cubit Integration<span class="hx:absolute hx:-mt-20" id="modular--cubit-integration"></span>
-    <a href="#modular--cubit-integration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To integrate Flutter Modular with Flutter Bloc (Cubit), we will adopt Modular’s standard folder structure that promotes a clear separation of project modules.</p>
-<p><strong>Our folder structure was organized as follows:</strong></p>
-<p>| lib
-| — main.dart
-| — app/
-| — — app_module.dart
-| — — app_widget.dart
-| — — home/
-| — — — home_cubit.dart
-| — — — home_module.dart
-| — — — home_page.dart</p>
-<p>Now to explain better, I will present the code snippets and explain the most important points.</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">// main.dart
-</span></span><span class="line"><span class="cl">void main() {
-</span></span><span class="line"><span class="cl">  runApp(
-</span></span><span class="line"><span class="cl">    ModularApp(
-</span></span><span class="line"><span class="cl">      module: AppModule(),
-</span></span><span class="line"><span class="cl">      child: const AppWidget(),
-</span></span><span class="line"><span class="cl">    ),
-</span></span><span class="line"><span class="cl">  );
-</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">// app_module.dart
-</span></span><span class="line"><span class="cl">class AppModule extends Module {
-</span></span><span class="line"><span class="cl">  @override
-</span></span><span class="line"><span class="cl">  List&lt;Module&gt; get imports =&gt; const [];
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  @override
-</span></span><span class="line"><span class="cl">  void binds(Injector i) {}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  @override
-</span></span><span class="line"><span class="cl">  void exportedBinds(Injector i) {}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  @override
-</span></span><span class="line"><span class="cl">  void routes(RouteManager r) {
-</span></span><span class="line"><span class="cl">    r.module(&#39;/&#39;, module: HomeModule());
-</span></span><span class="line"><span class="cl">  }
-</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<blockquote>
-  <p><em>6.3.3</em></p>
-
-</blockquote>
-<p>Module is a class from the flutter_modular package that helps organize and modularize Flutter projects.</p>
-<p>imports: returns a list of modules that this module imports. In this case, there is no imported module ([]).</p>
-<p>binds: is used to define module dependencies (bindings). Here, we are leaving it empty, which means we are not defining any dependencies on this particular module.</p>
-<p>exportedBinds: is used to define dependencies that will be exported to other modules. Just like binds, we are leaving it empty in this example.</p>
-<p>routes: The routes method is used to define the module’s routes. A route is a URL that points to a certain part of the application. Here we are setting the root route (/) to point to the HomeModule module.</p>
-<p>In short, the app_modules.dartfile is defining the main application module (AppModule). It imports other modules, defines dependencies, exports dependencies, and configures application routes. These settings are important for organizing and structuring the project.</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">// app_widget.dart
-</span></span><span class="line"><span class="cl">class AppWidget extends StatelessWidget {
-</span></span><span class="line"><span class="cl">  const AppWidget({super.key});
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  @override
-</span></span><span class="line"><span class="cl">  Widget build(BuildContext context) {
-</span></span><span class="line"><span class="cl">    return MaterialApp.router(
-</span></span><span class="line"><span class="cl">      theme: ThemeData.light(),
-</span></span><span class="line"><span class="cl">      title: &#39;Modular Cubit Example&#39;,
-</span></span><span class="line"><span class="cl">      routeInformationParser: Modular.routeInformationParser,
-</span></span><span class="line"><span class="cl">      routerDelegate: Modular.routerDelegate,
-</span></span><span class="line"><span class="cl">    );
-</span></span><span class="line"><span class="cl">  }
-</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<p>The AppWidget configures and initializes the Flutter app, providing custom themes, titles, and routing settings using MaterialApp.router. This is essential to integrate Flutter Modular with Flutter Bloc (Cubit) and ensure a smooth and consistent user experience.</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">// home_module.dart
-</span></span><span class="line"><span class="cl">class HomeModule extends Module {
-</span></span><span class="line"><span class="cl">  @override
-</span></span><span class="line"><span class="cl">  List&lt;Module&gt; get imports =&gt; const [];
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  @override
-</span></span><span class="line"><span class="cl">  void binds(Injector i) {}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  @override
-</span></span><span class="line"><span class="cl">  void exportedBinds(Injector i) {}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  @override
-</span></span><span class="line"><span class="cl">  void routes(RouteManager r) {
-</span></span><span class="line"><span class="cl">    r.child(
-</span></span><span class="line"><span class="cl">      &#39;/&#39;,
-</span></span><span class="line"><span class="cl">      child: (_) =&gt; BlocProvider(
-</span></span><span class="line"><span class="cl">        create: (_) =&gt; HomeCubit(),
-</span></span><span class="line"><span class="cl">        child: const HomePage(),
-</span></span><span class="line"><span class="cl">      ),
-</span></span><span class="line"><span class="cl">    );
-</span></span><span class="line"><span class="cl">  }
-</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<p>The HomeModule defines application-specific Home module settings, including defining routes and configuring the HomeCubit for the HomePage.</p>
-<p>It is worth mentioning that inside r.child there is a BlocProvider that is providing HomeCubit()for the widget tree of this route. This is useful when you need a cubit class to be available to widgets within a certain route, but not globally throughout the application.</p>
-<p>In the home_module.dart example, the BlocProvider is wrapping the HomePage. This means that any widget within HomePage that needs to access the HomeCubit will have access to it.</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">// home_page.dart
-</span></span><span class="line"><span class="cl">class HomePage extends StatelessWidget {
-</span></span><span class="line"><span class="cl">  const HomePage({super.key});
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  @override
-</span></span><span class="line"><span class="cl">  Widget build(BuildContext context) {
-</span></span><span class="line"><span class="cl">    final HomeCubit homeCubit = BlocProvider.of&lt;HomeCubit&gt;(context);
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    return Scaffold(
-</span></span><span class="line"><span class="cl">      appBar: AppBar(
-</span></span><span class="line"><span class="cl">        title: const Text(&#39;Counter App&#39;),
-</span></span><span class="line"><span class="cl">      ),
-</span></span><span class="line"><span class="cl">      body: Center(
-</span></span><span class="line"><span class="cl">        child: Column(
-</span></span><span class="line"><span class="cl">          mainAxisAlignment: MainAxisAlignment.center,
-</span></span><span class="line"><span class="cl">          children: [
-</span></span><span class="line"><span class="cl">            BlocBuilder&lt;HomeCubit, CounterState&gt;(
-</span></span><span class="line"><span class="cl">              builder: (context, state) {
-</span></span><span class="line"><span class="cl">                return Text(&#39;Counter: ${state.count}&#39;);
-</span></span><span class="line"><span class="cl">              },
-</span></span><span class="line"><span class="cl">            ),
-</span></span><span class="line"><span class="cl">            const SizedBox(height: 20),
-</span></span><span class="line"><span class="cl">            Row(
-</span></span><span class="line"><span class="cl">              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-</span></span><span class="line"><span class="cl">              children: [
-</span></span><span class="line"><span class="cl">                FloatingActionButton(
-</span></span><span class="line"><span class="cl">                  onPressed: () =&gt; homeCubit.increment(),
-</span></span><span class="line"><span class="cl">                  child: const Icon(Icons.add),
-</span></span><span class="line"><span class="cl">                ),
-</span></span><span class="line"><span class="cl">                FloatingActionButton(
-</span></span><span class="line"><span class="cl">                  onPressed: () =&gt; homeCubit.decrement(),
-</span></span><span class="line"><span class="cl">                  child: const Icon(Icons.remove),
-</span></span><span class="line"><span class="cl">                ),
-</span></span><span class="line"><span class="cl">              ],
-</span></span><span class="line"><span class="cl">            ),
-</span></span><span class="line"><span class="cl">          ],
-</span></span><span class="line"><span class="cl">        ),
-</span></span><span class="line"><span class="cl">      ),
-</span></span><span class="line"><span class="cl">    );
-</span></span><span class="line"><span class="cl">  }
-</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<p>Inside the build method, we use BlocProvider.of<HomeCubit>(context) to get the HomeCubit instance provided by BlocProvider. This allows us to access cubit’s methods to interact with the state.</p>
-<p>BlocBuilder is used to rebuild its children every time the state of the given cubit changes. Here, we are displaying the current counter value in the text.</p>
-<p>FloatingActionButton defines two floating buttons: one to increment the counter when pressed and another to decrement the counter, both calling their respective methods implemented in cubit.</p>
-<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
-
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">// home_cubit.dart
-</span></span><span class="line"><span class="cl">class HomeCubit extends Cubit&lt;CounterState&gt; {
-</span></span><span class="line"><span class="cl">  HomeCubit() : super(CounterInitialState());
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  void increment() {
-</span></span><span class="line"><span class="cl">    emit(CounterIncrementedState(state.count + 1));
-</span></span><span class="line"><span class="cl">  }
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  void decrement() {
-</span></span><span class="line"><span class="cl">    emit(CounterDecrementedState(state.count - 1));
-</span></span><span class="line"><span class="cl">  }
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// states
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">abstract class CounterState {
-</span></span><span class="line"><span class="cl">  final int count;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  CounterState(this.count);
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">class CounterInitialState extends CounterState {
-</span></span><span class="line"><span class="cl">  CounterInitialState() : super(0);
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">class CounterIncrementedState extends CounterState {
-</span></span><span class="line"><span class="cl">  CounterIncrementedState(int count) : super(count);
-</span></span><span class="line"><span class="cl">}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">class CounterDecrementedState extends CounterState {
-</span></span><span class="line"><span class="cl">  CounterDecrementedState(int count) : super(count);
-</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
-  <button
-    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-    title="Copy code"
-  >
-    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
-<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
-  </button>
-</div>
-</div>
-<p>HomeCubit is a class that extends Cubit<CounterState>. Cubit is a class from the flutter_bloc package that manages state and business logic in a Flutter application. Here, HomeCubit manages the state of the counter.</p>
-<p>The HomeCubit() constructor calls the constructor of the Cubit<CounterState> parent class and passes CounterInitialState() as the initial state of the cubit. This means that the initial state of the counter is CounterInitialState.</p>
-<p>increment() and decrement() are methods used to increase and decrease the counter respectively. They use the emit method to emit new counter states based on the current state. For example, increment() emits a new state CounterIncrementedState with the counter incremented by 1 relative to the current state.</p>
-<p>Counter states are represented by classes that extend CounterState, which is an abstract class. Each state class contains a count field, which represents the current value of the counter.</p>
-<p>CounterInitialState represents the initial state of the counter, where the counter starts with the value 0 and is initialized together with the constructor as below.</p>
-<blockquote>
-  <p><em><strong>HomeCubit() : super(CounterInitialState());</strong></em></p>
-
-</blockquote>
-<p>CounterIncrementedState represents the state of the counter after the increment operation, where the counter is increased by 1 from the previous state.</p>
-<p>CounterDecrementedState represents the state of the counter after the decrement operation, where the counter is decreased by 1 compared to the previous state.</p>
-<p>The home_cubit.dart file defines the HomeCubit cubit class responsible for managing the counter state and counter-related states, including the initial state, the state after incrementing, and the state after decrementing. It provides methods to change the counter state reactively and efficiently.</p>
-<p>Using classes to represent states as done in the example provided has several advantages and is considered a best practice. Here are some reasons why it’s important to use classes as state:</p>
-<ol>
-<li>Clarity and organization: Allows you to organize and structure the code in a clear and understandable way. Each state is represented by a separate class, which makes code easier to understand and maintain, especially in applications with complex states.</li>
-<li>Data encapsulation: State classes encapsulate data related to a given state, making it easier to manage and manipulate. This promotes cohesion and reduces coupling between different application components.</li>
-<li>Code reuse: You can reuse these classes in different parts of your application, facilitating consistency and code reuse. For example, if you have a counter state on multiple screens in your application, you can reuse the same state class on all of them.</li>
-<li>Static typing: Using classes as state promotes static typing, which helps detect type errors at compile time. This provides more security and robustness to the code, reducing the likelihood of errors during execution.</li>
-<li>Ease of testing: State classes are simple, independent objects that can be easily tested in isolation. This makes it easier to write unit tests to validate the application’s behavior in different states.</li>
-<li>Extensibility: You can easily add new states and functionality to your application by simply creating new state classes and updating the logic accordingly. This makes the application more flexible and adaptable to future changes.</li>
-</ol>
-<h3>Conclusion<span class="hx:absolute hx:-mt-20" id="conclusion"></span>
-    <a href="#conclusion" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Integrating Flutter Modular with Flutter Bloc (Cubit) may seem daunting at first glance, but with the right approach and the right tools, it is an achievable task. I hope this article has provided valuable insights into how to accomplish this integration. Keep exploring and experimenting to sharpen your Flutter development skills!</p>
-<p>To learn more about Flutter Modular, check out the official documentation <a href="https://pub.dev/packages/flutter_modular"target="_blank" rel="noopener">here</a> and to find out more about Cubit read the documentation <a href="https://pub.dev/packages/flutter_bloc"target="_blank" rel="noopener">here</a> or my other article <a href="https://medium.com/@lugpontes/unlocking-cubit-simplifying-state-management-in-flutter-6c3568104ba9"target="_blank" rel="noopener">here</a>.</p>
-<p>Source code: <a href="https://github.com/rkpontes/flutter_modular_cubit"target="_blank" rel="noopener">https://github.com/rkpontes/flutter_modular_cubit</a></p>
-<p>Did I help you? <a href="https://buymeacoffee.com/raphaelpontes"target="_blank" rel="noopener">Buy me a coffee</a></p>
-<p>Follow me in</p>
-<ul>
-<li><strong>Linkedin</strong>: <a href="https://www.linkedin.com/in/raphaelkennedy/"target="_blank" rel="noopener">raphaelkennedy</a></li>
-<li><strong>Youtube:</strong> <a href="http://www.youtube.com/@raphaelpontes"target="_blank" rel="noopener">raphaelpontes</a></li>
-</ul>
-<p><img src="https://cdn-images-1.medium.com/max/1024/1*d4EcNSpiPllJiY5ItcDYww.png" alt=""  loading="lazy" /></p>
-]]></content:encoded>
-        
-            <category>state-management</category>
-            <category>android-app-development</category>
-            <category>flutter</category>
-            <category>integration</category>
-            <category>ios-app-development</category>
-        
-      </item>
-    
-      <item>
-        <title>Sobre</title>
-        <link>https://www.orapha.dev/about/</link>
-        <guid isPermaLink="true">https://www.orapha.dev/about/</guid>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 GMT</pubDate>
-        <description>&lt;h2&gt;Quem sou&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;quem-sou&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#quem-sou&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Sou Raphael Pontes, engenheiro de software sênior, com mais de uma década de experiência construindo produtos, participando de startups, liderando iniciativas técnicas e entregando software em contextos bem diferentes, do freela ao produto em operação.&lt;/p&gt;
-&lt;h2&gt;Minha trajetória&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;minha-trajetória&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#minha-trajet%c3%b3ria&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Minha base passa por desenvolvimento web e mobile, com foco forte em Flutter, Laravel, APIs REST e arquitetura de software. Ao longo dos anos, também trabalhei com liderança técnica, business intelligence, testes, clean architecture, bancos relacionais e não relacionais, Firebase, cloud functions, UI/UX e planejamento e execução de projetos.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h2>Quem sou<span class="hx:absolute hx:-mt-20" id="quem-sou"></span>
-    <a href="#quem-sou" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Sou Raphael Pontes, engenheiro de software sênior, com mais de uma década de experiência construindo produtos, participando de startups, liderando iniciativas técnicas e entregando software em contextos bem diferentes, do freela ao produto em operação.</p>
-<h2>Minha trajetória<span class="hx:absolute hx:-mt-20" id="minha-trajetória"></span>
-    <a href="#minha-trajet%c3%b3ria" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Minha base passa por desenvolvimento web e mobile, com foco forte em Flutter, Laravel, APIs REST e arquitetura de software. Ao longo dos anos, também trabalhei com liderança técnica, business intelligence, testes, clean architecture, bancos relacionais e não relacionais, Firebase, cloud functions, UI/UX e planejamento e execução de projetos.</p>
-<p>Também tenho uma relação forte com criação e compartilhamento de conhecimento. Além do trabalho em produto e engenharia, gosto de publicar vídeos, explorar ferramentas novas e transformar aprendizado prático em conteúdo útil.</p>
-<h2>Este blog<span class="hx:absolute hx:-mt-20" id="este-blog"></span>
-    <a href="#este-blog" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>O <code>orapha.dev</code> é meu espaço para escrever com mais calma sobre programação, padrões, arquitetura, inteligência artificial e decisões técnicas do dia a dia.</p>
-<p>Não me interessa tecnologia como vitrine. Me interessa tecnologia como prática: o que vale a pena adotar, o que complica sem necessidade, o que envelhece bem e o que realmente ajuda a construir software melhor.</p>
-<p>Por isso, este blog funciona como um caderno público de observações, experimentos e opiniões. Um lugar para degustar tecnologias de forma pessoal e pensativa.</p>
-<h2>Onde me encontrar<span class="hx:absolute hx:-mt-20" id="onde-me-encontrar"></span>
-    <a href="#onde-me-encontrar" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
-<li>LinkedIn: <a href="https://www.linkedin.com/in/raphaelkennedy/"target="_blank" rel="noopener">raphaelkennedy</a></li>
-<li>GitHub: <a href="https://github.com/rkpontes"target="_blank" rel="noopener">rkpontes</a></li>
-<li>YouTube: <a href="https://www.youtube.com/raphaelpontes"target="_blank" rel="noopener">youtube.com/raphaelpontes</a></li>
-<li>Instagram: <a href="http://instagram.com/raphaelkennedy"target="_blank" rel="noopener">@raphaelkennedy</a></li>
-</ul>
-]]></content:encoded>
-        
-      </item>
-    
-  </channel>
-</rss>
-
+]]></content:encoded><category>security</category><category>android</category><category>ios</category><category>development</category><category>flutter</category></item></channel></rss>
