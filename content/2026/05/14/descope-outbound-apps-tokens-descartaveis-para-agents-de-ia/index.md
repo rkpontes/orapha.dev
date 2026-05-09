@@ -1,325 +1,593 @@
-# Descope Outbound Apps: Tokens Descartáveis para Agents de IA
+# Entendendo Outbound Apps: Arquitetura de Token Vault para OAuth
 
-## O Problema: Credenciais que Não Deveriam Existir
+## O Problema: Gestão de Credenciais de Terceiros
 
-Você está construindo um agente de IA que precisa acessar o Google Calendar do usuário para marcar reuniões. A solução óbvia? Guardar o token OAuth no banco de dados e usar quando necessário.
+Quando sua aplicação precisa acessar dados de usuários em serviços externos (Google Calendar, Salesforce, HubSpot), você enfrenta um desafio arquitetural: **como armazenar e gerenciar tokens de acesso de forma segura?**
 
-**O problema:** Tokens persistentes são bombas-relógio. Se vazarem, alguém tem acesso indefinido aos dados do usuário. Se forem comprometidos, você descobre meses depois. E o pior: você dorme pensando "será que aquele token do usuário X está seguro?"
+### As Alternativas e Seus Problemas
 
-## A Solução: Tokens que Nascem para Morrer
+**Alternativa 1: Banco de Dados Próprio**
+```
+┌─────────┐      ┌──────────────┐      ┌──────────────┐
+│ Usuário │──────│  Seu App     │──────│  Seu Banco   │
+└─────────┘      │              │      │ (tokens)     │
+                 └──────────────┘      └──────────────┘
+```
+- Você precisa implementar criptografia, refresh automático, auditoria
+- Em caso de breach, todos os tokens dos usuários vazam
+- Compliance complexo (SOC2, HIPAA, etc.)
 
-O Descope Outbound Apps resolve isso com uma abordagem radical: **tokens de curta duração que o agente usa uma vez e descarta**.
+**Alternativa 2: Variáveis de Ambiente**
+- Não funciona para múltiplos usuários (cada usuário tem seu próprio token)
+- Anti-padrão de segurança
 
-Em vez de armazenar tokens longos no seu backend, você solicita um token **just-in-time** - válido apenas para aquela operação específica, com escopo mínimo necessário, e que expira em minutos.
+**Alternativa 3: Vault Especializado (HashiCorp, AWS Secrets Manager)**
+- Funciona, mas adiciona complexidade operacional
+- Você ainda precisa implementar a lógica de OAuth
 
-### Por Que Isso Muda Tudo
+## O Padrão Token Vault
 
-| Abordagem Tradicional | Descope Outbound Apps |
-|----------------------|----------------------|
-| Tokens persistentes no DB | Tokens solicitados sob demanda |
-| Refresh automático contínuo | Token de vida curta (5-15 min) |
-| Se vazar = acesso indefinido | Se vazar = já expirou |
-| Você gerencia OAuth | Descope gerencia OAuth |
-| Escopo amplo "para garantir" | Escopo mínimo por operação |
+Um **Token Vault** é um componente arquitetural que:
+1. Armazena tokens de acesso (OAuth ou API keys)
+2. Gerencia automaticamente o ciclo de vida (refresh, expiração)
+3. Fornece acesso sob demanda via API
+4. Audita todas as operações
 
-## Como Funciona na Prática
+**Outbound Apps** são uma implementação desse padrão.
 
-### 1. Configuração do Outbound App
+## O Que São Outbound Apps
 
-No console do Descope:
+Segundo a documentação, Outbound Apps podem:
+
+1. **Conectar a provedores OAuth** (Google, Microsoft, LinkedIn, etc.) e gerenciar todo o ciclo de vida OAuth
+2. **Funcionar como cofre (vault)** para tokens OAuth E chaves de API estáticas
+
+### Casos de Uso Principais
+
+- **OAuth Incremental**: Começar com escopos mínimos no login, solicitar permissões adicionais (calendário, contatos) apenas quando necessário
+- **Agents de IA e MCP**: Agents que precisam acessar serviços externos de forma segura
+- **Controle de Acesso Granular**: Definir quem pode recuperar tokens usando políticas
+
+## Como Funciona
+
+### Fluxo de 3 Etapas
 
 ```
-Outbound Apps → Add Outbound App → Google Calendar
-├─ App ID: calendar-agent-prod
-├─ Client ID: [seu client do Google]
-├─ Client Secret: [seu secret do Google]
-├─ Scopes Padrão: readonly (você pode sobrescrever via código)
-└─ Token Lifetime: 300 segundos (5 minutos)
+1. CRIAR APP
+   Console Descope → Outbound Apps → + Outbound App
+   ├─ Escolher provedor OAuth OU criar "Custom API Key"
+   └─ Configurar client_id, client_secret, scopes
+
+2. CONECTAR USUÁRIO
+   Usuário faz OAuth flow → Descope armazena:
+   ├─ Access token
+   ├─ Refresh token (se disponível)
+   ├─ Escopos consentidos
+   └─ ID do usuário no provedor (tokenSub)
+
+3. USAR TOKEN
+   Sua aplicação chama API Descope → Recebe access token válido
+   → Usa na API do provedor → Descarta token
 ```
 
-### 2. O Fluxo de Token Descartável
+### 1. Criando um Outbound App
 
+No console Descope, você configura:
+
+**Para OAuth:**
+```yaml
+App ID: calendar-integration
+Provedor: Google Calendar
+Client ID: abc123.apps.googleusercontent.com
+Client Secret: GOCSPX-xyz789
+Scopes:
+  - https://www.googleapis.com/auth/calendar.readonly
+Endpoints (pré-configurados para provedores conhecidos):
+  Authorization: https://accounts.google.com/o/oauth2/v2/auth
+  Token: https://oauth2.googleapis.com/token
+Callback URL: https://api.descope.com/oauth/callback
 ```
-Agente precisa ler agenda
-        ↓
-Solicita token ao Descope (scope: calendar.readonly)
-        ↓
-Descope retorna token válido por 5 minutos
-        ↓
-Agente usa token imediatamente
-        ↓
-Token é descartado da memória
-        ↓
-Token expira (mesmo que alguém o intercepte)
+
+**Para API Key (Custom API Key App):**
+```yaml
+Tipo: Custom API Key
+App ID: internal-api
+Nome: Minha API Interna
 ```
 
-## Implementação em Python
+### 2. Conectando Usuários
 
-```python
-import descope
-from datetime import datetime, timedelta
+Existem 3 formas de conectar usuários:
 
-class SecureAIAgent:
-    def __init__(self):
-        self.descope_client = descope.DescopeClient(
-            project_id="seu-project-id",
-            management_key="sua-management-key"
-        )
+**A) Frontend SDKs** (React, Next.js, Web)
+
+**B) Descope Flows** (editor no-code)
+
+**C) API REST** diretamente
+
+Exemplo de início de conexão via API:
+
+```bash
+# Iniciar fluxo OAuth
+curl -X POST "https://api.descope.com/v1/oauth/authorize" \
+  -H "Authorization: Bearer ${PROJECT_ID}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "provider": "google",
+    "redirectUrl": "https://meuapp.com/callback"
+  }'
+```
+
+O usuário é redirecionado para a tela de consentimento do Google, aprova, e o Descope armazena os tokens.
+
+### 3. Recuperando Tokens
+
+Depois de conectado, você pode recuperar tokens de duas formas:
+
+#### A) Último Token Válido (Recomendado)
+
+```bash
+curl -X POST "https://api.descope.com/v1/mgmt/outbound/app/user/token/latest" \
+  -H "Authorization: Bearer ${PROJECT_ID}:${MANAGEMENT_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "appId": "calendar-integration",
+    "userId": "user_123",
+    "options": {
+      "withRefreshToken": false,
+      "forceRefresh": false
+    }
+  }'
+```
+
+**Importante**: Esta API **sempre** retorna um access token válido. Se estiver expirado, o Descope faz refresh automaticamente antes de retornar.
+
+#### B) Token com Scopes Específicos
+
+```bash
+curl -X POST "https://api.descope.com/v1/mgmt/outbound/app/user/token" \
+  -H "Authorization: Bearer ${PROJECT_ID}:${MANAGEMENT_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "appId": "calendar-integration",
+    "userId": "user_123",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar.readonly"
+    ],
+    "options": {
+      "withRefreshToken": false
+    }
+  }'
+```
+
+**Nota**: Os scopes devem ser **exatamente** os mesmos usados na conexão. Se não forem, recebe erro 404.
+
+### Resposta da API
+
+```json
+{
+  "token": {
+    "id": "tok_abc123",
+    "appId": "calendar-integration",
+    "userId": "user_123",
+    "tokenSub": "123456789",  // ID do usuário no Google
+    "accessToken": "ya29.a0AXooCgvMep7...",
+    "accessTokenType": "Bearer",
+    "accessTokenExpiry": "1741107113",  // Unix timestamp
+    "hasRefreshToken": true,
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar.readonly"
+    ],
+    "lastRefreshTime": "1741103514"
+  }
+}
+```
+
+**Observações:**
+- `refreshToken` só é retornado se `withRefreshToken: true`
+- A expiração é definida pelo provedor OAuth (Google), não pelo Descope
+- O Descope gerencia o refresh, você sempre recebe um token válido
+
+## Tokens em Nível de Tenant
+
+Além de tokens por usuário, você pode ter tokens por tenant:
+
+```bash
+# Último token do tenant
+curl -X POST "https://api.descope.com/v1/mgmt/outbound/app/tenant/token/latest" \
+  -H "Authorization: Bearer ${PROJECT_ID}:${MANAGEMENT_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "appId": "salesforce",
+    "tenantId": "tenant_456"
+  }'
+```
+
+```bash
+# Token com scopes específicos do tenant
+curl -X POST "https://api.descope.com/v1/mgmt/outbound/app/tenant/token" \
+  -H "Authorization: Bearer ${PROJECT_ID}:${MANAGEMENT_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "appId": "salesforce",
+    "tenantId": "tenant_456",
+    "scopes": ["api", "refresh_token"]
+  }'
+```
+
+## Usando o Token na API do Provedor
+
+Após recuperar o token, use-o imediatamente:
+
+```bash
+# Exemplo: Google Calendar API
+ACCESS_TOKEN="ya29.a0AXooCgvMep7..."
+
+curl "https://www.googleapis.com/calendar/v3/calendars/primary/events" \
+  -H "Authorization: Bearer ${ACCESS_TOKEN}"
+```
+
+**Princípio importante**: O token só deve existir na memória pelo tempo necessário para a chamada. Não armazene em variáveis persistentes.
+
+## Autenticação para Recuperar Tokens
+
+Você pode autenticar de duas formas:
+
+### 1. Management Key
+
+Use em backends seguros onde você pode armazenar secrets:
+
+```bash
+Authorization: Bearer ${PROJECT_ID}:${MANAGEMENT_KEY}
+```
+
+### 2. Inbound App Token
+
+Use em ambientes não-seguros (MCP servers, agents):
+
+```bash
+Authorization: Bearer ${PROJECT_ID}:${ACCESS_TOKEN}
+```
+
+**Requisito**: O Inbound App Token deve incluir o scope `outbound.token.fetch`. Se não tiver, a requisição é negada.
+
+Isso permite aplicar políticas: você pode bloquear um agente de acessar tokens em tempo real, mesmo que o usuário já tenha conectado o app.
+
+## Custom API Key Apps
+
+Para serviços que não usam OAuth, você pode criar apps de API Key:
+
+```bash
+# Criar app de API key
+curl -X POST "https://api.descope.com/v1/mgmt/outbound/app/create" \
+  -H "Authorization: Bearer ${PROJECT_ID}:${MANAGEMENT_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Internal API",
+    "description": "API key para serviço interno"
+  }'
+```
+
+Depois, use flows ou APIs para coletar e armazenar a API key do usuário/tenant.
+
+## Gerenciamento Programático
+
+### Criar App
+
+```bash
+curl -X POST "https://api.descope.com/v1/mgmt/outbound/app/create" \
+  -H "Authorization: Bearer ${PROJECT_ID}:${MANAGEMENT_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "My Calendar App",
+    "description": "Integration with Google Calendar",
+    "logo": "https://example.com/logo.png"
+  }'
+```
+
+### Listar Apps
+
+```bash
+curl "https://api.descope.com/v1/mgmt/outbound/apps" \
+  -H "Authorization: Bearer ${PROJECT_ID}:${MANAGEMENT_KEY}"
+```
+
+### Carregar App Específico
+
+```bash
+curl "https://api.descope.com/v1/mgmt/outbound/app/calendar-integration" \
+  -H "Authorization: Bearer ${PROJECT_ID}:${MANAGEMENT_KEY}"
+```
+
+### Atualizar App
+
+```bash
+curl -X POST "https://api.descope.com/v1/mgmt/outbound/app/update" \
+  -H "Authorization: Bearer ${PROJECT_ID}:${MANAGEMENT_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "id": "calendar-integration",
+    "name": "Updated Name",
+    "description": "Updated description"
+  }'
+```
+
+### Deletar App
+
+```bash
+curl -X POST "https://api.descope.com/v1/mgmt/outbound/app/delete" \
+  -H "Authorization: Bearer ${PROJECT_ID}:${MANAGEMENT_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "id": "calendar-integration"
+  }'
+```
+
+## Tratamento de Erros
+
+### Códigos de Status Comuns
+
+| Código | Significado | Causas Comuns |
+|--------|-------------|---------------|
+| **401** | Unauthorized | Management key ou project ID inválido |
+| **403** | Forbidden | Permissões insuficientes ou acesso ao tenant negado |
+| **404** | Token not found | Usuário nunca conectou o app, token foi limpo, ou scopes incorretos |
+| **500** | Server error | Método HTTP inválido (não POST) ou payload JSON malformado |
+
+### Exemplo de Tratamento
+
+```javascript
+async function fetchOutboundToken(appId, userId, scopes = null) {
+  const headers = {
+    "Authorization": `Bearer ${PROJECT_ID}:${MANAGEMENT_KEY}`,
+    "Content-Type": "application/json"
+  };
+  
+  const endpoint = scopes 
+    ? "/v1/mgmt/outbound/app/user/token"
+    : "/v1/mgmt/outbound/app/user/token/latest";
+  
+  const body = { appId, userId };
+  if (scopes) body.scopes = scopes;
+  
+  try {
+    const response = await fetch(`https://api.descope.com${endpoint}`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify(body)
+    });
     
-    def get_temporary_token(self, user_id: str, scopes: list, ttl_seconds: int = 300):
-        """
-        Solicita um token de curta duração.
-        TTL padrão: 5 minutos (você pode ajustar conforme a operação)
-        """
-        try:
-            token_response = self.descope_client.management.outbound_app.generate_token(
-                app_id="calendar-agent-prod",
-                user_id=user_id,
-                scopes=scopes,
-                custom_claims={
-                    "exp": datetime.utcnow() + timedelta(seconds=ttl_seconds),
-                    "operation": "calendar_read",  # auditoria
-                    "session_id": "unique-session-id"  # rastreabilidade
-                }
-            )
-            
-            return {
-                "access_token": token_response["token"],
-                "expires_in": ttl_seconds,
-                "scope": " ".join(scopes)
-            }
-        except Exception as e:
-            # Log seguro: não exponha o user_id em logs de erro
-            print(f"[AUDIT] Falha na geração de token: {e}")
-            raise
+    if (response.status === 404) {
+      console.log("Token não encontrado. Usuário precisa conectar o app primeiro.");
+      return null;
+    }
     
-    def read_calendar(self, user_id: str, date: str):
-        """
-        Exemplo de operação: ler agenda do usuário.
-        Token é gerado, usado e imediatamente descartado.
-        """
-        # 1. Solicitar token com escopo MÍNIMO necessário
-        token_data = self.get_temporary_token(
-            user_id=user_id,
-            scopes=["calendar.events.readonly"],
-            ttl_seconds=60  # 1 minuto é suficiente para uma leitura
-        )
-        
-        access_token = token_data["access_token"]
-        
-        try:
-            # 2. Usar o token imediatamente
-            import requests
-            
-            response = requests.get(
-                "https://www.googleapis.com/calendar/v3/calendars/primary/events",
-                headers={"Authorization": f"Bearer {access_token}"},
-                params={"timeMin": f"{date}T00:00:00Z"}
-            )
-            
-            events = response.json()
-            
-            # 3. LOG DE AUDITORIA (quem fez o quê e quando)
-            self._log_operation(
-                user_id=user_id,
-                operation="calendar_read",
-                scopes_used=["calendar.events.readonly"],
-                timestamp=datetime.utcnow()
-            )
-            
-            return events
-            
-        finally:
-            # 4. DESCARTAR O TOKEN DA MEMÓRIA
-            # Em Python, podemos forçar a liberação
-            access_token = None
-            del access_token
+    if (response.status === 401) {
+      console.log("Credenciais inválidas. Verifique PROJECT_ID e MANAGEMENT_KEY.");
+      return null;
+    }
     
-    def schedule_meeting(self, user_id: str, meeting_data: dict):
-        """
-        Operação de escrita: requer escopo diferente e TTL maior.
-        """
-        token_data = self.get_temporary_token(
-            user_id=user_id,
-            scopes=["calendar.events"],  # escopo de escrita
-            ttl_seconds=120  # 2 minutos para a operação completa
-        )
-        
-        access_token = token_data["access_token"]
-        
-        try:
-            response = requests.post(
-                "https://www.googleapis.com/calendar/v3/calendars/primary/events",
-                headers={
-                    "Authorization": f"Bearer {access_token}",
-                    "Content-Type": "application/json"
-                },
-                json=meeting_data
-            )
-            
-            self._log_operation(
-                user_id=user_id,
-                operation="calendar_create",
-                scopes_used=["calendar.events"],
-                timestamp=datetime.utcnow()
-            )
-            
-            return response.json()
-            
-        finally:
-            access_token = None
-            del access_token
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
     
-    def _log_operation(self, user_id: str, operation: str, scopes_used: list, timestamp: datetime):
-        """
-        Auditoria: registre TODAS as operações para compliance.
-        """
-        audit_log = {
-            "user_hash": self._hash_user_id(user_id),  # nunca logue IDs reais
-            "operation": operation,
-            "scopes": scopes_used,
-            "timestamp": timestamp.isoformat(),
-            "environment": "production"
-        }
-        
-        # Envie para seu sistema de logs (Datadog, CloudWatch, etc)
-        print(f"[AUDIT] {audit_log}")
-    
-    def _hash_user_id(self, user_id: str) -> str:
-        """Hash do user_id para privacidade em logs."""
-        import hashlib
-        return hashlib.sha256(user_id.encode()).hexdigest()[:16]
+    return await response.json();
+  } catch (error) {
+    console.error("Erro ao buscar token:", error);
+    return null;
+  }
+}
 ```
 
-## Padrão Avançado: Token por Operação
+## Boas Práticas de Segurança
 
-Para máxima segurança, você pode gerar tokens ainda mais granulares:
+### 1. Escopo Mínimo
 
-```python
-class UltraSecureAgent:
+Sempre solicite o mínimo de permissões necessário:
+
+```javascript
+// ❌ Ruim - Acesso total
+calendar.events  // See, edit, share, delete
+
+// ✅ Bom - Apenas leitura
+calendar.events.readonly
+```
+
+### 2. Nunca Armazene Access Tokens
+
+```javascript
+// ❌ Ruim
+const token = await fetchToken();  // Guarda na variável
+await callApi1(token);             // Usa
+await callApi2(token);             // Reusa depois de 10 minutos
+
+// ✅ Bom
+async function executeWithFreshToken(operation) {
+  const { token } = await fetchToken();  // Sempre pega token válido
+  try {
+    return await operation(token.accessToken);
+  } finally {
+    // Token é descartado automaticamente ao sair do escopo
+  }
+}
+```
+
+### 3. Use HTTPS Sempre
+
+Todas as chamadas devem usar TLS 1.2 ou superior.
+
+### 4. Não Logue Tokens
+
+```javascript
+// ❌ Ruim
+console.log("Token:", accessToken);  // Nunca faça isso
+
+// ✅ Bom
+console.log("Token obtido para usuário:", userId);
+console.log("Scopes:", scopes);
+console.log("Expira em:", new Date(expiry * 1000));
+```
+
+### 5. Gerenciamento de Chaves
+
+- Roteie Management Keys periodicamente
+- Use Inbound App Tokens para agents/MCP (mais granularidade)
+- Nunca exponha Management Keys em código frontend
+
+### 6. Políticas de Acesso
+
+Para agents/MCP, configure políticas:
+
+```yaml
+# Exemplo conceitual de política
+- effect: allow
+  action: outbound.token.fetch
+  resource: app:calendar-integration
+  condition:
+    - user.role: admin
     
-    def execute_tool(self, user_id: str, tool_name: str, params: dict):
-        """
-        Cada ferramenta recebe seu próprio token com escopo exato.
-        """
-        
-        tool_configs = {
-            "calendar.read": {
-                "scopes": ["calendar.events.readonly"],
-                "ttl": 60,
-                "endpoint": "calendar/v3/events"
-            },
-            "calendar.create": {
-                "scopes": ["calendar.events"],
-                "ttl": 120,
-                "endpoint": "calendar/v3/events"
-            },
-            "contacts.lookup": {
-                "scopes": ["contacts.readonly"],
-                "ttl": 30,  # só precisa de 30 segundos!
-                "endpoint": "people/v1/people"
-            }
-        }
-        
-        config = tool_configs.get(tool_name)
-        if not config:
-            raise ValueError(f"Ferramenta desconhecida: {tool_name}")
-        
-        # Token com tempo de vida MÍNIMO necessário
-        token = self.get_temporary_token(
-            user_id=user_id,
-            scopes=config["scopes"],
-            ttl_seconds=config["ttl"]
-        )
-        
-        # Execute a operação e descarte
-        try:
-            result = self._call_provider_api(config["endpoint"], token, params)
-            return result
-        finally:
-            # Garanta que o token seja removido
-            del token
+- effect: deny
+  action: outbound.token.fetch
+  resource: app:calendar-integration
+  condition:
+    - request.ip not in: ["10.0.0.0/8"]
 ```
 
-## Checklist de Segurança
+## Checklist de Implementação
 
-### ✅ O Que Fazer
+- [ ] Configurar app no provedor OAuth com redirect URI correto
+- [ ] Criar Outbound App no Descope com scopes mínimos
+- [ ] Implementar fluxo de conexão (SDK, Flow ou API)
+- [ ] Implementar recuperação de tokens usando Management Key ou Inbound App
+- [ ] Tratar erro 404 (usuário não conectado)
+- [ ] Usar token imediatamente e descartar
+- [ ] Implementar logs de auditoria (quem acessou qual token quando)
+- [ ] Configurar políticas de acesso se usando Inbound Apps
+- [ ] Rotação periódica de Management Keys
+- [ ] Nunca logar access tokens completos
 
-- **TTL mínimo possível**: Se a operação demora 5 segundos, defina TTL de 30 segundos
-- **Escopo mínimo**: Nunca peça `calendar` completo se só precisa ler eventos
-- **Auditoria completa**: Logue toda operação com hash do usuário
-- **TLS everywhere**: Todas as chamadas devem ser HTTPS
-- **Rotação de management keys**: Mude as chaves do Descope regularmente
-
-### ❌ O Que Evitar
-
-- ❌ Nunca armazene tokens em variáveis de ambiente
-- ❌ Nunca logue tokens (mesmo que parcialmente)
-- ❌ Nunca reutilize tokens entre operações
-- ❌ Nunca use TTL maior que o necessário "para garantir"
-- ❌ Nunca exponha management keys no código frontend
-
-## Arquitetura de Produção
+## Arquitetura de Referência: Agent de IA
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                      Usuário                                │
-└─────────────────────────┬───────────────────────────────────┘
-                          │ "Agende uma reunião"
-                          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                   Seu Backend/API                           │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │  1. Validar requisição                              │   │
-│  │  2. Verificar permissões do usuário                 │   │
-│  │  3. Determinar ferramentas necessárias              │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────┬───────────────────────────────────┘
-                          │ Solicita token (scope: calendar.write, TTL: 2min)
-                          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                   Descope                                   │
-│  ├─ Valida consentimento do usuário                         │
-│  ├─ Gera token de curta duração                             │
-│  └─ Retorna token + metadados                               │
-└─────────────────────────┬───────────────────────────────────┘
-                          │ Token válido por 2 minutos
-                          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                   Seu Backend/API                           │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │  4. Usa token imediatamente                         │   │
-│  │  5. Chama Google Calendar API                       │   │
-│  │  6. Descarta token                                  │   │
-│  │  7. Loga auditoria                                  │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────┬───────────────────────────────────┘
-                          │ Resposta para o usuário
-                          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                      Usuário                                │
-│              "Reunião agendada com sucesso!"               │
-└─────────────────────────────────────────────────────────────┘
+Usuário: "Agende reunião com cliente"
+    ↓
+┌─────────────────────────────────────┐
+│  Interface do Agent (LLM)           │
+│  - Interpreta intenção              │
+│  - Identifica tools: CRM + Calendar │
+└─────────────────┬───────────────────┘
+                  ↓
+┌─────────────────────────────────────┐
+│  MCP Server / Backend               │
+│                                     │
+│  1. Verifica permissões do usuário  │
+│                                     │
+│  2. POST /outbound/app/user/token   │
+│     → App: salesforce               │
+│     → User: user_123                │
+│     ← Recebe access_token (válido)  │
+│                                     │
+│  3. Call Salesforce API             │
+│     → Busca contato                 │
+│     ← Dados do contato              │
+│     → Descarta token                │
+│                                     │
+│  4. POST /outbound/app/user/token   │
+│     → App: google-calendar          │
+│     → User: user_123                │
+│     ← Recebe access_token (válido)  │
+│                                     │
+│  5. Call Google Calendar API        │
+│     → Cria evento                   │
+│     ← Confirmação                   │
+│     → Descarta token                │
+│                                     │
+│  6. Log de auditoria                │
+└─────────────────┬───────────────────┘
+                  ↓
+Usuário: "Reunião agendada com sucesso"
 ```
+
+## Comparação: Com vs Sem Outbound Apps
+
+### Sem Outbound Apps (Tradicional)
+
+```
+┌─────────┐     ┌──────────┐     ┌────────────┐     ┌──────────┐
+│ Usuário │────▶│ Seu App  │────▶│ Seu Banco  │────▶│  Google  │
+└─────────┘     └──────────┘     │ (tokens)   │     └──────────┘
+                                 └────────────┘
+                                 
+Você precisa implementar:
+✗ Criptografia de tokens
+✗ Refresh automático
+✗ Auditoria de acesso
+✗ Rotação de secrets
+✗ Compliance (SOC2, etc.)
+```
+
+### Com Outbound Apps
+
+```
+┌─────────┐     ┌──────────┐     ┌──────────┐     ┌──────────┐
+│ Usuário │────▶│ Seu App  │────▶│ Descope  │────▶│  Google  │
+└─────────┘     └──────────┘     │ (vault)  │     └──────────┘
+                                 └──────────┘
+                                 
+Descope gerencia:
+✓ Criptografia
+✓ Refresh automático
+✓ Auditoria
+✓ Ciclo de vida
+
+Sua app só:
+✓ Solicita token quando precisa
+✓ Usa imediatamente
+✓ Descarta
+```
+
+## Trade-offs
+
+### Vantagens
+
+1. **Segurança**: Tokens não transitam pelo seu banco
+2. **Compliance**: Auditoria automática integrada
+3. **Simplicidade**: Sem implementar refresh logic
+4. **Granularidade**: Políticas de acesso em tempo real (com Inbound Apps)
+5. **Múltiplos formatos**: Suporta OAuth e API keys estáticas
+
+### Desvantagens
+
+1. **Latência**: Chamada extra à API do Descope para cada operação
+2. **Vendor Lock-in**: Dependência do serviço
+3. **Custo**: Serviço adicional
+4. **Complexidade**: Mais um componente na arquitetura
+
+### Quando Usar
+
+✅ **Ideal para**:
+- Aplicações SaaS multi-tenant
+- Agents de IA (MCP servers)
+- Requisitos de compliance rigorosos
+- Equipes que querem evitar complexidade OAuth
+
+❌ **Não ideal para**:
+- Aplicações simples com poucas integrações
+- Casos onde latência é crítica (< 50ms)
+- Projetos que não podem depender de serviços externos
 
 ## Conclusão
 
-Com Descope Outbound Apps e tokens de curta duração, você transforma a segurança do seu agente de IA de um problema contínuo em uma solução elegante. O agente recebe exatamente o que precisa, pelo tempo que precisa, e depois **nada**.
+Outbound Apps implementam o padrão Token Vault, externalizando a complexidade de gestão de credenciais OAuth. Em vez de armazenar tokens no seu banco, você os recupera sob demanda via API, usa imediatamente e descarta.
 
-**O resultado?** Você pode dormir tranquilo sabendo que:
-- Não há tokens vazando em logs
-- Não há credenciais persistentes para serem roubadas
-- Cada operação é rastreável e auditável
-- Mesmo em caso de comprometimento, o dano é limitado a minutos
+O fluxo é simples: **conecte o usuário uma vez, recupere tokens quando necessário, use e descarte**.
 
-Tokens que nascem, vivem brevemente, e morrem - deixando apenas o registro de que fizeram seu trabalho.
+Isso reduz a superfície de ataque da sua aplicação, simplifica compliance e permite que você se concentre na lógica de negócio em vez de segurança de tokens.
 
----
+Lembre-se: **o token só deve existir na memória pelo tempo estritamente necessário para completar a operação**.
 
-**Próximos passos:**
-1. Crie uma conta no [Descope](https://descope.com)
-2. Configure seu primeiro Outbound App com Google Calendar
-3. Implemente o padrão de token descartável em seu agente
-4. Configure alertas de auditoria para operações suspeitas
+## Recursos
 
-**Lembre-se:** Segurança não é um estado, é um processo. Revise seus TTLs, escopos e logs regularmente.
+- [Descope Outbound Apps Docs](https://docs.descope.com/identity-federation/outbound-apps)
+- [OAuth 2.0 RFC 6749](https://tools.ietf.org/html/rfc6749)
+- [OWASP OAuth 2.0 Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html)
