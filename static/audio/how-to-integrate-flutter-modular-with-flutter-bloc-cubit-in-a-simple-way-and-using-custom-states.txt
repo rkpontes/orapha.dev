@@ -1,0 +1,75 @@
+How to Integrate Flutter Modular with Flutter Bloc (Cubit) in a Simple Way and Using Custom States (Classes)
+
+ARTICLE IN PORTUGUESE
+
+The world of Flutter libs is constantly evolving. But what if we could combine the power of Flutter Modular with the simplicity of Flutter Bloc (Cubit)? In this article, we will explore exactly that and uncover the secrets of this powerful integration.
+
+Flutter Modular
+
+Flutter Modular is a package that simplifies the organization and modularization of Flutter projects. It offers a module-based structure. In addition to providing dependency injection and route navigation.
+
+Cubit
+
+Cubit is a community-developed implementation of the Bloc (Business Logic Component) design pattern in Flutter. It simplifies state management in Flutter apps, making it easier to understand and maintain. If you want to dive deeper into Cubit, check out my other article here.
+
+Installing the libs
+
+This process is essential to ensure you have access to Cubit and Modular functionality in your application.
+
+Modular + Cubit Integration
+
+To integrate Flutter Modular with Flutter Bloc (Cubit), we will adopt Modular’s standard folder structure that promotes a clear separation of project modules.
+
+Our folder structure was organized as follows:
+
+| lib
+| — main.dart
+| — app/
+| — — appmodule.dart
+| — — appwidget.dart
+| — — home/
+| — — — homecubit.dart
+| — — — homemodule.dart
+| — — — homepage.dart
+
+Now to explain better, I will present the code snippets and explain the most important points.
+
+6.3.3
+
+Module is a class from the fluttermodular package that helps organize and modularize Flutter projects.
+
+imports: returns a list of modules that this module imports. In this case, there is no imported module ([]).
+
+binds: is used to define module dependencies (bindings). Here, we are leaving it empty, which means we are not defining any dependencies on this particular module.
+
+exportedBinds: is used to define dependencies that will be exported to other modules. Just like binds, we are leaving it empty in this example.
+
+routes: The routes method is used to define the module’s routes. A route is a URL that points to a certain part of the application. Here we are setting the root route (/) to point to the HomeModule module.
+
+In short, the appmodules.dartfile is defining the main application module (AppModule). It imports other modules, defines dependencies, exports dependencies, and configures application routes. These settings are important for organizing and structuring the project.
+
+The AppWidget configures and initializes the Flutter app, providing custom themes, titles, and routing settings using MaterialApp.router. This is essential to integrate Flutter Modular with Flutter Bloc (Cubit) and ensure a smooth and consistent user experience.
+
+The HomeModule defines application-specific Home module settings, including defining routes and configuring the HomeCubit for the HomePage.
+
+It is worth mentioning that inside r.child there is a BlocProvider that is providing HomeCubit()for the widget tree of this route. This is useful when you need a cubit class to be available to widgets within a certain route, but not globally throughout the application.
+
+In the homemodule.dart example, the BlocProvider is wrapping the HomePage. This means that any widget within HomePage that needs to access the HomeCubit will have access to it.
+
+Inside the build method, we use BlocProvider.of(context) to get the HomeCubit instance provided by BlocProvider. This allows us to access cubit’s methods to interact with the state.
+
+BlocBuilder is used to rebuild its children every time the state of the given cubit changes. Here, we are displaying the current counter value in the text.
+
+FloatingActionButton defines two floating buttons: one to increment the counter when pressed and another to decrement the counter, both calling their respective methods implemented in cubit.
+
+HomeCubit is a class that extends Cubit. Cubit is a class from the flutterbloc package that manages state and business logic in a Flutter application. Here, HomeCubit manages the state of the counter.
+
+The HomeCubit() constructor calls the constructor of the Cubit parent class and passes CounterInitialState() as the initial state of the cubit. This means that the initial state of the counter is CounterInitialState.
+
+increment() and decrement() are methods used to increase and decrease the counter respectively. They use the emit method to emit new counter states based on the current state. For example, increment() emits a new state CounterIncrementedState with the counter incremented by 1 relative to the current state.
+
+Counter states are represented by classes that extend CounterState, which is an abstract class. Each state class contains a count field, which represents the current value of the counter.
+
+CounterInitialState represents the initial state of the counter, where the counter starts with the value 0 and is initialized together with the constructor as below.
+
+HomeCubit() :
