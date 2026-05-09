@@ -103,7 +103,7 @@ def generate_audio_say(text, output_path):
         subprocess.run([
             'ffmpeg', '-y', '-i', str(aiff_path),
             '-codec:a', 'libmp3lame',
-            '-qscale:a', '2',  # Qualidade boa (0-9, onde 0 é melhor)
+            '-qscale:a', '0',  # Qualidade máxima (0-9, onde 0 é melhor)
             str(mp3_path)
         ], check=True, capture_output=True)
         
