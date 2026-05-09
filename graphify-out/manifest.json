@@ -1,0 +1,1106 @@
+{
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/assets/js/toc-scroll.js": {
+    "mtime": 1773894167.6833854,
+    "hash": "6bcc3517a8187f6c2d8dcda92de2dfe3"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/assets/js/favicon.js": {
+    "mtime": 1773894167.679715,
+    "hash": "cb0d1d1f0f602386ad41cccf387e88ab"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/assets/js/nav-menu.js": {
+    "mtime": 1773894167.6817825,
+    "hash": "2577c22f0286073969e66aa62d782070"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/assets/js/back-to-top.js": {
+    "mtime": 1773894167.6784236,
+    "hash": "0a618329db55ae13cd8b45e0350fa64b"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/assets/js/lang.js": {
+    "mtime": 1773894167.6810725,
+    "hash": "5c9d02f47b4e1742659f7c37ea197449"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/assets/js/sidebar.js": {
+    "mtime": 1773894167.6821055,
+    "hash": "361c1a1408cebfe3903e79cdbf92c5b6"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/assets/js/tabs.js": {
+    "mtime": 1773894167.6827636,
+    "hash": "ad790caf2a792aab0be8cfc563febf01"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/assets/js/theme.js": {
+    "mtime": 1773894167.6830788,
+    "hash": "bbde598f4b3deccec489d4d661cb613e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/assets/js/filetree.js": {
+    "mtime": 1773894167.6800869,
+    "hash": "a71b0f8895f30c9ddff4a6fb00b17ec8"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/assets/js/switcher-menu.js": {
+    "mtime": 1773894167.6824255,
+    "hash": "d8b2341eb48ac7fd357cd1d55231cbdb"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/assets/js/flexsearch.js": {
+    "mtime": 1773894167.6805508,
+    "hash": "44e2610496171623b5e9ce59fefe4cc5"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/assets/js/banner.js": {
+    "mtime": 1773894167.6789844,
+    "hash": "dc0886d0986de3e7dee09184c53a3925"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/assets/js/code-copy.js": {
+    "mtime": 1773894167.679372,
+    "hash": "ff91462c22996abc49e90e088097d504"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/assets/js/menu.js": {
+    "mtime": 1773894167.6814487,
+    "hash": "ed1cbd0db21323fff25d55a7305f50c8"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/pt-br.search.min.a9af84626d6b626e08cc4829434e6d4ef98875ff97a6cbf7ef3ba6345b5cb536.js": {
+    "mtime": 1775674243.9303634,
+    "hash": "48e47d62f100ae38257f22a674f756aa"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/pt-br.search.js": {
+    "mtime": 1773946427.1297112,
+    "hash": "1ea26377bc3a0f00af9eaf41d775baf4"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/js/main.min.aec568c7def21902f0688ccfb381bda5d1ef3db58d3e62d0f3bc61b637d8a2d2.js": {
+    "mtime": 1775674243.8971624,
+    "hash": "b95030a10791f7a1eb269b3449d7d9db"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js": {
+    "mtime": 1775674243.9021797,
+    "hash": "50da1f9c3049d2ebcbc040ce429d9549"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/js/main.js": {
+    "mtime": 1773946427.0712945,
+    "hash": "a64bc0b94105f98412826a10f153ba4b"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js": {
+    "mtime": 1773946427.0819566,
+    "hash": "6293f40e3b54cd2d1807dc132abaf9dc"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/scripts/fix-s3-params.rb": {
+    "mtime": 1773896984.688227,
+    "hash": "bea4ac46e12ff5ccf9130cb57e1754d7"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/scripts/fix_html_entities.rb": {
+    "mtime": 1773894169.4614122,
+    "hash": "bb843ad6008c0ae6443d655022f7b11c"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/scripts/import_medium_feed.rb": {
+    "mtime": 1773896566.64505,
+    "hash": "e38edfe214dd01f50f9fa254f12c5b6d"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/scripts/generate_index.rb": {
+    "mtime": 1773896959.7884667,
+    "hash": "e751a8c2ad87056a32c9ae5323d5f2a3"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/scripts/fix-old-code-blocks.rb": {
+    "mtime": 1773894169.4606216,
+    "hash": "905f4c0db66e8917e196d74b442bc441"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/scripts/fix_images.rb": {
+    "mtime": 1773894169.4618502,
+    "hash": "93dbf35b9a01bf2dceaba8b986a3fff9"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/hugo.yaml": {
+    "mtime": 1773944241.0774865,
+    "hash": "270b41d06ac777251a12b6fd92d424cc"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/README.md": {
+    "mtime": 1773895689.251568,
+    "hash": "ab2c216c9f4c94df5723090fddab5975"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/modules.txt": {
+    "mtime": 1773894167.739382,
+    "hash": "c46f1d1b062e586d154fc831e22db254"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/llms.txt": {
+    "mtime": 1773894167.732043,
+    "hash": "4a012ecc2e18d48422a5082943e5171c"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/single.html": {
+    "mtime": 1773894167.732357,
+    "hash": "9fe4c614fd33e314f8df43dad5323d51"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/home.html": {
+    "mtime": 1773894167.73106,
+    "hash": "8a5e4d6c4b6a5020edfb9072902cc8a8"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/list.html": {
+    "mtime": 1773894167.7313647,
+    "hash": "4e1ecc415095a63f5098cef1c1ec4435"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/404.html": {
+    "mtime": 1773894167.6949444,
+    "hash": "a419e09f8b7457974803c4cd46b079de"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/taxonomy.html": {
+    "mtime": 1773894167.7326841,
+    "hash": "066d057bdd16093a5510dda07107cd2a"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/baseof.html": {
+    "mtime": 1773894167.7287955,
+    "hash": "292015ffc1f0dc7d8990c520ce904a95"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/wide.html": {
+    "mtime": 1773894167.733289,
+    "hash": "19d68559ca3d722f447b97233e894867"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/hextra-home.html": {
+    "mtime": 1773894167.7307584,
+    "hash": "7021e9c7af79a962d50763203c150239"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/term.html": {
+    "mtime": 1773894167.732994,
+    "hash": "c064ec7fefe0b53a85ee5ccb0e25cc30"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_markup/render-link.html": {
+    "mtime": 1773894167.6989276,
+    "hash": "0479cf1b10688e858cb0ffd8ff8a3655"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_markup/render-image.html": {
+    "mtime": 1773894167.6984768,
+    "hash": "8b2d6f2151a456868c1266193bc320d0"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_markup/render-codeblock.html": {
+    "mtime": 1773894167.6978707,
+    "hash": "0b6564613e7442e78de27dfe5bdb74d2"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_markup/render-passthrough.html": {
+    "mtime": 1773894167.6993346,
+    "hash": "b33d38a2f37dbce699f4c917f978673f"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_markup/render-blockquote-alert.html": {
+    "mtime": 1773894167.6956396,
+    "hash": "9b510ff4bec36f451d4bcca581534fe5"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_markup/render-codeblock-mermaid.html": {
+    "mtime": 1773894167.6964276,
+    "hash": "de305b52ab5ed3b0288c51aea9874f4e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_markup/render-heading.html": {
+    "mtime": 1773894167.6981778,
+    "hash": "37f3b7676b3c23ed40dcc8ce2dfa099f"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_markup/render-blockquote-regular.html": {
+    "mtime": 1773894167.6960084,
+    "hash": "86800868cfd7f2427f0749224d26634c"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/docs/single.html": {
+    "mtime": 1773894167.730452,
+    "hash": "f473b288a79bf97652fb05fa743c527c"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/docs/list.html": {
+    "mtime": 1773894167.7301326,
+    "hash": "f473b288a79bf97652fb05fa743c527c"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/blog/single.html": {
+    "mtime": 1773894167.729633,
+    "hash": "affeac5238fd4a3649f98d79fe0bd966"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/blog/list.html": {
+    "mtime": 1773894167.7293139,
+    "hash": "f03a6f5d234085a1e99be295f8273fa6"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/navbar.html": {
+    "mtime": 1773894167.7086918,
+    "hash": "850adbefcd483bb174d279ddff057141"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/navbar-link.html": {
+    "mtime": 1773894167.7080257,
+    "hash": "0339df7dcafca864fc0237d1b8ed731f"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/tags.html": {
+    "mtime": 1773894167.7144473,
+    "hash": "6ef3e64ed457bc5d5e3420e61626a296"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/opengraph.html": {
+    "mtime": 1773894167.7090256,
+    "hash": "5cf3cfabd296d7a9b7afbf35a9f79d1b"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/toc.html": {
+    "mtime": 1773894167.715365,
+    "hash": "8e18855b4003f5a3e159ef448da9d666"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/scripts.html": {
+    "mtime": 1773894167.711694,
+    "hash": "e88a3edd086d2b2e15dad455b1f77fce"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/favicons.html": {
+    "mtime": 1773894167.7064192,
+    "hash": "19bc03da96c8325fb1a595765e3c2924"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/google-analytics.html": {
+    "mtime": 1773894167.7070668,
+    "hash": "a97598e00373300d7a7aabf7e150af20"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/navbar-title.html": {
+    "mtime": 1773894167.708355,
+    "hash": "d72ea9bfa189c4dab10a48428b333bcb"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/theme-toggle.html": {
+    "mtime": 1773894167.7148829,
+    "hash": "60740059b1f65e93b5947601e760f7f6"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/language-switch.html": {
+    "mtime": 1773894167.7077086,
+    "hash": "4c4308e9dba4425fb77de05547a3e371"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/breadcrumb.html": {
+    "mtime": 1773894167.7002008,
+    "hash": "4eb62d2e0e2db98b879227eff6200f19"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/banner.html": {
+    "mtime": 1773894167.6998894,
+    "hash": "0571dddbaa24e44f3742c989d0755c98"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/head.html": {
+    "mtime": 1773894167.7073855,
+    "hash": "4812216f815a91c43c73bdc659f0e050"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/search.html": {
+    "mtime": 1773894167.7120223,
+    "hash": "7d86f12bcf87dec096bc8b6d15a638ed"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/footer.html": {
+    "mtime": 1773894167.7067382,
+    "hash": "40d9f92665bec337c9adc71719be11b9"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/sidebar.html": {
+    "mtime": 1773894167.7139761,
+    "hash": "901a950a2f6343a8d446a485f835bfe0"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/utils/extract-headings.html": {
+    "mtime": 1773894167.7159047,
+    "hash": "f459be4d04310b2d8a1bb610185d77b8"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/utils/file-path.html": {
+    "mtime": 1773894167.7162197,
+    "hash": "0ec5f6dbe213b91bd0aaf981030aeb26"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/utils/format-date.html": {
+    "mtime": 1773894167.7166388,
+    "hash": "095e7700e51dc3843f58a5693232019e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/utils/title.html": {
+    "mtime": 1773894167.7191887,
+    "hash": "0185280e6644c69c24137fd57b50139e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/utils/fragments.html": {
+    "mtime": 1773894167.716973,
+    "hash": "85c108c6e21d96f1864fef3a0cfacc9a"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/utils/page-description.html": {
+    "mtime": 1773894167.7181349,
+    "hash": "52e352ddae0aa9c47678788158a5ad46"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/utils/icon.html": {
+    "mtime": 1773894167.7174382,
+    "hash": "f92da16989d2c86c39d937595772312e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/utils/page-width-override.html": {
+    "mtime": 1773894167.71848,
+    "hash": "bb4fdd1d4c933c6eec33d1843e203c16"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/utils/sort-pages.html": {
+    "mtime": 1773894167.7188475,
+    "hash": "7332a45a5de976ad907616d5e9078675"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/utils/lang-link.html": {
+    "mtime": 1773894167.7177887,
+    "hash": "fa47d45b19f85e37c0eaf427c8131791"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/shortcodes/callout.html": {
+    "mtime": 1773894167.7128656,
+    "hash": "b06a7381f1592cca4ae7d419bab061bf"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/shortcodes/badge.html": {
+    "mtime": 1773894167.7125442,
+    "hash": "b734f735696f70c7c77344609ae10d98"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/shortcodes/card.html": {
+    "mtime": 1773894167.7131941,
+    "hash": "20cbbc92d05cd730984cd24ab5806921"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/shortcodes/cards.html": {
+    "mtime": 1773894167.7135882,
+    "hash": "ed4a7070f480a6f61a8611cb1f7f647f"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/components/codeblock-copy-button.html": {
+    "mtime": 1773894167.70279,
+    "hash": "b6a72a85d7975354758e74e68218ddb4"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/components/github-style-alert.html": {
+    "mtime": 1773894167.7040968,
+    "hash": "b6b7db54d6fbeac2e3b6d8a3ec78e4f5"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/components/pager.html": {
+    "mtime": 1773894167.7047713,
+    "hash": "57e227e13c52422b1f0d23a52ba9c4ba"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/components/codeblock.html": {
+    "mtime": 1773894167.7031121,
+    "hash": "dc5fe7eba81f555548c39a8d080e8a31"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/components/last-updated.html": {
+    "mtime": 1773894167.704454,
+    "hash": "8634f25ff76fdd5b561a7bf724c45d90"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/components/comments.html": {
+    "mtime": 1773894167.7034373,
+    "hash": "ccf78c59a4e2c39d60f0deeb2eac5e65"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/components/giscus.html": {
+    "mtime": 1773894167.703774,
+    "hash": "bd5a3f688295338c77e057ffe516b386"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/components/blog-pager.html": {
+    "mtime": 1773894167.7024527,
+    "hash": "193e2c6bf114d68be23f065b7c356dbc"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/components/analytics/matomo.html": {
+    "mtime": 1773894167.7016854,
+    "hash": "b5821e311a25bad1e00f646e28c865c3"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/components/analytics/umami.html": {
+    "mtime": 1773894167.7020276,
+    "hash": "a13b307d41c00db0534c9898b651c2bf"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/components/analytics/google-analytics.html": {
+    "mtime": 1773894167.7012813,
+    "hash": "f13a4bbd02db4314a46044ca1d17cf7f"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/components/analytics/analytics.html": {
+    "mtime": 1773894167.7009685,
+    "hash": "9f9dc1919d064f5e96063fa9a3bd40f3"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/scripts/mathjax.html": {
+    "mtime": 1773894167.710721,
+    "hash": "e6f138173de138f50c1171917d5a58c2"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/scripts/katex.html": {
+    "mtime": 1773894167.7103724,
+    "hash": "e84d6d2ab0b3c5a6d7637ac5342522a6"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/scripts/asciinema.html": {
+    "mtime": 1773894167.7097542,
+    "hash": "a52e3d89fbb728914d1808654fdf8876"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/scripts/core.html": {
+    "mtime": 1773894167.7100658,
+    "hash": "4d16792ad753b4e00d38191c4f115c6a"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/scripts/mermaid.html": {
+    "mtime": 1773894167.7110386,
+    "hash": "fc939a31ae2f59b0a84c17de2e67a92f"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/scripts/search.html": {
+    "mtime": 1773894167.711357,
+    "hash": "8d47ffc9070bce5fa666ae7d14aac68e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/custom/head-end.html": {
+    "mtime": 1773679069.0,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/custom/navbar-title.html": {
+    "mtime": 1773679069.0,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/custom/banner.html": {
+    "mtime": 1773679069.0,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_partials/custom/footer.html": {
+    "mtime": 1773679069.0,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/callout.html": {
+    "mtime": 1773894167.7205112,
+    "hash": "df0a95899aead0f4c5b789331c2e6880"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/badge.html": {
+    "mtime": 1773894167.7200701,
+    "hash": "566ad8a53e697f4d9fc0208ba6c7337d"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/jupyter.html": {
+    "mtime": 1773894167.727059,
+    "hash": "b81969283c7337948cfecb42ca5a4e06"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/tabs.html": {
+    "mtime": 1773894167.728482,
+    "hash": "babd48622f27dc8e44de8b7948b2c6c8"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/include.html": {
+    "mtime": 1773894167.7267172,
+    "hash": "39d3c2c51e332bc728750f1236aad41a"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/card.html": {
+    "mtime": 1773894167.7208676,
+    "hash": "a027fbfb590547873ec00790173c5fc9"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/details.html": {
+    "mtime": 1773894167.7215436,
+    "hash": "3c9aa53d8dc8f3f30de899e29d6c229d"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/asciinema.html": {
+    "mtime": 1773894167.7197454,
+    "hash": "3a24aa74b52454e44782eefaa90ea5bc"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/icon.html": {
+    "mtime": 1773894167.7263935,
+    "hash": "abdbda117bfdec7eaa455e8710f6b6c2"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/steps.html": {
+    "mtime": 1773894167.7277174,
+    "hash": "d5e5ee5fb3411cac4cb4bb488b82e33f"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/pdf.html": {
+    "mtime": 1773894167.727393,
+    "hash": "fdfa9a42fa744a2c7c5e21a71b236630"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/cards.html": {
+    "mtime": 1773894167.7212095,
+    "hash": "98e97c7c99ad5aebc0f34666cee041b5"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/tab.html": {
+    "mtime": 1773894167.7280128,
+    "hash": "700ffd36d241f741c69676e6da093a5b"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/filetree/container.html": {
+    "mtime": 1773894167.722057,
+    "hash": "399c01b8456d2f83c72c22e2717bba1d"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/filetree/file.html": {
+    "mtime": 1773894167.7227595,
+    "hash": "90f7aec45a00656db95e254f1ba2757f"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/filetree/folder.html": {
+    "mtime": 1773894167.7230935,
+    "hash": "b57b1f7aa24dd61cc40a4c25779554bc"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/hextra/hero-container.html": {
+    "mtime": 1773894167.725075,
+    "hash": "de4981c02dfa779f3f441590b9ecf88e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/hextra/hero-headline.html": {
+    "mtime": 1773894167.725417,
+    "hash": "ad5189a3e952732c218c489c26100dfb"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/hextra/hero-button.html": {
+    "mtime": 1773894167.7247496,
+    "hash": "c9cc1f2fea3d0f4d6ba4eb5fc2773e5c"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/hextra/hero-section.html": {
+    "mtime": 1773894167.7257276,
+    "hash": "6ab34702de740e03966e393be43573bf"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/hextra/hero-subtitle.html": {
+    "mtime": 1773894167.7260718,
+    "hash": "f7e3b29b3cfcaf752515a2629073f971"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/hextra/hero-badge.html": {
+    "mtime": 1773894167.7243154,
+    "hash": "f2d9aa02013fe77b9fec05044102c4d9"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/hextra/feature-card.html": {
+    "mtime": 1773894167.7236438,
+    "hash": "01f30233e1bb3958c64b3c0b52ea4f62"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/layouts/_shortcodes/hextra/feature-grid.html": {
+    "mtime": 1773894167.723969,
+    "hash": "8a31abfeeac7114a2a516f04eb43838f"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/nl.yaml": {
+    "mtime": 1773894167.690619,
+    "hash": "187f112f7571676623929a6e744e57ea"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/ja.yaml": {
+    "mtime": 1773894167.6893952,
+    "hash": "fac344dae500c32903039a70d1a86c60"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/en.yaml": {
+    "mtime": 1773894167.6873748,
+    "hash": "afcfc49f838b05de4327d041048bc492"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/pt.yaml": {
+    "mtime": 1773894167.6913714,
+    "hash": "c809339424862af7e0f7604e012695b8"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/uk.yaml": {
+    "mtime": 1773894167.6928554,
+    "hash": "f0ec5d624770f7d9bdaad2bff7308a83"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/ru.yaml": {
+    "mtime": 1773894167.6920404,
+    "hash": "fdde64a5c230d11e38b8ceaefd1581d9"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/de.yaml": {
+    "mtime": 1773894167.6870406,
+    "hash": "3be081c409732e9b65bb9aa567e55439"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/zh-cn.yaml": {
+    "mtime": 1773894167.693595,
+    "hash": "b7ef1cef3848ec4b83d11b39c29563ff"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/ro.yaml": {
+    "mtime": 1773894167.6917129,
+    "hash": "08f2b7fc8e24ed273fb5ef246ff6f031"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/zh-tw.yaml": {
+    "mtime": 1773894167.6939883,
+    "hash": "6feb9285e42cf037d7bcf5f75e84cf0b"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/he.yaml": {
+    "mtime": 1773894167.6890614,
+    "hash": "f351d25d5858937f3bab0c1e81e33259"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/ko.yaml": {
+    "mtime": 1773894167.6898248,
+    "hash": "1548381f4b8e270f33aa8bfebe4f42c1"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/fr.yaml": {
+    "mtime": 1773894167.68862,
+    "hash": "4750b222af9e22190e0ef0f727395d36"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/es.yaml": {
+    "mtime": 1773894167.6877668,
+    "hash": "06a63eccd2efc4e6bd88e8e3f85644ef"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/nn.yaml": {
+    "mtime": 1773894167.6909504,
+    "hash": "4cd8cf904c7f7e73a9f7b5550febbeef"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/nb.yaml": {
+    "mtime": 1773894167.6902838,
+    "hash": "9e2bb6e53b6cf598b6c352f09b2a8201"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/cs.yaml": {
+    "mtime": 1773894167.6867118,
+    "hash": "0ac3aba19f68cbd335d980dd59d3b46e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/fa.yaml": {
+    "mtime": 1773894167.6881511,
+    "hash": "0e35cb30235800c42c9766daf206f21f"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/vi.yaml": {
+    "mtime": 1773894167.693184,
+    "hash": "c0101fb2963225d4b4e044ccc1942986"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/i18n/sw.yaml": {
+    "mtime": 1773894167.6924326,
+    "hash": "076512d664711555989a82091a53692c"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/data/icons.yaml": {
+    "mtime": 1773894167.6852422,
+    "hash": "7fae1d5ed6928f155bca1f40f584de33"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/assets/css/safelist.txt": {
+    "mtime": 1773894167.6758966,
+    "hash": "543d99d5cf2b080284999d97a769e1e7"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/_index.md": {
+    "mtime": 1773896734.362603,
+    "hash": "45722929afc67c686018ac200dc53594"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/index.md": {
+    "mtime": 1773896575.3586102,
+    "hash": "56e85e6a1826c936e11506e59282d060"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/index.md": {
+    "mtime": 1773896575.3523483,
+    "hash": "6f89c8db5e2c6947a608d15977920ede"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2024/05/03/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode/index.md": {
+    "mtime": 1773896575.4086158,
+    "hash": "d80a8124565e7307f44602168b1ef358"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2024/05/03/how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states/index.md": {
+    "mtime": 1773896575.4174502,
+    "hash": "ed8f06f0cd246a058931553bfd97290d"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2024/05/18/increase-security-in-your-flutter-applications/index.md": {
+    "mtime": 1773896575.3997433,
+    "hash": "b63b276992b93655c49fd810f4cd3c94"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/index.md": {
+    "mtime": 1773896575.3669815,
+    "hash": "e710229524ee731a664ba37906c9c3e3"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2024/06/15/unlocking-the-secrets-of-solid-a-beginners-guide/index.md": {
+    "mtime": 1773896575.382036,
+    "hash": "406be853a7d5c08c485274d8d38407c0"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2024/06/15/code-generators-in-flutter-whats-cheap-and-what-s-expensive/index.md": {
+    "mtime": 1773896575.3930902,
+    "hash": "0c404e962a21a6887d1055af724fe575"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/archives/_index.md": {
+    "mtime": 1773896767.710966,
+    "hash": "ac35862416f9af2d996c1a60cf443d59"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/about/index.md": {
+    "mtime": 1773896123.5861657,
+    "hash": "f5c4de0ae5701cddab3a4f40da40c921"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/index.md": {
+    "mtime": 1774229708.154038,
+    "hash": "8235297bb9c11924662d3fc481a644be"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2026/03/19/agent-engineering-e-agentic-flow-engineering/index.md": {
+    "mtime": 1773895697.7260973,
+    "hash": "fe200b6f6155b3389bf2b1705262312b"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/index.md": {
+    "mtime": 1773946426.511653,
+    "hash": "2be5dd548e54b24a37f075e6c57e14d2"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/index.md": {
+    "mtime": 1774275904.1398568,
+    "hash": "342fd857c74604e78f5cc9dde790cb30"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/index.md": {
+    "mtime": 1775524188.248246,
+    "hash": "18d552634046db2096beb23b235911fb"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/index.md": {
+    "mtime": 1777516416.3713243,
+    "hash": "8aed8bc64e7790cc8f83a666d98bfa30"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/index.md": {
+    "mtime": 1775696997.4286604,
+    "hash": "cd93043c82fdc37c13a08bc386a1f375"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2026/04/06/3-no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/index.md": {
+    "mtime": 1775524615.3707912,
+    "hash": "83dfcec4258d83858504de4a2627e212"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/index.md": {
+    "mtime": 1775524611.0720115,
+    "hash": "893f407ac205b04066cb42eef3bfc041"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2026/04/06/4-no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/index.md": {
+    "mtime": 1775524619.4017062,
+    "hash": "d1ae3bfe357a25f16b127ad4838ae129"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/index.md": {
+    "mtime": 1775500151.306275,
+    "hash": "cc6abbc2de95e24ee1933498b0083358"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2026/04/06/5-no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/index.md": {
+    "mtime": 1775524623.4523575,
+    "hash": "4a6decb47bf80c4adba14cc90aef900f"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/content/2026/04/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/index.md": {
+    "mtime": 1776387208.5720756,
+    "hash": "1c5969bce2e6442d8d8dd025026361e8"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/index.html": {
+    "mtime": 1775674243.9314885,
+    "hash": "3075d0dfade071e823e46d85333fca37"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/404.html": {
+    "mtime": 1775674243.9448962,
+    "hash": "a419e09f8b7457974803c4cd46b079de"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2025/index.html": {
+    "mtime": 1775674243.9355855,
+    "hash": "f414aee89b5bd414d54517d37ba8db45"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/index.html": {
+    "mtime": 1775674243.9350462,
+    "hash": "183ae60b8df7bb4114f4a46b18c8c5b9"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/index.html": {
+    "mtime": 1775674243.9352553,
+    "hash": "cd7ce35cf7cca63503405fea44cebaae"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2024/index.html": {
+    "mtime": 1775674243.9310782,
+    "hash": "d0be9e57f6b69fae55ea1549cd72a600"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2024/05/03/ensuring-the-security-of-your-flutter-application-essential-practices-in-gray-box-mode/index.html": {
+    "mtime": 1775674243.9312487,
+    "hash": "32b9dd7ca520fc822d73b8c6faf0126c"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2024/05/03/how-to-integrate-flutter-modular-with-flutter-bloc-cubit-in-a-simple-way-and-using-custom-states/index.html": {
+    "mtime": 1775674243.9313896,
+    "hash": "4c675660514050370106277b161e1560"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2024/05/18/increase-security-in-your-flutter-applications/index.html": {
+    "mtime": 1775674243.931389,
+    "hash": "3ca10a4935bcd021111b8f03aed80b54"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/index.html": {
+    "mtime": 1775674243.9312956,
+    "hash": "236851991c3ed779e90cd0ec7147d4e1"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2024/06/15/unlocking-the-secrets-of-solid-a-beginners-guide/index.html": {
+    "mtime": 1775674243.9313731,
+    "hash": "de6e855ca19e8ad10b903c9ff79e0d69"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2024/06/15/code-generators-in-flutter-whats-cheap-and-what-s-expensive/index.html": {
+    "mtime": 1775674243.931371,
+    "hash": "4bd1424e947162ae6d798c82418ab74a"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/archives/index.html": {
+    "mtime": 1775674243.9487257,
+    "hash": "0eae3c4b50281368d5c6623a69d1901a"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/about/index.html": {
+    "mtime": 1775674243.948691,
+    "hash": "3273dd9043d0c7eb3dc72d2b636f8fed"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/index.html": {
+    "mtime": 1775674243.9513116,
+    "hash": "bcfc7acf65bb6c97092f8aa317e11cb6"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/app-development/index.html": {
+    "mtime": 1775674243.9522462,
+    "hash": "54107e7019bc10f6f571690d7a760bf5"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/engenharia-de-software/index.html": {
+    "mtime": 1775674243.9580374,
+    "hash": "8915edd9629c01437bd527cd6e15564a"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/clean-code/index.html": {
+    "mtime": 1775674243.9559093,
+    "hash": "20c01d74583c275c61eec26dd35f5cc1"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/principios/index.html": {
+    "mtime": 1775674243.9694722,
+    "hash": "ae65b109edd7530ca569eb315922cddf"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/android-app-development/index.html": {
+    "mtime": 1775674243.9520845,
+    "hash": "ce2ee7b2b284cf8225567f4c304aaf32"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/tasks/index.html": {
+    "mtime": 1775674243.9790127,
+    "hash": "2d7b76a3c0dbff5d417aec1322b22a00"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/cybersecurity/index.html": {
+    "mtime": 1775674243.9588168,
+    "hash": "5bd650c687306b27c3fd45d0682f2ba3"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/llm/index.html": {
+    "mtime": 1775674243.9715428,
+    "hash": "9b60571fdd731a7d7bc8f1b074fc17a2"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/planejamento/index.html": {
+    "mtime": 1775674243.9721062,
+    "hash": "798a5b8f86caee0a7d79af881dfbf15f"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/build-runner/index.html": {
+    "mtime": 1775674243.9539187,
+    "hash": "e5e4b42739d2a15125b5fa5dd047f186"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/especificacao/index.html": {
+    "mtime": 1775674243.9663126,
+    "hash": "2fb8a04a977e08a2d6a5195a9a15a9fa"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/reflexao/index.html": {
+    "mtime": 1775674243.9697952,
+    "hash": "67fc0a13d134df0d9af2ab4eb01fa25e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/security/index.html": {
+    "mtime": 1775674243.9729433,
+    "hash": "83df5932232eeed7724445d28a6b7de9"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/development/index.html": {
+    "mtime": 1775674243.957609,
+    "hash": "e5005442e7b0c12b1d5155e4ab9b79cf"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/plan/index.html": {
+    "mtime": 1775674243.969467,
+    "hash": "3593277e2c04ddc34371b93ab87020b8"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/software-development/index.html": {
+    "mtime": 1775674243.9757679,
+    "hash": "b61ade567b9219adef5cfb1703ca3a9b"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/integration/index.html": {
+    "mtime": 1775674243.9701693,
+    "hash": "28a4dc79f72a4dba7d10768f490a3fc5"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/implementacao/index.html": {
+    "mtime": 1775674243.9618025,
+    "hash": "5c226c659ca187e0255000270f58efd5"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/ia/index.html": {
+    "mtime": 1775674243.9632056,
+    "hash": "9217f7a4856d8cc0c52e4c55adfc5c2d"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/agents/index.html": {
+    "mtime": 1775674243.9559138,
+    "hash": "96681483c11c9691983b2684f5602258"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/solid/index.html": {
+    "mtime": 1775674243.9758434,
+    "hash": "ba6eb2933b96e5e826baed3a9097d733"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/mcp/index.html": {
+    "mtime": 1775674243.976546,
+    "hash": "ed260322dbb6d61ed17aa5661bb50d1a"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/ios/index.html": {
+    "mtime": 1775674243.9667816,
+    "hash": "13ada4cc2400253e44fbf1b8e694f52e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/intelligence-artificielle/index.html": {
+    "mtime": 1775674243.9661689,
+    "hash": "28c9dfd3ea3e3621fc8be457ca9fdf1a"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/constitution/index.html": {
+    "mtime": 1775674243.960738,
+    "hash": "56b7f813dedc61e6f6a320c315d873eb"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/flutter/index.html": {
+    "mtime": 1775674243.960735,
+    "hash": "3fe9817c15efbf4cf9ee546e0bcb9912"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/spec-driven-development/index.html": {
+    "mtime": 1775674243.978174,
+    "hash": "56f874fc0bcd4c740cb6625be5c4917f"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/architecture/index.html": {
+    "mtime": 1775674243.9539142,
+    "hash": "0e096cde95b022464f2d00ae07127689"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/state-management/index.html": {
+    "mtime": 1775674243.9777687,
+    "hash": "8a4339ceb204f87e70c6df35b2a140e1"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/carreira/index.html": {
+    "mtime": 1775674243.9553509,
+    "hash": "819ca2211692dc0e1d2489552b2ef2d5"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/ai/index.html": {
+    "mtime": 1775674243.9514492,
+    "hash": "72c840030e1713e551541df1e42f50dd"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/tecnologia/index.html": {
+    "mtime": 1775674243.9813118,
+    "hash": "3c4555f31ca25a9f1816054b2154a071"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/android/index.html": {
+    "mtime": 1775674243.9526646,
+    "hash": "672d0f931b6c289b6ab06bac18caa88e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/spec-kit/index.html": {
+    "mtime": 1775674243.9767547,
+    "hash": "a75ce2807deac1cb181ebf58abd10b73"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/desenvolvimento/index.html": {
+    "mtime": 1775674243.9570038,
+    "hash": "d67dc5d919a972dfe17ea190a02c58e8"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/hacking/index.html": {
+    "mtime": 1775674243.9597714,
+    "hash": "da5fa79d293c0746fbf0f19125973a0e"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/implement/index.html": {
+    "mtime": 1775674243.962877,
+    "hash": "954491407439f53170392faee371d970"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/software-engineering/index.html": {
+    "mtime": 1775674243.981356,
+    "hash": "77a32b7eb197c9250c58995e879898c9"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/code-generator/index.html": {
+    "mtime": 1775674243.9562345,
+    "hash": "4f2aab0e071b260b151b267e9351ffea"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/specify/index.html": {
+    "mtime": 1775674243.97804,
+    "hash": "fe124c8eab43a268317618547acf98be"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/ios-app-development/index.html": {
+    "mtime": 1775674243.96596,
+    "hash": "3d37daedea62f53bf24d515d8dad93b6"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/tags/tarefas/index.html": {
+    "mtime": 1775674243.978886,
+    "hash": "729df1cdd09601d66b5385c3b800b8b9"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2026/index.html": {
+    "mtime": 1775674243.9399188,
+    "hash": "30daa4be6175841a50c27e68c0c223d9"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/index.html": {
+    "mtime": 1775674243.9400485,
+    "hash": "1446f4269b5edfd0c83248dd0b1bc481"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2026/03/19/agent-engineering-e-agentic-flow-engineering/index.html": {
+    "mtime": 1775674243.9368482,
+    "hash": "fd3fa3838e637376b0353e0136c25cd7"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/index.html": {
+    "mtime": 1775674243.9356644,
+    "hash": "2b7b9afe7156815db972453538c2bb2d"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/index.html": {
+    "mtime": 1775674243.9447885,
+    "hash": "be58edfcad34b7fa599aa51281a6ed87"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/index.html": {
+    "mtime": 1775674243.9416208,
+    "hash": "f8e3d19758c0faff11aa169cf28a6568"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/index.html": {
+    "mtime": 1775674243.9485018,
+    "hash": "9c75bf84680a06fedd1a4a2bc0b15e2c"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/index.html": {
+    "mtime": 1775674243.9484954,
+    "hash": "24198735630ccb2858133c9ad0a5f36b"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/index.html": {
+    "mtime": 1775674243.9484975,
+    "hash": "681a03f7d72dc70993b0731da053b886"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/index.html": {
+    "mtime": 1775674243.9485037,
+    "hash": "98d13f73f51af5a59309e0f8ac67091c"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/index.html": {
+    "mtime": 1775674243.9429235,
+    "hash": "b8d2baaace90ce1ad29201ff791aa236"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/categories/index.html": {
+    "mtime": 1775674243.9541798,
+    "hash": "601d9205ea1b0e2ab2b1b2c3d244f3c6"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/single.html": {
+    "mtime": 1773944399.183631,
+    "hash": "05ee9fb699dd68617826ba2edea8ab8b"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/index.html": {
+    "mtime": 1773894914.20115,
+    "hash": "de9653e099657125ca7cabff3d299621"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/archives.html": {
+    "mtime": 1773894936.164785,
+    "hash": "2838e768fba1a095358b24c4a1b688e3"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/shortcodes/youtube.html": {
+    "mtime": 1773894169.4177558,
+    "hash": "a8fcbab83e035eec756dd1c08fd458e3"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/partials/schema.html": {
+    "mtime": 1773894169.41658,
+    "hash": "76e513f6ac0801a25089d92bba0334d5"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/partials/twitter_cards.html": {
+    "mtime": 1773897024.362471,
+    "hash": "a0015d9aab8fd5fdf830e7eab80d4be8"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/partials/components/comments.html": {
+    "mtime": 1773944926.926212,
+    "hash": "221b7d2feef443c4ab4cc2027972bbd0"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/partials/custom/head-end.html": {
+    "mtime": 1773944944.86577,
+    "hash": "56235c5835cbae620194a9b1afd36dd1"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/i18n/pt-BR.yaml": {
+    "mtime": 1773893988.7665606,
+    "hash": "731b1fcbc8eedf32deef3bc04c5b4524"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/static/favicon-16x16.png": {
+    "mtime": 1773894167.7361033,
+    "hash": "e91537aa3b2f52891937c094fd984cfa"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/static/android-chrome-192x192.png": {
+    "mtime": 1773894167.73417,
+    "hash": "91fb6536eab4d76ef09aa4bf4fa6768b"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/static/apple-touch-icon.png": {
+    "mtime": 1773894167.7352703,
+    "hash": "7c196bc1785d289b77b12bf50cf94809"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/static/android-chrome-512x512.png": {
+    "mtime": 1773894167.7346833,
+    "hash": "684be14b64123fb4e25e54ffa818a256"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/static/favicon.svg": {
+    "mtime": 1773894167.7372367,
+    "hash": "bc185d65cb2f06335890211e60483289"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/static/favicon-32x32.png": {
+    "mtime": 1773894167.7364166,
+    "hash": "f2fac1e55c6b4e44a4ec4ca036cdd2c3"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/static/images/logo-dark.svg": {
+    "mtime": 1773894167.737856,
+    "hash": "66cc271a2553b31ebe9885b04ffeef44"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/static/images/logo.svg": {
+    "mtime": 1773894167.7381885,
+    "hash": "39477ec3d41196ec7beaf5042f868f7a"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/favicon-16x16.png": {
+    "mtime": 1773894167.7361033,
+    "hash": "e91537aa3b2f52891937c094fd984cfa"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/web-app-manifest-192x192.png": {
+    "mtime": 1773891624.46481,
+    "hash": "5ed6abe1eca61540a9804a92ba52bb81"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/android-chrome-192x192.png": {
+    "mtime": 1773894167.73417,
+    "hash": "91fb6536eab4d76ef09aa4bf4fa6768b"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/apple-touch-icon.png": {
+    "mtime": 1773891624.4361832,
+    "hash": "ef21303b27dfecdc5cb034aca503c770"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/web-app-manifest-512x512.png": {
+    "mtime": 1773891624.4690983,
+    "hash": "f89094d12cdf9ea3abdb4e0809c90c8d"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/android-chrome-512x512.png": {
+    "mtime": 1773894167.7346833,
+    "hash": "684be14b64123fb4e25e54ffa818a256"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/favicon-96x96.png": {
+    "mtime": 1773891624.4393337,
+    "hash": "e9a2124b7ba874e9453e2da800b7a6d2"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/favicon.svg": {
+    "mtime": 1773891624.452227,
+    "hash": "1123a5770258c1e8e721596507839ad4"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/favicon-32x32.png": {
+    "mtime": 1773894167.7364166,
+    "hash": "f2fac1e55c6b4e44a4ec4ca036cdd2c3"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/images/logo-dark.svg": {
+    "mtime": 1773894167.737856,
+    "hash": "66cc271a2553b31ebe9885b04ffeef44"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/images/logo.svg": {
+    "mtime": 1773894167.7381885,
+    "hash": "39477ec3d41196ec7beaf5042f868f7a"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/static/web-app-manifest-192x192.png": {
+    "mtime": 1773891624.46481,
+    "hash": "5ed6abe1eca61540a9804a92ba52bb81"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/static/apple-touch-icon.png": {
+    "mtime": 1773891624.4361832,
+    "hash": "ef21303b27dfecdc5cb034aca503c770"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/static/web-app-manifest-512x512.png": {
+    "mtime": 1773891624.4690983,
+    "hash": "f89094d12cdf9ea3abdb4e0809c90c8d"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/static/favicon-96x96.png": {
+    "mtime": 1773891624.4393337,
+    "hash": "e9a2124b7ba874e9453e2da800b7a6d2"
+  },
+  "/Users/raphaelpontes/Documents/Projetos/orapha_dev/static/favicon.svg": {
+    "mtime": 1773891624.452227,
+    "hash": "1123a5770258c1e8e721596507839ad4"
+  }
+}

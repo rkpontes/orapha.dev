@@ -1,0 +1,17 @@
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/index.html
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/categories/index.html
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/single.html
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/index.html
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/archives.html
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/shortcodes/youtube.html
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/partials/schema.html
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/partials/twitter_cards.html
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/partials/components/comments.html
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/layouts/partials/custom/head-end.html
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/i18n/pt-BR.yaml
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/static/favicon.svg
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/static/images/logo-dark.svg
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/_vendor/github.com/imfing/hextra/static/images/logo.svg
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/images/logo-dark.svg
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/public/images/logo.svg
+/Users/raphaelpontes/Documents/Projetos/orapha_dev/static/favicon.svg
