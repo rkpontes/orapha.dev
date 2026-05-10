@@ -49,7 +49,7 @@
         <span class="hx:mx-2">·</span>
         <a href="#disqus_wrapper"
           class="hx:text-gray-400 hx:dark:text-gray-500 hx:hover:text-primary-600 hx:dark:hover:text-primary-400 hx:transition-colors">
-          💬 Deixe seu comentário
+          💬 {{ i18n "leaveComment" }}
         </a>
         {{- end -}}
       </div>
@@ -61,15 +61,15 @@
       {{ $audioPath := printf "/audio/%s.mp3" $slug }}
       {{ $audioFile := printf "static%s" $audioPath }}
       
-      <div class="audio-player-container {{ if not (fileExists $audioFile) }}audio-not-found{{ end }}" data-audio-url="{{ $audioPath | absURL }}" data-audio-exists="{{ fileExists $audioFile }}">
+      <div class="audio-player-container {{ if not (fileExists $audioFile) }}audio-not-found{{ end }}" data-audio-url="{{ $audioPath | absURL }}" data-audio-exists="{{ fileExists $audioFile }}" data-i18n-listen="{{ i18n "listenToArticle" }}" data-i18n-continue="{{ i18n "continueListening" }}" data-i18n-playing="{{ i18n "playing" }}" data-i18n-error-load="{{ i18n "errorLoadingAudio" }}" data-i18n-error-play="{{ i18n "errorPlayingAudio" }}">
         <div class="audio-player-wrapper">
-          <button class="audio-play-btn" aria-label="Ouvir artigo">
+          <button class="audio-play-btn" aria-label="{{ i18n "playArticle" }}">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M8 5v14l11-7z"/>
             </svg>
           </button>
           <div class="audio-info">
-            <div class="audio-label">🎧 Ouça este artigo</div>
+            <div class="audio-label">🎧 {{ i18n "listenToArticle" }}</div>
             <div class="audio-progress-container" style="display: none;">
               <div class="audio-progress-bar"></div>
             </div>
@@ -105,6 +105,13 @@
   const timeDisplay = player.querySelector('.audio-time');
   const label = player.querySelector('.audio-label');
   
+  // Get i18n strings from data attributes
+  const i18nListen = player.dataset.i18nListen;
+  const i18nContinue = player.dataset.i18nContinue;
+  const i18nPlaying = player.dataset.i18nPlaying;
+  const i18nErrorLoad = player.dataset.i18nErrorLoad;
+  const i18nErrorPlay = player.dataset.i18nErrorPlay;
+  
   let audio = null;
   let isPlaying = false;
   
@@ -133,10 +140,13 @@
         isPlaying = false;
         playBtn.classList.remove('playing');
         playBtn.innerHTML = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>';
+        label.textContent = '🎧 ' + i18nListen;
         progressBar.style.width = '0%';
+        progressContainer.style.display = 'none';
+        timeDisplay.style.display = 'none';
       });
       audio.addEventListener('error', () => {
-        label.textContent = '❌ Erro ao carregar áudio';
+        label.textContent = '❌ ' + i18nErrorLoad;
         label.style.color = '#e74c3c';
         player.classList.add('audio-error');
       });
@@ -146,16 +156,16 @@
       audio.pause();
       playBtn.classList.remove('playing');
       playBtn.innerHTML = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>';
-      label.textContent = '🎧 Continuar ouvindo';
+      label.textContent = '🎧 ' + i18nContinue;
     } else {
       audio.play().catch(err => {
         console.error('Erro ao tocar áudio:', err);
-        label.textContent = '❌ Erro ao reproduzir';
+        label.textContent = '❌ ' + i18nErrorPlay;
         label.style.color = '#e74c3c';
       });
       playBtn.classList.add('playing');
       playBtn.innerHTML = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
-      label.textContent = '🔊 Tocando...';
+      label.textContent = '🔊 ' + i18nPlaying;
       progressContainer.style.display = 'block';
       timeDisplay.style.display = 'block';
     }

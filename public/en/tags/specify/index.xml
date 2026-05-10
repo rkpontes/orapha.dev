@@ -1,22 +1,4 @@
-<rss version="2.0"
-     xmlns:content="http://purl.org/rss/1.0/modules/content/"
-     xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>orapha.dev</title>
-    <link>http://localhost:1313/</link>
-    <description>Raphael Pontes&#39; blog — software engineering, AI, and development. English edition.</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 09 May 2026 21:39:49 GMT</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/>
-    
-      <item>
-        <title>Awesome Design: A catalog of design systems ready to use with AI agents</title>
-        <link>http://localhost:1313/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</link>
-        <guid isPermaLink="true">http://localhost:1313/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</guid>
-        <pubDate>Sat, 09 May 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;Awesome Design: A catalog of design systems ready to use with AI agents&lt;/h1&gt;&lt;p&gt;There&amp;rsquo;s something that&amp;rsquo;s always bothered me when working with code agents: visual inconsistency. You ask the agent to &amp;ldquo;create a dashboard screen,&amp;rdquo; it delivers something functional, but the visual&amp;hellip; well, the visual looks like it was made by someone who&amp;rsquo;s never heard of a design system. Each screen becomes an island, each component has its own personality, and in the end you have a visual Frankenstein that works but doesn&amp;rsquo;t give that professional product feeling.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1>Awesome Design: A catalog of design systems ready to use with AI agents</h1><p>There&rsquo;s something that&rsquo;s always bothered me when working with code agents: visual inconsistency. You ask the agent to &ldquo;create a dashboard screen,&rdquo; it delivers something functional, but the visual&hellip; well, the visual looks like it was made by someone who&rsquo;s never heard of a design system. Each screen becomes an island, each component has its own personality, and in the end you have a visual Frankenstein that works but doesn&rsquo;t give that professional product feeling.</p>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>orapha.dev</title><link>https://www.orapha.dev/</link><description>Raphael Pontes' blog — software engineering, AI, and development. English edition.</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 09 May 2026 22:08:40 GMT</lastBuildDate><atom:link href="https://www.orapha.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Awesome Design: A catalog of design systems ready to use with AI agents</title><link>https://www.orapha.dev/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</guid><pubDate>Sat, 09 May 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;Awesome Design: A catalog of design systems ready to use with AI agents&lt;/h1&gt;&lt;p&gt;There&amp;rsquo;s something that&amp;rsquo;s always bothered me when working with code agents: visual inconsistency. You ask the agent to &amp;ldquo;create a dashboard screen,&amp;rdquo; it delivers something functional, but the visual&amp;hellip; well, the visual looks like it was made by someone who&amp;rsquo;s never heard of a design system. Each screen becomes an island, each component has its own personality, and in the end you have a visual Frankenstein that works but doesn&amp;rsquo;t give that professional product feeling.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>Awesome Design: A catalog of design systems ready to use with AI agents</h1><p>There&rsquo;s something that&rsquo;s always bothered me when working with code agents: visual inconsistency. You ask the agent to &ldquo;create a dashboard screen,&rdquo; it delivers something functional, but the visual&hellip; well, the visual looks like it was made by someone who&rsquo;s never heard of a design system. Each screen becomes an island, each component has its own personality, and in the end you have a visual Frankenstein that works but doesn&rsquo;t give that professional product feeling.</p>
 <p>I&rsquo;ve tried various approaches. I&rsquo;ve shared Figma links, I&rsquo;ve described colors and typography in detail, I&rsquo;ve even sent screenshots with annotations. It works, but it&rsquo;s tedious. And the worst part: with each new feature, the conversation starts from scratch.</p>
 <p>That&rsquo;s when I discovered <a href="https://github.com/voltagent/awesome-design-md"target="_blank" rel="noopener"><strong>Awesome Design</strong></a>.</p>
 <h2>What is DESIGN.md?<span class="hx:absolute hx:-mt-20" id="what-is-designmd"></span>
@@ -110,27 +92,993 @@
 <li><a href="https://stitch.withgoogle.com/docs/design-md/overview/"target="_blank" rel="noopener">DESIGN.md Documentation on Google Stitch</a></li>
 <li><a href="https://getdesign.md/"target="_blank" rel="noopener">Site with design system previews</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>ai</category>
-            <category>design-systems</category>
-            <category>design-md</category>
-            <category>frontend</category>
-            <category>voltagent</category>
-        
-      </item>
-    
-      <item>
-        <title>In Spec-Driven Development, `specify` is where ambiguity starts to die</title>
-        <link>http://localhost:1313/en/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</link>
-        <guid isPermaLink="true">http://localhost:1313/en/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</guid>
-        <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;In Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; is where ambiguity starts to die&lt;/h1&gt;&lt;p&gt;In the text &lt;a href=&#34;http://localhost:1313/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/a&gt;, I focused on the &lt;code&gt;constitution&lt;/code&gt; stage, where I define the criteria that will guide the project.&lt;/p&gt;
+]]></content:encoded><category>ai</category><category>design-systems</category><category>design-md</category><category>frontend</category><category>voltagent</category></item><item><title>Demystifying the OpenSpec Propose Process: What Happens Behind the Scenes?</title><link>https://www.orapha.dev/en/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/</guid><pubDate>Wed, 29 Apr 2026 23:22:42 GMT</pubDate><description>&lt;p&gt;When we execute the proposal creation command (propose) in OpenSpec — for example, when starting the &lt;code&gt;add-course-enrollment-module&lt;/code&gt; functionality —, the system works behind the scenes to generate a series of fundamental files for development success.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve ever wondered what each of these artifacts is for, this article is for you. Let&amp;rsquo;s explore the anatomy of each generated document and how they ensure team alignment: from business vision to coding.&lt;/p&gt;</description><content:encoded><![CDATA[<p>When we execute the proposal creation command (propose) in OpenSpec — for example, when starting the <code>add-course-enrollment-module</code> functionality —, the system works behind the scenes to generate a series of fundamental files for development success.</p>
+<p>If you&rsquo;ve ever wondered what each of these artifacts is for, this article is for you. Let&rsquo;s explore the anatomy of each generated document and how they ensure team alignment: from business vision to coding.</p>
+<hr>
+<h2>1. The Proposal (<code>proposal.md</code>): The &ldquo;Why&rdquo; and the &ldquo;What&rdquo;<span class="hx:absolute hx:-mt-20" id="1-the-proposal-proposalmd-the-why-and-the-what"></span>
+    <a href="#1-the-proposal-proposalmd-the-why-and-the-what" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The proposal document is the starting point of your journey. It serves as the bridge between business and engineering.</p>
+<ul>
+<li><strong>What it contains:</strong> Motivation for the functionality, exact scope of what will be built, and which new &ldquo;capabilities&rdquo; are being introduced to the system. In our example, it maps the impact on the project and introduces <code>enrollment-management</code>, <code>payment-gateway-adapter</code>, and <code>enrollment-command-dispatch</code>.</li>
+<li><strong>What it&rsquo;s for:</strong> Ensuring that everyone involved (developers, POs, stakeholders) has clarity about the value being delivered and the size of the change, even before we write the first line of code.</li>
+</ul>
+<h2>2. The Design Document (<code>design.md</code>): The &ldquo;How&rdquo; at High Level<span class="hx:absolute hx:-mt-20" id="2-the-design-document-designmd-the-how-at-high-level"></span>
+    <a href="#2-the-design-document-designmd-the-how-at-high-level" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>If <em>Proposal</em> focuses on business, <em>Design Document</em> deepens into technical terrain. Here live architecture decisions and risk mitigation.</p>
+<ul>
+<li><strong>What it contains:</strong> Documents the technical decisions that will guide development. For example, the decision to replicate the pattern already used in &ldquo;students&rdquo; in the frontend, the adoption of deterministic commands in BFF, payment adapter isolation, and ensuring idempotency via <code>request_id</code> based on <em>polling</em>.</li>
+<li><strong>What it&rsquo;s for:</strong> Preventing future headaches. By listing risks, their mitigations, and the migration plan, the technical team has a map of possible obstacles and how to circumvent them without hurting the application&rsquo;s architecture.</li>
+</ul>
+<h2>3. The Specs (<code>specs/*/spec.md</code>): The Rules of the Game<span class="hx:absolute hx:-mt-20" id="3-the-specs-specsspecmd-the-rules-of-the-game"></span>
+    <a href="#3-the-specs-specsspecmd-the-rules-of-the-game" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>One of OpenSpec&rsquo;s great insights is dividing a complex problem into smaller &ldquo;capabilities,&rdquo; generating dedicated specifications for each system domain:</p>
+<h3><code>specs/enrollment-management/spec.md</code> (Frontend)<span class="hx:absolute hx:-mt-20" id="specsenrollment-managementspecmd-frontend"></span>
+    <a href="#specsenrollment-managementspecmd-frontend" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Focused on user experience. Defines interface requirements: how the enrollments table should behave, rules for hiding sensitive data, allowed actions (edit, remove, open URL, trigger message modals), and non-functional requirements such as responsiveness and synchronization with backend.</p>
+<h3><code>specs/payment-gateway-adapter/spec.md</code> (Integration)<span class="hx:absolute hx:-mt-20" id="specspayment-gateway-adapterspecmd-integration"></span>
+    <a href="#specspayment-gateway-adapterspecmd-integration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Focused on communication with the partner. Defines the rules of the game with the Payment Gateway API: how to create, query, update, and cancel payments. In addition, it ensures correct mapping of third-party API statuses to the internal domain and formalizes security in credential handling.</p>
+<h3><code>specs/enrollment-command-dispatch/spec.md</code> (Backend/BFF)<span class="hx:absolute hx:-mt-20" id="specsenrollment-command-dispatchspecmd-backendbff"></span>
+    <a href="#specsenrollment-command-dispatchspecmd-backendbff" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Focused on internal robustness. Defines responsibilities in BFF (Backend For Frontend), such as deterministic resolution of provider configurations, issuance of versioned commands, and strict application of idempotency and traceability in events.</p>
+<h2>4. The Action Plan (<code>tasks.md</code>): Getting Hands-On<span class="hx:absolute hx:-mt-20" id="4-the-action-plan-tasksmd-getting-hands-on"></span>
+    <a href="#4-the-action-plan-tasksmd-getting-hands-on" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The cherry on top of the entire planning process. After understanding context, architecture, and specific requirements, OpenSpec compiles all this into an actionable checklist.</p>
+<ul>
+<li><strong>What it contains:</strong> A logical grouping of tasks. In the case of our enrollment functionality, 12 ordered groups were generated for implementation: ranging from initial <em>setup</em>, through domain modeling, use cases, infrastructure, screen/UI development, hook construction, route configuration, and observability, to closing with tests and final documentation.</li>
+<li><strong>What it&rsquo;s for:</strong> It&rsquo;s the developer&rsquo;s pocket guide. It allows the team to pick up independent tasks knowing exactly in what order they should be executed, making progress predictable and easy to track.</li>
+</ul>
+<hr>
+<h3>Conclusion<span class="hx:absolute hx:-mt-20" id="conclusion"></span>
+    <a href="#conclusion" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Having a brilliant idea is great, but transforming it into software running in production requires method.</p>
+<p>With the OpenSpec <strong>Propose</strong> process, all the heavy lifting of planning, architectural organization, and task division is done fluidly. The result are extremely predictable development cycles (sprints), always living documentation, and an intelligently reduced <em>time-to-market</em> in a standardized way.</p>
+<p>Next time OpenSpec generates these artifacts, you&rsquo;ll know exactly the importance of each piece of this gear!</p>
+]]></content:encoded><category>openspec</category><category>software-engineering</category><category>spec-driven-development</category><category>architecture</category></item><item><title>From Feature to Deploy Hands-Free: Architecture of a Software Factory with AI Using Spec-Driven Development</title><link>https://www.orapha.dev/en/2026/04/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/</guid><pubDate>Wed, 15 Apr 2026 23:18:03 GMT</pubDate><description>&lt;h1&gt;From Feature to Deploy Hands-Free: Architecture of a Software Factory with AI Using Spec-Driven Development&lt;/h1&gt;&lt;h2&gt;Introduction: What the Software Industry Was Like Before AI&lt;span class="hx:absolute hx:-mt-20" id="introduction-what-the-software-industry-was-like-before-ai"&gt;&lt;/span&gt;
+&lt;a href="#introduction-what-the-software-industry-was-like-before-ai" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;For decades, software development was operated as a high-specialization artisanal process. This isn&amp;rsquo;t a demerit: this model built practically everything we use today. The problem is that it depends on constant human synchronization. Refinement, implementation, review, QA, security, and deploy are stages with fragile interfaces, many times based on tacit context.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>From Feature to Deploy Hands-Free: Architecture of a Software Factory with AI Using Spec-Driven Development</h1><h2>Introduction: What the Software Industry Was Like Before AI<span class="hx:absolute hx:-mt-20" id="introduction-what-the-software-industry-was-like-before-ai"></span>
+    <a href="#introduction-what-the-software-industry-was-like-before-ai" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>For decades, software development was operated as a high-specialization artisanal process. This isn&rsquo;t a demerit: this model built practically everything we use today. The problem is that it depends on constant human synchronization. Refinement, implementation, review, QA, security, and deploy are stages with fragile interfaces, many times based on tacit context.</p>
+<p>In daily life, this appears in known symptoms: card that changes scope mid-execution, large PR with slow review, bugs discovered late, bottleneck in key people, and difficulty predicting real lead time. When the company grows, this model tends to saturate.</p>
+<p>In industrial terms, it&rsquo;s like a factory that depends on master craftsmen for each station on the line. Quality can be excellent, but variation between batches is high and throughput doesn&rsquo;t scale linearly. In software, variability becomes rework; rework becomes cost; cost becomes strategic slowness.</p>
+<p>The central point of this article is: AI allows migrating from an artisanal model to a software factory oriented by technical contract, without eliminating human engineering, but changing its focus to system design, governance, and operational quality.</p>
+<h2>The Concept of Automated Assembly Line with AI<span class="hx:absolute hx:-mt-20" id="the-concept-of-automated-assembly-line-with-ai"></span>
+    <a href="#the-concept-of-automated-assembly-line-with-ai" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>From Squad to Industrial Cell<span class="hx:absolute hx:-mt-20" id="from-squad-to-industrial-cell"></span>
+    <a href="#from-squad-to-industrial-cell" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The squad continues to exist as a business and decision unit. What changes is operational execution: repeatable and verifiable tasks pass to automated cells of specialized agents. Each cell has defined input, quality criteria, and traceable output.</p>
+<p>In a modern factory, you don&rsquo;t wait for quality control only at the end of the line. You place inspection at each station. The assembly line with AI applies this logic to software: spec, code, review, test, security, and observability are chained gates.</p>
+<h3>What Changes If This Idea Works?<span class="hx:absolute hx:-mt-20" id="what-changes-if-this-idea-works"></span>
+    <a href="#what-changes-if-this-idea-works" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>If it really works, it changes the game in four dimensions:</p>
+<ol>
+<li>Throughput: more deliveries per time unit without increasing team at the same pace.</li>
+<li>Consistency: technical standard less dependent on who picked up the task.</li>
+<li>Predictability: lead time and rework rate more stable.</li>
+<li>Traceability: decision and evidence accessible from card to deploy.</li>
+</ol>
+<p>In practice, the PO&rsquo;s board stops being just intention management and starts reflecting real technical execution state, with telemetry of progress and risk.</p>
+<h3>Will Jobs End?<span class="hx:absolute hx:-mt-20" id="will-jobs-end"></span>
+    <a href="#will-jobs-end" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The mature answer is: not in the simplistic sense, but roles change. Repetitive work of translation and execution tends to fall. In counterpart, demand grows for platform engineering, specification design, agent governance, automation security, observability, and operation of the sociotechnical system.</p>
+<p>The professional who only writes code per task loses space. The professional who designs delivery systems with quality and governance gains protagonism.</p>
+<h2>General System Architecture<span class="hx:absolute hx:-mt-20" id="general-system-architecture"></span>
+    <a href="#general-system-architecture" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Board as Input System<span class="hx:absolute hx:-mt-20" id="board-as-input-system"></span>
+    <a href="#board-as-input-system" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The board (Kanban/Jira/Linear) continues to be the source of business truth. Each card should contain intention, expected value, acceptance criteria, and restrictions. Without this, automation just accelerates ambiguity.</p>
+<h3>MCP as Integration and Contract Layer<span class="hx:absolute hx:-mt-20" id="mcp-as-integration-and-contract-layer"></span>
+    <a href="#mcp-as-integration-and-contract-layer" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>MCP functions as a context bus between systems and agents: board, repository, CI/CD, tests, security, and documentation. Without a common contract layer, each agent becomes an isolated script and the assembly line degrades to glued automation.</p>
+<h3>Structured Queue as Operational Buffer<span class="hx:absolute hx:-mt-20" id="structured-queue-as-operational-buffer"></span>
+    <a href="#structured-queue-as-operational-buffer" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Ingestion transforms cards into queue items with explicit schema, for example:</p>
+<ul>
+<li>business_goal</li>
+<li>acceptance_criteria</li>
+<li>constraints</li>
+<li>dependencies</li>
+<li>impact_scope</li>
+<li>risk_profile</li>
+<li>definition_of_done</li>
+</ul>
+<p>This queue is the equivalent to a production order with clear technical instruction.</p>
+<h3>Agent Mesh (Specialized Workers)<span class="hx:absolute hx:-mt-20" id="agent-mesh-specialized-workers"></span>
+    <a href="#agent-mesh-specialized-workers" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Instead of one generalist agent, mature architecture uses specialization:</p>
+<ul>
+<li>Spec agent</li>
+<li>Implementation worker</li>
+<li>Review harness</li>
+<li>QA agent</li>
+<li>Security agent</li>
+<li>UX agent</li>
+<li>Orchestrator agent</li>
+</ul>
+<p>Each agent acts in a domain, with input/output interface and scaling policies.</p>
+<h3>Quality Control and Governance<span class="hx:absolute hx:-mt-20" id="quality-control-and-governance"></span>
+    <a href="#quality-control-and-governance" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Autonomy without governance becomes operational risk. Control includes:</p>
+<ul>
+<li>policies (constitution);</li>
+<li>automated gates;</li>
+<li>audit trails;</li>
+<li>action limits by risk level;</li>
+<li>mandatory human escalation in critical cases.</li>
+</ul>
+<h2>Pipeline Step by Step<span class="hx:absolute hx:-mt-20" id="pipeline-step-by-step"></span>
+    <a href="#pipeline-step-by-step" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>1) Demand Ingestion: Board → Queue<span class="hx:absolute hx:-mt-20" id="1-demand-ingestion-board--queue"></span>
+    <a href="#1-demand-ingestion-board--queue" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The pipeline starts with semantic parsing of cards, context enrichment, and requirements normalization. Example: improve checkout can become three distinct deliverables (API latency, antifraud validation, transactional error UX). The objective is to reduce ambiguity before the first line of code.</p>
+<h3>2) SDD + Automated Implementation<span class="hx:absolute hx:-mt-20" id="2-sdd--automated-implementation"></span>
+    <a href="#2-sdd--automated-implementation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>With normalized demand, the flow enters SDD:</p>
+<ul>
+<li>generates change spec;</li>
+<li>explicit contracts (API, data, expected behavior);</li>
+<li>decomposes tasks;</li>
+<li>applies specification-guided implementation.</li>
+</ul>
+<p>This is the point where the factory differentiates itself from prompt + code. The spec is the upstream quality control artifact.</p>
+<h3>3) Automated Code Review<span class="hx:absolute hx:-mt-20" id="3-automated-code-review"></span>
+    <a href="#3-automated-code-review" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The review harness audits the PR focusing on spec adherence, regression, complexity, and architectural impact. It can approve, request changes, or open a block for human review.</p>
+<p>The idea isn&rsquo;t to remove human reviewer, but reserve human intervention for cases of higher value or risk.</p>
+<h3>4) CI/CD for Staging<span class="hx:absolute hx:-mt-20" id="4-cicd-for-staging"></span>
+    <a href="#4-cicd-for-staging" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After approval in the review gate, the assembly line triggers build, static checks, and automatic deploy in staging. Ephemeral environments per PR increase isolation and reduce &ldquo;works on my machine.&rdquo;</p>
+<h3>5) Automated Tests with QA Agents<span class="hx:absolute hx:-mt-20" id="5-automated-tests-with-qa-agents"></span>
+    <a href="#5-automated-tests-with-qa-agents" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The QA agent executes smoke tests (critical flow sanity), regression suite (legacy stability), and tests based on spec acceptance criteria.</p>
+<p>Failure doesn&rsquo;t return as noise. It returns as a structured item with probable cause, evidence, and correction recommendation.</p>
+<h3>6) Continuous Security with Cyber Agent<span class="hx:absolute hx:-mt-20" id="6-continuous-security-with-cyber-agent"></span>
+    <a href="#6-continuous-security-with-cyber-agent" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Security enters as a fixed station on the line, not a final stage:</p>
+<ul>
+<li>vulnerability analysis;</li>
+<li>OWASP Top 10 validations (including Broken Access Control);</li>
+<li>automated pentest for sensitive flows;</li>
+<li>analysis of secrets, authz/authn, headers, and undue exposure.</li>
+</ul>
+<p>The gain is anticipating risk before merge/deploy in production.</p>
+<h3>7) Reports and Traceability<span class="hx:absolute hx:-mt-20" id="7-reports-and-traceability"></span>
+    <a href="#7-reports-and-traceability" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Each stage produces evidence:</p>
+<ul>
+<li>structured logs;</li>
+<li>execution links;</li>
+<li>test outputs;</li>
+<li>security findings;</li>
+<li>review decision;</li>
+<li>time and quality metrics.</li>
+</ul>
+<p>Without evidence, there&rsquo;s no reliable operation at scale.</p>
+<h3>8) Feedback Loop to PO&rsquo;s Board<span class="hx:absolute hx:-mt-20" id="8-feedback-loop-to-pos-board"></span>
+    <a href="#8-feedback-loop-to-pos-board" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>At the end of each cycle, the assembly line updates the board with real technical status: approved/rejected by gate, blocks, residual risk, and recommended next step.</p>
+<p>With this, product and engineering operate on the same truth state.</p>
+<h2>The Role of Spec-Driven Development (OpenSpec)<span class="hx:absolute hx:-mt-20" id="the-role-of-spec-driven-development-openspec"></span>
+    <a href="#the-role-of-spec-driven-development-openspec" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>constitution, propose/specify, apply, archive<span class="hx:absolute hx:-mt-20" id="constitution-proposespecify-apply-archive"></span>
+    <a href="#constitution-proposespecify-apply-archive" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>OpenSpec organizes execution into four movements:</p>
+<ul>
+<li>constitution: factory principles, limits, and policies;</li>
+<li>propose/specify: change design with clear contracts;</li>
+<li>apply: implementation guided by spec;</li>
+<li>archive: decision record, trade-offs, and evidence.</li>
+</ul>
+<h3>Why Spec Is the Factory&rsquo;s Template<span class="hx:absolute hx:-mt-20" id="why-spec-is-the-factorys-template"></span>
+    <a href="#why-spec-is-the-factorys-template" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Without spec, the agent optimizes for plausibility. With spec, it optimizes for verifiable compliance. This difference is structural. The spec becomes the technical drawing of the part that allows repeatable quality, comparison between batches, and continuous process improvement.</p>
+<h2>The Role of Agents in Operation<span class="hx:absolute hx:-mt-20" id="the-role-of-agents-in-operation"></span>
+    <a href="#the-role-of-agents-in-operation" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Implementation Worker<span class="hx:absolute hx:-mt-20" id="implementation-worker"></span>
+    <a href="#implementation-worker" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Converts spec into code and technical artifacts. Should operate with limited scope, idempotency, and local checks before opening PR.</p>
+<h3>Review Harness<span class="hx:absolute hx:-mt-20" id="review-harness"></span>
+    <a href="#review-harness" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Acts as automated technical auditor, verifying architectural consistency and contract adherence. Reduces human reviewer&rsquo;s cognitive load.</p>
+<h3>QA Agent<span class="hx:absolute hx:-mt-20" id="qa-agent"></span>
+    <a href="#qa-agent" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Executes test strategy by risk and impact, focusing on detecting regression early.</p>
+<h3>Security Agent<span class="hx:absolute hx:-mt-20" id="security-agent"></span>
+    <a href="#security-agent" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Analyzes attack surface and enforces security baseline. In critical cases, can automatically block flow.</p>
+<h3>Orchestrator and Scaling Policies<span class="hx:absolute hx:-mt-20" id="orchestrator-and-scaling-policies"></span>
+    <a href="#orchestrator-and-scaling-policies" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Coordinates the line: priority, retries, circuit breakers, rollbacks, and human handoff. Without orchestration, there&rsquo;s no factory; there are just concurrent scripts.</p>
+<h2>UI/UX as First-Class Stage<span class="hx:absolute hx:-mt-20" id="uiux-as-first-class-stage"></span>
+    <a href="#uiux-as-first-class-stage" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Flow and Wireframe Generation<span class="hx:absolute hx:-mt-20" id="flow-and-wireframe-generation"></span>
+    <a href="#flow-and-wireframe-generation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Before implementation, the UX agent proposes navigation flow, wireframes, and interaction alternatives. This prevents interface decisions improvised during coding.</p>
+<h3>State and Interface Contract Definition<span class="hx:absolute hx:-mt-20" id="state-and-interface-contract-definition"></span>
+    <a href="#state-and-interface-contract-definition" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Every screen should explicit states: loading, empty, success, partial, error, and permissions by profile. Poorly defined state is a classic source of rework between frontend, backend, and QA.</p>
+<h3>UX Consistency Gate Before Code<span class="hx:absolute hx:-mt-20" id="ux-consistency-gate-before-code"></span>
+    <a href="#ux-consistency-gate-before-code" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The assembly line only advances when there&rsquo;s minimum UX consistency: journey coherence, terminology, accessibility, and behavior predictability. UX stops being finishing and becomes structural requirement.</p>
+<h2>End-to-End Observability and Traceability<span class="hx:absolute hx:-mt-20" id="end-to-end-observability-and-traceability"></span>
+    <a href="#end-to-end-observability-and-traceability" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Evidence by Stage<span class="hx:absolute hx:-mt-20" id="evidence-by-stage"></span>
+    <a href="#evidence-by-stage" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Each station needs to emit consumable evidence by humans and machines. Example: CI run link, coverage report, spec diff, security checklist.</p>
+<h3>Throughput, Quality, and Risk Metrics<span class="hx:absolute hx:-mt-20" id="throughput-quality-and-risk-metrics"></span>
+    <a href="#throughput-quality-and-risk-metrics" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Useful metrics for operating this factory:</p>
+<ul>
+<li>lead time by demand type;</li>
+<li>automatic approval rate;</li>
+<li>rework by stage;</li>
+<li>escape rate to production;</li>
+<li>MTTR by failure category.</li>
+</ul>
+<h3>Deliverable Traceability by Stage<span class="hx:absolute hx:-mt-20" id="deliverable-traceability-by-stage"></span>
+    <a href="#deliverable-traceability-by-stage" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Every deliverable should have lineage: card → queue item → spec → commit → PR → pipeline run → deploy. This reduces diagnostic time and improves governance.</p>
+<h2>Benefits, Risks, and Trade-offs<span class="hx:absolute hx:-mt-20" id="benefits-risks-and-trade-offs"></span>
+    <a href="#benefits-risks-and-trade-offs" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Scale and Consistency versus Coupling to AI Stack<span class="hx:absolute hx:-mt-20" id="scale-and-consistency-versus-coupling-to-ai-stack"></span>
+    <a href="#scale-and-consistency-versus-coupling-to-ai-stack" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The more scale gain, the greater the risk of lock-in to tools and models. Mitigation: open contracts, provider abstraction, and policy versioning.</p>
+<h3>Speed versus Validation Cost<span class="hx:absolute hx:-mt-20" id="speed-versus-validation-cost"></span>
+    <a href="#speed-versus-validation-cost" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Automation accelerates delivery, but requires investment in gates, observability, and security. Without this, you accelerate error with efficiency.</p>
+<h3>Autonomy versus Governance<span class="hx:absolute hx:-mt-20" id="autonomy-versus-governance"></span>
+    <a href="#autonomy-versus-governance" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Giving autonomy to agents improves throughput, but amplifies risk surface. The balance comes from clear action limits, audit trail, and human scaling.</p>
+<h2>Future: AI-Native Software Development<span class="hx:absolute hx:-mt-20" id="future-ai-native-software-development"></span>
+    <a href="#future-ai-native-software-development" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Smaller Teams, Stronger Platforms<span class="hx:absolute hx:-mt-20" id="smaller-teams-stronger-platforms"></span>
+    <a href="#smaller-teams-stronger-platforms" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The trend is less effort in repetitive operational tasks and more investment in platform engineering. Smaller teams can deliver more when operating a well-designed assembly line.</p>
+<h3>Engineering as Sociotechnical System Design<span class="hx:absolute hx:-mt-20" id="engineering-as-sociotechnical-system-design"></span>
+    <a href="#engineering-as-sociotechnical-system-design" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Competitive differential becomes designing the entire system: people, agents, policies, metrics, and feedback loops. Code continues central, but is no longer the only unit of value.</p>
+<h2>Conclusion<span class="hx:absolute hx:-mt-20" id="conclusion"></span>
+    <a href="#conclusion" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The software factory with AI isn&rsquo;t an abstract promise. It&rsquo;s an operational model possible now for organizations that already have board, PR, and CI/CD discipline. The leap comes from treating specification as contract, agents as specialized cells, and quality as a flow property.</p>
+<p>If traditional development was a high-skill workshop, the next stage is a precision factory with strategic human supervision. It&rsquo;s not about automating for automation&rsquo;s sake. It&rsquo;s about building a delivery system that scales without losing reliability.</p>
+<p>The question is no longer whether AI will enter the development cycle. The question is: will your engineering operate AI as a point tool or as a production architecture?</p>
+]]></content:encoded><category>software-engineering</category><category>ai</category><category>spec-driven-development</category><category>devops</category><category>platform-engineering</category></item><item><title>OpenSpec in Practice: Installation, Usage, Complete Flow, and Optional Commands</title><link>https://www.orapha.dev/en/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/</guid><pubDate>Wed, 08 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;OpenSpec in Practice: Installation, Usage, Complete Flow, and Optional Commands&lt;/h1&gt;&lt;p&gt;If you already use a code agent in your daily life, you&amp;rsquo;ve already noticed the pattern: when intention is vague, output is also vague. That&amp;rsquo;s why I started studying &lt;strong&gt;Spec-Driven Development (SDD)&lt;/strong&gt; tools more closely and, on this journey, &lt;strong&gt;OpenSpec&lt;/strong&gt; became a very interesting option.&lt;/p&gt;
+&lt;p&gt;Its proposal is simple: before going out implementing, you organize the change in clear artifacts (proposal, specs, tasks and, when necessary, design), execute with more predictability, and maintain history of what changed in the system&amp;rsquo;s expected behavior.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>OpenSpec in Practice: Installation, Usage, Complete Flow, and Optional Commands</h1><p>If you already use a code agent in your daily life, you&rsquo;ve already noticed the pattern: when intention is vague, output is also vague. That&rsquo;s why I started studying <strong>Spec-Driven Development (SDD)</strong> tools more closely and, on this journey, <strong>OpenSpec</strong> became a very interesting option.</p>
+<p>Its proposal is simple: before going out implementing, you organize the change in clear artifacts (proposal, specs, tasks and, when necessary, design), execute with more predictability, and maintain history of what changed in the system&rsquo;s expected behavior.</p>
+<p>In this article, I&rsquo;ll detail everything you asked for, in a practical way:</p>
+<ol>
+<li>How to install OpenSpec.</li>
+<li>How to start in a new or existing project.</li>
+<li>Which flow I recommend for daily use.</li>
+<li>Which optional commands are worth knowing (CLI and slash commands).</li>
+</ol>
+<h2>What is OpenSpec (without beating around the bush)<span class="hx:absolute hx:-mt-20" id="what-is-openspec-without-beating-around-the-bush"></span>
+    <a href="#what-is-openspec-without-beating-around-the-bush" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>OpenSpec is an open source SDD framework for working with AI assistants. It adds a specification layer in the repository to reduce improvisation and increase predictability.</p>
+<p>The main structure stays inside <code>openspec/</code>:</p>
+<ul>
+<li><code>openspec/specs/</code>: current source of truth of the system.</li>
+<li><code>openspec/changes/</code>: proposed changes in progress.</li>
+<li><code>openspec/changes/archive/</code>: changes already completed and archived.</li>
+</ul>
+<p>The real value is in this separation: you can clearly see the current state and what is being proposed, without mixing everything in chat conversation.</p>
+<h2>Prerequisites<span class="hx:absolute hx:-mt-20" id="prerequisites"></span>
+    <a href="#prerequisites" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Before installing, ensure:</p>
+<ul>
+<li><code>Node.js &gt;= 20.19.0</code></li>
+<li>A package manager (<code>npm</code>, <code>pnpm</code>, <code>yarn</code>, or <code>bun</code>)</li>
+<li>A local project (can be brownfield, no problem)</li>
+<li>A compatible code agent (Codex, Claude Code, Cursor, Copilot, etc.)</li>
+</ul>
+<p>Quick commands to validate environment:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">node --version
+</span></span><span class="line"><span class="cl">npm --version</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>Installing OpenSpec CLI<span class="hx:absolute hx:-mt-20" id="installing-openspec-cli"></span>
+    <a href="#installing-openspec-cli" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>With npm<span class="hx:absolute hx:-mt-20" id="with-npm"></span>
+    <a href="#with-npm" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install -g @fission-ai/openspec@latest</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>With pnpm<span class="hx:absolute hx:-mt-20" id="with-pnpm"></span>
+    <a href="#with-pnpm" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pnpm install -g @fission-ai/openspec@latest</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>With yarn<span class="hx:absolute hx:-mt-20" id="with-yarn"></span>
+    <a href="#with-yarn" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">yarn global add @fission-ai/openspec@latest</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>With bun<span class="hx:absolute hx:-mt-20" id="with-bun"></span>
+    <a href="#with-bun" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bun install -g @fission-ai/openspec@latest</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>After installation:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openspec --version</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>If this command returns the version, the CLI is ready.</p>
+<h2>Initializing in the Project<span class="hx:absolute hx:-mt-20" id="initializing-in-the-project"></span>
+    <a href="#initializing-in-the-project" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>In the project root directory:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> my-project
+</span></span><span class="line"><span class="cl">openspec init</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>In practice, this command:</p>
+<ul>
+<li>creates the <code>openspec/</code> folder</li>
+<li>generates instructions for the agent (including <code>AGENTS.md</code> in the project)</li>
+<li>configures integrations for supported tools</li>
+</ul>
+<p>After <code>init</code>, I like to run:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openspec list</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>This already confirms if the structure is active and if there are open changes.</p>
+<h2>Generated Structure and How to Read It<span class="hx:absolute hx:-mt-20" id="generated-structure-and-how-to-read-it"></span>
+    <a href="#generated-structure-and-how-to-read-it" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>A typical change flow looks like this:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">openspec/
+</span></span><span class="line"><span class="cl">├── specs/
+</span></span><span class="line"><span class="cl">│   └── auth/
+</span></span><span class="line"><span class="cl">│       └── spec.md
+</span></span><span class="line"><span class="cl">└── changes/
+</span></span><span class="line"><span class="cl">    └── add-2fa/
+</span></span><span class="line"><span class="cl">        ├── proposal.md
+</span></span><span class="line"><span class="cl">        ├── tasks.md
+</span></span><span class="line"><span class="cl">        ├── design.md (optional)
+</span></span><span class="line"><span class="cl">        └── specs/
+</span></span><span class="line"><span class="cl">            └── auth/
+</span></span><span class="line"><span class="cl">                └── spec.md</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Practical interpretation:</p>
+<ul>
+<li><code>proposal.md</code>: why change and what will change.</li>
+<li><code>specs/*</code>: requirement/behavior deltas.</li>
+<li><code>tasks.md</code>: implementation checklist.</li>
+<li><code>design.md</code>: technical decisions when necessary.</li>
+</ul>
+<h2>Recommended Flow for Using OpenSpec in Daily Life<span class="hx:absolute hx:-mt-20" id="recommended-flow-for-using-openspec-in-daily-life"></span>
+    <a href="#recommended-flow-for-using-openspec-in-daily-life" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This is the flow I consider most balanced between rigor and speed.</p>
+<h3>1) Create the change proposal<span class="hx:absolute hx:-mt-20" id="1-create-the-change-proposal"></span>
+    <a href="#1-create-the-change-proposal" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In the agent, request an OpenSpec proposal for a specific feature.</p>
+<p>Example with shortcut (when the tool supports):</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">/openspec:proposal Add profile search filters</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>2) Review and validate before implementing<span class="hx:absolute hx:-mt-20" id="2-review-and-validate-before-implementing"></span>
+    <a href="#2-review-and-validate-before-implementing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In terminal:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openspec list
+</span></span><span class="line"><span class="cl">openspec validate add-profile-search-filters
+</span></span><span class="line"><span class="cl">openspec show add-profile-search-filters</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>This is where you cut ambiguity and avoid rework.</p>
+<h3>3) Refine proposal/specs/tasks<span class="hx:absolute hx:-mt-20" id="3-refine-proposalspecstasks"></span>
+    <a href="#3-refine-proposalspecstasks" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>If clarity is lacking, ask the agent to adjust criteria, scenarios, and tasks until it becomes executable.</p>
+<h3>4) Implement based on tasks<span class="hx:absolute hx:-mt-20" id="4-implement-based-on-tasks"></span>
+    <a href="#4-implement-based-on-tasks" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">/openspec:apply add-profile-search-filters</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>The idea is to implement on top of <code>tasks.md</code> and not on improvisation.</p>
+<h3>5) Archive the completed change<span class="hx:absolute hx:-mt-20" id="5-archive-the-completed-change"></span>
+    <a href="#5-archive-the-completed-change" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In the agent:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">/openspec:archive add-profile-search-filters</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Or via CLI:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openspec archive add-profile-search-filters --yes</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>When you archive, the change leaves the &ldquo;in progress&rdquo; state and starts composing the consolidated history.</p>
+<h2>Main Commands (CLI)<span class="hx:absolute hx:-mt-20" id="main-commands-cli"></span>
+    <a href="#main-commands-cli" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>In real use, these are the commands that matter most:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">openspec init
+</span></span><span class="line"><span class="cl">openspec list
+</span></span><span class="line"><span class="cl">openspec view
+</span></span><span class="line"><span class="cl">openspec show &lt;change&gt;
+</span></span><span class="line"><span class="cl">openspec validate &lt;change&gt;
+</span></span><span class="line"><span class="cl">openspec archive &lt;change&gt; --yes
+</span></span><span class="line"><span class="cl">openspec update</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Quick summary:</p>
+<ul>
+<li><code>init</code>: initializes OpenSpec in the repo.</li>
+<li><code>list</code>: lists open changes.</li>
+<li><code>view</code>: interactive dashboard.</li>
+<li><code>show</code>: displays proposal/tasks/spec deltas of a change.</li>
+<li><code>validate</code>: validates specs format/structure.</li>
+<li><code>archive</code>: archives completed change.</li>
+<li><code>update</code>: updates instructions and bindings for agents in the project.</li>
+</ul>
+<h2>Shortcut Commands in the Agent<span class="hx:absolute hx:-mt-20" id="shortcut-commands-in-the-agent"></span>
+    <a href="#shortcut-commands-in-the-agent" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>They depend on the tool, but the current OpenSpec pattern in several native integrations is:</p>
+<ul>
+<li><code>/openspec:proposal</code></li>
+<li><code>/openspec:apply</code></li>
+<li><code>/openspec:archive</code></li>
+</ul>
+<p>In some contexts/documentations you&rsquo;ll also find the <strong>OPSX</strong> (experimental) flow, with commands like:</p>
+<ul>
+<li><code>/opsx:new</code></li>
+<li><code>/opsx:continue</code></li>
+<li><code>/opsx:ff</code></li>
+<li><code>/opsx:apply</code></li>
+<li><code>/opsx:archive</code></li>
+</ul>
+<p>The important point: check which set of commands your integration installed at <code>init</code>.</p>
+<h2>Common Errors (and How to Avoid)<span class="hx:absolute hx:-mt-20" id="common-errors-and-how-to-avoid"></span>
+    <a href="#common-errors-and-how-to-avoid" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ol>
+<li>Skip proposal review and go straight to implementation.</li>
+<li>Accept <code>tasks.md</code> without checking order and dependencies.</li>
+<li>Not validate specs (<code>validate</code>) before applying.</li>
+<li>Mix commands from different docs without checking your integration.</li>
+<li>Not archive completed change (becomes mess quickly).</li>
+</ol>
+<h2>An Example of End-to-End Execution<span class="hx:absolute hx:-mt-20" id="an-example-of-end-to-end-execution"></span>
+    <a href="#an-example-of-end-to-end-execution" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1) Install</span>
+</span></span><span class="line"><span class="cl">npm install -g @fission-ai/openspec@latest
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2) Initialize in project</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> my-project
+</span></span><span class="line"><span class="cl">openspec init
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 3) Check state</span>
+</span></span><span class="line"><span class="cl">openspec list
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 4) In agent, create proposal</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># /openspec:proposal Add profile search filters</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 5) Review in terminal</span>
+</span></span><span class="line"><span class="cl">openspec validate add-profile-search-filters
+</span></span><span class="line"><span class="cl">openspec show add-profile-search-filters
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 6) In agent, implement</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># /openspec:apply add-profile-search-filters</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 7) Archive change</span>
+</span></span><span class="line"><span class="cl">openspec archive add-profile-search-filters --yes</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>Closing<span class="hx:absolute hx:-mt-20" id="closing"></span>
+    <a href="#closing" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>When you install, initialize, and follow a minimal flow of proposal, review, application, and archiving, the quality of execution with agents rises a lot.</p>
+<p>And the best: you maintain real traceability of technical intention, without depending on chat memory.</p>
+]]></content:encoded><category>ai</category><category>openspec</category><category>spec-driven-development</category><category>software-engineering</category><category>development</category></item><item><title>In Spec-Driven Development, `implement` is where everything else turns into code</title><link>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</guid><pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;In Spec-Driven Development, &lt;code&gt;implement&lt;/code&gt; is where everything else turns into code&lt;/h1&gt;&lt;p&gt;In the text &lt;a href="https://www.orapha.dev/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/"&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/a&gt;, I talked about the &lt;code&gt;constitution&lt;/code&gt; stage, where I define the principles that will govern the project&amp;rsquo;s decisions.&lt;/p&gt;
+&lt;p&gt;Then, in &lt;a href="https://www.orapha.dev/en/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/"&gt;In Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; is where ambiguity starts to die&lt;/a&gt;, I showed the point where demand gains clearer expected behavior.&lt;/p&gt;
+&lt;p&gt;In sequence, in &lt;a href="https://www.orapha.dev/en/2026/04/06/3-no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/"&gt;In Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; is where specification turns into execution strategy&lt;/a&gt;, I entered the stage that organizes the crossing with order, dependency, and sense of risk.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>In Spec-Driven Development, <code>implement</code> is where everything else turns into code</h1><p>In the text <a href="/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/">In Spec-Driven Development, Everything Starts with Principles</a>, I talked about the <code>constitution</code> stage, where I define the principles that will govern the project&rsquo;s decisions.</p>
+<p>Then, in <a href="/en/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/">In Spec-Driven Development, <code>specify</code> is where ambiguity starts to die</a>, I showed the point where demand gains clearer expected behavior.</p>
+<p>In sequence, in <a href="/en/2026/04/06/3-no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/">In Spec-Driven Development, <code>plan</code> is where specification turns into execution strategy</a>, I entered the stage that organizes the crossing with order, dependency, and sense of risk.</p>
+<p>After that, in <a href="/en/2026/04/06/4-no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/">In Spec-Driven Development, <code>tasks</code> is where the plan turns into concrete work units</a>, I talked about the break that transforms strategy into executable blocks.</p>
+<p>But, at some point, all this needs to turn into code.</p>
+<p>That&rsquo;s where <code>implement</code> enters.</p>
+<p>And here I think an important simplification is worth making: yes, in a certain sense, <code>implement</code> is just implementing.</p>
+<p>If the previous work was well done, this stage shouldn&rsquo;t carry a great methodological drama. The objective now is to take an already delimited task and transform that into code.</p>
+<p>Except that doesn&rsquo;t mean the work is done.</p>
+<p>In the AI context, many times the act of implementing became cheap. The agent writes quickly, suggests structure, connects parts, and returns a plausible solution in a short time.</p>
+<p>That&rsquo;s why, for me, the main point of <code>implement</code> isn&rsquo;t to romanticize code writing.</p>
+<p>The main point is another: after the code was generated, someone still needs to review what was delivered.</p>
+<h2>Implementing Can Be the Easiest Part<span class="hx:absolute hx:-mt-20" id="implementing-can-be-the-easiest-part"></span>
+    <a href="#implementing-can-be-the-easiest-part" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Depending on context, implementation itself almost becomes an operational stage:</p>
+<blockquote>
+  <p>pick up the task<br>
+generate the code<br>
+adjust what&rsquo;s necessary<br>
+move forward</p>
+
+</blockquote>
+<p>If <code>constitution</code>, <code>specify</code>, <code>plan</code>, and <code>tasks</code> did the job right, this is even expected.</p>
+<p>The problem starts when the person treats the agent&rsquo;s output as if it were already the final delivery.</p>
+<p>Because one thing is to generate code.</p>
+<p>Another thing is to verify if that code:</p>
+<ul>
+<li>solved exactly the task</li>
+<li>respected the scope</li>
+<li>didn&rsquo;t invent things outside what was agreed</li>
+<li>didn&rsquo;t distort the specified behavior</li>
+<li>continues coherent with the project&rsquo;s principles</li>
+</ul>
+<p>That&rsquo;s where, for me, the real work lives.</p>
+<h2>What Really Matters After Implementing<span class="hx:absolute hx:-mt-20" id="what-really-matters-after-implementing"></span>
+    <a href="#what-really-matters-after-implementing" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>I tend to look at <code>implement</code> less as an epic construction moment and more as a transition point.</p>
+<p>The code appeared. Now it needs to be confronted with what came before.</p>
+<p>In practice, I want to review if the delivery:</p>
+<ul>
+<li>corresponds to the task that was asked for</li>
+<li>remains faithful to the specification</li>
+<li>didn&rsquo;t trample the plan</li>
+<li>didn&rsquo;t bring unnecessary complexity</li>
+<li>can be accepted with reasonable confidence</li>
+</ul>
+<p>If I finish this stage only with the feeling that &ldquo;it seems like it turned out good,&rdquo; it&rsquo;s still little.</p>
+<h2>A Practical Example of Difference<span class="hx:absolute hx:-mt-20" id="a-practical-example-of-difference"></span>
+    <a href="#a-practical-example-of-difference" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Let&rsquo;s go back to the orders example.</p>
+<p>Suppose the current task is this:</p>
+<ul>
+<li>implement order creation with automatic total calculation</li>
+</ul>
+<p>If I look only at the generation stage, maybe it&rsquo;s enough to ask the agent to do this and receive a block of code back.</p>
+<p>But the relevant work starts right after:</p>
+<ul>
+<li>did it only create the flow or did it invent more things?</li>
+<li>is the total being calculated the right way?</li>
+<li>does order without item continue to be blocked?</li>
+<li>was the relationship with existing client respected?</li>
+<li>did the solution stay compatible with the simplicity the project wanted?</li>
+</ul>
+<p>Notice the difference.</p>
+<p>The act of implementing can even be straightforward.</p>
+<p>What can&rsquo;t be automatic is accepting what was implemented.</p>
+<h2>In the End<span class="hx:absolute hx:-mt-20" id="in-the-end"></span>
+    <a href="#in-the-end" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>After the delivery is finalized, there&rsquo;s still an important responsibility in your hands: ensuring that everything that was defined as a requirement was really met. It&rsquo;s not enough to look at the code and feel that it seems ready. It&rsquo;s also not enough to trust just because the implementation came out clean, organized, or plausible.</p>
+<p>If there are <code>requirements.md</code> files involved in that work, it&rsquo;s up to you to check one by one and ensure that all items listed there were, in fact, resolved and marked as complete. This matters because, in the end, what validates the delivery isn&rsquo;t just the existence of code, but the adherence between what was asked for and what was actually delivered.</p>
+<p>And there&rsquo;s another point here that I think is important: not everything will be validated automatically. In several cases, manual checking will still exist. Interface flow, behavior in specific scenario, integration that depends on real context, experience detail, or anything else not fully covered by automated tests still needs to be verified by you.</p>
+<p>That is: the <code>implement</code> stage doesn&rsquo;t exactly end when code appears. It ends when the delivery was reviewed, confronted with requirements, and validated in a minimally responsible way.</p>
+<p>But, in the end, the flow doesn&rsquo;t end like someone who closes a rigid process and leaves. It ends and restarts.</p>
+<p>If a new demand emerges, the natural path is to return to <code>specify</code> and start again from there, with a new clear specification for what needs to be built now. And, if along that path you realize that some principle from <code>constitution</code> needs to change, be refined, or even be substituted, that&rsquo;s also part of the process.</p>
+<p>I like this structure precisely because it isn&rsquo;t rigid in the bad sense. It&rsquo;s atomic. Each part exists with a clear function, but none of them needs to be treated as a sacred or immutable piece. If the project evolves, the structure can evolve along. If context changes, principles can change along. If the way of executing improves, the flow can also be adjusted.</p>
+<p>For me, this is one of the strongest points of this approach: it organizes work without pretending that the project will remain the same forever.</p>
+<p>Thanks for reading this far.</p>
+]]></content:encoded><category>ai</category><category>spec-driven-development</category><category>implement</category><category>implementation</category><category>software-engineering</category></item><item><title>In Spec-Driven Development, `tasks` is where the plan turns into concrete work units</title><link>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</guid><pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;In Spec-Driven Development, &lt;code&gt;tasks&lt;/code&gt; is where the plan turns into concrete work units&lt;/h1&gt;&lt;p&gt;In the text &lt;a href="https://www.orapha.dev/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/"&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/a&gt;, I focused on the &lt;code&gt;constitution&lt;/code&gt; stage, where I define the criteria that will guide the project&amp;rsquo;s decisions.&lt;/p&gt;
+&lt;p&gt;Then, in &lt;a href="https://www.orapha.dev/en/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/"&gt;In Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; is where ambiguity starts to die&lt;/a&gt;, I entered the stage where demand stops being vague intention and starts having clearer expected behavior.&lt;/p&gt;
+&lt;p&gt;In sequence, in &lt;a href="https://www.orapha.dev/en/2026/04/06/3-no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/"&gt;In Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; is where specification turns into execution strategy&lt;/a&gt;, I talked about the stage that organizes the work crossing with order, dependency, and sense of risk.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>In Spec-Driven Development, <code>tasks</code> is where the plan turns into concrete work units</h1><p>In the text <a href="/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/">In Spec-Driven Development, Everything Starts with Principles</a>, I focused on the <code>constitution</code> stage, where I define the criteria that will guide the project&rsquo;s decisions.</p>
+<p>Then, in <a href="/en/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/">In Spec-Driven Development, <code>specify</code> is where ambiguity starts to die</a>, I entered the stage where demand stops being vague intention and starts having clearer expected behavior.</p>
+<p>In sequence, in <a href="/en/2026/04/06/3-no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/">In Spec-Driven Development, <code>plan</code> is where specification turns into execution strategy</a>, I talked about the stage that organizes the work crossing with order, dependency, and sense of risk.</p>
+<p>But plan, by itself, still isn&rsquo;t executable work.</p>
+<p>Between knowing the strategy and starting to implement, there&rsquo;s still an important question: how do I transform this path into concrete execution blocks without losing coherence?</p>
+<p>That&rsquo;s where the <code>tasks</code> stage enters.</p>
+<p>And, for me, this stage matters a lot because it&rsquo;s in it that planning stops being a good narrative about execution and starts becoming work parts that someone can really pick up, understand, and complete.</p>
+<h2>The Error of Thinking Breaking Work Is Just Making a Checklist<span class="hx:absolute hx:-mt-20" id="the-error-of-thinking-breaking-work-is-just-making-a-checklist"></span>
+    <a href="#the-error-of-thinking-breaking-work-is-just-making-a-checklist" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>When someone hears &ldquo;tasks,&rdquo; it&rsquo;s common to imagine something very simple:</p>
+<ul>
+<li>create backend</li>
+<li>create frontend</li>
+<li>make tests</li>
+<li>review</li>
+<li>deliver</li>
+</ul>
+<p>This even seems like organization, but many times it&rsquo;s still too generic.</p>
+<p>A list like this can give a sense of structural progress without solving the main thing: each item continues too broad, too ambiguous, or too mixed to guide execution well.</p>
+<p>In practice, poorly broken tasks usually generate some well-known problems:</p>
+<ul>
+<li>blocks too big to validate early</li>
+<li>parts with confusing responsibility</li>
+<li>items that mix several decisions at the same time</li>
+<li>hidden dependencies</li>
+<li>false sense that work is well distributed</li>
+</ul>
+<p>When this happens, execution starts to slip back into improvisation. The difference is that now improvisation comes packaged as a checklist.</p>
+<h2>What the <code>tasks</code> Stage Solves<span class="hx:absolute hx:-mt-20" id="what-the-tasks-stage-solves"></span>
+    <a href="#what-the-tasks-stage-solves" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>I don&rsquo;t see <code>tasks</code> as the obligation to produce a huge list to seem methodical. Nor do I see it as simple conversion of plan into subtitles.</p>
+<p>For me, <code>tasks</code> solves one very concrete thing: transform execution strategy into clear, limited, and verifiable work units.</p>
+<p>It&rsquo;s the moment when I try to decide:</p>
+<ul>
+<li>which piece of work deserves to become its own task</li>
+<li>what does each task need to deliver</li>
+<li>where does one task end and the next begin</li>
+<li>what dependencies need to be explicit</li>
+<li>what criterion makes a task be considered complete</li>
+</ul>
+<p>If <code>plan</code> organizes the crossing, <code>tasks</code> defines the steps.</p>
+<p>And this matters a lot because, without this translation, implementation continues too big, too diffuse, or too dependent on local interpretation.</p>
+<h2><code>Tasks</code> Isn&rsquo;t Fragmenting for the Sake of Fragmenting<span class="hx:absolute hx:-mt-20" id="tasks-isnt-fragmenting-for-the-sake-of-fragmenting"></span>
+    <a href="#tasks-isnt-fragmenting-for-the-sake-of-fragmenting" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>There&rsquo;s a curious risk here.</p>
+<p>When the person realizes they need to better break the work, they can exaggerate to the other side and turn everything into microtasks:</p>
+<ul>
+<li>create model</li>
+<li>create migration</li>
+<li>create service</li>
+<li>create controller</li>
+<li>create route</li>
+<li>create unit test</li>
+<li>create integration test</li>
+</ul>
+<p>This can work in some contexts, but many times produces an artificially excessive break.</p>
+<p>Because a good task isn&rsquo;t just a small task. A good task is a task with sense.</p>
+<p>If I separate work using only technical or mechanical cuts, I run the risk of losing the bond with the behavior I wanted to deliver. And, when that happens, I start optimizing implementation pieces instead of real units of result.</p>
+<p>For me, the question isn&rsquo;t just &ldquo;how to divide?&rdquo;. The question is &ldquo;how to divide without destroying delivery coherence?&rdquo;.</p>
+<h2>What I Try to Capture in a Good <code>tasks</code> Stage<span class="hx:absolute hx:-mt-20" id="what-i-try-to-capture-in-a-good-tasks-stage"></span>
+    <a href="#what-i-try-to-capture-in-a-good-tasks-stage" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>I don&rsquo;t follow rigid template, but normally I want to leave this stage with some things very clear.</p>
+<p>Something along these lines:</p>
+<ul>
+<li>each task needs to have an understandable objective</li>
+<li>each task should produce an observable result</li>
+<li>the boundary between tasks can&rsquo;t be confusing</li>
+<li>dependencies need to be explicit</li>
+<li>the size of each block should allow reasonable validation</li>
+<li>sequence should continue respecting the plan</li>
+</ul>
+<p>If I look at a task list and still feel that &ldquo;anything can mean anything,&rdquo; then this stage hasn&rsquo;t closed right yet.</p>
+<h2>The Questions I Usually Use in <code>tasks</code><span class="hx:absolute hx:-mt-20" id="the-questions-i-usually-use-in-tasks"></span>
+    <a href="#the-questions-i-usually-use-in-tasks" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>If in <code>constitution</code> I used the <code>5 Qs</code>, in <code>specify</code> another set of questions and in <code>plan</code> questions of order and risk, here I usually force operational clarity.</p>
+<p>Normally I want to answer something like:</p>
+<ul>
+<li><code>Q1.</code> What work unit produces a real result?</li>
+<li><code>Q2.</code> Where does one task end and the next begin?</li>
+<li><code>Q3.</code> What dependencies need to be explicit?</li>
+<li><code>Q4.</code> What can I validate when completing each task?</li>
+<li><code>Q5.</code> Does this break help execution or just seem organized?</li>
+</ul>
+<h3><code>Q1.</code> What work unit produces a real result?<span class="hx:absolute hx:-mt-20" id="q1-what-work-unit-produces-a-real-result"></span>
+    <a href="#q1-what-work-unit-produces-a-real-result" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This question exists to prevent ornamental tasks.</p>
+<p>A good task, for me, needs to point to some result that makes sense by itself. Not necessarily a final result for the user, but at least something with clear function within the delivery.</p>
+<p>Examples:</p>
+<ul>
+<li>structure the minimum order flow with mandatory client relationship</li>
+<li>validate automatic total calculation in backend</li>
+<li>allow operator to view already registered orders</li>
+</ul>
+<p>Notice the difference.</p>
+<p>These items may still involve several internal changes, but remain connected to an understandable result. This is much better than a list of technical pieces without context.</p>
+<h3><code>Q2.</code> Where does one task end and the next begin?<span class="hx:absolute hx:-mt-20" id="q2-where-does-one-task-end-and-the-next-begin"></span>
+    <a href="#q2-where-does-one-task-end-and-the-next-begin" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This question helps me avoid overlap.</p>
+<p>When the boundary between tasks is bad, several things start to happen:</p>
+<ul>
+<li>two tasks mess with the same central problem</li>
+<li>completion criteria become vague</li>
+<li>a task seems &ldquo;almost ready&rdquo; for too long</li>
+<li>review gets confused because no one knows what that block should have solved</li>
+</ul>
+<p>I like to try to make the separation more honest. If one task depends on another to make sense, this needs to be clear. If two tasks are solving the same nucleus, perhaps the break is wrong.</p>
+<p>In other words: a good task has contour.</p>
+<h3><code>Q3.</code> What dependencies need to be explicit?<span class="hx:absolute hx:-mt-20" id="q3-what-dependencies-need-to-be-explicit"></span>
+    <a href="#q3-what-dependencies-need-to-be-explicit" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Not every task is born isolated.</p>
+<p>Some need previous decision, minimum base ready, or completed validation to make sense. When this stays too implicit, execution tends to open fronts too early.</p>
+<p>So I try to make visible:</p>
+<ul>
+<li>which tasks unlock others</li>
+<li>what can walk in parallel without high conflict</li>
+<li>which items depend on model or rule already stabilized</li>
+<li>where there&rsquo;s still too sensitive a point to separate early</li>
+</ul>
+<p>This is especially important when work involves AI, because opening multiple parallel executions without clear dependency is an efficient way to produce collision with the appearance of productivity.</p>
+<h3><code>Q4.</code> What can I validate when completing each task?<span class="hx:absolute hx:-mt-20" id="q4-what-can-i-validate-when-completing-each-task"></span>
+    <a href="#q4-what-can-i-validate-when-completing-each-task" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This question brings <code>tasks</code> very close to healthy execution.</p>
+<p>For me, a task gets much better when there&rsquo;s some clear way to verify if it fulfilled what it promised. This doesn&rsquo;t mean that every task needs to have a formal battery of tests at the same instant, but it means that it needs to touch some observable criterion.</p>
+<p>Something like:</p>
+<ul>
+<li>order can be created with client and valid item</li>
+<li>total is calculated correctly</li>
+<li>system blocks finalization without item</li>
+<li>listing shows recently created orders</li>
+</ul>
+<p>When the task doesn&rsquo;t offer any clear verification point, usually it&rsquo;s too broad or poorly defined.</p>
+<h3><code>Q5.</code> Does this break help execution or just seem organized?<span class="hx:absolute hx:-mt-20" id="q5-does-this-break-help-execution-or-just-seem-organized"></span>
+    <a href="#q5-does-this-break-help-execution-or-just-seem-organized" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This is the question I like the most because it dismantles a lot of false sophistication.</p>
+<p>There are task lists that look beautiful on paper but hinder more than help. Sometimes because they created too many blocks. Sometimes because they turned each technical layer into its own item. Sometimes because they separated things that should walk together.</p>
+<p>So I try to be pragmatic.</p>
+<p>If the break:</p>
+<ul>
+<li>improves execution clarity</li>
+<li>facilitates validation</li>
+<li>reduces rework</li>
+<li>preserves coherence with the plan</li>
+</ul>
+<p>then it&rsquo;s helping.</p>
+<p>If it just increases the feeling of control without improving the real work crossing, it&rsquo;s probably overdoing it.</p>
+<h2>A Practical Example of Difference<span class="hx:absolute hx:-mt-20" id="a-practical-example-of-difference"></span>
+    <a href="#a-practical-example-of-difference" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Suppose the same orders demand I&rsquo;ve been using in the other texts:</p>
+<ul>
+<li>internal operators need to manually register orders</li>
+<li>each order must be associated with an existing client</li>
+<li>order items need to inform quantity and price</li>
+<li>the system should calculate total automatically</li>
+<li>orders cannot be finalized without at least one item</li>
+<li>in this first version there will be no online payment nor tax issuance</li>
+</ul>
+<p>After specifying and planning, I still need to transform this into executable work.</p>
+<p>A weak break could be:</p>
+<ul>
+<li>make orders backend</li>
+<li>make orders frontend</li>
+<li>create tests</li>
+</ul>
+<p>This is little useful. Each item continues too big.</p>
+<p>Now look at a better break:</p>
+<ul>
+<li>define and validate the minimum order structure with mandatory link to client</li>
+<li>implement order creation with automatic total calculation</li>
+<li>block order finalization without valid item</li>
+<li>make listing and basic query of orders available to operators</li>
+<li>cover critical flows and adjust error messages</li>
+</ul>
+<p>Here there&rsquo;s already much more ground.</p>
+<p>Not because the list got longer, but because each item points to a more concrete delivery unit.</p>
+<h2>In the End<span class="hx:absolute hx:-mt-20" id="in-the-end"></span>
+    <a href="#in-the-end" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>If I had to summarize the function of <code>tasks</code> in one sentence, I would say this: it&rsquo;s the stage where the plan stops being just intelligent sequence and starts becoming graspable work.</p>
+<p>For me, this matters because good execution doesn&rsquo;t just depend on knowing where to go. It also depends on knowing which piece makes sense to attack now, with clear boundary and minimally honest completion criterion.</p>
+<p>When this break is well done, implementation gains rhythm without losing coherence.</p>
+<p>In the next text, I want to enter the <code>implement</code> stage, which is when this whole chain finally turns into code.</p>
+]]></content:encoded><category>ai</category><category>spec-driven-development</category><category>tasks</category><category>tarefas</category><category>software-engineering</category></item><item><title>In Spec-Driven Development, `plan` is where specification turns into execution strategy</title><link>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</guid><pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;In Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; is where specification turns into execution strategy&lt;/h1&gt;&lt;p&gt;In the text &lt;a href="https://www.orapha.dev/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/"&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/a&gt;, I talked about the &lt;code&gt;constitution&lt;/code&gt; stage, where I define the criteria that will guide the project.&lt;/p&gt;
+&lt;p&gt;Then, in &lt;a href="https://www.orapha.dev/en/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/"&gt;In Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; is where ambiguity starts to die&lt;/a&gt;, I entered the stage where demand stops being vague intention and starts having clearer expected behavior.&lt;/p&gt;
+&lt;p&gt;But an important bridge is still missing between understanding the problem and going out implementing.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>In Spec-Driven Development, <code>plan</code> is where specification turns into execution strategy</h1><p>In the text <a href="/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/">In Spec-Driven Development, Everything Starts with Principles</a>, I talked about the <code>constitution</code> stage, where I define the criteria that will guide the project.</p>
+<p>Then, in <a href="/en/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/">In Spec-Driven Development, <code>specify</code> is where ambiguity starts to die</a>, I entered the stage where demand stops being vague intention and starts having clearer expected behavior.</p>
+<p>But an important bridge is still missing between understanding the problem and going out implementing.</p>
+<p>This bridge is the <code>plan</code> stage.</p>
+<p>And, for me, it exists to answer a simple question: given that now I know what needs to be done, what is the best way to cross this work without turning execution into an expensive improvisation?</p>
+<p>Because one thing is to have a good specification. Another thing is to know how to execute that specification with order, criteria, and sense of dependency.</p>
+<p>That&rsquo;s where many demands start to get lost.</p>
+<h2>The Error of Thinking Good Specification Is Already Enough<span class="hx:absolute hx:-mt-20" id="the-error-of-thinking-good-specification-is-already-enough"></span>
+    <a href="#the-error-of-thinking-good-specification-is-already-enough" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>When specification is clear, it gives a somewhat deceptive feeling that the work is already practically solved.</p>
+<p>The reasoning usually goes like this:</p>
+<blockquote>
+  <p>now that everything is clear, it&rsquo;s just implementing<br>
+AI already understood what needs to be done<br>
+let&rsquo;s go breaking into prompt and deliver quickly</p>
+
+</blockquote>
+<p>In very small projects, sometimes this even works. But, as demand grows a little, this leap starts to charge a price.</p>
+<p>Because understanding what needs to be built doesn&rsquo;t automatically solve:</p>
+<ul>
+<li>where to start</li>
+<li>what depends on what</li>
+<li>what can be done in parallel</li>
+<li>which part concentrates more risk</li>
+<li>where it&rsquo;s worth validating early</li>
+<li>how to avoid rework between stages</li>
+</ul>
+<p>Without this reasoning, implementation turns into a sequence of locally plausible actions, but globally disorganized.</p>
+<p>In the short term, it seems like speed.</p>
+<p>In the medium term, refactoring, decision collisions, crooked scope, and that famous sensation that the work walked a lot and consolidated little appear.</p>
+<h2>What the <code>plan</code> Stage Solves<span class="hx:absolute hx:-mt-20" id="what-the-plan-stage-solves"></span>
+    <a href="#what-the-plan-stage-solves" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>I don&rsquo;t see <code>plan</code> as a pompous schedule. Nor do I see it as the obligation to assemble a document full of little boxes just to seem like process.</p>
+<p>For me, <code>plan</code> solves one very practical thing: transform specification into execution strategy.</p>
+<p>It&rsquo;s the moment when I try to organize:</p>
+<ul>
+<li>the order of work</li>
+<li>dependencies between parts</li>
+<li>blocks that make sense to separate</li>
+<li>risks that deserve attention early</li>
+<li>sequence that reduces rework</li>
+<li>validation points along the way</li>
+</ul>
+<p>In other words, if <code>specify</code> answers &ldquo;what needs to happen,&rdquo; <code>plan</code> starts to answer &ldquo;how do I organize the crossing of this work.&rdquo;</p>
+<p>This doesn&rsquo;t mean descending to code yet. It means giving operational shape to the path.</p>
+<h2><code>Plan</code> Isn&rsquo;t Distributing Tasks on Impulse<span class="hx:absolute hx:-mt-20" id="plan-isnt-distributing-tasks-on-impulse"></span>
+    <a href="#plan-isnt-distributing-tasks-on-impulse" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>There&rsquo;s a common error here.</p>
+<p>Many people understand planning as simply breaking the demand into several smaller items:</p>
+<ul>
+<li>make backend</li>
+<li>make frontend</li>
+<li>create database</li>
+<li>add tests</li>
+<li>review</li>
+</ul>
+<p>This is better than nothing, but can still be too superficial.</p>
+<p>Because planning isn&rsquo;t just fragmenting. It&rsquo;s organizing with intention.</p>
+<p>A good work break needs to consider dependency, risk, and logical sequence. Otherwise I just trade a big block for several confusing little blocks.</p>
+<p>For example, if there&rsquo;s a structural decision that impacts API, interface, and persistence, maybe the first step isn&rsquo;t &ldquo;make screen.&rdquo; Maybe it&rsquo;s validating the main flow, the data model, or the central rule first. If I ignore this, I spread implementation before locking the solution&rsquo;s axis.</p>
+<p>Good planning, for me, isn&rsquo;t the longest list. It&rsquo;s the most defensible order.</p>
+<h2>What I Try to Capture in a Good <code>plan</code> Stage<span class="hx:absolute hx:-mt-20" id="what-i-try-to-capture-in-a-good-plan-stage"></span>
+    <a href="#what-i-try-to-capture-in-a-good-plan-stage" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>I don&rsquo;t follow a rigid template, but normally I want to leave this stage with some things relatively clear.</p>
+<p>Something along these lines:</p>
+<ul>
+<li>what is the safest execution path</li>
+<li>which parts unlock the others</li>
+<li>which blocks can be treated separately</li>
+<li>where is the biggest technical or understanding risk</li>
+<li>at what point is it worth validating before continuing</li>
+<li>how to avoid redundant work or bad sequence</li>
+</ul>
+<p>If I still can&rsquo;t see this, the demand may even be well specified, but still not well planned.</p>
+<h2>The Questions I Usually Use in <code>plan</code><span class="hx:absolute hx:-mt-20" id="the-questions-i-usually-use-in-plan"></span>
+    <a href="#the-questions-i-usually-use-in-plan" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>If in <code>constitution</code> I talked about the <code>5 Qs</code>, and in <code>specify</code> I used another set to reduce ambiguity, in <code>plan</code> I tend to ask questions that force order and strategy.</p>
+<p>Normally I want to answer something like:</p>
+<ul>
+<li><code>Q1.</code> What is the smallest viable sequence to put this delivery on its feet?</li>
+<li><code>Q2.</code> What depends on what?</li>
+<li><code>Q3.</code> Where is the biggest risk or uncertainty?</li>
+<li><code>Q4.</code> What needs to be validated before expanding?</li>
+<li><code>Q5.</code> How to break this without losing coherence?</li>
+</ul>
+<h3><code>Q1.</code> What is the smallest viable sequence to put this delivery on its feet?<span class="hx:absolute hx:-mt-20" id="q1-what-is-the-smallest-viable-sequence-to-put-this-delivery-on-its-feet"></span>
+    <a href="#q1-what-is-the-smallest-viable-sequence-to-put-this-delivery-on-its-feet" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This question helps me not start with the most visible place, but with the most useful one.</p>
+<p>Not always the first step is the most visible. Sometimes the work needs to start with a minimum base that allows the rest to exist with less friction.</p>
+<p>When I answer this, I try to think something like:</p>
+<ul>
+<li>what is the main flow that needs to exist first</li>
+<li>what minimum foundation sustains the next stages</li>
+<li>what do I need to have standing to stop speculating and start consolidating</li>
+</ul>
+<p>This helps a lot to avoid ornamental planning, in which several parallel pieces advance without the problem&rsquo;s nucleus really being resolved.</p>
+<h3><code>Q2.</code> What depends on what?<span class="hx:absolute hx:-mt-20" id="q2-what-depends-on-what"></span>
+    <a href="#q2-what-depends-on-what" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This is the question that prevents the plan from becoming wishful thinking.</p>
+<p>There are demands where almost everything seems to be able to happen in parallel, until the moment when one decision changes and drags half the work along.</p>
+<p>I like to make explicit:</p>
+<ul>
+<li>which parts are prerequisites for others</li>
+<li>which decisions need to be made early</li>
+<li>what can advance in parallel without high risk of collision</li>
+<li>where there is enough coupling to demand sequence</li>
+</ul>
+<p>This is especially important when execution involves AI, because it&rsquo;s very easy to open several fronts at the same time and only later realize that they were sharing different assumptions.</p>
+<h3><code>Q3.</code> Where is the biggest risk or uncertainty?<span class="hx:absolute hx:-mt-20" id="q3-where-is-the-biggest-risk-or-uncertainty"></span>
+    <a href="#q3-where-is-the-biggest-risk-or-uncertainty" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Planning is also deciding where I don&rsquo;t want to discover a problem too late.</p>
+<p>Every demand has some more sensitive point:</p>
+<ul>
+<li>business rule still somewhat nebulous</li>
+<li>more unstable external integration</li>
+<li>modeling decision that affects the rest</li>
+<li>technical restriction that can block implementation</li>
+</ul>
+<p>If I identify this early, I can pull this risk closer to the beginning. Not necessarily to completely resolve it right away, but at least to validate it before the rest of the plan is built on top of a weak assumption.</p>
+<p>For me, this is one of the biggest gains of <code>plan</code>: it reduces the chance of a beautiful sequence on top of a wrong premise.</p>
+<h3><code>Q4.</code> What needs to be validated before expanding?<span class="hx:absolute hx:-mt-20" id="q4-what-needs-to-be-validated-before-expanding"></span>
+    <a href="#q4-what-needs-to-be-validated-before-expanding" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Not everything needs to be implemented to the end before learning something useful.</p>
+<p>Sometimes I just need to validate:</p>
+<ul>
+<li>if the central flow closes</li>
+<li>if the main rule sustains itself</li>
+<li>if integration responds as expected</li>
+<li>if initial modeling isn&rsquo;t crooked</li>
+</ul>
+<p>This question helps me insert validation milestones within the plan, instead of pushing all learning to the end.</p>
+<p>This is especially valuable in work with agents, because production speed can mask a structural problem for several consecutive interactions. When I create validation points, I better control this risk.</p>
+<h3><code>Q5.</code> How to break this without losing coherence?<span class="hx:absolute hx:-mt-20" id="q5-how-to-break-this-without-losing-coherence"></span>
+    <a href="#q5-how-to-break-this-without-losing-coherence" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Breaking work is necessary. Breaking it poorly is very dangerous.</p>
+<p>If I separate too much, I create fragmentation and overhead. If I separate too little, I return to the big and difficult-to-control block.</p>
+<p>So I try to look for a decomposition that preserves sense. Something in which each block has a clear responsibility, a reasonable completion criterion, and an understandable relationship with the greater objective.</p>
+<p>In practice, this usually means:</p>
+<ul>
+<li>break by flow or capability, not by arbitrary layer</li>
+<li>avoid dividing too early something that still depends on central decision</li>
+<li>separate what can be validated in isolation</li>
+<li>keep each part connected to an observable result</li>
+</ul>
+<p>When this is well done, the next stage gains a lot. Because execution starts walking on more stable tracks.</p>
+<h2>A Practical Example of Difference<span class="hx:absolute hx:-mt-20" id="a-practical-example-of-difference"></span>
+    <a href="#a-practical-example-of-difference" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Clear specification:</p>
+<ul>
+<li>internal operators need to manually register orders</li>
+<li>each order must be associated with an existing client</li>
+<li>order items need to inform quantity and price</li>
+<li>the system should calculate total automatically</li>
+<li>orders cannot be finalized without at least one item</li>
+<li>in this first version there will be no online payment nor tax issuance</li>
+</ul>
+<p>Up to here, I know what needs to be built.</p>
+<p>But this still isn&rsquo;t a plan.</p>
+<p>A weak break could be:</p>
+<ul>
+<li>make orders screen</li>
+<li>create orders endpoint</li>
+<li>save to database</li>
+<li>add tests</li>
+</ul>
+<p>This seems organized, but is still a generic list.</p>
+<p>Now look at a more planned version:</p>
+<ul>
+<li>validate minimum order model and mandatory relationship with client</li>
+<li>implement order creation with automatic total calculation</li>
+<li>prevent order finalization without valid item</li>
+<li>only then build listing and visualization for operators</li>
+<li>finally, cover critical flows and adjust error messages</li>
+</ul>
+<p>Notice the difference.</p>
+<p>In the second version, I&rsquo;m not just dividing work. I&rsquo;m choosing an order that respects dependency, reduces rework, and prioritizes the rule&rsquo;s nucleus before the layers around it.</p>
+<h2>Planning Isn&rsquo;t Bureaucratizing<span class="hx:absolute hx:-mt-20" id="planning-isnt-bureaucratizing"></span>
+    <a href="#planning-isnt-bureaucratizing" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>It&rsquo;s worth saying this because many people turn up their nose when they hear the word &ldquo;planning.&rdquo;</p>
+<p>I also don&rsquo;t have patience for process that exists just to generate document.</p>
+<p>But the <code>plan</code> stage I&rsquo;m defending here is another thing. It doesn&rsquo;t serve to rigidify work. It serves to increase the chance of clean execution.</p>
+<p>Before AI, much of development energy was consumed by coding itself. There was much more operational hours going to write, adjust, refactor, connect parts, and carry implementation on the back.</p>
+<p>With AI, that coding time dropped drastically.</p>
+<p>And, if that time dropped, it shouldn&rsquo;t be automatically reinvested in producing even more code on impulse.</p>
+<p>For me, a relevant part of that time needs to be reallocated to planning.</p>
+<p>Not in the sense of transforming developer into PM or PO.</p>
+<p>It&rsquo;s not about substituting who defines priority, business context, product objective, or demand direction.</p>
+<p>It&rsquo;s about something else: once the demand has already arrived, someone still needs to think about what is the best way to execute it.</p>
+<p>Someone still needs to understand:</p>
+<ul>
+<li>what is the best order</li>
+<li>where it&rsquo;s not worth improvising</li>
+<li>what needs to be validated early</li>
+<li>how to divide the work without losing the thread</li>
+</ul>
+<p>Before, a lot of inefficiency was hidden inside manual implementation effort. Now that implementing became cheaper, the weight of poorly thought-out execution became more visible.</p>
+<p>If I receive a good demand and still go out coding without a plan, the chance isn&rsquo;t just to err. It&rsquo;s to err quickly, on several fronts, with a false sense of productivity.</p>
+<p>So, for me, planning well became an even more important skill in the AI context.</p>
+<p>Not because the process became more bureaucratic.</p>
+<p>But because coding stopped being the main bottleneck. And, when that happens, thinking better about execution starts to have much higher return.</p>
+<h2>Closing<span class="hx:absolute hx:-mt-20" id="closing"></span>
+    <a href="#closing" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>If <code>constitution</code> defines principles, and <code>specify</code> reduces ambiguity about what needs to be built, then <code>plan</code> is the stage that transforms that clarity into coordinated movement.</p>
+<p>It&rsquo;s where I stop looking only at the demand and start looking at the crossing.</p>
+<p>Because execution isn&rsquo;t just doing. Execution is also choosing the right order to do.</p>
+<p>And, in the end, much bad implementation isn&rsquo;t born from bad specification. It&rsquo;s born from bad sequence.</p>
+<p>In the next text, I want to enter the <code>tasks</code> stage, which is when this plan starts to turn into concrete work units.</p>
+]]></content:encoded><category>ai</category><category>spec-driven-development</category><category>plan</category><category>planning</category><category>software-engineering</category></item><item><title>In Spec-Driven Development, `specify` is where ambiguity starts to die</title><link>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</guid><pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;In Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; is where ambiguity starts to die&lt;/h1&gt;&lt;p&gt;In the text &lt;a href="https://www.orapha.dev/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/"&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/a&gt;, I focused on the &lt;code&gt;constitution&lt;/code&gt; stage, where I define the criteria that will guide the project.&lt;/p&gt;
 &lt;p&gt;But principles alone don&amp;rsquo;t deliver system.&lt;/p&gt;
 &lt;p&gt;After saying how the project should think, comes the time to say what it needs to build.&lt;/p&gt;
 &lt;p&gt;That&amp;rsquo;s where the &lt;code&gt;specify&lt;/code&gt; stage enters.&lt;/p&gt;
-&lt;p&gt;And, for me, this is one of the most important parts of the entire flow. Because, in practice, it&amp;rsquo;s here that the work of a new demand begins.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1>In Spec-Driven Development, <code>specify</code> is where ambiguity starts to die</h1><p>In the text <a href="/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/">In Spec-Driven Development, Everything Starts with Principles</a>, I focused on the <code>constitution</code> stage, where I define the criteria that will guide the project.</p>
+&lt;p&gt;And, for me, this is one of the most important parts of the entire flow. Because, in practice, it&amp;rsquo;s here that the work of a new demand begins.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>In Spec-Driven Development, <code>specify</code> is where ambiguity starts to die</h1><p>In the text <a href="/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/">In Spec-Driven Development, Everything Starts with Principles</a>, I focused on the <code>constitution</code> stage, where I define the criteria that will guide the project.</p>
 <p>But principles alone don&rsquo;t deliver system.</p>
 <p>After saying how the project should think, comes the time to say what it needs to build.</p>
 <p>That&rsquo;s where the <code>specify</code> stage enters.</p>
@@ -317,25 +1265,9 @@ add notification</p>
 <p>For me, this is the point where ambiguity really starts to lose space.</p>
 <p>Because, in the end, specifying well isn&rsquo;t producing bureaucracy. It&rsquo;s making the problem understandable enough so that implementation, review, and validation work on the same reality.</p>
 <p>In the next deep dive, the natural path is to enter the stage that takes this specification and transforms it into an execution plan.</p>
-]]></content:encoded>
-        
-            <category>ai</category>
-            <category>spec-driven-development</category>
-            <category>specify</category>
-            <category>specification</category>
-            <category>software-engineering</category>
-        
-      </item>
-    
-      <item>
-        <title>In Spec-Driven Development, Everything Starts with Principles</title>
-        <link>http://localhost:1313/en/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</link>
-        <guid isPermaLink="true">http://localhost:1313/en/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</guid>
-        <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/h1&gt;&lt;p&gt;In the article &lt;a href=&#34;http://localhost:1313/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/&#34;&gt;How I&amp;rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects&lt;/a&gt;, I went through the flow stages in a more general way.&lt;/p&gt;
+]]></content:encoded><category>ai</category><category>spec-driven-development</category><category>specify</category><category>specification</category><category>software-engineering</category></item><item><title>In Spec-Driven Development, Everything Starts with Principles</title><link>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</guid><pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/h1&gt;&lt;p&gt;In the article &lt;a href="https://www.orapha.dev/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/"&gt;How I&amp;rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects&lt;/a&gt;, I went through the flow stages in a more general way.&lt;/p&gt;
 &lt;p&gt;But I thought it was worth going back calmly to each of them, in separate texts, because there&amp;rsquo;s stuff there that deserves to be properly dissected.&lt;/p&gt;
-&lt;p&gt;If the idea is to gradually deepen this flow, it makes sense to open precisely at the stage where I define the project principles.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1>In Spec-Driven Development, Everything Starts with Principles</h1><p>In the article <a href="/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/">How I&rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects</a>, I went through the flow stages in a more general way.</p>
+&lt;p&gt;If the idea is to gradually deepen this flow, it makes sense to open precisely at the stage where I define the project principles.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>In Spec-Driven Development, Everything Starts with Principles</h1><p>In the article <a href="/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/">How I&rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects</a>, I went through the flow stages in a more general way.</p>
 <p>But I thought it was worth going back calmly to each of them, in separate texts, because there&rsquo;s stuff there that deserves to be properly dissected.</p>
 <p>If the idea is to gradually deepen this flow, it makes sense to open precisely at the stage where I define the project principles.</p>
 <p>I&rsquo;m talking about <code>constitution</code>.</p>
@@ -518,23 +1450,7 @@ now improve architecture</p>
 <p>That&rsquo;s why I like this stage so much. Before discussing screen, endpoint, database, stack, or task, I can define what will really command decisions.</p>
 <p>For me, this is the moment when the project stops being just a request and starts to become a system with technical identity.</p>
 <p>In the next deep dive, the natural path is to enter the <code>specify</code> stage, which is when the conversation leaves principles and enters what really needs to be built.</p>
-]]></content:encoded>
-        
-            <category>ai</category>
-            <category>spec-driven-development</category>
-            <category>constitution</category>
-            <category>software-engineering</category>
-            <category>principles</category>
-        
-      </item>
-    
-      <item>
-        <title>How I&#39;ve Been Using Spec-Driven Development with Spec Kit in My Projects</title>
-        <link>http://localhost:1313/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</link>
-        <guid isPermaLink="true">http://localhost:1313/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</guid>
-        <pubDate>Fri, 03 Apr 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;How I&amp;rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects&lt;/h1&gt;&lt;p&gt;If you&amp;rsquo;ve ever tried to build software with a code agent, you&amp;rsquo;ve probably been on this roller coaster. Some days things go really well. On others, the agent delivers half of what you asked for, invents a structure that makes no sense, breaks the build, or even does something that seems to work, but with a foundation that you yourself wouldn&amp;rsquo;t do that way.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1>How I&rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects</h1><p>If you&rsquo;ve ever tried to build software with a code agent, you&rsquo;ve probably been on this roller coaster. Some days things go really well. On others, the agent delivers half of what you asked for, invents a structure that makes no sense, breaks the build, or even does something that seems to work, but with a foundation that you yourself wouldn&rsquo;t do that way.</p>
+]]></content:encoded><category>ai</category><category>spec-driven-development</category><category>constitution</category><category>software-engineering</category><category>principles</category></item><item><title>How I've Been Using Spec-Driven Development with Spec Kit in My Projects</title><link>https://www.orapha.dev/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</guid><pubDate>Fri, 03 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;How I&amp;rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects&lt;/h1&gt;&lt;p&gt;If you&amp;rsquo;ve ever tried to build software with a code agent, you&amp;rsquo;ve probably been on this roller coaster. Some days things go really well. On others, the agent delivers half of what you asked for, invents a structure that makes no sense, breaks the build, or even does something that seems to work, but with a foundation that you yourself wouldn&amp;rsquo;t do that way.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>How I&rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects</h1><p>If you&rsquo;ve ever tried to build software with a code agent, you&rsquo;ve probably been on this roller coaster. Some days things go really well. On others, the agent delivers half of what you asked for, invents a structure that makes no sense, breaks the build, or even does something that seems to work, but with a foundation that you yourself wouldn&rsquo;t do that way.</p>
 <p>I&rsquo;ve been thinking a lot about this. And, for me, the problem is almost never just in the model. Most of the time, the problem is in the way we ask. Loose request generates loose response. Poorly tied context generates crooked decision. And, when there&rsquo;s no clear way to say what needs to be built and how it will be validated, the chance of turning into improvisation is too high.</p>
 <p>That&rsquo;s why I started looking more closely at <strong>Spec-Driven Development</strong>, or simply <strong>SDD</strong>. And, within that, a tool that caught my attention was <strong>Spec Kit</strong>, an open source toolkit created precisely to organize this workflow with agents.</p>
 <p>In this text, I want to show you how I&rsquo;ve been seeing this process in practice. Not as pretty talk, but as a more serious way of working with AI in development. The idea here is to get out of the thrown prompt in the chat and enter a flow with principles, specification, plan, tasks, and implementation.</p>
@@ -1180,27 +2096,11 @@ It&rsquo;s about creating a process in which I continue to think as an engineer,
 <p><a href="/en/2026/04/06/5-no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/">In Spec-Driven Development, <code>implement</code> is where everything else turns into code</a></p>
 </li>
 </ul>
-]]></content:encoded>
-        
-            <category>ai</category>
-            <category>spec-driven-development</category>
-            <category>spec-kit</category>
-            <category>software-engineering</category>
-            <category>development</category>
-        
-      </item>
-    
-      <item>
-        <title>Are You Feeling Like Crap With the Emergence of AI?</title>
-        <link>http://localhost:1313/en/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</link>
-        <guid isPermaLink="true">http://localhost:1313/en/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</guid>
-        <pubDate>Sun, 22 Mar 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;Are You Feeling Like Crap With the Emergence of AI?&lt;/h1&gt;&lt;p&gt;Last week I was feeling a bit down.&lt;/p&gt;
+]]></content:encoded><category>ai</category><category>spec-driven-development</category><category>spec-kit</category><category>software-engineering</category><category>development</category></item><item><title>Are You Feeling Like Crap With the Emergence of AI?</title><link>https://www.orapha.dev/en/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</guid><pubDate>Sun, 22 Mar 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;Are You Feeling Like Crap With the Emergence of AI?&lt;/h1&gt;&lt;p&gt;Last week I was feeling a bit down.&lt;/p&gt;
 &lt;p&gt;Receiving demands, creating prompts, reviewing changes, approving or denying responses, rewriting prompts, adjusting context, and repeating this cycle over and over.&lt;/p&gt;
 &lt;p&gt;At some point, this started to corrode me inside.&lt;/p&gt;
 &lt;p&gt;Because I like to program.&lt;/p&gt;
-&lt;p&gt;I like to create algorithms, connect classes, think about modeling, do dependency inversion, organize responsibility, name an abstraction well, and see an architecture start to breathe. There&amp;rsquo;s a very alive part of my relationship with software that has always gone through this: hand-written code.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h1>Are You Feeling Like Crap With the Emergence of AI?</h1><p>Last week I was feeling a bit down.</p>
+&lt;p&gt;I like to create algorithms, connect classes, think about modeling, do dependency inversion, organize responsibility, name an abstraction well, and see an architecture start to breathe. There&amp;rsquo;s a very alive part of my relationship with software that has always gone through this: hand-written code.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>Are You Feeling Like Crap With the Emergence of AI?</h1><p>Last week I was feeling a bit down.</p>
 <p>Receiving demands, creating prompts, reviewing changes, approving or denying responses, rewriting prompts, adjusting context, and repeating this cycle over and over.</p>
 <p>At some point, this started to corrode me inside.</p>
 <p>Because I like to program.</p>
@@ -1317,30 +2217,13 @@ It&rsquo;s about creating a process in which I continue to think as an engineer,
 <p>I feel in transition.</p>
 <p>And, for this moment in my life, that&rsquo;s already a lot.</p>
 <p>My thanks to <strong>Chad Fowler</strong> for the article. Some readings don&rsquo;t completely resolve the crisis, but they put a name to what was hurting. And, sometimes, that&rsquo;s exactly where recovery begins.</p>
-]]></content:encoded>
-        
-            <category>ai</category>
-            <category>software-engineering</category>
-            <category>career</category>
-            <category>development</category>
-            <category>reflection</category>
-        
-      </item>
-    
-      <item>
-        <title>Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work</title>
-        <link>http://localhost:1313/en/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</link>
-        <guid isPermaLink="true">http://localhost:1313/en/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</guid>
-        <pubDate>Fri, 20 Mar 2026 11:15:00 GMT</pubDate>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; this text is a &lt;strong&gt;Portuguese translation&lt;/strong&gt; of the original article by &lt;strong&gt;Mohit Sewak, Ph.D.&lt;/strong&gt;, published in &lt;strong&gt;Level Up Coding&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original article:&lt;/strong&gt; &lt;a href=&#34;https://levelup.gitconnected.com/vibe-coding-is-dead-why-autonomous-ai-requires-strict-deterministic-fences-to-actually-work-4b8a3ebb6fc1&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work&lt;/a&gt;&lt;/p&gt;
-
+]]></content:encoded><category>ai</category><category>software-engineering</category><category>career</category><category>development</category><category>reflection</category></item><item><title>Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work</title><link>https://www.orapha.dev/en/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</guid><pubDate>Fri, 20 Mar 2026 11:15:00 GMT</pubDate><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; this text is a &lt;strong&gt;Portuguese translation&lt;/strong&gt; of the original article by &lt;strong&gt;Mohit Sewak, Ph.D.&lt;/strong&gt;, published in &lt;strong&gt;Level Up Coding&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original article:&lt;/strong&gt; &lt;a href="https://levelup.gitconnected.com/vibe-coding-is-dead-why-autonomous-ai-requires-strict-deterministic-fences-to-actually-work-4b8a3ebb6fc1"target="_blank" rel="noopener"&gt;Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1&gt;Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work&lt;/h1&gt;&lt;p&gt;&lt;em&gt;The era of deploying &amp;ldquo;naked&amp;rdquo; models is over. Welcome to the era of AI Harness Engineering.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Mohit Sewak, Ph.D.&lt;/p&gt;
-&lt;p&gt;11 min read&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<blockquote>
+&lt;p&gt;11 min read&lt;/p&gt;</description><content:encoded><![CDATA[<blockquote>
   <p><strong>Note:</strong> this text is a <strong>Portuguese translation</strong> of the original article by <strong>Mohit Sewak, Ph.D.</strong>, published in <strong>Level Up Coding</strong>.</p>
 <p><strong>Original article:</strong> <a href="https://levelup.gitconnected.com/vibe-coding-is-dead-why-autonomous-ai-requires-strict-deterministic-fences-to-actually-work-4b8a3ebb6fc1"target="_blank" rel="noopener">Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work</a></p>
 
@@ -1490,25 +2373,9 @@ It&rsquo;s about creating a process in which I continue to think as an engineer,
 <p>Sewak, M. (2026). <em>What is AI Harness Engineering? Your Guide to Controlling Autonomous Systems</em>. Medium. <a href="https://medium.com/"target="_blank" rel="noopener">https://medium.com/</a></p>
 <p>Siebert, L. C., Lupetti, M. L., Aizenberg, E., Beckers, N., … Lagendijk, R. L. (2021). <em>Meaningful human control: actionable properties for AI system development</em>. arXiv. <a href="https://arxiv.org/pdf/2112.01298v2"target="_blank" rel="noopener">https://arxiv.org/pdf/2112.01298v2</a></p>
 <p><strong>Legal notice:</strong> opinions expressed in this article are personal and don&rsquo;t necessarily reflect the official policy or position of any affiliated organization. AI assistance was used in the research and writing of this article, as well as in generating any accompanying images. Licensed under <code>CC BY-ND 4.0</code>.</p>
-]]></content:encoded>
-        
-            <category>ai</category>
-            <category>agents</category>
-            <category>software-engineering</category>
-            <category>security</category>
-            <category>mcp</category>
-        
-      </item>
-    
-      <item>
-        <title>Do You Still Remember the Principles of Software Engineering?</title>
-        <link>http://localhost:1313/en/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</link>
-        <guid isPermaLink="true">http://localhost:1313/en/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</guid>
-        <pubDate>Thu, 19 Mar 2026 10:30:00 GMT</pubDate>
-        <description>&lt;p&gt;We&amp;rsquo;re living through a curious phase of technology. It&amp;rsquo;s never been so easy to generate code, create tests, ask for architecture suggestions, or fix bugs with AI help. In a few seconds, a tool answers what before would take hours of research, trial, and error.&lt;/p&gt;
+]]></content:encoded><category>ai</category><category>agents</category><category>software-engineering</category><category>security</category><category>mcp</category></item><item><title>Do You Still Remember the Principles of Software Engineering?</title><link>https://www.orapha.dev/en/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</guid><pubDate>Thu, 19 Mar 2026 10:30:00 GMT</pubDate><description>&lt;p&gt;We&amp;rsquo;re living through a curious phase of technology. It&amp;rsquo;s never been so easy to generate code, create tests, ask for architecture suggestions, or fix bugs with AI help. In a few seconds, a tool answers what before would take hours of research, trial, and error.&lt;/p&gt;
 &lt;p&gt;This seems great, and in many cases it really is. The problem starts when speed comes to be confused with engineering.&lt;/p&gt;
-&lt;p&gt;Many people today present themselves as software developers or software engineers, but faced with so much automation it&amp;rsquo;s worth revisiting a simple question: do you still remember the principles of software engineering?&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>We&rsquo;re living through a curious phase of technology. It&rsquo;s never been so easy to generate code, create tests, ask for architecture suggestions, or fix bugs with AI help. In a few seconds, a tool answers what before would take hours of research, trial, and error.</p>
+&lt;p&gt;Many people today present themselves as software developers or software engineers, but faced with so much automation it&amp;rsquo;s worth revisiting a simple question: do you still remember the principles of software engineering?&lt;/p&gt;</description><content:encoded><![CDATA[<p>We&rsquo;re living through a curious phase of technology. It&rsquo;s never been so easy to generate code, create tests, ask for architecture suggestions, or fix bugs with AI help. In a few seconds, a tool answers what before would take hours of research, trial, and error.</p>
 <p>This seems great, and in many cases it really is. The problem starts when speed comes to be confused with engineering.</p>
 <p>Many people today present themselves as software developers or software engineers, but faced with so much automation it&rsquo;s worth revisiting a simple question: do you still remember the principles of software engineering?</p>
 <p>In the end, AI accelerates execution. But foundation continues to be what sustains software when the rush passes.</p>
@@ -1562,25 +2429,10 @@ It&rsquo;s about creating a process in which I continue to think as an engineer,
     <a href="#so-do-you-consider-yourself-a-software-engineer" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>If you consider yourself a software engineer, you need to remember that your value isn&rsquo;t just in writing code quickly. Your value is in making good decisions, building with clarity, maintaining simplicity, testing rigorously, and delivering solutions that continue to make sense after the initial excitement.</p>
 <p>With AI&rsquo;s help, perhaps you&rsquo;re producing more. But perhaps you&rsquo;re also forgetting what really matters.</p>
 <p>And what really matters continues to be the same: think well, build right, and don&rsquo;t abandon the principles that sustain software engineering.</p>
-]]></content:encoded>
-        
-            <category>software-engineering</category>
-            <category>ai</category>
-            <category>development</category>
-            <category>technology</category>
-        
-      </item>
-    
-      <item>
-        <title>Agent Engineering + Agentic Flow Engineering: A More Organized View</title>
-        <link>http://localhost:1313/en/2026/03/19/agent-engineering-e-agentic-flow-engineering/</link>
-        <guid isPermaLink="true">http://localhost:1313/en/2026/03/19/agent-engineering-e-agentic-flow-engineering/</guid>
-        <pubDate>Thu, 19 Mar 2026 01:00:00 GMT</pubDate>
-        <description>&lt;p&gt;The two texts below talk, at their core, about the same transition: moving away from AI used as an isolated assistant and starting to treat it as an organized system. One emphasizes the structure of agent teams, with roles, capabilities, and collaboration. The other emphasizes something even more important in production: flow, orchestration, governance, fault tolerance, and observability.&lt;/p&gt;
+]]></content:encoded><category>software-engineering</category><category>ai</category><category>development</category><category>technology</category></item><item><title>Agent Engineering + Agentic Flow Engineering: A More Organized View</title><link>https://www.orapha.dev/en/2026/03/19/agent-engineering-e-agentic-flow-engineering/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/03/19/agent-engineering-e-agentic-flow-engineering/</guid><pubDate>Thu, 19 Mar 2026 01:00:00 GMT</pubDate><description>&lt;p&gt;The two texts below talk, at their core, about the same transition: moving away from AI used as an isolated assistant and starting to treat it as an organized system. One emphasizes the structure of agent teams, with roles, capabilities, and collaboration. The other emphasizes something even more important in production: flow, orchestration, governance, fault tolerance, and observability.&lt;/p&gt;
 &lt;p&gt;Putting both together, the central idea can be summarized like this:&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;The value is not in having &amp;ldquo;more agents,&amp;rdquo; but in designing a system in which specialized agents work with clear contracts, explicit flows, and real operational control.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>The two texts below talk, at their core, about the same transition: moving away from AI used as an isolated assistant and starting to treat it as an organized system. One emphasizes the structure of agent teams, with roles, capabilities, and collaboration. The other emphasizes something even more important in production: flow, orchestration, governance, fault tolerance, and observability.</p>
+&lt;p&gt;The value is not in having &amp;ldquo;more agents,&amp;rdquo; but in designing a system in which specialized agents work with clear contracts, explicit flows, and real operational control.&lt;/p&gt;</description><content:encoded><![CDATA[<p>The two texts below talk, at their core, about the same transition: moving away from AI used as an isolated assistant and starting to treat it as an organized system. One emphasizes the structure of agent teams, with roles, capabilities, and collaboration. The other emphasizes something even more important in production: flow, orchestration, governance, fault tolerance, and observability.</p>
 <p>Putting both together, the central idea can be summarized like this:</p>
 <blockquote>
   <p>The value is not in having &ldquo;more agents,&rdquo; but in designing a system in which specialized agents work with clear contracts, explicit flows, and real operational control.</p>
@@ -1787,24 +2639,8 @@ Agentic Flow Engineering organizes how the system really works.</p>
 <li><a href="https://www.linkedin.com/pulse/complete-agent-engineering-playbook-agentsmd-skillsmd-zeelan-shaik-dzpic/"target="_blank" rel="noopener">The Complete Agent Engineering Playbook (Agents.md + Skills.md + Agent Teams)</a></li>
 <li><a href="https://www.linkedin.com/pulse/agentic-flow-engineering-why-matters-what-who-needs-how-baipalli-jowsf/"target="_blank" rel="noopener">Agentic Flow Engineering: Why It Matters, What It Is, Who Needs It, and How to Build It</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>ai</category>
-            <category>agents</category>
-            <category>llm</category>
-            <category>software-engineering</category>
-            <category>architecture</category>
-        
-      </item>
-    
-      <item>
-        <title>Teaching Copilot to Speak Your Repository&#39;s Language</title>
-        <link>http://localhost:1313/en/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</link>
-        <guid isPermaLink="true">http://localhost:1313/en/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</guid>
-        <pubDate>Wed, 29 Oct 2025 14:46:13 GMT</pubDate>
-        <description>&lt;p&gt;Working for over 14 years with software development, I always find myself thinking about trends and new technologies that can be used to &lt;strong&gt;reduce friction in the dev&amp;rsquo;s daily life&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Did you know there&amp;rsquo;s the possibility of adding &lt;strong&gt;personalized instructions directly in your repository for AI agents?&lt;/strong&gt; Basically, you can &amp;ldquo;teach&amp;rdquo; Copilot about the rules, patterns, and styles of your project, and it will generate suggestions much more aligned with what you and your team really need.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Working for over 14 years with software development, I always find myself thinking about trends and new technologies that can be used to <strong>reduce friction in the dev&rsquo;s daily life</strong>.</p>
+]]></content:encoded><category>ai</category><category>agents</category><category>llm</category><category>software-engineering</category><category>architecture</category></item><item><title>Teaching Copilot to Speak Your Repository's Language</title><link>https://www.orapha.dev/en/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</link><guid isPermaLink="true">https://www.orapha.dev/en/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</guid><pubDate>Wed, 29 Oct 2025 14:46:13 GMT</pubDate><description>&lt;p&gt;Working for over 14 years with software development, I always find myself thinking about trends and new technologies that can be used to &lt;strong&gt;reduce friction in the dev&amp;rsquo;s daily life&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Did you know there&amp;rsquo;s the possibility of adding &lt;strong&gt;personalized instructions directly in your repository for AI agents?&lt;/strong&gt; Basically, you can &amp;ldquo;teach&amp;rdquo; Copilot about the rules, patterns, and styles of your project, and it will generate suggestions much more aligned with what you and your team really need.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Working for over 14 years with software development, I always find myself thinking about trends and new technologies that can be used to <strong>reduce friction in the dev&rsquo;s daily life</strong>.</p>
 <p>Did you know there&rsquo;s the possibility of adding <strong>personalized instructions directly in your repository for AI agents?</strong> Basically, you can &ldquo;teach&rdquo; Copilot about the rules, patterns, and styles of your project, and it will generate suggestions much more aligned with what you and your team really need.</p>
 <p>It&rsquo;s like having a coworker who has already read all the project documentation and knows exactly what should or shouldn&rsquo;t be suggested—and this coworker doesn&rsquo;t sleep, doesn&rsquo;t get tired, and is always ready to help you code.</p>
 <p>This feature is an incredible step to transform Copilot into something more than just an &ldquo;intelligent autocomplete&rdquo;: it becomes an <strong>active member of the team</strong>, shaped by the context you provide.</p>
@@ -1954,23 +2790,8 @@ With specific instructions, you create files inside .github/instructions/ and us
 <li>LinkedIn: <a href="https://www.linkedin.com/in/raphaelkennedy"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li>YouTube: <a href="https://youtube.com/@raphaelpontes"target="_blank" rel="noopener">@raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>github-copilot</category>
-            <category>ai</category>
-            <category>developer-experience</category>
-            <category>customization</category>
-        
-      </item>
-    
-      <item>
-        <title>How I Structure My Entities in Flutter and Why It Changed My Way of Programming</title>
-        <link>http://localhost:1313/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</link>
-        <guid isPermaLink="true">http://localhost:1313/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</guid>
-        <pubDate>Mon, 17 Mar 2025 18:22:49 GMT</pubDate>
-        <description>&lt;p&gt;Hey dev!&lt;/p&gt;
-&lt;p&gt;If you&amp;rsquo;ve ever needed to consume multiple APIs in a Flutter app, you know the mess can start quickly. At first, it seems simple: you get the data from the API, throw it directly into the model, and done! But then comes that moment when you need to integrate a second API, deal with unexpected backend changes, or even optimize data loading. And suddenly&amp;hellip; BOOM💥! Your code turns into a real Frankenstein, hard to understand and even harder to maintain.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Hey dev!</p>
+]]></content:encoded><category>github-copilot</category><category>ai</category><category>developer-experience</category><category>customization</category></item><item><title>How I Structure My Entities in Flutter and Why It Changed My Way of Programming</title><link>https://www.orapha.dev/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</link><guid isPermaLink="true">https://www.orapha.dev/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</guid><pubDate>Mon, 17 Mar 2025 18:22:49 GMT</pubDate><description>&lt;p&gt;Hey dev!&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve ever needed to consume multiple APIs in a Flutter app, you know the mess can start quickly. At first, it seems simple: you get the data from the API, throw it directly into the model, and done! But then comes that moment when you need to integrate a second API, deal with unexpected backend changes, or even optimize data loading. And suddenly&amp;hellip; BOOM💥! Your code turns into a real Frankenstein, hard to understand and even harder to maintain.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Hey dev!</p>
 <p>If you&rsquo;ve ever needed to consume multiple APIs in a Flutter app, you know the mess can start quickly. At first, it seems simple: you get the data from the API, throw it directly into the model, and done! But then comes that moment when you need to integrate a second API, deal with unexpected backend changes, or even optimize data loading. And suddenly&hellip; BOOM💥! Your code turns into a real Frankenstein, hard to understand and even harder to maintain.</p>
 <p>That&rsquo;s exactly what happened to me at the beginning of my journey. Until I discovered the importance of <strong>Entities</strong>, <strong>Adapters</strong>, and <strong>DTOs</strong>. These three layers changed my way of programming and made my apps more organized and easier to scale.</p>
 <p>Today I want to tell you how I structure all this and why this approach can save your code too.</p>
@@ -2137,22 +2958,7 @@ With specific instructions, you create files inside .github/instructions/ and us
 <li>LinkedIn: <a href="https://www.linkedin.com/in/raphaelkennedy"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li>YouTube: <a href="https://youtube.com/@raphaelpontes"target="_blank" rel="noopener">@raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>flutter</category>
-            <category>architecture</category>
-            <category>entities</category>
-            <category>clean-architecture</category>
-        
-      </item>
-    
-      <item>
-        <title>Moral Concerns in Technology Development</title>
-        <link>http://localhost:1313/en/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</link>
-        <guid isPermaLink="true">http://localhost:1313/en/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</guid>
-        <pubDate>Fri, 02 Aug 2024 02:30:50 GMT</pubDate>
-        <description>&lt;p&gt;Folks, before starting this article, I would like to introduce myself: I am a Software Engineer with a curious mind, always traveling in reflections that I want to share with you. Recently, I watched a movie about the scientist who developed the atomic bomb, and this sparked a series of thoughts I hadn&amp;rsquo;t considered before. I decided to write this article because I believe my concerns may &amp;ldquo;open the eyes&amp;rdquo; of many of you who are reading me.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Folks, before starting this article, I would like to introduce myself: I am a Software Engineer with a curious mind, always traveling in reflections that I want to share with you. Recently, I watched a movie about the scientist who developed the atomic bomb, and this sparked a series of thoughts I hadn&rsquo;t considered before. I decided to write this article because I believe my concerns may &ldquo;open the eyes&rdquo; of many of you who are reading me.</p>
+]]></content:encoded><category>flutter</category><category>architecture</category><category>entities</category><category>clean-architecture</category></item><item><title>Moral Concerns in Technology Development</title><link>https://www.orapha.dev/en/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</link><guid isPermaLink="true">https://www.orapha.dev/en/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</guid><pubDate>Fri, 02 Aug 2024 02:30:50 GMT</pubDate><description>&lt;p&gt;Folks, before starting this article, I would like to introduce myself: I am a Software Engineer with a curious mind, always traveling in reflections that I want to share with you. Recently, I watched a movie about the scientist who developed the atomic bomb, and this sparked a series of thoughts I hadn&amp;rsquo;t considered before. I decided to write this article because I believe my concerns may &amp;ldquo;open the eyes&amp;rdquo; of many of you who are reading me.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Folks, before starting this article, I would like to introduce myself: I am a Software Engineer with a curious mind, always traveling in reflections that I want to share with you. Recently, I watched a movie about the scientist who developed the atomic bomb, and this sparked a series of thoughts I hadn&rsquo;t considered before. I decided to write this article because I believe my concerns may &ldquo;open the eyes&rdquo; of many of you who are reading me.</p>
 <p><img src="https://cdn-images-1.medium.com/max/310/1*JNmRSfjJQHuXj3xFelGegQ@2x.jpeg" alt=""  loading="lazy" /></p>
 <h3>Contextualizing<span class="hx:absolute hx:-mt-20" id="contextualizing"></span>
     <a href="#contextualizing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>As presented in the film &ldquo;Oppenheimer,&rdquo; we can reflect on the responsibility of the Manhattan Project, which resulted in the creation of the atomic bomb. This invention ended thousands of lives both in the short and long term. The moral responsibility of those who develop technologies with destructive potential is a crucial topic that we need to discuss.</p>
@@ -2184,24 +2990,10 @@ With specific instructions, you create files inside .github/instructions/ and us
 <li>LinkedIn: <a href="https://www.linkedin.com/in/raphaelkennedy"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li>YouTube: <a href="https://youtube.com/@raphaelpontes"target="_blank" rel="noopener">raphaelpontes</a></li>
 </ul>
-]]></content:encoded>
-        
-            <category>software-development</category>
-            <category>technology</category>
-            <category>artificial-intelligence</category>
-        
-      </item>
-    
-      <item>
-        <title>About</title>
-        <link>http://localhost:1313/en/about/</link>
-        <guid isPermaLink="true">http://localhost:1313/en/about/</guid>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 GMT</pubDate>
-        <description>&lt;h2&gt;Who I am&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;who-i-am&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#who-i-am&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;I am Raphael Pontes, a senior software engineer with over a decade of experience building products, participating in startups, leading technical initiatives, and delivering software in very different contexts, from freelance to production products.&lt;/p&gt;
-&lt;h2&gt;My journey&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;my-journey&#34;&gt;&lt;/span&gt;
-    &lt;a href=&#34;#my-journey&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;My background spans web and mobile development, with a strong focus on Flutter, Laravel, REST APIs, and software architecture. Over the years, I&amp;rsquo;ve also worked with technical leadership, business intelligence, testing, clean architecture, relational and non-relational databases, Firebase, cloud functions, UI/UX, and project planning and execution.&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<h2>Who I am<span class="hx:absolute hx:-mt-20" id="who-i-am"></span>
+]]></content:encoded><category>software-development</category><category>technology</category><category>artificial-intelligence</category></item><item><title>About</title><link>https://www.orapha.dev/en/about/</link><guid isPermaLink="true">https://www.orapha.dev/en/about/</guid><pubDate>Mon, 01 Jan 0001 00:00:00 GMT</pubDate><description>&lt;h2&gt;Who I am&lt;span class="hx:absolute hx:-mt-20" id="who-i-am"&gt;&lt;/span&gt;
+&lt;a href="#who-i-am" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;I am Raphael Pontes, a senior software engineer with over a decade of experience building products, participating in startups, leading technical initiatives, and delivering software in very different contexts, from freelance to production products.&lt;/p&gt;
+&lt;h2&gt;My journey&lt;span class="hx:absolute hx:-mt-20" id="my-journey"&gt;&lt;/span&gt;
+&lt;a href="#my-journey" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;My background spans web and mobile development, with a strong focus on Flutter, Laravel, REST APIs, and software architecture. Over the years, I&amp;rsquo;ve also worked with technical leadership, business intelligence, testing, clean architecture, relational and non-relational databases, Firebase, cloud functions, UI/UX, and project planning and execution.&lt;/p&gt;</description><content:encoded><![CDATA[<h2>Who I am<span class="hx:absolute hx:-mt-20" id="who-i-am"></span>
     <a href="#who-i-am" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>I am Raphael Pontes, a senior software engineer with over a decade of experience building products, participating in startups, leading technical initiatives, and delivering software in very different contexts, from freelance to production products.</p>
 <h2>My journey<span class="hx:absolute hx:-mt-20" id="my-journey"></span>
     <a href="#my-journey" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>My background spans web and mobile development, with a strong focus on Flutter, Laravel, REST APIs, and software architecture. Over the years, I&rsquo;ve also worked with technical leadership, business intelligence, testing, clean architecture, relational and non-relational databases, Firebase, cloud functions, UI/UX, and project planning and execution.</p>
@@ -2217,10 +3009,4 @@ With specific instructions, you create files inside .github/instructions/ and us
 <li>YouTube: <a href="https://www.youtube.com/raphaelpontes"target="_blank" rel="noopener">youtube.com/raphaelpontes</a></li>
 <li>Instagram: <a href="http://instagram.com/raphaelkennedy"target="_blank" rel="noopener">@raphaelkennedy</a></li>
 </ul>
-]]></content:encoded>
-        
-      </item>
-    
-  </channel>
-</rss>
-
+]]></content:encoded></item></channel></rss>
