@@ -1,5 +1,11 @@
 # Dependencies for generate_audio.py
 # Install with: pip install -r scripts/requirements.txt
 
+# Core dependencies
 tqdm>=4.67.0
 mutagen>=1.47.0
+
+# Backends TTS (escolha um ou mais)
+edge-tts>=7.0.0    # Microsoft Edge TTS - recomendado (voz natural, online)
+# piper-tts       # TTS local rápido (opcional, offline)
+# openai          # OpenAI TTS API (requer API key)
