@@ -1,0 +1,775 @@
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>orapha.dev</title>
+    <link>http://localhost:1313/</link>
+    <description>Raphael Pontes&#39; blog — software engineering, AI, and development. English edition.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 09 May 2026 21:33:20 GMT</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/>
+    
+      <item>
+        <title>Awesome Design: A catalog of design systems ready to use with AI agents</title>
+        <link>http://localhost:1313/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</link>
+        <guid isPermaLink="true">http://localhost:1313/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</guid>
+        <pubDate>Sat, 09 May 2026 10:00:00 GMT</pubDate>
+        <description>&lt;h1&gt;Awesome Design: A catalog of design systems ready to use with AI agents&lt;/h1&gt;&lt;p&gt;There&amp;rsquo;s something that&amp;rsquo;s always bothered me when working with code agents: visual inconsistency. You ask the agent to &amp;ldquo;create a dashboard screen,&amp;rdquo; it delivers something functional, but the visual&amp;hellip; well, the visual looks like it was made by someone who&amp;rsquo;s never heard of a design system. Each screen becomes an island, each component has its own personality, and in the end you have a visual Frankenstein that works but doesn&amp;rsquo;t give that professional product feeling.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1>Awesome Design: A catalog of design systems ready to use with AI agents</h1><p>There&rsquo;s something that&rsquo;s always bothered me when working with code agents: visual inconsistency. You ask the agent to &ldquo;create a dashboard screen,&rdquo; it delivers something functional, but the visual&hellip; well, the visual looks like it was made by someone who&rsquo;s never heard of a design system. Each screen becomes an island, each component has its own personality, and in the end you have a visual Frankenstein that works but doesn&rsquo;t give that professional product feeling.</p>
+<p>I&rsquo;ve tried various approaches. I&rsquo;ve shared Figma links, I&rsquo;ve described colors and typography in detail, I&rsquo;ve even sent screenshots with annotations. It works, but it&rsquo;s tedious. And the worst part: with each new feature, the conversation starts from scratch.</p>
+<p>That&rsquo;s when I discovered <a href="https://github.com/voltagent/awesome-design-md"target="_blank" rel="noopener"><strong>Awesome Design</strong></a>.</p>
+<h2>What is DESIGN.md?<span class="hx:absolute hx:-mt-20" id="what-is-designmd"></span>
+    <a href="#what-is-designmd" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Before talking about the repository itself, I need to explain the concept. DESIGN.md is an idea that came from <a href="https://stitch.withgoogle.com/docs/design-md/overview/"target="_blank" rel="noopener">Google Stitch</a>. It&rsquo;s simply a markdown file that describes your project&rsquo;s design system: colors, typography, components, spacing, responsive behaviors.</p>
+<p>The trick is that, since it&rsquo;s markdown, AI agents read it very well. No complex JSON needed, no need to export from Figma, no plugin required. It&rsquo;s a text file, at the root of the project, that any agent can consult.</p>
+<p>The analogy I like to use:</p>
+<table>
+  <thead>
+      <tr>
+          <th>File</th>
+          <th>Who reads it</th>
+          <th>What it defines</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>AGENTS.md</code></td>
+          <td>Code agents</td>
+          <td>How to build the project</td>
+      </tr>
+      <tr>
+          <td><code>DESIGN.md</code></td>
+          <td>Design agents</td>
+          <td>How the project should look</td>
+      </tr>
+  </tbody>
+</table>
+<h2>What does Awesome Design offer?<span class="hx:absolute hx:-mt-20" id="what-does-awesome-design-offer"></span>
+    <a href="#what-does-awesome-design-offer" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The VoltAgent repository is basically a catalog of DESIGN.md files inspired by real sites and products. And when I say real, I&rsquo;m talking about brands like:</p>
+<p><strong>AI Platforms:</strong></p>
+<ul>
+<li><strong>Claude</strong> — that warm terracotta tone, clean editorial layout</li>
+<li><strong>ElevenLabs</strong> — dark cinematic UI, with that sound wave aesthetic</li>
+<li><strong>Ollama</strong> — monochromatic simplicity, focus on the terminal</li>
+<li><strong>VoltAgent</strong> — black-void canvas, emerald accent, terminal vibe</li>
+</ul>
+<p><strong>Dev Tools:</strong></p>
+<ul>
+<li><strong>Cursor</strong> — dark editor with sleek gradients</li>
+<li><strong>Vercel</strong> — black and white precision, Geist font</li>
+<li><strong>Warp</strong> — modern terminal, block UI</li>
+<li><strong>Supabase</strong> — dark emerald theme, code first</li>
+</ul>
+<p><strong>Productivity &amp; SaaS:</strong></p>
+<ul>
+<li><strong>Linear</strong> — ultra minimalist, precise, purple accent</li>
+<li><strong>Notion</strong> — warm minimalism, serif headings</li>
+<li><strong>Figma</strong> — vibrant multicolor, professional but fun</li>
+</ul>
+<p>And the list continues: Stripe, Spotify, Apple, Tesla, Airbnb, Nike&hellip; there are more than 70 documented design systems.</p>
+<h2>How it works in practice<span class="hx:absolute hx:-mt-20" id="how-it-works-in-practice"></span>
+    <a href="#how-it-works-in-practice" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The structure of each DESIGN.md follows a pattern that makes life much easier:</p>
+<ol>
+<li><strong>Visual Theme &amp; Atmosphere</strong> — the mood, density, design philosophy</li>
+<li><strong>Color Palette</strong> — semantic names + hex + function</li>
+<li><strong>Typography Rules</strong> — font families, complete hierarchy</li>
+<li><strong>Component Styles</strong> — buttons, cards, inputs, navigation</li>
+<li><strong>Layout Principles</strong> — spacing scale, grid, whitespace</li>
+<li><strong>Depth &amp; Elevation</strong> — shadow system, surface hierarchy</li>
+<li><strong>Do&rsquo;s and Don&rsquo;ts</strong> — guardrails and anti-patterns</li>
+<li><strong>Responsive Behavior</strong> — breakpoints, touch targets</li>
+<li><strong>Agent Prompt Guide</strong> — quick color references, ready to use</li>
+</ol>
+<p>Besides the DESIGN.md, each site includes:</p>
+<ul>
+<li><code>preview.html</code> — visual catalog with swatches, typographic scale, buttons</li>
+<li><code>preview-dark.html</code> — the same catalog with dark surfaces</li>
+</ul>
+<h2>Using it in practice<span class="hx:absolute hx:-mt-20" id="using-it-in-practice"></span>
+    <a href="#using-it-in-practice" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The workflow is absurdly simple:</p>
+<ol>
+<li>Choose a design system from the catalog</li>
+<li>Copy the DESIGN.md to your project root</li>
+<li>Tell your agent: &ldquo;use this design system&rdquo;</li>
+</ol>
+<p>That&rsquo;s it. Seriously.</p>
+<p>The agent will read the file, understand the colors, fonts, spacing, and apply everything to the code it generates. If you use Claude, Cursor, GitHub Copilot, or any other agent that reads context files, it works.</p>
+<h2>Why this matters<span class="hx:absolute hx:-mt-20" id="why-this-matters"></span>
+    <a href="#why-this-matters" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>For me, the value is in two places:</p>
+<p><strong>First, consistency.</strong> When you have a DESIGN.md committed in the repo, every interaction with the agent has a shared visual reference. It doesn&rsquo;t matter if you&rsquo;re working on the feature today or three months from now — the design system is there, documented, versioned.</p>
+<p><strong>Second, speed.</strong> Instead of losing 15 minutes describing &ldquo;I want a blue primary button with rounded borders and soft shadow,&rdquo; you simply point to the DESIGN.md. The agent already knows exactly how to style it.</p>
+<p>And there&rsquo;s a bonus: since each DESIGN.md is based on real products that work, you&rsquo;re essentially &ldquo;copying&rdquo; visual patterns that have already been tested and validated by companies that invest millions in design.</p>
+<h2>Considerations<span class="hx:absolute hx:-mt-20" id="considerations"></span>
+    <a href="#considerations" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Awesome Design is one of those repositories that seems simple but solves a real problem. The idea of using markdown for design system is elegant because it works with the flow we already use with code agents.</p>
+<p>If you&rsquo;re building something with AI and care about the visual quality of the result, it&rsquo;s worth checking out. The repository is constantly growing — there are already more than 70 design systems — and accepts contributions.</p>
+<p>I particularly like having this in my arsenal. It&rsquo;s another tool for when I want the agent to deliver something that not only works, but also <em>looks</em> well made.</p>
+<hr>
+<p><strong>Links:</strong></p>
+<ul>
+<li><a href="https://github.com/voltagent/awesome-design-md"target="_blank" rel="noopener">Awesome Design on GitHub</a></li>
+<li><a href="https://stitch.withgoogle.com/docs/design-md/overview/"target="_blank" rel="noopener">DESIGN.md Documentation on Google Stitch</a></li>
+<li><a href="https://getdesign.md/"target="_blank" rel="noopener">Site with design system previews</a></li>
+</ul>
+]]></content:encoded>
+        
+            <category>ai</category>
+            <category>design-systems</category>
+            <category>design-md</category>
+            <category>frontend</category>
+            <category>voltagent</category>
+        
+      </item>
+    
+      <item>
+        <title>Agent Engineering + Agentic Flow Engineering: A More Organized View</title>
+        <link>http://localhost:1313/en/2026/03/19/agent-engineering-e-agentic-flow-engineering/</link>
+        <guid isPermaLink="true">http://localhost:1313/en/2026/03/19/agent-engineering-e-agentic-flow-engineering/</guid>
+        <pubDate>Thu, 19 Mar 2026 01:00:00 GMT</pubDate>
+        <description>&lt;p&gt;The two texts below talk, at their core, about the same transition: moving away from AI used as an isolated assistant and starting to treat it as an organized system. One emphasizes the structure of agent teams, with roles, capabilities, and collaboration. The other emphasizes something even more important in production: flow, orchestration, governance, fault tolerance, and observability.&lt;/p&gt;
+&lt;p&gt;Putting both together, the central idea can be summarized like this:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;The value is not in having &amp;ldquo;more agents,&amp;rdquo; but in designing a system in which specialized agents work with clear contracts, explicit flows, and real operational control.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>The two texts below talk, at their core, about the same transition: moving away from AI used as an isolated assistant and starting to treat it as an organized system. One emphasizes the structure of agent teams, with roles, capabilities, and collaboration. The other emphasizes something even more important in production: flow, orchestration, governance, fault tolerance, and observability.</p>
+<p>Putting both together, the central idea can be summarized like this:</p>
+<blockquote>
+  <p>The value is not in having &ldquo;more agents,&rdquo; but in designing a system in which specialized agents work with clear contracts, explicit flows, and real operational control.</p>
+
+</blockquote>
+<h2>The Paradigm Shift<span class="hx:absolute hx:-mt-20" id="the-paradigm-shift"></span>
+    <a href="#the-paradigm-shift" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>For a long time, we used AI as a copilot: you write a prompt, receive a response, use what&rsquo;s useful, and continue the work manually.</p>
+<p>This model helps productivity, but doesn&rsquo;t create a system. It only improves one step.</p>
+<p>The next stage is to treat AI as part of the software architecture. Instead of a generic model trying to do everything, you define:</p>
+<ul>
+<li>who the agents are</li>
+<li>what each one can do</li>
+<li>how they communicate</li>
+<li>how decisions advance in the flow</li>
+<li>how failures are detected and contained</li>
+<li>how the system is audited</li>
+</ul>
+<p>That&rsquo;s why the authors talk about a change comparable to the transition from simple programs to distributed systems. When autonomy increases, the need for architecture also increases.</p>
+<h2>The Role of <code>Agents.md</code><span class="hx:absolute hx:-mt-20" id="the-role-of-agentsmd"></span>
+    <a href="#the-role-of-agentsmd" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The concept of <code>Agents.md</code> is simple: it works as the system&rsquo;s org chart.</p>
+<p>Instead of letting a generic agent improvise role, scope, and responsibility at each execution, you explicitly document:</p>
+<ul>
+<li>which agents exist</li>
+<li>what is each one&rsquo;s responsibility</li>
+<li>what deliveries they produce</li>
+<li>what are their limits of action</li>
+<li>with which other agents they interact</li>
+</ul>
+<p>In practice, <code>Agents.md</code> reduces ambiguity. It prevents every agent from trying to become a &ldquo;super agent&rdquo; and creates separation of responsibilities.</p>
+<p>A typical example would be something like this:</p>
+<ul>
+<li><code>ProductAgent</code>: translates business need into specification</li>
+<li><code>ArchitectureAgent</code>: defines technical structure and contracts</li>
+<li><code>BackendAgent</code>: implements services and rules</li>
+<li><code>FrontendAgent</code>: builds the interface</li>
+<li><code>QAAgent</code>: validates behavior and quality</li>
+<li><code>DevOpsAgent</code>: delivers, monitors, and operates</li>
+</ul>
+<p>The important point here is that role is not capability. Role is responsibility.</p>
+<h2>The Role of <code>Skills.md</code><span class="hx:absolute hx:-mt-20" id="the-role-of-skillsmd"></span>
+    <a href="#the-role-of-skillsmd" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>If <code>Agents.md</code> answers &ldquo;who does what,&rdquo; <code>Skills.md</code> answers &ldquo;with what capabilities this is done.&rdquo;</p>
+<p>Skills are reusable capabilities that can be shared by multiple agents, for example:</p>
+<ul>
+<li>code generation</li>
+<li>code review</li>
+<li>test creation</li>
+<li>security analysis</li>
+<li>performance optimization</li>
+<li>architecture design</li>
+</ul>
+<p>Separating role from capability is a good architectural decision for three reasons.</p>
+<p>First, it avoids conceptual duplication. You don&rsquo;t need to redefine the same capabilities in every agent.</p>
+<p>Second, it facilitates composition. Two different agents can use the same skill in different contexts.</p>
+<p>Third, it improves maintenance. You evolve a central capability and all agents that depend on it benefit.</p>
+<p>In practical terms, <code>Skills.md</code> is the system&rsquo;s toolkit.</p>
+<h2>Agent Teams Are Not Enough Without Flow<span class="hx:absolute hx:-mt-20" id="agent-teams-are-not-enough-without-flow"></span>
+    <a href="#agent-teams-are-not-enough-without-flow" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Here&rsquo;s where the second text&rsquo;s strongest contribution comes in.</p>
+<p>Defining agents and skills is necessary, but still insufficient. A real autonomous system doesn&rsquo;t break because a pretty role was missing on paper. It breaks because:</p>
+<ul>
+<li>context came incomplete</li>
+<li>an external tool failed</li>
+<li>two agents reached incompatible conclusions</li>
+<li>cost spiked</li>
+<li>the decision wasn&rsquo;t explainable</li>
+<li>no one can reconstruct why the system did what it did</li>
+</ul>
+<p>That is: the central problem isn&rsquo;t just the existence of agents. It&rsquo;s the design of the flow between them.</p>
+<p>Agentic Flow Engineering is precisely the discipline of designing multi-agent workflows that are:</p>
+<ul>
+<li>autonomous, but predictable</li>
+<li>flexible, but controlled</li>
+<li>intelligent, but auditable</li>
+<li>adaptive, but operable</li>
+</ul>
+<p>If MLOps made models usable in production, Agentic Flow Engineering tries to do the same with autonomy.</p>
+<h2>The Error of Starting with the Agent<span class="hx:absolute hx:-mt-20" id="the-error-of-starting-with-the-agent"></span>
+    <a href="#the-error-of-starting-with-the-agent" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>One of the best points of the second article is this: don&rsquo;t start by asking &ldquo;which agent should I build?&rdquo;.</p>
+<p>Start by asking:</p>
+<ul>
+<li>which decision needs to be made with reliability</li>
+<li>what result needs to be produced</li>
+<li>what business, cost, security, and time constraints exist</li>
+<li>what are the success and failure paths</li>
+</ul>
+<p>This completely changes the design.</p>
+<p>When you start with the agent, you tend to create entities that are too generic.</p>
+<p>When you start with intent and expected result, you tend to design a better flow, with less improvisation and more validation criteria.</p>
+<h2>Specialization Beats Improvisation<span class="hx:absolute hx:-mt-20" id="specialization-beats-improvisation"></span>
+    <a href="#specialization-beats-improvisation" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Both texts converge on this point: multi-agent systems work better when agents have clear scope and limited context.</p>
+<p>This means each agent needs:</p>
+<ul>
+<li>explicit responsibility</li>
+<li>delimited context</li>
+<li>defined inputs</li>
+<li>defined outputs</li>
+<li>handoff criteria</li>
+</ul>
+<p>This clarity improves quality, reduces cost, and facilitates debugging.</p>
+<p>In other words: specialization scales better than unrestricted generic intelligence.</p>
+<h2>Explicit Orchestration<span class="hx:absolute hx:-mt-20" id="explicit-orchestration"></span>
+    <a href="#explicit-orchestration" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Another central point is that agents shouldn&rsquo;t &ldquo;improvise&rdquo; collaboration every time.</p>
+<p>Good flows tend to assume explicit patterns, such as:</p>
+<ul>
+<li>sequential reasoning chains</li>
+<li>parallel execution with consensus</li>
+<li>supervisor-worker hierarchies</li>
+<li>event-based triggers</li>
+</ul>
+<p>This brings agent architecture closer to state machines, execution graphs, and more traditional distributed systems.</p>
+<p>The advantage is simple: when the flow is explicit, it can be tested, observed, and evolved.</p>
+<p>When the flow depends only on implicit prompt, it becomes too emergent for a serious environment.</p>
+<h2>Failure Must Be Treated as Part of the Design<span class="hx:absolute hx:-mt-20" id="failure-must-be-treated-as-part-of-the-design"></span>
+    <a href="#failure-must-be-treated-as-part-of-the-design" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This is perhaps the most important point of all.</p>
+<p>In agentic systems, you should assume from the start that:</p>
+<ul>
+<li>tools will fail</li>
+<li>agents will hallucinate</li>
+<li>context will arrive incomplete</li>
+<li>responses will vary</li>
+</ul>
+<p>If this is true, then the architecture needs to include:</p>
+<ul>
+<li>retry policies</li>
+<li>confidence thresholds</li>
+<li>deterministic fallback paths</li>
+<li>intermediate validation</li>
+<li>escalation to humans when necessary</li>
+</ul>
+<p>Resilience here isn&rsquo;t an operational detail. It&rsquo;s a product requirement.</p>
+<h2>Observability: Without It, There&rsquo;s No Trust<span class="hx:absolute hx:-mt-20" id="observability-without-it-theres-no-trust"></span>
+    <a href="#observability-without-it-theres-no-trust" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>A system with agents can&rsquo;t be an elegant black box.</p>
+<p>You need to observe at least:</p>
+<ul>
+<li>which decision path was followed</li>
+<li>which tools were called</li>
+<li>how much token was spent</li>
+<li>how long each agent took</li>
+<li>what the final result was</li>
+<li>what the confidence level was</li>
+<li>where the flow failed</li>
+</ul>
+<p>This point is relevant because many people talk about DevOps, MLOps, and LLMOps, but the text hits the mark by highlighting something more specific: <code>AgentOps</code>.</p>
+<p>When autonomy enters the scene, operation isn&rsquo;t just uptime. Operation comes to include behavior, justification, cost, and decision quality.</p>
+<h2>Governance: Prompts Are Not Contracts<span class="hx:absolute hx:-mt-20" id="governance-prompts-are-not-contracts"></span>
+    <a href="#governance-prompts-are-not-contracts" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Another hit of the second text is the implicit critique of the idea that a good prompt is enough.</p>
+<p>It&rsquo;s not enough.</p>
+<p>Prompts guide behavior, but don&rsquo;t replace contract. In production, you need:</p>
+<ul>
+<li>input and output schemas</li>
+<li>validation rules</li>
+<li>policy restrictions</li>
+<li>security boundaries</li>
+<li>audit trails</li>
+</ul>
+<p>Without this, the system might work in a demo, but will hardly be reliable in a corporate, regulated, or critical context.</p>
+<h2>Who Needs to Care About This<span class="hx:absolute hx:-mt-20" id="who-needs-to-care-about-this"></span>
+    <a href="#who-needs-to-care-about-this" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This discussion doesn&rsquo;t just interest AI engineers.</p>
+<p>It interests:</p>
+<ul>
+<li>engineering leaders, because it defines scale, risk, and architecture</li>
+<li>product teams, because autonomy without KPI becomes cost without return</li>
+<li>platform teams, because someone needs to operate this as a system</li>
+<li>business stakeholders, because auditability and explainability matter</li>
+<li>software engineers, because this model changes the way applications are structured</li>
+</ul>
+<p>In practice, the conversation stops being &ldquo;which model will we use?&rdquo; and becomes &ldquo;which system will we be able to sustain?&rdquo;.</p>
+<h2>A More Mature Way of Thinking About the Stack<span class="hx:absolute hx:-mt-20" id="a-more-mature-way-of-thinking-about-the-stack"></span>
+    <a href="#a-more-mature-way-of-thinking-about-the-stack" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The first article suggests that the native AI stack comes to include, besides code and infrastructure:</p>
+<ul>
+<li><code>Agents.md</code></li>
+<li><code>Skills.md</code></li>
+<li>agent teams</li>
+</ul>
+<p>I would add, based on the second text:</p>
+<ul>
+<li>flow contracts</li>
+<li>observability</li>
+<li>failure and fallback policies</li>
+<li>operational governance</li>
+</ul>
+<p>That is, the software stack with AI isn&rsquo;t just model + API + prompt.</p>
+<p>It becomes something closer to:</p>
+<ol>
+<li>code and infrastructure</li>
+<li>agent roles and capabilities</li>
+<li>explicit flow orchestration</li>
+<li>validation, observability, and governance</li>
+</ol>
+<p>Without these four layers, most agentic implementations continue to look like prototypes.</p>
+<h2>Conclusion<span class="hx:absolute hx:-mt-20" id="conclusion"></span>
+    <a href="#conclusion" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>If I had to condense both articles into a single thesis, it would be this:</p>
+<blockquote>
+  <p>Agent Engineering organizes who participates in the system.<br>
+Agentic Flow Engineering organizes how the system really works.</p>
+
+</blockquote>
+<p>The first gives organizational structure to autonomy.</p>
+<p>The second gives operational rigor so that autonomy doesn&rsquo;t become chaos.</p>
+<p>That&rsquo;s why the competitive advantage won&rsquo;t be in simply adding agents to a product. It will be in designing systems in which specialized agents operate with delimited context, clear contracts, real observability, and resilient flows.</p>
+<p>The future probably won&rsquo;t be &ldquo;AI everywhere&rdquo; in an amorphous way.</p>
+<p>It will be well-orchestrated autonomy.</p>
+<h2>Sources<span class="hx:absolute hx:-mt-20" id="sources"></span>
+    <a href="#sources" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li><a href="https://www.linkedin.com/pulse/complete-agent-engineering-playbook-agentsmd-skillsmd-zeelan-shaik-dzpic/"target="_blank" rel="noopener">The Complete Agent Engineering Playbook (Agents.md + Skills.md + Agent Teams)</a></li>
+<li><a href="https://www.linkedin.com/pulse/agentic-flow-engineering-why-matters-what-who-needs-how-baipalli-jowsf/"target="_blank" rel="noopener">Agentic Flow Engineering: Why It Matters, What It Is, Who Needs It, and How to Build It</a></li>
+</ul>
+]]></content:encoded>
+        
+            <category>ai</category>
+            <category>agents</category>
+            <category>llm</category>
+            <category>software-engineering</category>
+            <category>architecture</category>
+        
+      </item>
+    
+      <item>
+        <title>Teaching Copilot to Speak Your Repository&#39;s Language</title>
+        <link>http://localhost:1313/en/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</link>
+        <guid isPermaLink="true">http://localhost:1313/en/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</guid>
+        <pubDate>Wed, 29 Oct 2025 14:46:13 GMT</pubDate>
+        <description>&lt;p&gt;Working for over 14 years with software development, I always find myself thinking about trends and new technologies that can be used to &lt;strong&gt;reduce friction in the dev&amp;rsquo;s daily life&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Did you know there&amp;rsquo;s the possibility of adding &lt;strong&gt;personalized instructions directly in your repository for AI agents?&lt;/strong&gt; Basically, you can &amp;ldquo;teach&amp;rdquo; Copilot about the rules, patterns, and styles of your project, and it will generate suggestions much more aligned with what you and your team really need.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>Working for over 14 years with software development, I always find myself thinking about trends and new technologies that can be used to <strong>reduce friction in the dev&rsquo;s daily life</strong>.</p>
+<p>Did you know there&rsquo;s the possibility of adding <strong>personalized instructions directly in your repository for AI agents?</strong> Basically, you can &ldquo;teach&rdquo; Copilot about the rules, patterns, and styles of your project, and it will generate suggestions much more aligned with what you and your team really need.</p>
+<p>It&rsquo;s like having a coworker who has already read all the project documentation and knows exactly what should or shouldn&rsquo;t be suggested—and this coworker doesn&rsquo;t sleep, doesn&rsquo;t get tired, and is always ready to help you code.</p>
+<p>This feature is an incredible step to transform Copilot into something more than just an &ldquo;intelligent autocomplete&rdquo;: it becomes an <strong>active member of the team</strong>, shaped by the context you provide.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*pRpE_OerwUnYxytxY7PPQg.png" alt=""  loading="lazy" /></p>
+<p><em>[Image generated by AI]</em></p>
+<h3>Overview<span class="hx:absolute hx:-mt-20" id="overview"></span>
+    <a href="#overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Here we&rsquo;ll focus on Copilot, as it has the <strong>ability to give context to the repository</strong>. Instead of just generating &ldquo;generic&rdquo; code, now we can <strong>teach the AI about project rules</strong>, conventions, frameworks, and even the small details that normally only those already on the team know.</p>
+<p>In practice, this transforms Copilot into something much more than an intelligent autocomplete: it becomes a <strong>technical partner shaped by your repository</strong>. If you work on a large project, with multiple modules and different stacks, having personalized instructions is like writing a manual for the AI.</p>
+<p>And the best: all of this is versioned in the repository itself. That is, any dev who clones the project already inherits the same level of context.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*tZig2YF4TxvYyWS_hgo6eg.png" alt=""  loading="lazy" /></p>
+<p><em>[Image generated by AI]</em></p>
+<h3>Prerequisites<span class="hx:absolute hx:-mt-20" id="prerequisites"></span>
+    <a href="#prerequisites" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Before configuring, it&rsquo;s worth checking some basic points:</p>
+<p><strong>1. Instructions file in the repository</strong></p>
+<ul>
+<li>Create the .github/copilot-instructions.md at the project root (or specific files in .github/instructions/).</li>
+<li>This is the &ldquo;manual&rdquo; that Copilot will read to align with your team&rsquo;s practices.</li>
+</ul>
+<p><strong>2. Feature enabled</strong></p>
+<ul>
+<li>The feature is still in <em>public preview</em>, so it needs to be active on your account/organization.</li>
+</ul>
+<p><strong>3. Updated IDE/Editor</strong></p>
+<ul>
+<li>Make sure you&rsquo;re using the latest version of GitHub Copilot in VS Code, JetBrains, or the web interface, because only these versions already understand custom instructions.</li>
+</ul>
+<p><strong>4. Context awareness</strong></p>
+<ul>
+<li>Instructions are applied together with other layers (personal, organization, etc.). That is, avoid contradictions: if in the repository you say &ldquo;use React&rdquo;, but in personal instructions you ask &ldquo;prefer Vue&rdquo;, Copilot may get confused.</li>
+</ul>
+<p>With this ready, you&rsquo;re ready to start personalizing your experience with Copilot and shaping code suggestions to your style and the real needs of the project.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*afncu7piYCLhP9MVsPy1LQ.png" alt=""  loading="lazy" /></p>
+<p><em>[Image generated by AI]</em></p>
+<h3>Types of Personalized Instructions<span class="hx:absolute hx:-mt-20" id="types-of-personalized-instructions"></span>
+    <a href="#types-of-personalized-instructions" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This is the point where Copilot stops being &ldquo;just a generic assistant&rdquo; and really starts to <strong>speak your project&rsquo;s language</strong>. There are three main ways you can give instructions, and each has its usefulness depending on the size and complexity of the repository.</p>
+<h4>1. Repository-Wide Instructions<span class="hx:absolute hx:-mt-20" id="1-repository-wide-instructions"></span>
+    <a href="#1-repository-wide-instructions" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>This is where you define the <strong>general rules of the game</strong>.
+A file called .github/copilot-instructions.md at the root serves as a guide for everything that happens within the repository. It&rsquo;s where you can write things like:</p>
+<ul>
+<li>&ldquo;Prefer <strong>TypeScript</strong> over JavaScript.&rdquo;</li>
+<li>&ldquo;Use <strong>clean architecture</strong> on the backend.&rdquo;</li>
+<li>&ldquo;Tests should be written with <strong>JUnit</strong>.&rdquo;</li>
+</ul>
+<p>In practice, it&rsquo;s like having a secret README just for Copilot.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*IIPHbY7OjE-xGpcoBlVprQ.png" alt=""  loading="lazy" /></p>
+<p><em>[Image generated by AI]</em></p>
+<h4>2. Path-Specific Instructions<span class="hx:absolute hx:-mt-20" id="2-path-specific-instructions"></span>
+    <a href="#2-path-specific-instructions" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Now imagine a monolithic project with several areas: API, frontend, mobile, infra scripts. Each can have <strong>different rules</strong>.
+With specific instructions, you create files inside .github/instructions/ and use glob patterns (applyTo) to say where they apply.</p>
+<p>Practical example:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">applyTo: &#34;src/**/*.ts&#34;
+</span></span><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">Always use async/await instead of chained Promises.</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>This is powerful because it prevents Copilot from suggesting off-pattern code in specific parts of the project.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*_5yNfP4KwwhEaeyOWzd92g.png" alt=""  loading="lazy" /></p>
+<p><em>[Image generated by AI]</em></p>
+<h3>Use in Real Environment and Checks<span class="hx:absolute hx:-mt-20" id="use-in-real-environment-and-checks"></span>
+    <a href="#use-in-real-environment-and-checks" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After you create the instruction files, Copilot starts acting as if it had read all the project documentation. <strong>And yes, you can check if this is really happening</strong>.</p>
+<h4>How it works in practice<span class="hx:absolute hx:-mt-20" id="how-it-works-in-practice"></span>
+    <a href="#how-it-works-in-practice" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><ul>
+<li>With each suggestion, Copilot &ldquo;reads&rdquo; the instructions along with the code.</li>
+<li>If you&rsquo;re in a file that matches an applyTo, specific instructions are applied along with the general ones.</li>
+<li>This allows returning suggestions closer to the style and patterns you defined.</li>
+</ul>
+<p>It&rsquo;s like having a <em>living linter</em> that, instead of just pointing out errors, already suggests the right code from the start.</p>
+<h4>How to check if it&rsquo;s working<span class="hx:absolute hx:-mt-20" id="how-to-check-if-its-working"></span>
+    <a href="#how-to-check-if-its-working" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Within <strong>Copilot Chat</strong> (in the IDE or GitHub), you can often see the <strong>References</strong> section at the end of the AI&rsquo;s response.</p>
+<ul>
+<li>If something like .github/copilot-instructions.md appears, it&rsquo;s a sign that Copilot used your instructions.</li>
+<li>If it doesn&rsquo;t appear, the file may not be configured in the right place or may not be enabled in the chat.</li>
+</ul>
+<p>It&rsquo;s a simple detail, but it helps to be sure that the configuration effort wasn&rsquo;t in vain.</p>
+<h4>Attention to conflicts<span class="hx:absolute hx:-mt-20" id="attention-to-conflicts"></span>
+    <a href="#attention-to-conflicts" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Remember that Copilot also takes into account:</p>
+<ul>
+<li><strong>Personal dev instructions</strong> (what you configured in your account).</li>
+<li><strong>Organization instructions</strong>.</li>
+<li><strong>Repository instructions</strong>.</li>
+</ul>
+<p>If they conflict (&ldquo;use Vue&rdquo; vs &ldquo;use React&rdquo;), behavior can become unpredictable. So, it&rsquo;s good to align with the team and avoid contradictions.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*whdd7P_BMqNQPFHOH5eY9Q.png" alt=""  loading="lazy" /></p>
+<p><em>[Image generated by AI]</em></p>
+<h3>Enable or Disable<span class="hx:absolute hx:-mt-20" id="enable-or-disable"></span>
+    <a href="#enable-or-disable" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>You won&rsquo;t always want Copilot to follow the repository instructions. Sometimes you want it to think &ldquo;outside the box&rdquo; or ignore specific rules just to experiment with a new approach. And yes, you can <strong>turn personalized instructions on and off</strong> simply.</p>
+<h4>In Copilot Chat<span class="hx:absolute hx:-mt-20" id="in-copilot-chat"></span>
+    <a href="#in-copilot-chat" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>If you&rsquo;re inside the repository, the chat shows a little button to <strong>&ldquo;Enable/Disable custom instructions&rdquo;</strong>. It&rsquo;s basically a switch:</p>
+<ul>
+<li>On → Copilot reads the .github/copilot-instructions.md and files inside .github/instructions/.</li>
+<li>Off → it ignores these rules and generates code like a normal autocomplete.</li>
+</ul>
+<p>It&rsquo;s useful when you want to test alternative solutions without the team rules filter.</p>
+<h4>In Code Review (Pull Requests)<span class="hx:absolute hx:-mt-20" id="in-code-review-pull-requests"></span>
+    <a href="#in-code-review-pull-requests" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>On GitHub itself, you can configure whether Copilot should or shouldn&rsquo;t consider personalized instructions when reviewing PRs.</p>
+<p>The path is: <strong>Settings → Code &amp; automation → Copilot → Code review → Use custom instructions when reviewing pull requests</strong>.</p>
+<p>If you turn this off, Copilot reviews the PR without looking at the repository rules.</p>
+<h3>Practical Recommendations (from an experienced developer&rsquo;s perspective)<span class="hx:absolute hx:-mt-20" id="practical-recommendations-from-an-experienced-developers-perspective"></span>
+    <a href="#practical-recommendations-from-an-experienced-developers-perspective" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>After years dealing with mobile, web, and backend projects, I&rsquo;ve learned that the difference between a team that &ldquo;uses a tool&rdquo; and one that <strong>extracts real value from it</strong> lies in the small day-to-day practices. Here are some tips I would apply without thinking twice when working with personalized instructions in Copilot:</p>
+<h4>1. Document for humans, not just for AI<span class="hx:absolute hx:-mt-20" id="1-document-for-humans-not-just-for-ai"></span>
+    <a href="#1-document-for-humans-not-just-for-ai" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Don&rsquo;t fall into the temptation of writing instructions thinking only about Copilot. Write as if you were explaining to a new coworker who just joined the team. This guarantees clarity for both people and AI.</p>
+<p>👉 Example:
+<strong>&ldquo;Prefer async/await instead of then/catch&rdquo; is much more useful than &ldquo;use async/await&rdquo;.</strong></p>
+<h4>2. Avoid contradictions between instructions<span class="hx:absolute hx:-mt-20" id="2-avoid-contradictions-between-instructions"></span>
+    <a href="#2-avoid-contradictions-between-instructions" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>I&rsquo;ve seen teams get tangled up because the repo said &ldquo;use React&rdquo; and each dev&rsquo;s personal instructions said &ldquo;prefer Vue&rdquo;.</p>
+<p>Define <strong>one source of truth</strong> and keep everyone aligned.</p>
+<h4>3. Update as the project evolves<span class="hx:absolute hx:-mt-20" id="3-update-as-the-project-evolves"></span>
+    <a href="#3-update-as-the-project-evolves" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Your project isn&rsquo;t static. Today it might be Flutter 3.22, tomorrow it might be on 3.27. If you don&rsquo;t update the instructions, you&rsquo;ll receive outdated suggestions that only give rework. Reserve moments (e.g., end of sprint) to review copilot-instructions.md.</p>
+<h4>4. Include code and architecture conventions<span class="hx:absolute hx:-mt-20" id="4-include-code-and-architecture-conventions"></span>
+    <a href="#4-include-code-and-architecture-conventions" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Define how the team wants code to be written.</p>
+<ul>
+<li>Variable naming (camelCase, snake_case).</li>
+<li>Commit pattern.</li>
+<li>Preferred frameworks and libs.</li>
+<li>Layer structure (e.g., &ldquo;Controllers never call DB directly&rdquo;).</li>
+</ul>
+<p>This makes Copilot suggest code <strong>already in the format that passes code review</strong>.</p>
+<h4>5. Use as an onboarding tool<span class="hx:absolute hx:-mt-20" id="5-use-as-an-onboarding-tool"></span>
+    <a href="#5-use-as-an-onboarding-tool" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>New devs always suffer at first to understand the &ldquo;team way.&rdquo; If Copilot already suggests code aligned with the pattern, onboarding becomes much faster and smoother.</p>
+<h4>6. Test the impact<span class="hx:absolute hx:-mt-20" id="6-test-the-impact"></span>
+    <a href="#6-test-the-impact" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><p>Don&rsquo;t rely only on the feeling that it &ldquo;improved.&rdquo; Compare PRs before and after instructions: fewer style comments? Fewer build errors? If yes, you&rsquo;re on the right track.</p>
+<p>So, if there&rsquo;s one thing I&rsquo;ve learned in these 14 years on the road is that technology isn&rsquo;t just about code, it&rsquo;s about <strong>how we use tools to work better, as a team, and create solutions that make a difference</strong>.</p>
+<p>GitHub Copilot with personalized instructions is exactly that: a step beyond autocomplete. It&rsquo;s like taking all the culture, patterns, and experience of your team and putting it next to the AI, transforming it into a true development partner.</p>
+<p>And now, the ball is in your court:</p>
+<ul>
+<li>Will you let Copilot be just another tool in your stack?</li>
+<li>Or will you teach it to play your team&rsquo;s game, speaking the same language as you?</li>
+</ul>
+<p>My tip: <strong>try it on your next project</strong>. Start simple, write two or three instructions that already make a difference in your daily life and feel the impact. I&rsquo;m sure that, just like it happened with me, you&rsquo;ll realize that you&rsquo;re putting Copilot not just as an assistant, but as a living part of your team. 🚀</p>
+<p><img src="https://cdn-images-1.medium.com/max/1024/1*lsVfvfCIuuQCIaCXgL_m6Q.png" alt=""  loading="lazy" /></p>
+<p><em>[Image generated by AI]</em></p>
+<p>I&rsquo;ve been a developer for over 14 years, postgraduate in Software Engineering and Mobile Development, and I write to share real learnings from someone who is in the technology trenches every day.</p>
+<p><strong>Read more of my articles at:</strong> <a href="https://medium.com/@raphaelkennedy"target="_blank" rel="noopener">medium.com/@raphaelkennedy</a></p>
+<p>[[ <a href="http://buymeacoffee.com/raphaelpontes"target="_blank" rel="noopener">Buy me a coffee</a> ]]</p>
+<p><strong>Follow me on social media</strong></p>
+<ul>
+<li>LinkedIn: <a href="https://www.linkedin.com/in/raphaelkennedy"target="_blank" rel="noopener">raphaelkennedy</a></li>
+<li>YouTube: <a href="https://youtube.com/@raphaelpontes"target="_blank" rel="noopener">@raphaelpontes</a></li>
+</ul>
+]]></content:encoded>
+        
+            <category>github-copilot</category>
+            <category>ai</category>
+            <category>developer-experience</category>
+            <category>customization</category>
+        
+      </item>
+    
+      <item>
+        <title>How I Structure My Entities in Flutter and Why It Changed My Way of Programming</title>
+        <link>http://localhost:1313/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</link>
+        <guid isPermaLink="true">http://localhost:1313/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</guid>
+        <pubDate>Mon, 17 Mar 2025 18:22:49 GMT</pubDate>
+        <description>&lt;p&gt;Hey dev!&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve ever needed to consume multiple APIs in a Flutter app, you know the mess can start quickly. At first, it seems simple: you get the data from the API, throw it directly into the model, and done! But then comes that moment when you need to integrate a second API, deal with unexpected backend changes, or even optimize data loading. And suddenly&amp;hellip; BOOM💥! Your code turns into a real Frankenstein, hard to understand and even harder to maintain.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>Hey dev!</p>
+<p>If you&rsquo;ve ever needed to consume multiple APIs in a Flutter app, you know the mess can start quickly. At first, it seems simple: you get the data from the API, throw it directly into the model, and done! But then comes that moment when you need to integrate a second API, deal with unexpected backend changes, or even optimize data loading. And suddenly&hellip; BOOM💥! Your code turns into a real Frankenstein, hard to understand and even harder to maintain.</p>
+<p>That&rsquo;s exactly what happened to me at the beginning of my journey. Until I discovered the importance of <strong>Entities</strong>, <strong>Adapters</strong>, and <strong>DTOs</strong>. These three layers changed my way of programming and made my apps more organized and easier to scale.</p>
+<p>Today I want to tell you how I structure all this and why this approach can save your code too.</p>
+<p><img src="https://cdn-images-1.medium.com/max/480/0*nedp-VQ57p-PWpNJ.gif" alt=""  loading="lazy" /></p>
+<h3>What is an Entity and why should you use it?<span class="hx:absolute hx:-mt-20" id="what-is-an-entity-and-why-should-you-use-it"></span>
+    <a href="#what-is-an-entity-and-why-should-you-use-it" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The <strong>Entity</strong> (or Entity) is the heart of your data model. It represents the pure and independent concept of data within your application domain, without worrying about infrastructure details like API, database, or local files.</p>
+<p>The main advantage of having a well-defined Entity is that it keeps your code decoupled. This means that, regardless of where the data comes from (API, SQLite, Firebase, etc.), your business logic will always work with the same structure.</p>
+<p>Let&rsquo;s look at an example. Imagine your app works with users and receives this JSON from the API:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;id_usuario&#34;: 123,
+</span></span><span class="line"><span class="cl">  &#34;nome_completo&#34;: &#34;John Silva&#34;,
+</span></span><span class="line"><span class="cl">  &#34;email&#34;: &#34;john@email.com&#34;,
+</span></span><span class="line"><span class="cl">  &#34;idade&#34;: 30
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>If you use this format directly in the app, any change in the backend can break your code. But if you define an <strong>Entity</strong>, your internal model will remain stable:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">class User {
+</span></span><span class="line"><span class="cl">  final int id;
+</span></span><span class="line"><span class="cl">  final String name;
+</span></span><span class="line"><span class="cl">  final String email;
+</span></span><span class="line"><span class="cl">  final int age;
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  User({
+</span></span><span class="line"><span class="cl">    required this.id,
+</span></span><span class="line"><span class="cl">    required this.name,
+</span></span><span class="line"><span class="cl">    required this.email,
+</span></span><span class="line"><span class="cl">    required this.age,
+</span></span><span class="line"><span class="cl">  });
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Now, the rest of the app only needs to know this <strong>User</strong> entity, without worrying about how the data arrives or is stored. If tomorrow the API changes id_usuario to userId, the app continues to work perfectly—as long as the conversion is handled in the right place.</p>
+<p>And that&rsquo;s where the <strong>Adapter</strong> comes in.</p>
+<h3>What is an Adapter and why is it essential?<span class="hx:absolute hx:-mt-20" id="what-is-an-adapter-and-why-is-it-essential"></span>
+    <a href="#what-is-an-adapter-and-why-is-it-essential" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The <strong>Adapter</strong> is responsible for translating external data (API, database, cache) to the app&rsquo;s internal format and vice versa. It allows your <strong>Entity</strong> to remain clean and independent of any external data source.</p>
+<h3>Adapter Example<span class="hx:absolute hx:-mt-20" id="adapter-example"></span>
+    <a href="#adapter-example" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Here is an Adapter that converts the API JSON to our <strong>User Entity</strong>:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">class UserAdapter {
+</span></span><span class="line"><span class="cl">  static User fromJson(Map&lt;String, dynamic&gt; json) {
+</span></span><span class="line"><span class="cl">    return User(
+</span></span><span class="line"><span class="cl">      id: json[&#39;id_usuario&#39;],
+</span></span><span class="line"><span class="cl">      name: json[&#39;nome_completo&#39;],
+</span></span><span class="line"><span class="cl">      email: json[&#39;email&#39;],
+</span></span><span class="line"><span class="cl">      age: json[&#39;idade&#39;],
+</span></span><span class="line"><span class="cl">    );
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  static Map&lt;String, dynamic&gt; toJson(User user) {
+</span></span><span class="line"><span class="cl">    return {
+</span></span><span class="line"><span class="cl">      &#39;id_usuario&#39;: user.id,
+</span></span><span class="line"><span class="cl">      &#39;nome_completo&#39;: user.name,
+</span></span><span class="line"><span class="cl">      &#39;email&#39;: user.email,
+</span></span><span class="line"><span class="cl">      &#39;idade&#39;: user.age,
+</span></span><span class="line"><span class="cl">    };
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Now, if the backend decides to change field names, I only need to change this Adapter and done! The rest of the app continues to work perfectly, as it only handles the <strong>User</strong> entity.</p>
+<p>The Adapter prevents the app from needing to know specific details of different APIs. If you need to consume multiple data sources with different formats, each can have its own Adapter without impacting your app logic.</p>
+<h3>What is a DTO and why is it different from Adapter?<span class="hx:absolute hx:-mt-20" id="what-is-a-dto-and-why-is-it-different-from-adapter"></span>
+    <a href="#what-is-a-dto-and-why-is-it-different-from-adapter" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>While the Adapter serves to convert API data to an <strong>Entity</strong>, the <strong>DTO (Data Transfer Object)</strong> is used to define exactly which data will be transported between system layers.</p>
+<p>The difference is that a DTO doesn&rsquo;t need to have the same structure as the Entity. It can be a subset of the data or even contain information formatted differently.</p>
+<h3>DTO Example<span class="hx:absolute hx:-mt-20" id="dto-example"></span>
+    <a href="#dto-example" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Let&rsquo;s say we need to send a user to the API, but the <strong>User</strong> entity contains information that doesn&rsquo;t need to be transmitted, such as a createdAt field.</p>
+<p>Instead of sending the entire <strong>Entity</strong>, we create a DTO to define exactly what will be sent:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">class UserDTO {
+</span></span><span class="line"><span class="cl">  final String name;
+</span></span><span class="line"><span class="cl">  final String email;
+</span></span><span class="line"><span class="cl">  final int age;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  UserDTO({
+</span></span><span class="line"><span class="cl">    required this.name,
+</span></span><span class="line"><span class="cl">    required this.email,
+</span></span><span class="line"><span class="cl">    required this.age,
+</span></span><span class="line"><span class="cl">  });
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  Map&lt;String, dynamic&gt; toJson() {
+</span></span><span class="line"><span class="cl">    return {
+</span></span><span class="line"><span class="cl">      &#39;nome_completo&#39;: name,
+</span></span><span class="line"><span class="cl">      &#39;email&#39;: email,
+</span></span><span class="line"><span class="cl">      &#39;idade&#39;: age,
+</span></span><span class="line"><span class="cl">    };
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  factory UserDTO.fromJson(Map&lt;String, dynamic&gt; json) {
+</span></span><span class="line"><span class="cl">    return UserDTO(
+</span></span><span class="line"><span class="cl">      name: json[&#39;nome_completo&#39;],
+</span></span><span class="line"><span class="cl">      email: json[&#39;email&#39;],
+</span></span><span class="line"><span class="cl">      age: json[&#39;idade&#39;],
+</span></span><span class="line"><span class="cl">    );
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Here, the DTO serves as an intermediary model to ensure that only necessary data is transmitted. This improves communication performance and prevents leakage of unnecessary information.</p>
+<h3>Summary of the Opera<span class="hx:absolute hx:-mt-20" id="summary-of-the-opera"></span>
+    <a href="#summary-of-the-opera" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><strong>Entity</strong> Represents pure internal domain data ALWAYS, to ensure the code is decoupled from the API or database.</p>
+<p><strong>Adapter</strong> Converts data between API and Entity when the API structure is different from the app&rsquo;s internal structure.</p>
+<p><strong>DTO</strong> defines a specific model for transporting data between system layers when there&rsquo;s a need to transmit only part of the data or format it specifically.</p>
+<p>Well, we&rsquo;re almost concluding our article, but I know you, reader, mentally asked me:</p>
+<p>And the answer is simple&hellip; <strong>Yes, we can</strong>. I&rsquo;ll explain this in the next topic.</p>
+<h3>When to use Adapter and DTO together?<span class="hx:absolute hx:-mt-20" id="when-to-use-adapter-and-dto-together"></span>
+    <a href="#when-to-use-adapter-and-dto-together" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In some cases, we can combine both. See a common flow:</p>
+<ol>
+<li>The API returns data → The <strong>Adapter</strong> transforms the API response into an <strong>Entity</strong>.</li>
+<li>The app needs to send data to the API → We create a <strong>DTO</strong> to represent exactly what will be sent.</li>
+<li>The DTO can be passed to the Adapter, which then makes the necessary conversion before sending the data to the API.</li>
+</ol>
+<p>This ensures well-structured, easy-to-test, and maintainable code.</p>
+<p><img src="https://cdn-images-1.medium.com/max/499/0*vhpb7CdMOGg_wBFx.gif" alt=""  loading="lazy" /></p>
+<h3>Conclusion<span class="hx:absolute hx:-mt-20" id="conclusion"></span>
+    <a href="#conclusion" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>If there&rsquo;s one thing I&rsquo;ve learned programming in Flutter (and struggling with different APIs), it&rsquo;s that separating code responsibilities well makes all the difference.</p>
+<ul>
+<li><strong>Entities</strong> keep the code clean and independent from the API.</li>
+<li><strong>Adapters</strong> protect the app from unexpected backend changes.</li>
+<li><strong>DTOs</strong> ensure that only necessary data is transported.</li>
+</ul>
+<p>In the end, all this makes your code more organized, scalable, and easy to test.</p>
+<p>If you haven&rsquo;t structured your code this way, try it! I&rsquo;m sure that once you start, you&rsquo;ll never want to go back.</p>
+<p>And you, do you already use this approach? How do you structure your entities in Flutter? Let&rsquo;s exchange ideas here or on my networks below.</p>
+<p><img src="https://cdn-images-1.medium.com/max/480/0*SIS09iEdBEk4N9LF.gif" alt=""  loading="lazy" /></p>
+<p>Read more of my articles: <a href="https://medium.com/@raphaelkennedy"target="_blank" rel="noopener">medium.com/@raphaelkennedy</a></p>
+<p>[[ <a href="http://buymeacoffee.com/raphaelpontes"target="_blank" rel="noopener">Buy me a coffee</a> ]]</p>
+<p>Follow me on social media</p>
+<ul>
+<li>LinkedIn: <a href="https://www.linkedin.com/in/raphaelkennedy"target="_blank" rel="noopener">raphaelkennedy</a></li>
+<li>YouTube: <a href="https://youtube.com/@raphaelpontes"target="_blank" rel="noopener">@raphaelpontes</a></li>
+</ul>
+]]></content:encoded>
+        
+            <category>flutter</category>
+            <category>architecture</category>
+            <category>entities</category>
+            <category>clean-architecture</category>
+        
+      </item>
+    
+      <item>
+        <title>Moral Concerns in Technology Development</title>
+        <link>http://localhost:1313/en/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</link>
+        <guid isPermaLink="true">http://localhost:1313/en/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</guid>
+        <pubDate>Fri, 02 Aug 2024 02:30:50 GMT</pubDate>
+        <description>&lt;p&gt;Folks, before starting this article, I would like to introduce myself: I am a Software Engineer with a curious mind, always traveling in reflections that I want to share with you. Recently, I watched a movie about the scientist who developed the atomic bomb, and this sparked a series of thoughts I hadn&amp;rsquo;t considered before. I decided to write this article because I believe my concerns may &amp;ldquo;open the eyes&amp;rdquo; of many of you who are reading me.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>Folks, before starting this article, I would like to introduce myself: I am a Software Engineer with a curious mind, always traveling in reflections that I want to share with you. Recently, I watched a movie about the scientist who developed the atomic bomb, and this sparked a series of thoughts I hadn&rsquo;t considered before. I decided to write this article because I believe my concerns may &ldquo;open the eyes&rdquo; of many of you who are reading me.</p>
+<p><img src="https://cdn-images-1.medium.com/max/310/1*JNmRSfjJQHuXj3xFelGegQ@2x.jpeg" alt=""  loading="lazy" /></p>
+<h3>Contextualizing<span class="hx:absolute hx:-mt-20" id="contextualizing"></span>
+    <a href="#contextualizing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>As presented in the film &ldquo;Oppenheimer,&rdquo; we can reflect on the responsibility of the Manhattan Project, which resulted in the creation of the atomic bomb. This invention ended thousands of lives both in the short and long term. The moral responsibility of those who develop technologies with destructive potential is a crucial topic that we need to discuss.</p>
+<p>Cillian Murphy, the actor who played Oppenheimer, is known for his role as Thomas Shelby in &ldquo;Peaky Blinders,&rdquo; a character without scruples or morals. In &ldquo;Oppenheimer,&rdquo; Murphy manages to convey the deep concern of someone who carries the weight of having blood on their hands. His impeccable performance captures the essence of a scientist divided between technological advancement and the terrible consequences of his creation.</p>
+<p><img src="https://cdn-images-1.medium.com/max/226/1*M5aJ54TZQcLtvOfGNJX6dw@2x.jpeg" alt=""  loading="lazy" /></p>
+<p>The creation of the atomic bomb brought a new era to humanity, marked by unprecedented destructive power. Scientists and engineers involved in the Manhattan Project faced a moral dilemma: develop a weapon to end the war and save lives, or consider the devastating long-term consequences. The dilemma wasn&rsquo;t just about the weapon&rsquo;s effectiveness, but about the morality of its use. The reflection on the responsibility of creating such powerful technology leads us to think about the role of developers and the ethical decisions we must make.</p>
+<h3>The New Digital Atomic Bomb<span class="hx:absolute hx:-mt-20" id="the-new-digital-atomic-bomb"></span>
+    <a href="#the-new-digital-atomic-bomb" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>This brings to mind the emergence of new technologies, such as Artificial Intelligences (AIs). We know that AI is not something new, but its everyday use has gained strength recently, and this challenges us to think about the consequences of our innovations. AIs, for example, can bring significant advances in various areas, but also raise ethical and moral questions about privacy, security, and impact on the job market.</p>
+<p><img src="https://cdn-images-1.medium.com/max/363/1*teb7qMYi4HchiAS3KMUbzg@2x.jpeg" alt=""  loading="lazy" /></p>
+<p>With the advancement of AIs, large-scale data collection and analysis has become common. Companies and governments have access to detailed information about individuals, which can be used to personalize services and improve user experience. However, this massive amount of data can also be exploited in ways that invade personal privacy. We need to establish clear limits on what is acceptable in terms of data collection and use, ensuring that individual rights are protected.</p>
+<p>Security is another critical area. AIs have the potential to be used in security systems, such as surveillance and cyber defense. Although these applications can increase protection, they can also be used maliciously. More sophisticated and difficult-to-detect cyber attacks are a real threat. Creating AIs that can identify and neutralize these threats is essential, but this must be done responsibly and ethically.</p>
+<p>The impact on the job market is another point of intense debate. AI-driven automation has the potential to completely transform entire sectors of the economy. While some repetitive and dangerous tasks can be automated, freeing workers for more creative and safer activities, many traditional jobs may disappear. This forces us to rethink the structure of work and develop strategies for professional requalification and adaptation to new economic realities. So, as we embrace the opportunities offered by AIs, we must also address the ethical and moral questions that arise. Technology should be developed and implemented in a way that benefits society as a whole, promoting justice, equity, and respect for human rights. Collaboration between governments, companies, and civil society will be crucial to ensure that technological innovations contribute to a fairer and more sustainable future.</p>
+<h3>Reflection<span class="hx:absolute hx:-mt-20" id="reflection"></span>
+    <a href="#reflection" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>It is crucial to highlight that creating teams don&rsquo;t always consider all the consequences of their projects. Often, innovation is driven by the desire to solve immediate problems, without deep reflection on long-term effects.</p>
+<p><img src="https://cdn-images-1.medium.com/max/392/1*p8HZ4iuS6lWlZ-orCGBpQg@2x.jpeg" alt=""  loading="lazy" /></p>
+<p>The pressure to launch new products and services can lead to excessive focus on quick and efficient solutions, leaving aside broader considerations about ethical, social, and environmental impact. For example, a new technology may solve an urgent need, but at the same time, it may create new vulnerabilities or exacerbate existing inequalities.</p>
+<p>Furthermore, lack of comprehensive analysis can result in unintended consequences, such as amplifying implicit biases in AIs or deterioration of personal privacy. These consequences can be difficult to predict and even more difficult to mitigate after the technology is implemented.</p>
+<p>So it is worth emphasizing that it is essential for developers to adopt a holistic and responsible approach when creating new technologies. This includes conducting impact assessments, consulting experts from various fields, and engaging with the community to better understand the possible repercussions of their innovations. Integrating ethical principles from the early phases of development can help ensure that technologies not only solve immediate problems but also contribute to a fairer and more equitable future.</p>
+<p>Every benefit to the world can be followed by harms. While a new technology can improve quality of life, it can also bring unexpected challenges. For example, the creation of a new programming language can generate employment and income for many families, but a malicious AI can invade servers and steal thousands of personal information.</p>
+<h3>Conclusion<span class="hx:absolute hx:-mt-20" id="conclusion"></span>
+    <a href="#conclusion" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>To conclude, the consequences of developing new technologies can range from simple impacts, such as a programming language that benefits the economy, to complex problems, such as an AI that manipulates information to influence elections. It is essential that we consider the moral responsibilities associated with our innovations. As I said: &ldquo;The future is a blank page that will be scratched by someone who has the consent or not of responsibilities, once scratched, it can never be erased.&rdquo;</p>
+<p><img src="https://cdn-images-1.medium.com/max/237/1*iM3hKfeAuZ04BTPYyeR9Og@2x.jpeg" alt=""  loading="lazy" /></p>
+<p>This quote illustrates the importance of approaching technological development with a sense of responsibility and foresight. When we create and implement new technologies, we are not only shaping the present, but also drawing indelible lines in the future. Each innovation can trigger a series of consequences that can be beneficial or harmful.</p>
+<p>Health-oriented technologies, such as gene editing, can cure previously incurable diseases, but also raise ethical questions about manipulation of the human genome. Similarly, social media platforms can connect people around the world, but can also be used to spread disinformation and hate. The future is in our hands and, as we scratch this blank page, we must do so with care, conscience, and an unwavering commitment to moral responsibility. Only then will we not be remembered by our children as the &ldquo;old man who invented the bomb that destroyed the world.&rdquo;</p>
+<p>It is worth noting that this text had AI assistance for grammatical corrections, but all ideas presented here are the result of research and the author&rsquo;s own opinions.</p>
+<p>Did I help you? <a href="http://buymeacoffee.com/raphaelpontes"target="_blank" rel="noopener">Buy me a coffee</a></p>
+<p>Follow me on</p>
+<ul>
+<li>LinkedIn: <a href="https://www.linkedin.com/in/raphaelkennedy"target="_blank" rel="noopener">raphaelkennedy</a></li>
+<li>YouTube: <a href="https://youtube.com/@raphaelpontes"target="_blank" rel="noopener">raphaelpontes</a></li>
+</ul>
+]]></content:encoded>
+        
+            <category>software-development</category>
+            <category>technology</category>
+            <category>artificial-intelligence</category>
+        
+      </item>
+    
+      <item>
+        <title>About</title>
+        <link>http://localhost:1313/en/about/</link>
+        <guid isPermaLink="true">http://localhost:1313/en/about/</guid>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 GMT</pubDate>
+        <description>&lt;h2&gt;Who I am&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;who-i-am&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#who-i-am&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;I am Raphael Pontes, a senior software engineer with over a decade of experience building products, participating in startups, leading technical initiatives, and delivering software in very different contexts, from freelance to production products.&lt;/p&gt;
+&lt;h2&gt;My journey&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;my-journey&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#my-journey&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;My background spans web and mobile development, with a strong focus on Flutter, Laravel, REST APIs, and software architecture. Over the years, I&amp;rsquo;ve also worked with technical leadership, business intelligence, testing, clean architecture, relational and non-relational databases, Firebase, cloud functions, UI/UX, and project planning and execution.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h2>Who I am<span class="hx:absolute hx:-mt-20" id="who-i-am"></span>
+    <a href="#who-i-am" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>I am Raphael Pontes, a senior software engineer with over a decade of experience building products, participating in startups, leading technical initiatives, and delivering software in very different contexts, from freelance to production products.</p>
+<h2>My journey<span class="hx:absolute hx:-mt-20" id="my-journey"></span>
+    <a href="#my-journey" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>My background spans web and mobile development, with a strong focus on Flutter, Laravel, REST APIs, and software architecture. Over the years, I&rsquo;ve also worked with technical leadership, business intelligence, testing, clean architecture, relational and non-relational databases, Firebase, cloud functions, UI/UX, and project planning and execution.</p>
+<p>I also have a strong relationship with creating and sharing knowledge. Beyond product and engineering work, I enjoy publishing videos, exploring new tools, and turning practical learning into useful content.</p>
+<h2>This blog<span class="hx:absolute hx:-mt-20" id="this-blog"></span>
+    <a href="#this-blog" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><code>orapha.dev</code> is my space to write more calmly about programming, patterns, architecture, artificial intelligence, and day-to-day technical decisions.</p>
+<p>I&rsquo;m not interested in technology as a showcase. I&rsquo;m interested in technology as practice: what&rsquo;s worth adopting, what unnecessarily complicates things, what ages well, and what really helps build better software.</p>
+<p>That&rsquo;s why this blog works as a public notebook of observations, experiments, and opinions. A place to taste technologies in a personal and thoughtful way.</p>
+<h2>Where to find me<span class="hx:absolute hx:-mt-20" id="where-to-find-me"></span>
+    <a href="#where-to-find-me" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>LinkedIn: <a href="https://www.linkedin.com/in/raphaelkennedy/"target="_blank" rel="noopener">raphaelkennedy</a></li>
+<li>GitHub: <a href="https://github.com/rkpontes"target="_blank" rel="noopener">rkpontes</a></li>
+<li>YouTube: <a href="https://www.youtube.com/raphaelpontes"target="_blank" rel="noopener">youtube.com/raphaelpontes</a></li>
+<li>Instagram: <a href="http://instagram.com/raphaelkennedy"target="_blank" rel="noopener">@raphaelkennedy</a></li>
+</ul>
+]]></content:encoded>
+        
+      </item>
+    
+  </channel>
+</rss>
+

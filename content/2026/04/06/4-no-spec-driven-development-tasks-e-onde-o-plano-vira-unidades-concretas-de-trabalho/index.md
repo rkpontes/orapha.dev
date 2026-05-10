@@ -2,6 +2,7 @@
 title: "No Spec-Driven Development, `tasks` é onde o plano vira unidades concretas de trabalho"
 date: '2026-04-06T10:00:00-06:00'
 slug: no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho
+translationKey: no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho-2026-04-06
 tags:
   - ia
   - spec-driven-development

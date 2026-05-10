@@ -2,6 +2,7 @@
 title: "Desmistificando o processo de Propose no OpenSpec: O que acontece nos bastidores?"
 date: '2026-04-29T23:22:42-03:00'
 slug: desmistificando-o-processo-de-propose-no-openspec
+translationKey: desmistificando-o-processo-de-propose-no-openspec-2026-04-29
 tags:
   - openspec
   - engenharia-de-software

@@ -2,6 +2,7 @@
 title: "Da feature ao deploy sem mãos: arquitetura de uma software factory com IA usando Spec-Driven Development"
 date: '2026-04-15T23:18:03-03:00'
 slug: da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development
+translationKey: da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development-2026-04-15
 tags:
   - engenharia-de-software
   - ia

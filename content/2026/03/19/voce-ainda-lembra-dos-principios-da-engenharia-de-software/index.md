@@ -2,6 +2,7 @@
 title: "Você ainda lembra dos princípios da engenharia de software?"
 date: '2026-03-19T10:30:00-03:00'
 slug: voce-ainda-lembra-dos-principios-da-engenharia-de-software
+translationKey: voce-ainda-lembra-dos-principios-da-engenharia-de-software-2026-03-19
 tags:
 - software-engineering
 - ai

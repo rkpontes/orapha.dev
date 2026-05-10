@@ -2,6 +2,7 @@
 title: "Agent Engineering + Agentic Flow Engineering: uma visão mais organizada"
 date: '2026-03-19T01:00:00-03:00'
 slug: agent-engineering-e-agentic-flow-engineering
+translationKey: agent-engineering-e-agentic-flow-engineering-2026-03-19
 tags:
 - ai
 - agents

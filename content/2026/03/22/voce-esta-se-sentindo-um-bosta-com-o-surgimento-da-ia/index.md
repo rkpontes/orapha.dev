@@ -2,6 +2,7 @@
 title: "Você está se sentindo um bosta com o surgimento da IA?"
 date: '2026-03-22T10:00:00-03:00'
 slug: voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia
+translationKey: voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia-2026-03-22
 tags:
 - ai
 - software-engineering

@@ -2,6 +2,7 @@
 title: "Vibe Coding está morto: por que a IA autônoma exige cercas determinísticas rígidas para realmente funcionar"
 date: '2026-03-20T11:15:00-03:00'
 slug: vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar
+translationKey: vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar-2026-03-20
 tags:
 - ai
 - agents

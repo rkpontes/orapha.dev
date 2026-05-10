@@ -2,6 +2,7 @@
 title: "As Preocupações Morais no Desenvolvimento de Tecnologias"
 date: '2024-08-02T02:30:50-03:00'
 slug: as-preocupacoes-morais-no-desenvolvimento-de-tecnologias
+translationKey: as-preocupacoes-morais-no-desenvolvimento-de-tecnologias-2024-08-02
 tags:
 - software-development
 - tecnologia

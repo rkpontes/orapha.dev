@@ -2,6 +2,7 @@
 title: "Como estruturo minhas Entities no Flutter e por que isso mudou meu jeito de programar"
 date: '2025-03-17T18:22:49-03:00'
 slug: como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar
+translationKey: como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar-2025-03-17
 draft: false
 description: "Fala, dev! Se você já precisou consumir múltiplas APIs em um app Flutter, sabe que a bagunça pode começar rápido. No começo, parece simples: você pega os dad..."
 ---

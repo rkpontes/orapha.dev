@@ -2,6 +2,7 @@
 title: "Graphify: Transformando seu projeto em um grafo de conhecimento que agentes de IA entendem"
 date: '2026-05-10T10:00:00-03:00'
 slug: graphify-transformando-seu-projeto-em-grafo-de-conhecimento-para-agentes-de-ia
+translationKey: graphify-transformando-seu-projeto-em-grafo-de-conhecimento-para-agentes-de-ia-2026-05-10
 tags:
   - ia
   - knowledge-graph

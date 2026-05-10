@@ -2,6 +2,7 @@
 title: "Agentic Coding: GSD vs Spec Kit vs OpenSpec vs Taskmaster AI — Onde as ferramentas SDD divergem"
 date: '2026-05-13T10:00:00-03:00'
 slug: agentic-coding-gsd-vs-spec-kit-vs-openspec-vs-taskmaster-ai-onde-as-ferramentas-sdd-divergem
+translationKey: agentic-coding-gsd-vs-spec-kit-vs-openspec-vs-taskmaster-ai-2026-05-13
 tags:
   - ia
   - spec-driven-development

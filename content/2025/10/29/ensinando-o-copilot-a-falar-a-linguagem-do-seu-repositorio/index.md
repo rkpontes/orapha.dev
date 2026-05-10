@@ -2,6 +2,7 @@
 title: "Ensinando o Copilot a falar a linguagem do seu repositório"
 date: '2025-10-29T14:46:13-03:00'
 slug: ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio
+translationKey: ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio-2025-10-29
 draft: false
 description: "Trabalhando há mais de 14 anos com desenvolvimento de software, sempre me pego pensando sobre as tendências e novidades das tecnologias que podem ser usadas..."
 ---

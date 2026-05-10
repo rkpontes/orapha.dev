@@ -1,3 +1,18 @@
+---
+title: "Descope Outbound Apps: Tokens descartáveis para agents de IA"
+date: '2026-05-14T10:00:00-03:00'
+slug: descope-outbound-apps-tokens-descartaveis-para-agents-de-ia
+translationKey: descope-outbound-apps-tokens-descartaveis-para-agents-de-ia-2026-05-14
+tags:
+  - descope
+  - outbound-apps
+  - oauth
+  - security
+  - ai-agents
+draft: false
+description: "Entendendo a arquitetura de Outbound Apps: padrão de Token Vault para credenciais OAuth com agents de IA e MCP servers."
+---
+
 # Entendendo Outbound Apps: Arquitetura de Token Vault para OAuth
 
 ## O Problema: Gestão de Credenciais de Terceiros

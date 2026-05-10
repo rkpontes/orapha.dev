@@ -2,6 +2,7 @@
 title: "Get Shit Done: Meta-prompting e spec-driven development que realmente funciona"
 date: '2026-05-12T10:00:00-03:00'
 slug: get-shit-done-meta-prompting-e-spec-driven-development-para-agentes-de-ia
+translationKey: get-shit-done-meta-prompting-e-spec-driven-development-para-agentes-de-ia-2026-05-12
 tags:
   - ia
   - spec-driven-development

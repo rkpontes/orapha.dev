@@ -2,6 +2,7 @@
 title: "No Spec-Driven Development, `implement` é onde todo o resto vira código"
 date: '2026-04-06T10:00:00-07:00'
 slug: no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo
+translationKey: no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo-2026-04-06
 tags:
   - ia
   - spec-driven-development

@@ -2,6 +2,7 @@
 title: "No Spec-Driven Development, `plan` é onde a especificação vira estratégia de execução"
 date: '2026-04-06T10:00:00-05:00'
 slug: no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao
+translationKey: no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao-2026-04-06
 tags:
   - ia
   - spec-driven-development

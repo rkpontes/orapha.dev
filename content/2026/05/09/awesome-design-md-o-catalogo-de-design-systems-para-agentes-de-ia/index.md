@@ -2,6 +2,7 @@
 title: "Awesome Design: Um catálogo de design systems prontos para usar com agentes de IA"
 date: '2026-05-09T10:00:00-03:00'
 slug: awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia
+translationKey: awesome-design-md-2026-05-09
 tags:
   - ia
   - design-systems

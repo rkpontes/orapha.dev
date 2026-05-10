@@ -2,6 +2,7 @@
 title: "No Spec-Driven Development, `specify` é onde a ambiguidade começa a morrer"
 date: '2026-04-06T10:00:00-04:00'
 slug: no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer
+translationKey: no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer-2026-04-06
 tags:
   - ia
   - spec-driven-development

@@ -2,6 +2,7 @@
 title: "OpenSpec na prática: instalação, uso, fluxo completo e comandos opcionais"
 date: '2026-04-08T10:00:00-03:00'
 slug: openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais
+translationKey: openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais-2026-04-08
 tags:
   - ia
   - openspec

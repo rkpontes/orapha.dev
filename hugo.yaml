@@ -15,8 +15,94 @@ baseURL: "https://www.orapha.dev/"
 
 languages:
   pt-br:
-    languageName: "Portugues"
+    languageName: "Português"
+    languageCode: "pt-BR"
     weight: 1
+    menu:
+      main:
+        - name: Tema
+          weight: 0
+          params:
+            type: theme-toggle
+        - name: Sobre
+          pageRef: /about
+          weight: 1
+        - name: GitHub ↗
+          url: "https://github.com/rkpontes"
+          weight: 2
+          params:
+            icon: github
+        - name: Buscar
+          weight: 3
+          params:
+            type: search
+        - name: RSS
+          weight: 4
+          url: "/index.xml"
+          params:
+            icon: rss
+      sidebar:
+        - name: GitHub
+          weight: 1
+          url: "https://github.com/rkpontes"
+          params:
+            icon: github
+        - name: Twitter
+          weight: 1
+          url: "#"
+          params:
+            icon: x-twitter
+        - name: Instagram
+          weight: 1
+          url: "https://instagram.com/raphaelkennedy"
+          params:
+            icon: instagram
+  en:
+    languageName: "English"
+    languageCode: "en"
+    weight: 2
+    title: "orapha.dev"
+    params:
+      description: "Raphael Pontes' blog — software engineering, AI, and development. English edition."
+    menu:
+      main:
+        - name: Theme
+          weight: 0
+          params:
+            type: theme-toggle
+        - name: About
+          pageRef: /en/about
+          weight: 1
+        - name: GitHub ↗
+          url: "https://github.com/rkpontes"
+          weight: 2
+          params:
+            icon: github
+        - name: Search
+          weight: 3
+          params:
+            type: search
+        - name: RSS
+          weight: 4
+          url: "/en/index.xml"
+          params:
+            icon: rss
+      sidebar:
+        - name: GitHub
+          weight: 1
+          url: "https://github.com/rkpontes"
+          params:
+            icon: github
+        - name: Twitter
+          weight: 1
+          url: "#"
+          params:
+            icon: x-twitter
+        - name: Instagram
+          weight: 1
+          url: "https://instagram.com/raphaelkennedy"
+          params:
+            icon: instagram
 
 outputs:
   home: [HTML, RSS]
@@ -39,46 +125,6 @@ markup:
   # enable hextra syntax highlight
   highlight:
     noClasses: false
-
-menu:
-  main:
-    - name: Theme
-      weight: 0
-      params:
-        type: theme-toggle
-    - name: Sobre
-      pageRef: /about
-      weight: 1
-    - name: GitHub ↗
-      url: "https://github.com/rkpontes"
-      weight: 2
-      params:
-        icon: github
-    - name: Search
-      weight: 3
-      params:
-        type: search
-    - name: RSS
-      weight: 4
-      url: "/index.xml"
-      params:
-        icon: rss
-  sidebar:
-    - name: GitHub
-      weight: 1
-      url: "https://github.com/rkpontes"
-      params:
-        icon: github
-    - name: Twitter
-      weight: 1
-      url: "#"
-      params:
-        icon: x-twitter
-    - name: Instagram
-      weight: 1
-      url: "https://instagram.com/raphaelkennedy"
-      params:
-        icon: instagram
 
 params:
   navbar:

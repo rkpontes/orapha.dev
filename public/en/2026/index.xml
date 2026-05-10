@@ -1,0 +1,154 @@
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>orapha.dev</title>
+    <link>http://localhost:1313/</link>
+    <description>Raphael Pontes&#39; blog — software engineering, AI, and development. English edition.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 09 May 2026 21:24:56 GMT</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/>
+    
+      <item>
+        <title>Awesome Design: A catalog of design systems ready to use with AI agents</title>
+        <link>http://localhost:1313/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</link>
+        <guid isPermaLink="true">http://localhost:1313/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</guid>
+        <pubDate>Sat, 09 May 2026 10:00:00 GMT</pubDate>
+        <description>&lt;h1&gt;Awesome Design: A catalog of design systems ready to use with AI agents&lt;/h1&gt;&lt;p&gt;There&amp;rsquo;s something that&amp;rsquo;s always bothered me when working with code agents: visual inconsistency. You ask the agent to &amp;ldquo;create a dashboard screen,&amp;rdquo; it delivers something functional, but the visual&amp;hellip; well, the visual looks like it was made by someone who&amp;rsquo;s never heard of a design system. Each screen becomes an island, each component has its own personality, and in the end you have a visual Frankenstein that works but doesn&amp;rsquo;t give that professional product feeling.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1>Awesome Design: A catalog of design systems ready to use with AI agents</h1><p>There&rsquo;s something that&rsquo;s always bothered me when working with code agents: visual inconsistency. You ask the agent to &ldquo;create a dashboard screen,&rdquo; it delivers something functional, but the visual&hellip; well, the visual looks like it was made by someone who&rsquo;s never heard of a design system. Each screen becomes an island, each component has its own personality, and in the end you have a visual Frankenstein that works but doesn&rsquo;t give that professional product feeling.</p>
+<p>I&rsquo;ve tried various approaches. I&rsquo;ve shared Figma links, I&rsquo;ve described colors and typography in detail, I&rsquo;ve even sent screenshots with annotations. It works, but it&rsquo;s tedious. And the worst part: with each new feature, the conversation starts from scratch.</p>
+<p>That&rsquo;s when I discovered <a href="https://github.com/voltagent/awesome-design-md"target="_blank" rel="noopener"><strong>Awesome Design</strong></a>.</p>
+<h2>What is DESIGN.md?<span class="hx:absolute hx:-mt-20" id="what-is-designmd"></span>
+    <a href="#what-is-designmd" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Before talking about the repository itself, I need to explain the concept. DESIGN.md is an idea that came from <a href="https://stitch.withgoogle.com/docs/design-md/overview/"target="_blank" rel="noopener">Google Stitch</a>. It&rsquo;s simply a markdown file that describes your project&rsquo;s design system: colors, typography, components, spacing, responsive behaviors.</p>
+<p>The trick is that, since it&rsquo;s markdown, AI agents read it very well. No complex JSON needed, no need to export from Figma, no plugin required. It&rsquo;s a text file, at the root of the project, that any agent can consult.</p>
+<p>The analogy I like to use:</p>
+<table>
+  <thead>
+      <tr>
+          <th>File</th>
+          <th>Who reads it</th>
+          <th>What it defines</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>AGENTS.md</code></td>
+          <td>Code agents</td>
+          <td>How to build the project</td>
+      </tr>
+      <tr>
+          <td><code>DESIGN.md</code></td>
+          <td>Design agents</td>
+          <td>How the project should look</td>
+      </tr>
+  </tbody>
+</table>
+<h2>What does Awesome Design offer?<span class="hx:absolute hx:-mt-20" id="what-does-awesome-design-offer"></span>
+    <a href="#what-does-awesome-design-offer" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The VoltAgent repository is basically a catalog of DESIGN.md files inspired by real sites and products. And when I say real, I&rsquo;m talking about brands like:</p>
+<p><strong>AI Platforms:</strong></p>
+<ul>
+<li><strong>Claude</strong> — that warm terracotta tone, clean editorial layout</li>
+<li><strong>ElevenLabs</strong> — dark cinematic UI, with that sound wave aesthetic</li>
+<li><strong>Ollama</strong> — monochromatic simplicity, focus on the terminal</li>
+<li><strong>VoltAgent</strong> — black-void canvas, emerald accent, terminal vibe</li>
+</ul>
+<p><strong>Dev Tools:</strong></p>
+<ul>
+<li><strong>Cursor</strong> — dark editor with sleek gradients</li>
+<li><strong>Vercel</strong> — black and white precision, Geist font</li>
+<li><strong>Warp</strong> — modern terminal, block UI</li>
+<li><strong>Supabase</strong> — dark emerald theme, code first</li>
+</ul>
+<p><strong>Productivity &amp; SaaS:</strong></p>
+<ul>
+<li><strong>Linear</strong> — ultra minimalist, precise, purple accent</li>
+<li><strong>Notion</strong> — warm minimalism, serif headings</li>
+<li><strong>Figma</strong> — vibrant multicolor, professional but fun</li>
+</ul>
+<p>And the list continues: Stripe, Spotify, Apple, Tesla, Airbnb, Nike&hellip; there are more than 70 documented design systems.</p>
+<h2>How it works in practice<span class="hx:absolute hx:-mt-20" id="how-it-works-in-practice"></span>
+    <a href="#how-it-works-in-practice" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The structure of each DESIGN.md follows a pattern that makes life much easier:</p>
+<ol>
+<li><strong>Visual Theme &amp; Atmosphere</strong> — the mood, density, design philosophy</li>
+<li><strong>Color Palette</strong> — semantic names + hex + function</li>
+<li><strong>Typography Rules</strong> — font families, complete hierarchy</li>
+<li><strong>Component Styles</strong> — buttons, cards, inputs, navigation</li>
+<li><strong>Layout Principles</strong> — spacing scale, grid, whitespace</li>
+<li><strong>Depth &amp; Elevation</strong> — shadow system, surface hierarchy</li>
+<li><strong>Do&rsquo;s and Don&rsquo;ts</strong> — guardrails and anti-patterns</li>
+<li><strong>Responsive Behavior</strong> — breakpoints, touch targets</li>
+<li><strong>Agent Prompt Guide</strong> — quick color references, ready to use</li>
+</ol>
+<p>Besides the DESIGN.md, each site includes:</p>
+<ul>
+<li><code>preview.html</code> — visual catalog with swatches, typographic scale, buttons</li>
+<li><code>preview-dark.html</code> — the same catalog with dark surfaces</li>
+</ul>
+<h2>Using it in practice<span class="hx:absolute hx:-mt-20" id="using-it-in-practice"></span>
+    <a href="#using-it-in-practice" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The workflow is absurdly simple:</p>
+<ol>
+<li>Choose a design system from the catalog</li>
+<li>Copy the DESIGN.md to your project root</li>
+<li>Tell your agent: &ldquo;use this design system&rdquo;</li>
+</ol>
+<p>That&rsquo;s it. Seriously.</p>
+<p>The agent will read the file, understand the colors, fonts, spacing, and apply everything to the code it generates. If you use Claude, Cursor, GitHub Copilot, or any other agent that reads context files, it works.</p>
+<h2>Why this matters<span class="hx:absolute hx:-mt-20" id="why-this-matters"></span>
+    <a href="#why-this-matters" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>For me, the value is in two places:</p>
+<p><strong>First, consistency.</strong> When you have a DESIGN.md committed in the repo, every interaction with the agent has a shared visual reference. It doesn&rsquo;t matter if you&rsquo;re working on the feature today or three months from now — the design system is there, documented, versioned.</p>
+<p><strong>Second, speed.</strong> Instead of losing 15 minutes describing &ldquo;I want a blue primary button with rounded borders and soft shadow,&rdquo; you simply point to the DESIGN.md. The agent already knows exactly how to style it.</p>
+<p>And there&rsquo;s a bonus: since each DESIGN.md is based on real products that work, you&rsquo;re essentially &ldquo;copying&rdquo; visual patterns that have already been tested and validated by companies that invest millions in design.</p>
+<h2>Considerations<span class="hx:absolute hx:-mt-20" id="considerations"></span>
+    <a href="#considerations" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Awesome Design is one of those repositories that seems simple but solves a real problem. The idea of using markdown for design system is elegant because it works with the flow we already use with code agents.</p>
+<p>If you&rsquo;re building something with AI and care about the visual quality of the result, it&rsquo;s worth checking out. The repository is constantly growing — there are already more than 70 design systems — and accepts contributions.</p>
+<p>I particularly like having this in my arsenal. It&rsquo;s another tool for when I want the agent to deliver something that not only works, but also <em>looks</em> well made.</p>
+<hr>
+<p><strong>Links:</strong></p>
+<ul>
+<li><a href="https://github.com/voltagent/awesome-design-md"target="_blank" rel="noopener">Awesome Design on GitHub</a></li>
+<li><a href="https://stitch.withgoogle.com/docs/design-md/overview/"target="_blank" rel="noopener">DESIGN.md Documentation on Google Stitch</a></li>
+<li><a href="https://getdesign.md/"target="_blank" rel="noopener">Site with design system previews</a></li>
+</ul>
+]]></content:encoded>
+        
+            <category>ai</category>
+            <category>design-systems</category>
+            <category>design-md</category>
+            <category>frontend</category>
+            <category>voltagent</category>
+        
+      </item>
+    
+      <item>
+        <title>About</title>
+        <link>http://localhost:1313/en/about/</link>
+        <guid isPermaLink="true">http://localhost:1313/en/about/</guid>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 GMT</pubDate>
+        <description>&lt;h2&gt;Who I am&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;who-i-am&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#who-i-am&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;I am Raphael Pontes, a senior software engineer with over a decade of experience building products, participating in startups, leading technical initiatives, and delivering software in very different contexts, from freelance to production products.&lt;/p&gt;
+&lt;h2&gt;My journey&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;my-journey&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#my-journey&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;My background spans web and mobile development, with a strong focus on Flutter, Laravel, REST APIs, and software architecture. Over the years, I&amp;rsquo;ve also worked with technical leadership, business intelligence, testing, clean architecture, relational and non-relational databases, Firebase, cloud functions, UI/UX, and project planning and execution.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h2>Who I am<span class="hx:absolute hx:-mt-20" id="who-i-am"></span>
+    <a href="#who-i-am" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>I am Raphael Pontes, a senior software engineer with over a decade of experience building products, participating in startups, leading technical initiatives, and delivering software in very different contexts, from freelance to production products.</p>
+<h2>My journey<span class="hx:absolute hx:-mt-20" id="my-journey"></span>
+    <a href="#my-journey" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>My background spans web and mobile development, with a strong focus on Flutter, Laravel, REST APIs, and software architecture. Over the years, I&rsquo;ve also worked with technical leadership, business intelligence, testing, clean architecture, relational and non-relational databases, Firebase, cloud functions, UI/UX, and project planning and execution.</p>
+<p>I also have a strong relationship with creating and sharing knowledge. Beyond product and engineering work, I enjoy publishing videos, exploring new tools, and turning practical learning into useful content.</p>
+<h2>This blog<span class="hx:absolute hx:-mt-20" id="this-blog"></span>
+    <a href="#this-blog" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><code>orapha.dev</code> is my space to write more calmly about programming, patterns, architecture, artificial intelligence, and day-to-day technical decisions.</p>
+<p>I&rsquo;m not interested in technology as a showcase. I&rsquo;m interested in technology as practice: what&rsquo;s worth adopting, what unnecessarily complicates things, what ages well, and what really helps build better software.</p>
+<p>That&rsquo;s why this blog works as a public notebook of observations, experiments, and opinions. A place to taste technologies in a personal and thoughtful way.</p>
+<h2>Where to find me<span class="hx:absolute hx:-mt-20" id="where-to-find-me"></span>
+    <a href="#where-to-find-me" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>LinkedIn: <a href="https://www.linkedin.com/in/raphaelkennedy/"target="_blank" rel="noopener">raphaelkennedy</a></li>
+<li>GitHub: <a href="https://github.com/rkpontes"target="_blank" rel="noopener">rkpontes</a></li>
+<li>YouTube: <a href="https://www.youtube.com/raphaelpontes"target="_blank" rel="noopener">youtube.com/raphaelpontes</a></li>
+<li>Instagram: <a href="http://instagram.com/raphaelkennedy"target="_blank" rel="noopener">@raphaelkennedy</a></li>
+</ul>
+]]></content:encoded>
+        
+      </item>
+    
+  </channel>
+</rss>
+

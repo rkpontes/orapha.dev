@@ -2,6 +2,7 @@
 title: "Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos"
 date: '2026-04-03T10:00:00-03:00'
 slug: como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos
+translationKey: como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos-2026-04-03
 tags:
   - ia
   - spec-driven-development

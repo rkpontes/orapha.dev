@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-br" dir="ltr"><head>
+<html lang="pt-br" dir="ltr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -9,17 +9,37 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>orapha.dev</title>
-  <meta name="description" content="Descope Outbound Apps: Tokens Descartáveis para Agents de IAO Problema: Credenciais que Não Deveriam Existir Você está construindo um agente de IA que precisa acessar o Google Calendar do usuário para marcar reuniões. A solução óbvia? Guardar o token OAuth no banco de dados e usar quando necessário.
-O problema: Tokens persistentes são bombas-relógio. Se vazarem, alguém tem acesso indefinido aos dados do usuário. Se forem comprometidos, você descobre meses depois. E o pior: você dorme pensando “será que aquele token do usuário X está seguro?”" /><link rel="canonical" href="https://www.orapha.dev/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/" itemprop="url" />
+  <meta name="description" content="Entendendo Outbound Apps: Arquitetura de Token Vault para OAuthO Problema: Gestão de Credenciais de Terceiros Quando sua aplicação precisa acessar dados de usuários em serviços externos (Google Calendar, Salesforce, HubSpot), você enfrenta um desafio arquitetural: como armazenar e gerenciar tokens de acesso de forma segura?
+As Alternativas e Seus Problemas Alternativa 1: Banco de Dados Próprio
+┌─────────┐ ┌──────────────┐ ┌──────────────┐ │ Usuário │──────│ Seu App │──────│ Seu Banco │ └─────────┘ │ │ │ (tokens) │ └──────────────┘ └──────────────┘ Você precisa implementar criptografia, refresh automático, auditoria Em caso de breach, todos os tokens dos usuários vazam Compliance complexo (SOC2, HIPAA, etc.) Alternativa 2: Variáveis de Ambiente" /><link rel="canonical" href="http://localhost:1313/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/" itemprop="url" />
 
 <meta property="og:title" content="">
 <meta
   property="og:description"
   content="
     
-      Descope Outbound Apps: Tokens Descartáveis para Agents de IAO Problema: Credenciais que Não Deveriam Existir
-    Você está construindo um agente de IA que precisa acessar o Google Calendar do usuário para marcar reuniões. A solução óbvia? Guardar o token OAuth no banco de dados e usar quando necessário.
-O problema: Tokens persistentes são bombas-relógio. Se vazarem, alguém tem acesso indefinido aos dados do usuário. Se forem comprometidos, você descobre meses depois. E o pior: você dorme pensando &ldquo;será que aquele token do usuário X está seguro?&rdquo;
+      Entendendo Outbound Apps: Arquitetura de Token Vault para OAuthO Problema: Gestão de Credenciais de Terceiros
+    Quando sua aplicação precisa acessar dados de usuários em serviços externos (Google Calendar, Salesforce, HubSpot), você enfrenta um desafio arquitetural: como armazenar e gerenciar tokens de acesso de forma segura?
+As Alternativas e Seus Problemas
+    Alternativa 1: Banco de Dados Próprio
+
+
+┌─────────┐      ┌──────────────┐      ┌──────────────┐
+│ Usuário │──────│  Seu App     │──────│  Seu Banco   │
+└─────────┘      │              │      │ (tokens)     │
+                 └──────────────┘      └──────────────┘
+  
+    
+
+  
+
+
+
+Você precisa implementar criptografia, refresh automático, auditoria
+Em caso de breach, todos os tokens dos usuários vazam
+Compliance complexo (SOC2, HIPAA, etc.)
+
+Alternativa 2: Variáveis de Ambiente
     
   ">
 <meta
@@ -27,24 +47,21 @@ O problema: Tokens persistentes são bombas-relógio. Se vazarem, alguém tem ac
   content="
     article
   ">
-<meta property="og:url" content="https://www.orapha.dev/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/"><meta property="article:section" content="2026">
+<meta property="og:url" content="http://localhost:1313/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/"><meta property="article:section" content="2026">
 
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Raphael Pontes","url":"https://www.orapha.dev/"},"dateModified":"0001-01-01T00:00:00+00:00","datePublished":"0001-01-01T00:00:00+00:00","description":"Descope Outbound Apps: Tokens Descartáveis para Agents de IAO Problema: Credenciais que Não Deveriam Existir Você está construindo um agente de IA que precisa acessar o Google Calendar do usuário para marcar reuniões. A solução óbvia? Guardar o token OAuth no banco de dados e usar quando necessário.\nO problema: Tokens persistentes são bombas-relógio. Se vazarem, alguém tem acesso indefinido aos dados do usuário. Se forem comprometidos, você descobre meses depois. E o pior: você dorme pensando “será que aquele token do usuário X está seguro?”","headline":"","mainEntityOfPage":{"@id":"https://www.orapha.dev/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/","@type":"WebPage"},"publisher":{"@type":"Organization","name":"orapha.dev","url":"https://www.orapha.dev/"},"url":"https://www.orapha.dev/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/"}</script><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Raphael Pontes","url":"http://localhost:1313/"},"dateModified":"0001-01-01T00:00:00+00:00","datePublished":"0001-01-01T00:00:00+00:00","description":"Entendendo Outbound Apps: Arquitetura de Token Vault para OAuthO Problema: Gestão de Credenciais de Terceiros Quando sua aplicação precisa acessar dados de usuários em serviços externos (Google Calendar, Salesforce, HubSpot), você enfrenta um desafio arquitetural: como armazenar e gerenciar tokens de acesso de forma segura?\nAs Alternativas e Seus Problemas Alternativa 1: Banco de Dados Próprio\n┌─────────┐ ┌──────────────┐ ┌──────────────┐ │ Usuário │──────│ Seu App │──────│ Seu Banco │ └─────────┘ │ │ │ (tokens) │ └──────────────┘ └──────────────┘ Você precisa implementar criptografia, refresh automático, auditoria Em caso de breach, todos os tokens dos usuários vazam Compliance complexo (SOC2, HIPAA, etc.) Alternativa 2: Variáveis de Ambiente","headline":"","mainEntityOfPage":{"@id":"http://localhost:1313/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/","@type":"WebPage"},"publisher":{"@type":"Organization","name":"orapha.dev","url":"http://localhost:1313/"},"url":"http://localhost:1313/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/"}</script><meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@ORaphaDev">
 <meta name="twitter:creator" content="@ORaphaDev">
 <meta name="twitter:title" content="">
-<meta name="twitter:description" content="Descope Outbound Apps: Tokens Descartáveis para Agents de IAO Problema: Credenciais que Não Deveriam Existir Você está construindo um agente de IA que precisa acessar o Google Calendar do usuário para marcar reuniões. A solução óbvia? Guardar o token OAuth no banco de dados e usar quando necessário.
-O problema: Tokens persistentes são bombas-relógio. Se vazarem, alguém tem acesso indefinido aos dados do usuário. Se forem comprometidos, você descobre meses depois. E o pior: você dorme pensando “será que aquele token do usuário X está seguro?”">
-    <link rel="preload" href="/css/compiled/main.min.860421afd86baea436520550e3f5b912c5d0ca8bfec32b073ac5871b3ae0ca74.css" as="style" integrity="sha256-hgQhr9hrrqQ2UgVQ4/W5EsXQyov&#43;wysHOsWHGzrgynQ=" />
-    <link href="/css/compiled/main.min.860421afd86baea436520550e3f5b912c5d0ca8bfec32b073ac5871b3ae0ca74.css" rel="stylesheet" integrity="sha256-hgQhr9hrrqQ2UgVQ4/W5EsXQyov&#43;wysHOsWHGzrgynQ=" />
+<meta name="twitter:description" content="Entendendo Outbound Apps: Arquitetura de Token Vault para OAuthO Problema: Gestão de Credenciais de Terceiros Quando sua aplicação precisa acessar dados de usuários em serviços externos (Google Calendar, Salesforce, HubSpot), você enfrenta um desafio arquitetural: como armazenar e gerenciar tokens de acesso de forma segura?
+As Alternativas e Seus Problemas Alternativa 1: Banco de Dados Próprio
+┌─────────┐ ┌──────────────┐ ┌──────────────┐ │ Usuário │──────│ Seu App │──────│ Seu Banco │ └─────────┘ │ │ │ (tokens) │ └──────────────┘ └──────────────┘ Você precisa implementar criptografia, refresh automático, auditoria Em caso de breach, todos os tokens dos usuários vazam Compliance complexo (SOC2, HIPAA, etc.) Alternativa 2: Variáveis de Ambiente"><link href="/css/compiled/main.css" rel="stylesheet" />
+    <link href="/css/variables.css" rel="stylesheet" />
+    <link href="/css/custom.css" rel="stylesheet" />
 
   
-
-
-
-
 
 
   <script>
@@ -76,7 +93,7 @@ O problema: Tokens persistentes são bombas-relógio. Se vazarem, alguém tem ac
 
   
   
-  <link rel="alternate" type="application/rss+xml" title="orapha.dev RSS Feed" href="https://www.orapha.dev/index.xml" />
+  <link rel="alternate" type="application/rss+xml" title="orapha.dev RSS Feed" href="http://localhost:1313/index.xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -682,51 +699,105 @@ O problema: Tokens persistentes são bombas-relógio. Se vazarem, alguém tem ac
   
     <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
               <a
-                href="#o-problema-credenciais-que-n%c3%a3o-deveriam-existir"
+                href="#o-problema-gest%c3%a3o-de-credenciais-de-terceiros"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >O Problema: Credenciais que Não Deveriam Existir</a>
+              >O Problema: Gestão de Credenciais de Terceiros</a>
             </li>
           <li>
               <a
-                href="#a-solu%c3%a7%c3%a3o-tokens-que-nascem-para-morrer"
+                href="#o-padr%c3%a3o-token-vault"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >A Solução: Tokens que Nascem para Morrer</a>
+              >O Padrão Token Vault</a>
             </li>
           <li>
               <a
-                href="#como-funciona-na-pr%c3%a1tica"
+                href="#o-que-s%c3%a3o-outbound-apps"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Como Funciona na Prática</a>
+              >O Que São Outbound Apps</a>
             </li>
           <li>
               <a
-                href="#implementa%c3%a7%c3%a3o-em-python"
+                href="#como-funciona"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Implementação em Python</a>
+              >Como Funciona</a>
             </li>
           <li>
               <a
-                href="#padr%c3%a3o-avan%c3%a7ado-token-por-opera%c3%a7%c3%a3o"
+                href="#tokens-em-n%c3%advel-de-tenant"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Padrão Avançado: Token por Operação</a>
+              >Tokens em Nível de Tenant</a>
             </li>
           <li>
               <a
-                href="#checklist-de-seguran%c3%a7a"
+                href="#usando-o-token-na-api-do-provedor"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Checklist de Segurança</a>
+              >Usando o Token na API do Provedor</a>
             </li>
           <li>
               <a
-                href="#arquitetura-de-produ%c3%a7%c3%a3o"
+                href="#autentica%c3%a7%c3%a3o-para-recuperar-tokens"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
-              >Arquitetura de Produção</a>
+              >Autenticação para Recuperar Tokens</a>
+            </li>
+          <li>
+              <a
+                href="#custom-api-key-apps"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Custom API Key Apps</a>
+            </li>
+          <li>
+              <a
+                href="#gerenciamento-program%c3%a1tico"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Gerenciamento Programático</a>
+            </li>
+          <li>
+              <a
+                href="#tratamento-de-erros"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Tratamento de Erros</a>
+            </li>
+          <li>
+              <a
+                href="#boas-pr%c3%a1ticas-de-seguran%c3%a7a"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Boas Práticas de Segurança</a>
+            </li>
+          <li>
+              <a
+                href="#checklist-de-implementa%c3%a7%c3%a3o"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Checklist de Implementação</a>
+            </li>
+          <li>
+              <a
+                href="#arquitetura-de-refer%c3%aancia-agent-de-ia"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Arquitetura de Referência: Agent de IA</a>
+            </li>
+          <li>
+              <a
+                href="#compara%c3%a7%c3%a3o-com-vs-sem-outbound-apps"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Comparação: Com vs Sem Outbound Apps</a>
+            </li>
+          <li>
+              <a
+                href="#trade-offs"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Trade-offs</a>
             </li>
           <li>
               <a
                 href="#conclus%c3%a3o"
                 class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
               >Conclusão</a>
+            </li>
+          <li>
+              <a
+                href="#recursos"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Recursos</a>
             </li>
           </ul>
   
@@ -854,19 +925,51 @@ O problema: Tokens persistentes são bombas-relógio. Se vazarem, alguém tem ac
     <div class="hx:max-xl:hidden hx:h-0 hx:w-64 hx:shrink-0"></div></div>
   
   
-    <div class="hx:md:hidden  hx:sticky hx:bottom-0 hx:max-h-(--menu-height) hx:bg-white hx:dark:bg-dark hx:mx-4 hx:py-4 hx:shadow-[0_-12px_16px_#fff] hx:flex hx:items-center hx:gap-2 hx:border-gray-200 hx:dark:border-neutral-800 hx:dark:shadow-[0_-12px_16px_#111] hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:shadow-none hx:border-t" data-toggle-animation="show"><div class="hx:flex hx:grow hx:flex-col"><div class="hx:flex hx:justify-items-start hx:group" data-theme="light">
+    <div class="hx:md:hidden hx:justify-end hx:sticky hx:bottom-0 hx:max-h-(--menu-height) hx:bg-white hx:dark:bg-dark hx:mx-4 hx:py-4 hx:shadow-[0_-12px_16px_#fff] hx:flex hx:items-center hx:gap-2 hx:border-gray-200 hx:dark:border-neutral-800 hx:dark:shadow-[0_-12px_16px_#111] hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:shadow-none hx:border-t" data-toggle-animation="show"><div class="hx:flex hx:justify-items-start hx:grow">
+    <button
+      title="Change language"
+      data-state="closed"
+      data-location=""
+      class="hextra-language-switcher hx:cursor-pointer hx:rounded-md hx:text-left hx:font-medium hx:h-7 hx:px-2 hx:text-xs hx:text-gray-600 hx:transition-colors hx:dark:text-gray-400 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:grow"
+      type="button"
+      aria-label="Change language"
+    >
+      <div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height=12 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg><span>Português</span></div>
+    </button>
+    <ul
+      class="hextra-language-options hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-md hx:ring-1 hx:ring-black/5 hx:bg-white hx:py-1 hx:text-sm hx:shadow-lg hx:dark:ring-white/20 hx:dark:bg-neutral-800"
+      style="position: fixed; inset: auto auto 0px 0px; margin: 0px; min-width: 100px;"
+    >
+      
+        
+        <li class="hx:flex hx:flex-col">
+          <a
+            href="/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/"
+            class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+          >Português<span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span></a>
+        </li>
+      
+        
+        <li class="hx:flex hx:flex-col">
+          <a
+            href="/en/"
+            class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+          >English</a>
+        </li>
+      </ul>
+  </div><div class="hx:flex hx:justify-items-start hx:group" data-theme="light">
   <button
     title="Change theme"
     data-state="closed"
-    data-location="bottom"
+    data-location="bottom-right"
     class="hextra-theme-toggle hx:cursor-pointer hx:rounded-md hx:text-left hx:font-medium hx:h-7 hx:px-2 hx:text-xs hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:font-medium hx:text-gray-600 hx:transition-colors hx:dark:text-gray-400 hx:grow"
     type="button"
     aria-label="Change theme"
   >
-    <div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><span class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden">Light</span><svg height=12 class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><span class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden">Dark</span><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor">
+    <div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><svg height=12 class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor">
   <path d="M 11.996094,2 C 6.4986225,2.0192368 2.03125,6.5024993 2.03125,12 c 0,5.497501 4.4673725,9.980763 9.964844,10 H 12 12.0039 c 5.497471,-0.01924 9.964844,-4.502499 9.964844,-10 0,-5.4975007 -4.467373,-9.9807632 -9.964844,-10 H 12 Z M 12,4 c 4.417218,0.017598 7.96875,3.5822356 7.96875,8 0,4.417764 -3.551532,7.982402 -7.96875,8 z" />
 </svg>
-<span class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden">System</span></div>
+</div>
   </button>
   <ul
     class="hextra-theme-toggle-options hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-md hx:ring-1 hx:ring-black/5 hx:bg-white hx:py-1 hx:text-sm hx:shadow-lg hx:dark:ring-white/20 hx:dark:bg-neutral-800"
@@ -901,60 +1004,192 @@ O problema: Tokens persistentes são bombas-relógio. Se vazarem, alguém tem ac
       </p>
     </li>
   </ul>
-</div></div></div></aside>
+</div></div></aside>
   
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">Nesta página</p><ul>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#o-problema-credenciais-que-n%c3%a3o-deveriam-existir">O Problema: Credenciais que Não Deveriam Existir
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#o-problema-gest%c3%a3o-de-credenciais-de-terceiros">O Problema: Gestão de Credenciais de Terceiros
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#a-solu%c3%a7%c3%a3o-tokens-que-nascem-para-morrer">A Solução: Tokens que Nascem para Morrer
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#as-alternativas-e-seus-problemas">As Alternativas e Seus Problemas
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#por-que-isso-muda-tudo">Por Que Isso Muda Tudo
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#o-padr%c3%a3o-token-vault">O Padrão Token Vault
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#como-funciona-na-pr%c3%a1tica">Como Funciona na Prática
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#o-que-s%c3%a3o-outbound-apps">O Que São Outbound Apps
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#1-configura%c3%a7%c3%a3o-do-outbound-app">1. Configuração do Outbound App
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#casos-de-uso-principais">Casos de Uso Principais
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#2-o-fluxo-de-token-descart%c3%a1vel">2. O Fluxo de Token Descartável
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#como-funciona">Como Funciona
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#implementa%c3%a7%c3%a3o-em-python">Implementação em Python
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#fluxo-de-3-etapas">Fluxo de 3 Etapas
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#padr%c3%a3o-avan%c3%a7ado-token-por-opera%c3%a7%c3%a3o">Padrão Avançado: Token por Operação
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#1-criando-um-outbound-app">1. Criando um Outbound App
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#checklist-de-seguran%c3%a7a">Checklist de Segurança
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#2-conectando-usu%c3%a1rios">2. Conectando Usuários
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#-o-que-fazer">✅ O Que Fazer
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#3-recuperando-tokens">3. Recuperando Tokens
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#-o-que-evitar">❌ O Que Evitar
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#a-%c3%baltimo-token-v%c3%a1lido-recomendado">A) Último Token Válido (Recomendado)
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
-        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#arquitetura-de-produ%c3%a7%c3%a3o">Arquitetura de Produção
+        <a class="hx:ltr:pl-8 hx:rtl:pr-8 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#b-token-com-scopes-espec%c3%adficos">B) Token com Scopes Específicos
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#resposta-da-api">Resposta da API
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#tokens-em-n%c3%advel-de-tenant">Tokens em Nível de Tenant
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#usando-o-token-na-api-do-provedor">Usando o Token na API do Provedor
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#autentica%c3%a7%c3%a3o-para-recuperar-tokens">Autenticação para Recuperar Tokens
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#1-management-key">1. Management Key
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#2-inbound-app-token">2. Inbound App Token
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#custom-api-key-apps">Custom API Key Apps
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#gerenciamento-program%c3%a1tico">Gerenciamento Programático
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#criar-app">Criar App
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#listar-apps">Listar Apps
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#carregar-app-espec%c3%adfico">Carregar App Específico
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#atualizar-app">Atualizar App
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#deletar-app">Deletar App
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#tratamento-de-erros">Tratamento de Erros
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#c%c3%b3digos-de-status-comuns">Códigos de Status Comuns
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#exemplo-de-tratamento">Exemplo de Tratamento
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#boas-pr%c3%a1ticas-de-seguran%c3%a7a">Boas Práticas de Segurança
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#1-escopo-m%c3%adnimo">1. Escopo Mínimo
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#2-nunca-armazene-access-tokens">2. Nunca Armazene Access Tokens
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#3-use-https-sempre">3. Use HTTPS Sempre
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#4-n%c3%a3o-logue-tokens">4. Não Logue Tokens
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#5-gerenciamento-de-chaves">5. Gerenciamento de Chaves
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#6-pol%c3%adticas-de-acesso">6. Políticas de Acesso
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#checklist-de-implementa%c3%a7%c3%a3o">Checklist de Implementação
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#arquitetura-de-refer%c3%aancia-agent-de-ia">Arquitetura de Referência: Agent de IA
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#compara%c3%a7%c3%a3o-com-vs-sem-outbound-apps">Comparação: Com vs Sem Outbound Apps
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#sem-outbound-apps-tradicional">Sem Outbound Apps (Tradicional)
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#com-outbound-apps">Com Outbound Apps
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#trade-offs">Trade-offs
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#vantagens">Vantagens
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#desvantagens">Desvantagens
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#quando-usar">Quando Usar
         </a>
       </li>
       <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
         <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#conclus%c3%a3o">Conclusão
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:break-words" href="#recursos">Recursos
         </a>
       </li></ul>
       <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
@@ -981,6 +1216,11 @@ O problema: Tokens persistentes são bombas-relógio. Se vazarem, alguém tem ac
           class="hx:text-gray-400 hx:dark:text-gray-500 hx:hover:text-primary-600 hx:dark:hover:text-primary-400 hx:transition-colors">
           💬 Deixe seu comentário
         </a></div>
+
+      
+      
+      
+
       <div class="hx:mb-16"></div>
       
       
@@ -988,7 +1228,7 @@ O problema: Tokens persistentes são bombas-relógio. Se vazarem, alguém tem ac
       
       
       
-      <div class="audio-player-container audio-not-found" data-audio-url="https://www.orapha.dev/audio/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia.mp3" data-audio-exists="false">
+      <div class="audio-player-container " data-audio-url="http://localhost:1313/audio/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia.mp3" data-audio-exists="true">
         <div class="audio-player-wrapper">
           <button class="audio-play-btn" aria-label="Ouvir artigo">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -1006,54 +1246,536 @@ O problema: Tokens persistentes são bombas-relógio. Se vazarem, alguém tem ac
       </div>
       
       <div class="content">
-        <h1>Descope Outbound Apps: Tokens Descartáveis para Agents de IA</h1><h2>O Problema: Credenciais que Não Deveriam Existir<span class="hx:absolute hx:-mt-20" id="o-problema-credenciais-que-não-deveriam-existir"></span>
-    <a href="#o-problema-credenciais-que-n%c3%a3o-deveriam-existir" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Você está construindo um agente de IA que precisa acessar o Google Calendar do usuário para marcar reuniões. A solução óbvia? Guardar o token OAuth no banco de dados e usar quando necessário.</p>
-<p><strong>O problema:</strong> Tokens persistentes são bombas-relógio. Se vazarem, alguém tem acesso indefinido aos dados do usuário. Se forem comprometidos, você descobre meses depois. E o pior: você dorme pensando &ldquo;será que aquele token do usuário X está seguro?&rdquo;</p>
-<h2>A Solução: Tokens que Nascem para Morrer<span class="hx:absolute hx:-mt-20" id="a-solução-tokens-que-nascem-para-morrer"></span>
-    <a href="#a-solu%c3%a7%c3%a3o-tokens-que-nascem-para-morrer" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>O Descope Outbound Apps resolve isso com uma abordagem radical: <strong>tokens de curta duração que o agente usa uma vez e descarta</strong>.</p>
-<p>Em vez de armazenar tokens longos no seu backend, você solicita um token <strong>just-in-time</strong> - válido apenas para aquela operação específica, com escopo mínimo necessário, e que expira em minutos.</p>
-<h3>Por Que Isso Muda Tudo<span class="hx:absolute hx:-mt-20" id="por-que-isso-muda-tudo"></span>
-    <a href="#por-que-isso-muda-tudo" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+        <h1>Entendendo Outbound Apps: Arquitetura de Token Vault para OAuth</h1><h2>O Problema: Gestão de Credenciais de Terceiros<span class="hx:absolute hx:-mt-20" id="o-problema-gestão-de-credenciais-de-terceiros"></span>
+    <a href="#o-problema-gest%c3%a3o-de-credenciais-de-terceiros" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Quando sua aplicação precisa acessar dados de usuários em serviços externos (Google Calendar, Salesforce, HubSpot), você enfrenta um desafio arquitetural: <strong>como armazenar e gerenciar tokens de acesso de forma segura?</strong></p>
+<h3>As Alternativas e Seus Problemas<span class="hx:absolute hx:-mt-20" id="as-alternativas-e-seus-problemas"></span>
+    <a href="#as-alternativas-e-seus-problemas" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><strong>Alternativa 1: Banco de Dados Próprio</strong></p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><pre><code>┌─────────┐      ┌──────────────┐      ┌──────────────┐
+│ Usuário │──────│  Seu App     │──────│  Seu Banco   │
+└─────────┘      │              │      │ (tokens)     │
+                 └──────────────┘      └──────────────┘</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<ul>
+<li>Você precisa implementar criptografia, refresh automático, auditoria</li>
+<li>Em caso de breach, todos os tokens dos usuários vazam</li>
+<li>Compliance complexo (SOC2, HIPAA, etc.)</li>
+</ul>
+<p><strong>Alternativa 2: Variáveis de Ambiente</strong></p>
+<ul>
+<li>Não funciona para múltiplos usuários (cada usuário tem seu próprio token)</li>
+<li>Anti-padrão de segurança</li>
+</ul>
+<p><strong>Alternativa 3: Vault Especializado (HashiCorp, AWS Secrets Manager)</strong></p>
+<ul>
+<li>Funciona, mas adiciona complexidade operacional</li>
+<li>Você ainda precisa implementar a lógica de OAuth</li>
+</ul>
+<h2>O Padrão Token Vault<span class="hx:absolute hx:-mt-20" id="o-padrão-token-vault"></span>
+    <a href="#o-padr%c3%a3o-token-vault" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Um <strong>Token Vault</strong> é um componente arquitetural que:</p>
+<ol>
+<li>Armazena tokens de acesso (OAuth ou API keys)</li>
+<li>Gerencia automaticamente o ciclo de vida (refresh, expiração)</li>
+<li>Fornece acesso sob demanda via API</li>
+<li>Audita todas as operações</li>
+</ol>
+<p><strong>Outbound Apps</strong> são uma implementação desse padrão.</p>
+<h2>O Que São Outbound Apps<span class="hx:absolute hx:-mt-20" id="o-que-são-outbound-apps"></span>
+    <a href="#o-que-s%c3%a3o-outbound-apps" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Segundo a documentação, Outbound Apps podem:</p>
+<ol>
+<li><strong>Conectar a provedores OAuth</strong> (Google, Microsoft, LinkedIn, etc.) e gerenciar todo o ciclo de vida OAuth</li>
+<li><strong>Funcionar como cofre (vault)</strong> para tokens OAuth E chaves de API estáticas</li>
+</ol>
+<h3>Casos de Uso Principais<span class="hx:absolute hx:-mt-20" id="casos-de-uso-principais"></span>
+    <a href="#casos-de-uso-principais" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><strong>OAuth Incremental</strong>: Começar com escopos mínimos no login, solicitar permissões adicionais (calendário, contatos) apenas quando necessário</li>
+<li><strong>Agents de IA e MCP</strong>: Agents que precisam acessar serviços externos de forma segura</li>
+<li><strong>Controle de Acesso Granular</strong>: Definir quem pode recuperar tokens usando políticas</li>
+</ul>
+<h2>Como Funciona<span class="hx:absolute hx:-mt-20" id="como-funciona"></span>
+    <a href="#como-funciona" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Fluxo de 3 Etapas<span class="hx:absolute hx:-mt-20" id="fluxo-de-3-etapas"></span>
+    <a href="#fluxo-de-3-etapas" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><pre><code>1. CRIAR APP
+   Console Descope → Outbound Apps → &#43; Outbound App
+   ├─ Escolher provedor OAuth OU criar &#34;Custom API Key&#34;
+   └─ Configurar client_id, client_secret, scopes
+
+2. CONECTAR USUÁRIO
+   Usuário faz OAuth flow → Descope armazena:
+   ├─ Access token
+   ├─ Refresh token (se disponível)
+   ├─ Escopos consentidos
+   └─ ID do usuário no provedor (tokenSub)
+
+3. USAR TOKEN
+   Sua aplicação chama API Descope → Recebe access token válido
+   → Usa na API do provedor → Descarta token</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>1. Criando um Outbound App<span class="hx:absolute hx:-mt-20" id="1-criando-um-outbound-app"></span>
+    <a href="#1-criando-um-outbound-app" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>No console Descope, você configura:</p>
+<p><strong>Para OAuth:</strong></p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">App ID</span><span class="p">:</span><span class="w"> </span><span class="l">calendar-integration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">Provedor</span><span class="p">:</span><span class="w"> </span><span class="l">Google Calendar</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">Client ID</span><span class="p">:</span><span class="w"> </span><span class="l">abc123.apps.googleusercontent.com</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">Client Secret</span><span class="p">:</span><span class="w"> </span><span class="l">GOCSPX-xyz789</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">Scopes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">https://www.googleapis.com/auth/calendar.readonly</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">Endpoints (pré-configurados para provedores conhecidos)</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">Authorization</span><span class="p">:</span><span class="w"> </span><span class="l">https://accounts.google.com/o/oauth2/v2/auth</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">Token</span><span class="p">:</span><span class="w"> </span><span class="l">https://oauth2.googleapis.com/token</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">Callback URL</span><span class="p">:</span><span class="w"> </span><span class="l">https://api.descope.com/oauth/callback</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p><strong>Para API Key (Custom API Key App):</strong></p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">Tipo</span><span class="p">:</span><span class="w"> </span><span class="l">Custom API Key</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">App ID</span><span class="p">:</span><span class="w"> </span><span class="l">internal-api</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">Nome</span><span class="p">:</span><span class="w"> </span><span class="l">Minha API Interna</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>2. Conectando Usuários<span class="hx:absolute hx:-mt-20" id="2-conectando-usuários"></span>
+    <a href="#2-conectando-usu%c3%a1rios" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Existem 3 formas de conectar usuários:</p>
+<p><strong>A) Frontend SDKs</strong> (React, Next.js, Web)</p>
+<p><strong>B) Descope Flows</strong> (editor no-code)</p>
+<p><strong>C) API REST</strong> diretamente</p>
+<p>Exemplo de início de conexão via API:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Iniciar fluxo OAuth</span>
+</span></span><span class="line"><span class="cl">curl -X POST <span class="s2">&#34;https://api.descope.com/v1/oauth/authorize&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</span><span class="nv">PROJECT_ID</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Content-Type: application/json&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -d <span class="s1">&#39;{
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;provider&#34;: &#34;google&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;redirectUrl&#34;: &#34;https://meuapp.com/callback&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s1">  }&#39;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>O usuário é redirecionado para a tela de consentimento do Google, aprova, e o Descope armazena os tokens.</p>
+<h3>3. Recuperando Tokens<span class="hx:absolute hx:-mt-20" id="3-recuperando-tokens"></span>
+    <a href="#3-recuperando-tokens" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Depois de conectado, você pode recuperar tokens de duas formas:</p>
+<h4>A) Último Token Válido (Recomendado)<span class="hx:absolute hx:-mt-20" id="a-último-token-válido-recomendado"></span>
+    <a href="#a-%c3%baltimo-token-v%c3%a1lido-recomendado" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -X POST <span class="s2">&#34;https://api.descope.com/v1/mgmt/outbound/app/user/token/latest&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</span><span class="nv">PROJECT_ID</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">MANAGEMENT_KEY</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Content-Type: application/json&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -d <span class="s1">&#39;{
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;appId&#34;: &#34;calendar-integration&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;userId&#34;: &#34;user_123&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;options&#34;: {
+</span></span></span><span class="line"><span class="cl"><span class="s1">      &#34;withRefreshToken&#34;: false,
+</span></span></span><span class="line"><span class="cl"><span class="s1">      &#34;forceRefresh&#34;: false
+</span></span></span><span class="line"><span class="cl"><span class="s1">    }
+</span></span></span><span class="line"><span class="cl"><span class="s1">  }&#39;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p><strong>Importante</strong>: Esta API <strong>sempre</strong> retorna um access token válido. Se estiver expirado, o Descope faz refresh automaticamente antes de retornar.</p>
+<h4>B) Token com Scopes Específicos<span class="hx:absolute hx:-mt-20" id="b-token-com-scopes-específicos"></span>
+    <a href="#b-token-com-scopes-espec%c3%adficos" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -X POST <span class="s2">&#34;https://api.descope.com/v1/mgmt/outbound/app/user/token&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</span><span class="nv">PROJECT_ID</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">MANAGEMENT_KEY</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Content-Type: application/json&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -d <span class="s1">&#39;{
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;appId&#34;: &#34;calendar-integration&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;userId&#34;: &#34;user_123&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;scopes&#34;: [
+</span></span></span><span class="line"><span class="cl"><span class="s1">      &#34;https://www.googleapis.com/auth/calendar.readonly&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s1">    ],
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;options&#34;: {
+</span></span></span><span class="line"><span class="cl"><span class="s1">      &#34;withRefreshToken&#34;: false
+</span></span></span><span class="line"><span class="cl"><span class="s1">    }
+</span></span></span><span class="line"><span class="cl"><span class="s1">  }&#39;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p><strong>Nota</strong>: Os scopes devem ser <strong>exatamente</strong> os mesmos usados na conexão. Se não forem, recebe erro 404.</p>
+<h3>Resposta da API<span class="hx:absolute hx:-mt-20" id="resposta-da-api"></span>
+    <a href="#resposta-da-api" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;token&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="s2">&#34;tok_abc123&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;appId&#34;</span><span class="p">:</span> <span class="s2">&#34;calendar-integration&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;userId&#34;</span><span class="p">:</span> <span class="s2">&#34;user_123&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;tokenSub&#34;</span><span class="p">:</span> <span class="s2">&#34;123456789&#34;</span><span class="p">,</span>  <span class="c1">// ID do usuário no Google
+</span></span></span><span class="line"><span class="cl">    <span class="nt">&#34;accessToken&#34;</span><span class="p">:</span> <span class="s2">&#34;ya29.a0AXooCgvMep7...&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;accessTokenType&#34;</span><span class="p">:</span> <span class="s2">&#34;Bearer&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;accessTokenExpiry&#34;</span><span class="p">:</span> <span class="s2">&#34;1741107113&#34;</span><span class="p">,</span>  <span class="c1">// Unix timestamp
+</span></span></span><span class="line"><span class="cl">    <span class="nt">&#34;hasRefreshToken&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;scopes&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;https://www.googleapis.com/auth/calendar.readonly&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;lastRefreshTime&#34;</span><span class="p">:</span> <span class="s2">&#34;1741103514&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p><strong>Observações:</strong></p>
+<ul>
+<li><code>refreshToken</code> só é retornado se <code>withRefreshToken: true</code></li>
+<li>A expiração é definida pelo provedor OAuth (Google), não pelo Descope</li>
+<li>O Descope gerencia o refresh, você sempre recebe um token válido</li>
+</ul>
+<h2>Tokens em Nível de Tenant<span class="hx:absolute hx:-mt-20" id="tokens-em-nível-de-tenant"></span>
+    <a href="#tokens-em-n%c3%advel-de-tenant" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Além de tokens por usuário, você pode ter tokens por tenant:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Último token do tenant</span>
+</span></span><span class="line"><span class="cl">curl -X POST <span class="s2">&#34;https://api.descope.com/v1/mgmt/outbound/app/tenant/token/latest&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</span><span class="nv">PROJECT_ID</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">MANAGEMENT_KEY</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Content-Type: application/json&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -d <span class="s1">&#39;{
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;appId&#34;: &#34;salesforce&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;tenantId&#34;: &#34;tenant_456&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s1">  }&#39;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Token com scopes específicos do tenant</span>
+</span></span><span class="line"><span class="cl">curl -X POST <span class="s2">&#34;https://api.descope.com/v1/mgmt/outbound/app/tenant/token&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</span><span class="nv">PROJECT_ID</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">MANAGEMENT_KEY</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Content-Type: application/json&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -d <span class="s1">&#39;{
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;appId&#34;: &#34;salesforce&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;tenantId&#34;: &#34;tenant_456&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;scopes&#34;: [&#34;api&#34;, &#34;refresh_token&#34;]
+</span></span></span><span class="line"><span class="cl"><span class="s1">  }&#39;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>Usando o Token na API do Provedor<span class="hx:absolute hx:-mt-20" id="usando-o-token-na-api-do-provedor"></span>
+    <a href="#usando-o-token-na-api-do-provedor" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Após recuperar o token, use-o imediatamente:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Exemplo: Google Calendar API</span>
+</span></span><span class="line"><span class="cl"><span class="nv">ACCESS_TOKEN</span><span class="o">=</span><span class="s2">&#34;ya29.a0AXooCgvMep7...&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">curl <span class="s2">&#34;https://www.googleapis.com/calendar/v3/calendars/primary/events&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span><span class="s2">&#34;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p><strong>Princípio importante</strong>: O token só deve existir na memória pelo tempo necessário para a chamada. Não armazene em variáveis persistentes.</p>
+<h2>Autenticação para Recuperar Tokens<span class="hx:absolute hx:-mt-20" id="autenticação-para-recuperar-tokens"></span>
+    <a href="#autentica%c3%a7%c3%a3o-para-recuperar-tokens" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Você pode autenticar de duas formas:</p>
+<h3>1. Management Key<span class="hx:absolute hx:-mt-20" id="1-management-key"></span>
+    <a href="#1-management-key" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Use em backends seguros onde você pode armazenar secrets:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Authorization: Bearer <span class="si">${</span><span class="nv">PROJECT_ID</span><span class="si">}</span>:<span class="si">${</span><span class="nv">MANAGEMENT_KEY</span><span class="si">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>2. Inbound App Token<span class="hx:absolute hx:-mt-20" id="2-inbound-app-token"></span>
+    <a href="#2-inbound-app-token" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Use em ambientes não-seguros (MCP servers, agents):</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Authorization: Bearer <span class="si">${</span><span class="nv">PROJECT_ID</span><span class="si">}</span>:<span class="si">${</span><span class="nv">ACCESS_TOKEN</span><span class="si">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p><strong>Requisito</strong>: O Inbound App Token deve incluir o scope <code>outbound.token.fetch</code>. Se não tiver, a requisição é negada.</p>
+<p>Isso permite aplicar políticas: você pode bloquear um agente de acessar tokens em tempo real, mesmo que o usuário já tenha conectado o app.</p>
+<h2>Custom API Key Apps<span class="hx:absolute hx:-mt-20" id="custom-api-key-apps"></span>
+    <a href="#custom-api-key-apps" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Para serviços que não usam OAuth, você pode criar apps de API Key:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Criar app de API key</span>
+</span></span><span class="line"><span class="cl">curl -X POST <span class="s2">&#34;https://api.descope.com/v1/mgmt/outbound/app/create&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</span><span class="nv">PROJECT_ID</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">MANAGEMENT_KEY</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Content-Type: application/json&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -d <span class="s1">&#39;{
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;name&#34;: &#34;Internal API&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;description&#34;: &#34;API key para serviço interno&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s1">  }&#39;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Depois, use flows ou APIs para coletar e armazenar a API key do usuário/tenant.</p>
+<h2>Gerenciamento Programático<span class="hx:absolute hx:-mt-20" id="gerenciamento-programático"></span>
+    <a href="#gerenciamento-program%c3%a1tico" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Criar App<span class="hx:absolute hx:-mt-20" id="criar-app"></span>
+    <a href="#criar-app" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -X POST <span class="s2">&#34;https://api.descope.com/v1/mgmt/outbound/app/create&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</span><span class="nv">PROJECT_ID</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">MANAGEMENT_KEY</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Content-Type: application/json&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -d <span class="s1">&#39;{
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;name&#34;: &#34;My Calendar App&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;description&#34;: &#34;Integration with Google Calendar&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;logo&#34;: &#34;https://example.com/logo.png&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s1">  }&#39;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Listar Apps<span class="hx:absolute hx:-mt-20" id="listar-apps"></span>
+    <a href="#listar-apps" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl <span class="s2">&#34;https://api.descope.com/v1/mgmt/outbound/apps&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</span><span class="nv">PROJECT_ID</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">MANAGEMENT_KEY</span><span class="si">}</span><span class="s2">&#34;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Carregar App Específico<span class="hx:absolute hx:-mt-20" id="carregar-app-específico"></span>
+    <a href="#carregar-app-espec%c3%adfico" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl <span class="s2">&#34;https://api.descope.com/v1/mgmt/outbound/app/calendar-integration&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</span><span class="nv">PROJECT_ID</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">MANAGEMENT_KEY</span><span class="si">}</span><span class="s2">&#34;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Atualizar App<span class="hx:absolute hx:-mt-20" id="atualizar-app"></span>
+    <a href="#atualizar-app" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -X POST <span class="s2">&#34;https://api.descope.com/v1/mgmt/outbound/app/update&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</span><span class="nv">PROJECT_ID</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">MANAGEMENT_KEY</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Content-Type: application/json&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -d <span class="s1">&#39;{
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;id&#34;: &#34;calendar-integration&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;name&#34;: &#34;Updated Name&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;description&#34;: &#34;Updated description&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s1">  }&#39;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Deletar App<span class="hx:absolute hx:-mt-20" id="deletar-app"></span>
+    <a href="#deletar-app" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -X POST <span class="s2">&#34;https://api.descope.com/v1/mgmt/outbound/app/delete&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Authorization: Bearer </span><span class="si">${</span><span class="nv">PROJECT_ID</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">MANAGEMENT_KEY</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -H <span class="s2">&#34;Content-Type: application/json&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">  -d <span class="s1">&#39;{
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;id&#34;: &#34;calendar-integration&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s1">  }&#39;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>Tratamento de Erros<span class="hx:absolute hx:-mt-20" id="tratamento-de-erros"></span>
+    <a href="#tratamento-de-erros" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Códigos de Status Comuns<span class="hx:absolute hx:-mt-20" id="códigos-de-status-comuns"></span>
+    <a href="#c%c3%b3digos-de-status-comuns" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
   <thead>
       <tr>
-          <th>Abordagem Tradicional</th>
-          <th>Descope Outbound Apps</th>
+          <th>Código</th>
+          <th>Significado</th>
+          <th>Causas Comuns</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>Tokens persistentes no DB</td>
-          <td>Tokens solicitados sob demanda</td>
+          <td><strong>401</strong></td>
+          <td>Unauthorized</td>
+          <td>Management key ou project ID inválido</td>
       </tr>
       <tr>
-          <td>Refresh automático contínuo</td>
-          <td>Token de vida curta (5-15 min)</td>
+          <td><strong>403</strong></td>
+          <td>Forbidden</td>
+          <td>Permissões insuficientes ou acesso ao tenant negado</td>
       </tr>
       <tr>
-          <td>Se vazar = acesso indefinido</td>
-          <td>Se vazar = já expirou</td>
+          <td><strong>404</strong></td>
+          <td>Token not found</td>
+          <td>Usuário nunca conectou o app, token foi limpo, ou scopes incorretos</td>
       </tr>
       <tr>
-          <td>Você gerencia OAuth</td>
-          <td>Descope gerencia OAuth</td>
-      </tr>
-      <tr>
-          <td>Escopo amplo &ldquo;para garantir&rdquo;</td>
-          <td>Escopo mínimo por operação</td>
+          <td><strong>500</strong></td>
+          <td>Server error</td>
+          <td>Método HTTP inválido (não POST) ou payload JSON malformado</td>
       </tr>
   </tbody>
 </table>
-<h2>Como Funciona na Prática<span class="hx:absolute hx:-mt-20" id="como-funciona-na-prática"></span>
-    <a href="#como-funciona-na-pr%c3%a1tica" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>1. Configuração do Outbound App<span class="hx:absolute hx:-mt-20" id="1-configuração-do-outbound-app"></span>
-    <a href="#1-configura%c3%a7%c3%a3o-do-outbound-app" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>No console do Descope:</p>
+<h3>Exemplo de Tratamento<span class="hx:absolute hx:-mt-20" id="exemplo-de-tratamento"></span>
+    <a href="#exemplo-de-tratamento" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">fetchOutboundToken</span><span class="p">(</span><span class="nx">appId</span><span class="p">,</span> <span class="nx">userId</span><span class="p">,</span> <span class="nx">scopes</span> <span class="o">=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">headers</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Authorization&#34;</span><span class="o">:</span> <span class="sb">`Bearer </span><span class="si">${</span><span class="nx">PROJECT_ID</span><span class="si">}</span><span class="sb">:</span><span class="si">${</span><span class="nx">MANAGEMENT_KEY</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Content-Type&#34;</span><span class="o">:</span> <span class="s2">&#34;application/json&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">endpoint</span> <span class="o">=</span> <span class="nx">scopes</span> 
+</span></span><span class="line"><span class="cl">    <span class="o">?</span> <span class="s2">&#34;/v1/mgmt/outbound/app/user/token&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">:</span> <span class="s2">&#34;/v1/mgmt/outbound/app/user/token/latest&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">body</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">appId</span><span class="p">,</span> <span class="nx">userId</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">scopes</span><span class="p">)</span> <span class="nx">body</span><span class="p">.</span><span class="nx">scopes</span> <span class="o">=</span> <span class="nx">scopes</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="sb">`https://api.descope.com</span><span class="si">${</span><span class="nx">endpoint</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">method</span><span class="o">:</span> <span class="s2">&#34;POST&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">headers</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">body</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">body</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">404</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Token não encontrado. Usuário precisa conectar o app primeiro.&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">401</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Credenciais inválidas. Verifique PROJECT_ID e MANAGEMENT_KEY.&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="sb">`HTTP </span><span class="si">${</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kr">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&#34;Erro ao buscar token:&#34;</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>Boas Práticas de Segurança<span class="hx:absolute hx:-mt-20" id="boas-práticas-de-segurança"></span>
+    <a href="#boas-pr%c3%a1ticas-de-seguran%c3%a7a" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>1. Escopo Mínimo<span class="hx:absolute hx:-mt-20" id="1-escopo-mínimo"></span>
+    <a href="#1-escopo-m%c3%adnimo" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Sempre solicite o mínimo de permissões necessário:</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><pre><code>Outbound Apps → Add Outbound App → Google Calendar
-├─ App ID: calendar-agent-prod
-├─ Client ID: [seu client do Google]
-├─ Client Secret: [seu secret do Google]
-├─ Scopes Padrão: readonly (você pode sobrescrever via código)
-└─ Token Lifetime: 300 segundos (5 minutos)</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// ❌ Ruim - Acesso total
+</span></span></span><span class="line"><span class="cl"><span class="nx">calendar</span><span class="p">.</span><span class="nx">events</span>  <span class="c1">// See, edit, share, delete
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ✅ Bom - Apenas leitura
+</span></span></span><span class="line"><span class="cl"><span class="nx">calendar</span><span class="p">.</span><span class="nx">events</span><span class="p">.</span><span class="nx">readonly</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -1063,20 +1785,23 @@ O problema: Tokens persistentes são bombas-relógio. Se vazarem, alguém tem ac
   </button>
 </div>
 </div>
-<h3>2. O Fluxo de Token Descartável<span class="hx:absolute hx:-mt-20" id="2-o-fluxo-de-token-descartável"></span>
-    <a href="#2-o-fluxo-de-token-descart%c3%a1vel" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+<h3>2. Nunca Armazene Access Tokens<span class="hx:absolute hx:-mt-20" id="2-nunca-armazene-access-tokens"></span>
+    <a href="#2-nunca-armazene-access-tokens" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><pre><code>Agente precisa ler agenda
-        ↓
-Solicita token ao Descope (scope: calendar.readonly)
-        ↓
-Descope retorna token válido por 5 minutos
-        ↓
-Agente usa token imediatamente
-        ↓
-Token é descartado da memória
-        ↓
-Token expira (mesmo que alguém o intercepte)</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// ❌ Ruim
+</span></span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetchToken</span><span class="p">();</span>  <span class="c1">// Guarda na variável
+</span></span></span><span class="line"><span class="cl"><span class="kr">await</span> <span class="nx">callApi1</span><span class="p">(</span><span class="nx">token</span><span class="p">);</span>             <span class="c1">// Usa
+</span></span></span><span class="line"><span class="cl"><span class="kr">await</span> <span class="nx">callApi2</span><span class="p">(</span><span class="nx">token</span><span class="p">);</span>             <span class="c1">// Reusa depois de 10 minutos
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ✅ Bom
+</span></span></span><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">executeWithFreshToken</span><span class="p">(</span><span class="nx">operation</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">{</span> <span class="nx">token</span> <span class="p">}</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetchToken</span><span class="p">();</span>  <span class="c1">// Sempre pega token válido
+</span></span></span><span class="line"><span class="cl">  <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kr">await</span> <span class="nx">operation</span><span class="p">(</span><span class="nx">token</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">finally</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Token é descartado automaticamente ao sair do escopo
+</span></span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -1086,142 +1811,18 @@ Token expira (mesmo que alguém o intercepte)</code></pre></div><div class="hext
   </button>
 </div>
 </div>
-<h2>Implementação em Python<span class="hx:absolute hx:-mt-20" id="implementação-em-python"></span>
-    <a href="#implementa%c3%a7%c3%a3o-em-python" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+<h3>3. Use HTTPS Sempre<span class="hx:absolute hx:-mt-20" id="3-use-https-sempre"></span>
+    <a href="#3-use-https-sempre" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Todas as chamadas devem usar TLS 1.2 ou superior.</p>
+<h3>4. Não Logue Tokens<span class="hx:absolute hx:-mt-20" id="4-não-logue-tokens"></span>
+    <a href="#4-n%c3%a3o-logue-tokens" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">descope</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">SecureAIAgent</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">descope_client</span> <span class="o">=</span> <span class="n">descope</span><span class="o">.</span><span class="n">DescopeClient</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">            <span class="n">project_id</span><span class="o">=</span><span class="s2">&#34;seu-project-id&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="n">management_key</span><span class="o">=</span><span class="s2">&#34;sua-management-key&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">)</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_temporary_token</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">scopes</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">ttl_seconds</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">300</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">        Solicita um token de curta duração.
-</span></span></span><span class="line"><span class="cl"><span class="s2">        TTL padrão: 5 minutos (você pode ajustar conforme a operação)
-</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">token_response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">descope_client</span><span class="o">.</span><span class="n">management</span><span class="o">.</span><span class="n">outbound_app</span><span class="o">.</span><span class="n">generate_token</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">app_id</span><span class="o">=</span><span class="s2">&#34;calendar-agent-prod&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="n">scopes</span><span class="o">=</span><span class="n">scopes</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="n">custom_claims</span><span class="o">=</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;exp&#34;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">ttl_seconds</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;operation&#34;</span><span class="p">:</span> <span class="s2">&#34;calendar_read&#34;</span><span class="p">,</span>  <span class="c1"># auditoria</span>
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;session_id&#34;</span><span class="p">:</span> <span class="s2">&#34;unique-session-id&#34;</span>  <span class="c1"># rastreabilidade</span>
-</span></span><span class="line"><span class="cl">                <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="p">)</span>
-</span></span><span class="line"><span class="cl">            
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;access_token&#34;</span><span class="p">:</span> <span class="n">token_response</span><span class="p">[</span><span class="s2">&#34;token&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;expires_in&#34;</span><span class="p">:</span> <span class="n">ttl_seconds</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;scope&#34;</span><span class="p">:</span> <span class="s2">&#34; &#34;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">scopes</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># Log seguro: não exponha o user_id em logs de erro</span>
-</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;[AUDIT] Falha na geração de token: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="k">raise</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">read_calendar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">date</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">        Exemplo de operação: ler agenda do usuário.
-</span></span></span><span class="line"><span class="cl"><span class="s2">        Token é gerado, usado e imediatamente descartado.
-</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># 1. Solicitar token com escopo MÍNIMO necessário</span>
-</span></span><span class="line"><span class="cl">        <span class="n">token_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_temporary_token</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">            <span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="n">scopes</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;calendar.events.readonly&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">            <span class="n">ttl_seconds</span><span class="o">=</span><span class="mi">60</span>  <span class="c1"># 1 minuto é suficiente para uma leitura</span>
-</span></span><span class="line"><span class="cl">        <span class="p">)</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="n">access_token</span> <span class="o">=</span> <span class="n">token_data</span><span class="p">[</span><span class="s2">&#34;access_token&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># 2. Usar o token imediatamente</span>
-</span></span><span class="line"><span class="cl">            <span class="kn">import</span> <span class="nn">requests</span>
-</span></span><span class="line"><span class="cl">            
-</span></span><span class="line"><span class="cl">            <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;https://www.googleapis.com/calendar/v3/calendars/primary/events&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;Authorization&#34;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&#34;Bearer </span><span class="si">{</span><span class="n">access_token</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">},</span>
-</span></span><span class="line"><span class="cl">                <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;timeMin&#34;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s2">T00:00:00Z&#34;</span><span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="p">)</span>
-</span></span><span class="line"><span class="cl">            
-</span></span><span class="line"><span class="cl">            <span class="n">events</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">            
-</span></span><span class="line"><span class="cl">            <span class="c1"># 3. LOG DE AUDITORIA (quem fez o quê e quando)</span>
-</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">_log_operation</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="n">operation</span><span class="o">=</span><span class="s2">&#34;calendar_read&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="n">scopes_used</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;calendar.events.readonly&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                <span class="n">timestamp</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">            <span class="p">)</span>
-</span></span><span class="line"><span class="cl">            
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">events</span>
-</span></span><span class="line"><span class="cl">            
-</span></span><span class="line"><span class="cl">        <span class="k">finally</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># 4. DESCARTAR O TOKEN DA MEMÓRIA</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># Em Python, podemos forçar a liberação</span>
-</span></span><span class="line"><span class="cl">            <span class="n">access_token</span> <span class="o">=</span> <span class="kc">None</span>
-</span></span><span class="line"><span class="cl">            <span class="k">del</span> <span class="n">access_token</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">schedule_meeting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">meeting_data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">        Operação de escrita: requer escopo diferente e TTL maior.
-</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">token_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_temporary_token</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">            <span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="n">scopes</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;calendar.events&#34;</span><span class="p">],</span>  <span class="c1"># escopo de escrita</span>
-</span></span><span class="line"><span class="cl">            <span class="n">ttl_seconds</span><span class="o">=</span><span class="mi">120</span>  <span class="c1"># 2 minutos para a operação completa</span>
-</span></span><span class="line"><span class="cl">        <span class="p">)</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="n">access_token</span> <span class="o">=</span> <span class="n">token_data</span><span class="p">[</span><span class="s2">&#34;access_token&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;https://www.googleapis.com/calendar/v3/calendars/primary/events&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="n">headers</span><span class="o">=</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Authorization&#34;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&#34;Bearer </span><span class="si">{</span><span class="n">access_token</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;Content-Type&#34;</span><span class="p">:</span> <span class="s2">&#34;application/json&#34;</span>
-</span></span><span class="line"><span class="cl">                <span class="p">},</span>
-</span></span><span class="line"><span class="cl">                <span class="n">json</span><span class="o">=</span><span class="n">meeting_data</span>
-</span></span><span class="line"><span class="cl">            <span class="p">)</span>
-</span></span><span class="line"><span class="cl">            
-</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">_log_operation</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">                <span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="n">operation</span><span class="o">=</span><span class="s2">&#34;calendar_create&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="n">scopes_used</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;calendar.events&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                <span class="n">timestamp</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">            <span class="p">)</span>
-</span></span><span class="line"><span class="cl">            
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">            
-</span></span><span class="line"><span class="cl">        <span class="k">finally</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">access_token</span> <span class="o">=</span> <span class="kc">None</span>
-</span></span><span class="line"><span class="cl">            <span class="k">del</span> <span class="n">access_token</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">_log_operation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">operation</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">scopes_used</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">timestamp</span><span class="p">:</span> <span class="n">datetime</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">        Auditoria: registre TODAS as operações para compliance.
-</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">audit_log</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;user_hash&#34;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hash_user_id</span><span class="p">(</span><span class="n">user_id</span><span class="p">),</span>  <span class="c1"># nunca logue IDs reais</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;operation&#34;</span><span class="p">:</span> <span class="n">operation</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;scopes&#34;</span><span class="p">:</span> <span class="n">scopes_used</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;timestamp&#34;</span><span class="p">:</span> <span class="n">timestamp</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(),</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;environment&#34;</span><span class="p">:</span> <span class="s2">&#34;production&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="c1"># Envie para seu sistema de logs (Datadog, CloudWatch, etc)</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;[AUDIT] </span><span class="si">{</span><span class="n">audit_log</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">_hash_user_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;Hash do user_id para privacidade em logs.&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="kn">import</span> <span class="nn">hashlib</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">user_id</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()[:</span><span class="mi">16</span><span class="p">]</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// ❌ Ruim
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Token:&#34;</span><span class="p">,</span> <span class="nx">accessToken</span><span class="p">);</span>  <span class="c1">// Nunca faça isso
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ✅ Bom
+</span></span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Token obtido para usuário:&#34;</span><span class="p">,</span> <span class="nx">userId</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Scopes:&#34;</span><span class="p">,</span> <span class="nx">scopes</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Expira em:&#34;</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">expiry</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">));</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -1231,53 +1832,28 @@ Token expira (mesmo que alguém o intercepte)</code></pre></div><div class="hext
   </button>
 </div>
 </div>
-<h2>Padrão Avançado: Token por Operação<span class="hx:absolute hx:-mt-20" id="padrão-avançado-token-por-operação"></span>
-    <a href="#padr%c3%a3o-avan%c3%a7ado-token-por-opera%c3%a7%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Para máxima segurança, você pode gerar tokens ainda mais granulares:</p>
+<h3>5. Gerenciamento de Chaves<span class="hx:absolute hx:-mt-20" id="5-gerenciamento-de-chaves"></span>
+    <a href="#5-gerenciamento-de-chaves" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>Roteie Management Keys periodicamente</li>
+<li>Use Inbound App Tokens para agents/MCP (mais granularidade)</li>
+<li>Nunca exponha Management Keys em código frontend</li>
+</ul>
+<h3>6. Políticas de Acesso<span class="hx:absolute hx:-mt-20" id="6-políticas-de-acesso"></span>
+    <a href="#6-pol%c3%adticas-de-acesso" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Para agents/MCP, configure políticas:</p>
 <div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">UltraSecureAgent</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">execute_tool</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tool_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">        Cada ferramenta recebe seu próprio token com escopo exato.
-</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="n">tool_configs</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;calendar.read&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;scopes&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;calendar.events.readonly&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;ttl&#34;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;endpoint&#34;</span><span class="p">:</span> <span class="s2">&#34;calendar/v3/events&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">},</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;calendar.create&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;scopes&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;calendar.events&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;ttl&#34;</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;endpoint&#34;</span><span class="p">:</span> <span class="s2">&#34;calendar/v3/events&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">},</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;contacts.lookup&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;scopes&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;contacts.readonly&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;ttl&#34;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>  <span class="c1"># só precisa de 30 segundos!</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;endpoint&#34;</span><span class="p">:</span> <span class="s2">&#34;people/v1/people&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="n">config</span> <span class="o">=</span> <span class="n">tool_configs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">tool_name</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="n">config</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Ferramenta desconhecida: </span><span class="si">{</span><span class="n">tool_name</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="c1"># Token com tempo de vida MÍNIMO necessário</span>
-</span></span><span class="line"><span class="cl">        <span class="n">token</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_temporary_token</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">            <span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="n">scopes</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s2">&#34;scopes&#34;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">            <span class="n">ttl_seconds</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s2">&#34;ttl&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="p">)</span>
-</span></span><span class="line"><span class="cl">        
-</span></span><span class="line"><span class="cl">        <span class="c1"># Execute a operação e descarte</span>
-</span></span><span class="line"><span class="cl">        <span class="k">try</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_provider_api</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&#34;endpoint&#34;</span><span class="p">],</span> <span class="n">token</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">result</span>
-</span></span><span class="line"><span class="cl">        <span class="k">finally</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">            <span class="c1"># Garanta que o token seja removido</span>
-</span></span><span class="line"><span class="cl">            <span class="k">del</span> <span class="n">token</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># Exemplo conceitual de política</span><span class="w">
+</span></span></span><span class="line"><span class="cl">- <span class="nt">effect</span><span class="p">:</span><span class="w"> </span><span class="l">allow</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l">outbound.token.fetch</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l">app:calendar-integration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">condition</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">user.role</span><span class="p">:</span><span class="w"> </span><span class="l">admin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl">- <span class="nt">effect</span><span class="p">:</span><span class="w"> </span><span class="l">deny</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l">outbound.token.fetch</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l">app:calendar-integration</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">condition</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">request.ip not in</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;10.0.0.0/8&#34;</span><span class="p">]</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -1287,64 +1863,59 @@ Token expira (mesmo que alguém o intercepte)</code></pre></div><div class="hext
   </button>
 </div>
 </div>
-<h2>Checklist de Segurança<span class="hx:absolute hx:-mt-20" id="checklist-de-segurança"></span>
-    <a href="#checklist-de-seguran%c3%a7a" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>✅ O Que Fazer<span class="hx:absolute hx:-mt-20" id="-o-que-fazer"></span>
-    <a href="#-o-que-fazer" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
-<li><strong>TTL mínimo possível</strong>: Se a operação demora 5 segundos, defina TTL de 30 segundos</li>
-<li><strong>Escopo mínimo</strong>: Nunca peça <code>calendar</code> completo se só precisa ler eventos</li>
-<li><strong>Auditoria completa</strong>: Logue toda operação com hash do usuário</li>
-<li><strong>TLS everywhere</strong>: Todas as chamadas devem ser HTTPS</li>
-<li><strong>Rotação de management keys</strong>: Mude as chaves do Descope regularmente</li>
+<h2>Checklist de Implementação<span class="hx:absolute hx:-mt-20" id="checklist-de-implementação"></span>
+    <a href="#checklist-de-implementa%c3%a7%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li><input disabled="" type="checkbox"> Configurar app no provedor OAuth com redirect URI correto</li>
+<li><input disabled="" type="checkbox"> Criar Outbound App no Descope com scopes mínimos</li>
+<li><input disabled="" type="checkbox"> Implementar fluxo de conexão (SDK, Flow ou API)</li>
+<li><input disabled="" type="checkbox"> Implementar recuperação de tokens usando Management Key ou Inbound App</li>
+<li><input disabled="" type="checkbox"> Tratar erro 404 (usuário não conectado)</li>
+<li><input disabled="" type="checkbox"> Usar token imediatamente e descartar</li>
+<li><input disabled="" type="checkbox"> Implementar logs de auditoria (quem acessou qual token quando)</li>
+<li><input disabled="" type="checkbox"> Configurar políticas de acesso se usando Inbound Apps</li>
+<li><input disabled="" type="checkbox"> Rotação periódica de Management Keys</li>
+<li><input disabled="" type="checkbox"> Nunca logar access tokens completos</li>
 </ul>
-<h3>❌ O Que Evitar<span class="hx:absolute hx:-mt-20" id="-o-que-evitar"></span>
-    <a href="#-o-que-evitar" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
-<li>❌ Nunca armazene tokens em variáveis de ambiente</li>
-<li>❌ Nunca logue tokens (mesmo que parcialmente)</li>
-<li>❌ Nunca reutilize tokens entre operações</li>
-<li>❌ Nunca use TTL maior que o necessário &ldquo;para garantir&rdquo;</li>
-<li>❌ Nunca exponha management keys no código frontend</li>
-</ul>
-<h2>Arquitetura de Produção<span class="hx:absolute hx:-mt-20" id="arquitetura-de-produção"></span>
-    <a href="#arquitetura-de-produ%c3%a7%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+<h2>Arquitetura de Referência: Agent de IA<span class="hx:absolute hx:-mt-20" id="arquitetura-de-referência-agent-de-ia"></span>
+    <a href="#arquitetura-de-refer%c3%aancia-agent-de-ia" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
 
-<div><pre><code>┌─────────────────────────────────────────────────────────────┐
-│                      Usuário                                │
-└─────────────────────────┬───────────────────────────────────┘
-                          │ &#34;Agende uma reunião&#34;
-                          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                   Seu Backend/API                           │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │  1. Validar requisição                              │   │
-│  │  2. Verificar permissões do usuário                 │   │
-│  │  3. Determinar ferramentas necessárias              │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────┬───────────────────────────────────┘
-                          │ Solicita token (scope: calendar.write, TTL: 2min)
-                          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                   Descope                                   │
-│  ├─ Valida consentimento do usuário                         │
-│  ├─ Gera token de curta duração                             │
-│  └─ Retorna token &#43; metadados                               │
-└─────────────────────────┬───────────────────────────────────┘
-                          │ Token válido por 2 minutos
-                          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                   Seu Backend/API                           │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │  4. Usa token imediatamente                         │   │
-│  │  5. Chama Google Calendar API                       │   │
-│  │  6. Descarta token                                  │   │
-│  │  7. Loga auditoria                                  │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────┬───────────────────────────────────┘
-                          │ Resposta para o usuário
-                          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                      Usuário                                │
-│              &#34;Reunião agendada com sucesso!&#34;               │
-└─────────────────────────────────────────────────────────────┘</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+<div><pre><code>Usuário: &#34;Agende reunião com cliente&#34;
+    ↓
+┌─────────────────────────────────────┐
+│  Interface do Agent (LLM)           │
+│  - Interpreta intenção              │
+│  - Identifica tools: CRM &#43; Calendar │
+└─────────────────┬───────────────────┘
+                  ↓
+┌─────────────────────────────────────┐
+│  MCP Server / Backend               │
+│                                     │
+│  1. Verifica permissões do usuário  │
+│                                     │
+│  2. POST /outbound/app/user/token   │
+│     → App: salesforce               │
+│     → User: user_123                │
+│     ← Recebe access_token (válido)  │
+│                                     │
+│  3. Call Salesforce API             │
+│     → Busca contato                 │
+│     ← Dados do contato              │
+│     → Descarta token                │
+│                                     │
+│  4. POST /outbound/app/user/token   │
+│     → App: google-calendar          │
+│     → User: user_123                │
+│     ← Recebe access_token (válido)  │
+│                                     │
+│  5. Call Google Calendar API        │
+│     → Cria evento                   │
+│     ← Confirmação                   │
+│     → Descarta token                │
+│                                     │
+│  6. Log de auditoria                │
+└─────────────────┬───────────────────┘
+                  ↓
+Usuário: &#34;Reunião agendada com sucesso&#34;</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
   <button
     class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
     title="Copy code"
@@ -1354,25 +1925,98 @@ Token expira (mesmo que alguém o intercepte)</code></pre></div><div class="hext
   </button>
 </div>
 </div>
-<h2>Conclusão<span class="hx:absolute hx:-mt-20" id="conclusão"></span>
-    <a href="#conclus%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Com Descope Outbound Apps e tokens de curta duração, você transforma a segurança do seu agente de IA de um problema contínuo em uma solução elegante. O agente recebe exatamente o que precisa, pelo tempo que precisa, e depois <strong>nada</strong>.</p>
-<p><strong>O resultado?</strong> Você pode dormir tranquilo sabendo que:</p>
-<ul>
-<li>Não há tokens vazando em logs</li>
-<li>Não há credenciais persistentes para serem roubadas</li>
-<li>Cada operação é rastreável e auditável</li>
-<li>Mesmo em caso de comprometimento, o dano é limitado a minutos</li>
-</ul>
-<p>Tokens que nascem, vivem brevemente, e morrem - deixando apenas o registro de que fizeram seu trabalho.</p>
-<hr>
-<p><strong>Próximos passos:</strong></p>
-<ol>
-<li>Crie uma conta no <a href="https://descope.com"target="_blank" rel="noopener">Descope</a></li>
-<li>Configure seu primeiro Outbound App com Google Calendar</li>
-<li>Implemente o padrão de token descartável em seu agente</li>
-<li>Configure alertas de auditoria para operações suspeitas</li>
+<h2>Comparação: Com vs Sem Outbound Apps<span class="hx:absolute hx:-mt-20" id="comparação-com-vs-sem-outbound-apps"></span>
+    <a href="#compara%c3%a7%c3%a3o-com-vs-sem-outbound-apps" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Sem Outbound Apps (Tradicional)<span class="hx:absolute hx:-mt-20" id="sem-outbound-apps-tradicional"></span>
+    <a href="#sem-outbound-apps-tradicional" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><pre><code>┌─────────┐     ┌──────────┐     ┌────────────┐     ┌──────────┐
+│ Usuário │────▶│ Seu App  │────▶│ Seu Banco  │────▶│  Google  │
+└─────────┘     └──────────┘     │ (tokens)   │     └──────────┘
+                                 └────────────┘
+                                 
+Você precisa implementar:
+✗ Criptografia de tokens
+✗ Refresh automático
+✗ Auditoria de acesso
+✗ Rotação de secrets
+✗ Compliance (SOC2, etc.)</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Com Outbound Apps<span class="hx:absolute hx:-mt-20" id="com-outbound-apps"></span>
+    <a href="#com-outbound-apps" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><pre><code>┌─────────┐     ┌──────────┐     ┌──────────┐     ┌──────────┐
+│ Usuário │────▶│ Seu App  │────▶│ Descope  │────▶│  Google  │
+└─────────┘     └──────────┘     │ (vault)  │     └──────────┘
+                                 └──────────┘
+                                 
+Descope gerencia:
+✓ Criptografia
+✓ Refresh automático
+✓ Auditoria
+✓ Ciclo de vida
+
+Sua app só:
+✓ Solicita token quando precisa
+✓ Usa imediatamente
+✓ Descarta</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<h2>Trade-offs<span class="hx:absolute hx:-mt-20" id="trade-offs"></span>
+    <a href="#trade-offs" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Vantagens<span class="hx:absolute hx:-mt-20" id="vantagens"></span>
+    <a href="#vantagens" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ol>
+<li><strong>Segurança</strong>: Tokens não transitam pelo seu banco</li>
+<li><strong>Compliance</strong>: Auditoria automática integrada</li>
+<li><strong>Simplicidade</strong>: Sem implementar refresh logic</li>
+<li><strong>Granularidade</strong>: Políticas de acesso em tempo real (com Inbound Apps)</li>
+<li><strong>Múltiplos formatos</strong>: Suporta OAuth e API keys estáticas</li>
 </ol>
-<p><strong>Lembre-se:</strong> Segurança não é um estado, é um processo. Revise seus TTLs, escopos e logs regularmente.</p>
+<h3>Desvantagens<span class="hx:absolute hx:-mt-20" id="desvantagens"></span>
+    <a href="#desvantagens" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ol>
+<li><strong>Latência</strong>: Chamada extra à API do Descope para cada operação</li>
+<li><strong>Vendor Lock-in</strong>: Dependência do serviço</li>
+<li><strong>Custo</strong>: Serviço adicional</li>
+<li><strong>Complexidade</strong>: Mais um componente na arquitetura</li>
+</ol>
+<h3>Quando Usar<span class="hx:absolute hx:-mt-20" id="quando-usar"></span>
+    <a href="#quando-usar" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>✅ <strong>Ideal para</strong>:</p>
+<ul>
+<li>Aplicações SaaS multi-tenant</li>
+<li>Agents de IA (MCP servers)</li>
+<li>Requisitos de compliance rigorosos</li>
+<li>Equipes que querem evitar complexidade OAuth</li>
+</ul>
+<p>❌ <strong>Não ideal para</strong>:</p>
+<ul>
+<li>Aplicações simples com poucas integrações</li>
+<li>Casos onde latência é crítica (&lt; 50ms)</li>
+<li>Projetos que não podem depender de serviços externos</li>
+</ul>
+<h2>Conclusão<span class="hx:absolute hx:-mt-20" id="conclusão"></span>
+    <a href="#conclus%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Outbound Apps implementam o padrão Token Vault, externalizando a complexidade de gestão de credenciais OAuth. Em vez de armazenar tokens no seu banco, você os recupera sob demanda via API, usa imediatamente e descarta.</p>
+<p>O fluxo é simples: <strong>conecte o usuário uma vez, recupere tokens quando necessário, use e descarte</strong>.</p>
+<p>Isso reduz a superfície de ataque da sua aplicação, simplifica compliance e permite que você se concentre na lógica de negócio em vez de segurança de tokens.</p>
+<p>Lembre-se: <strong>o token só deve existir na memória pelo tempo estritamente necessário para completar a operação</strong>.</p>
+<h2>Recursos<span class="hx:absolute hx:-mt-20" id="recursos"></span>
+    <a href="#recursos" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li><a href="https://docs.descope.com/identity-federation/outbound-apps"target="_blank" rel="noopener">Descope Outbound Apps Docs</a></li>
+<li><a href="https://tools.ietf.org/html/rfc6749"target="_blank" rel="noopener">OAuth 2.0 RFC 6749</a></li>
+<li><a href="https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html"target="_blank" rel="noopener">OWASP OAuth 2.0 Cheat Sheet</a></li>
+</ul>
 
       </div>
       <div class="hx:mt-16"></div>
@@ -1383,9 +2027,9 @@ Token expira (mesmo que alguém o intercepte)</code></pre></div><div class="hext
 <script>
     (function() {
         var shortname = 'oraphadev';
-        var pageUrl = 'https:\/\/www.orapha.dev\/2026\/05\/14\/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia\/';
+        var pageUrl = 'http:\/\/localhost:1313\/2026\/05\/14\/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia\/';
         var pageIdentifier = '\/2026\/05\/14\/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia\/';
-        var isDev = false;
+        var isDev = true;
 
         var iframeContent = `
 <!DOCTYPE html>
@@ -1529,7 +2173,39 @@ Token expira (mesmo que alguém o intercepte)</code></pre></div><div class="hext
 })();
 </script>
 
-      <footer class="hextra-footer hx:bg-gray-100 hx:pb-[env(safe-area-inset-bottom)] hx:dark:bg-neutral-900 hx:print:bg-transparent"><div class="hx:mx-auto hx:flex hx:gap-2 hx:py-2 hx:px-4 hextra-max-footer-width"><div class="hx:flex hx:justify-items-start hx:group" data-theme="light">
+      <footer class="hextra-footer hx:bg-gray-100 hx:pb-[env(safe-area-inset-bottom)] hx:dark:bg-neutral-900 hx:print:bg-transparent"><div class="hx:mx-auto hx:flex hx:gap-2 hx:py-2 hx:px-4 hextra-max-footer-width"><div class="hx:flex hx:justify-items-start ">
+    <button
+      title="Change language"
+      data-state="closed"
+      data-location=""
+      class="hextra-language-switcher hx:cursor-pointer hx:rounded-md hx:text-left hx:font-medium hx:h-7 hx:px-2 hx:text-xs hx:text-gray-600 hx:transition-colors hx:dark:text-gray-400 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:grow"
+      type="button"
+      aria-label="Change language"
+    >
+      <div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height=12 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg><span>Português</span></div>
+    </button>
+    <ul
+      class="hextra-language-options hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-md hx:ring-1 hx:ring-black/5 hx:bg-white hx:py-1 hx:text-sm hx:shadow-lg hx:dark:ring-white/20 hx:dark:bg-neutral-800"
+      style="position: fixed; inset: auto auto 0px 0px; margin: 0px; min-width: 100px;"
+    >
+      
+        
+        <li class="hx:flex hx:flex-col">
+          <a
+            href="/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/"
+            class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+          >Português<span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span></a>
+        </li>
+      
+        
+        <li class="hx:flex hx:flex-col">
+          <a
+            href="/en/"
+            class="hx:text-gray-800 hx:dark:text-gray-100 hx:hover:bg-primary-50 hx:hover:text-primary-600 hx:hover:dark:bg-primary-500/10 hx:hover:dark:text-primary-600 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9"
+          >English</a>
+        </li>
+      </ul>
+  </div><div class="hx:flex hx:justify-items-start hx:group" data-theme="light">
   <button
     title="Change theme"
     data-state="closed"
@@ -1584,8 +2260,8 @@ Token expira (mesmo que alguém o intercepte)</code></pre></div><div class="hext
   </a></div><div class="hx:mt-6 hx:text-xs">© 2026 Raphael Pontes - All Rights Reserved</div></div>
     </div></footer>
     
-    <script defer src="/js/main.min.aec568c7def21902f0688ccfb381bda5d1ef3db58d3e62d0f3bc61b637d8a2d2.js" integrity="sha256-rsVox97yGQLwaIzPs4G9pdHvPbWNPmLQ87xhtjfYotI="></script>
-<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script>
-        <script defer src="/pt-br.search.min.a9af84626d6b626e08cc4829434e6d4ef98875ff97a6cbf7ef3ba6345b5cb536.js" integrity="sha256-qa&#43;EYm1rYm4IzEgpQ05tTvmIdf&#43;Xpsv37zumNFtctTY="></script>
+    <script defer src="/js/main.js" integrity=""></script>
+<script defer src="/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script>
+        <script defer src="/pt-br.search.js" integrity=""></script>
   </body>
 </html>

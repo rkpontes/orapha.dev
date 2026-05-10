@@ -2,6 +2,7 @@
 title: "UI UX Pro Max: Design intelligence para agentes de IA construírem interfaces profissionais"
 date: '2026-05-11T10:00:00-03:00'
 slug: ui-ux-pro-max-design-intelligence-para-agentes-de-ia
+translationKey: ui-ux-pro-max-design-intelligence-para-agentes-de-ia-2026-05-11
 tags:
   - ia
   - ui-design
