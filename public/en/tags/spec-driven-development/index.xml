@@ -1,4 +1,250 @@
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>orapha.dev</title><link>https://www.orapha.dev/</link><description>Raphael Pontes' blog — software engineering, AI, and development. English edition.</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 09 May 2026 22:08:40 GMT</lastBuildDate><atom:link href="https://www.orapha.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Awesome Design: A catalog of design systems ready to use with AI agents</title><link>https://www.orapha.dev/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</guid><pubDate>Sat, 09 May 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;Awesome Design: A catalog of design systems ready to use with AI agents&lt;/h1&gt;&lt;p&gt;There&amp;rsquo;s something that&amp;rsquo;s always bothered me when working with code agents: visual inconsistency. You ask the agent to &amp;ldquo;create a dashboard screen,&amp;rdquo; it delivers something functional, but the visual&amp;hellip; well, the visual looks like it was made by someone who&amp;rsquo;s never heard of a design system. Each screen becomes an island, each component has its own personality, and in the end you have a visual Frankenstein that works but doesn&amp;rsquo;t give that professional product feeling.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>Awesome Design: A catalog of design systems ready to use with AI agents</h1><p>There&rsquo;s something that&rsquo;s always bothered me when working with code agents: visual inconsistency. You ask the agent to &ldquo;create a dashboard screen,&rdquo; it delivers something functional, but the visual&hellip; well, the visual looks like it was made by someone who&rsquo;s never heard of a design system. Each screen becomes an island, each component has its own personality, and in the end you have a visual Frankenstein that works but doesn&rsquo;t give that professional product feeling.</p>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>orapha.dev</title>
+    <link>https://www.orapha.dev/</link>
+    <description>Raphael Pontes&#39; blog — software engineering, AI, and development. English edition.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 10 May 2026 20:20:54 GMT</lastBuildDate>
+    <atom:link href="https://www.orapha.dev/index.xml" rel="self" type="application/rss+xml"/>
+    
+      <item>
+        <title>Graphify: Transforming your project into a knowledge graph that AI agents understand</title>
+        <link>https://www.orapha.dev/en/2026/05/10/graphify-transformando-seu-projeto-em-grafo-de-conhecimento-para-agentes-de-ia/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2026/05/10/graphify-transformando-seu-projeto-em-grafo-de-conhecimento-para-agentes-de-ia/</guid>
+        <pubDate>Sun, 10 May 2026 10:00:00 GMT</pubDate>
+        <description>&lt;h1&gt;Graphify: Transforming your project into a knowledge graph that AI agents understand&lt;/h1&gt;&lt;p&gt;Working with large projects using AI agents has a classic problem: context. You open the chat, ask a question about how authentication works in your system, and the agent starts grepping around, opening random files, wasting time with irrelevant code. When your project has thousands of files, this &amp;ldquo;searching in the dark&amp;rdquo; approach doesn&amp;rsquo;t scale.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been through this many times. And the truth is that agents are good at understanding code but bad at understanding the &lt;strong&gt;structure&lt;/strong&gt; of code. They don&amp;rsquo;t have a mental map of the project. They don&amp;rsquo;t know what&amp;rsquo;s connected to what, they don&amp;rsquo;t see architectural patterns, they don&amp;rsquo;t capture design decisions scattered in comments and documentation.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1>Graphify: Transforming your project into a knowledge graph that AI agents understand</h1><p>Working with large projects using AI agents has a classic problem: context. You open the chat, ask a question about how authentication works in your system, and the agent starts grepping around, opening random files, wasting time with irrelevant code. When your project has thousands of files, this &ldquo;searching in the dark&rdquo; approach doesn&rsquo;t scale.</p>
+<p>I&rsquo;ve been through this many times. And the truth is that agents are good at understanding code but bad at understanding the <strong>structure</strong> of code. They don&rsquo;t have a mental map of the project. They don&rsquo;t know what&rsquo;s connected to what, they don&rsquo;t see architectural patterns, they don&rsquo;t capture design decisions scattered in comments and documentation.</p>
+<p>That&rsquo;s when I discovered <a href="https://github.com/safishamsi/graphify"target="_blank" rel="noopener"><strong>Graphify</strong></a>.</p>
+<h2>What is Graphify?<span class="hx:absolute hx:-mt-20" id="what-is-graphify"></span>
+    <a href="#what-is-graphify" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Graphify is a skill for code agents (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, GitHub Copilot CLI, VS Code Copilot Chat, Aider, and more) that transforms any folder of content into a <strong>queryable knowledge graph</strong>.</p>
+<p>And when I say &ldquo;any folder,&rdquo; I&rsquo;m talking about:</p>
+<ul>
+<li>Code in 28 languages (Python, TypeScript, Go, Rust, Java, etc.)</li>
+<li>SQL schemas</li>
+<li>Shell scripts</li>
+<li>Documentation (Markdown, HTML, TXT)</li>
+<li>Office files (docx, xlsx)</li>
+<li>PDFs</li>
+<li>Images (PNG, JPG, WebP)</li>
+<li>Video and audio (MP4, MOV, MP3, WAV)</li>
+<li>YouTube URLs</li>
+<li>Google Workspace documents</li>
+</ul>
+<p>The idea is simple: instead of letting the agent mine files in the dark, you create an intelligent map of the project that it can navigate.</p>
+<h2>How it works<span class="hx:absolute hx:-mt-20" id="how-it-works"></span>
+    <a href="#how-it-works" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Installation is straightforward:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">uv tool install graphifyy <span class="o">&amp;&amp;</span> graphify install
+</span></span><span class="line"><span class="cl"><span class="c1"># or: pipx install graphifyy &amp;&amp; graphify install</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># or: pip install graphifyy &amp;&amp; graphify install</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Then, just run it in your project:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><pre><code>/graphify .</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Done. Graphify will generate three files:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><pre><code>graphify-out/
+├── graph.html       # Interactive visualization — open in browser
+├── GRAPH_REPORT.md  # Executive summary with highlights and suggested questions
+└── graph.json       # Complete graph for programmatic queries</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>The <code>graph.html</code> is particularly useful. You can click on nodes, filter, search. It&rsquo;s a visual way to understand how the pieces of your project connect.</p>
+<h2>What&rsquo;s in the report<span class="hx:absolute hx:-mt-20" id="whats-in-the-report"></span>
+    <a href="#whats-in-the-report" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The <code>GRAPH_REPORT.md</code> is where things get interesting. It includes:</p>
+<ul>
+<li><strong>God nodes</strong> — the most connected concepts in the project. Everything goes through them.</li>
+<li><strong>Surprising connections</strong> — links between things that live in different files or modules, ranked by how unexpected they are.</li>
+<li><strong>The &ldquo;why&rdquo;</strong> — inline comments (<code># NOTE:</code>, <code># WHY:</code>, <code># HACK:</code>) and docstrings extracted as separate nodes.</li>
+<li><strong>Suggested questions</strong> — 4-5 questions the graph is positioned to answer.</li>
+<li><strong>Confidence tags</strong> — each relation is marked as <code>EXTRACTED</code> (found in code), <code>INFERRED</code> (inferred), or <code>AMBIGUOUS</code> (ambiguous).</li>
+</ul>
+<p>This means you can ask the agent: &ldquo;what connects authentication to the database?&rdquo; and it will query the graph instead of grepping around.</p>
+<h2>Integration with agents<span class="hx:absolute hx:-mt-20" id="integration-with-agents"></span>
+    <a href="#integration-with-agents" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Graphify has native integration with several platforms:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Platform</th>
+          <th>Command</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Claude Code</td>
+          <td><code>graphify install</code></td>
+      </tr>
+      <tr>
+          <td>Codex</td>
+          <td><code>graphify install --platform codex</code></td>
+      </tr>
+      <tr>
+          <td>OpenCode</td>
+          <td><code>graphify install --platform opencode</code></td>
+      </tr>
+      <tr>
+          <td>Cursor</td>
+          <td><code>graphify cursor install</code></td>
+      </tr>
+      <tr>
+          <td>VS Code Copilot Chat</td>
+          <td><code>graphify vscode install</code></td>
+      </tr>
+      <tr>
+          <td>GitHub Copilot CLI</td>
+          <td><code>graphify install --platform copilot</code></td>
+      </tr>
+      <tr>
+          <td>Gemini CLI</td>
+          <td><code>graphify install --platform gemini</code></td>
+      </tr>
+      <tr>
+          <td>Aider</td>
+          <td><code>graphify install --platform aider</code></td>
+      </tr>
+  </tbody>
+</table>
+<p>After installing, you can make the agent always use the graph:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">graphify claude install</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>This writes a configuration file that tells the assistant to read the <code>GRAPH_REPORT.md</code> before answering questions about your codebase. On platforms that support hooks (Claude Code, Codex, Gemini CLI), a hook triggers automatically before each file read call.</p>
+<h2>Querying the graph<span class="hx:absolute hx:-mt-20" id="querying-the-graph"></span>
+    <a href="#querying-the-graph" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Besides letting the agent use it automatically, you can query the graph directly:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><pre><code>/graphify query &#34;what connects auth to the database?&#34;
+/graphify path &#34;UserService&#34; &#34;DatabasePool&#34;
+/graphify explain &#34;RateLimiter&#34;</code></pre></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>Or via terminal:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">graphify query <span class="s2">&#34;show the auth flow&#34;</span>
+</span></span><span class="line"><span class="cl">graphify query <span class="s2">&#34;what connects DigestAuth to Response?&#34;</span> --graph graphify-out/graph.json</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>For MCP (Model Context Protocol) integration, you can expose the graph as a server:</p>
+<div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code">
+
+<div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python -m graphify.serve graphify-out/graph.json</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0">
+  <button
+    class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+    title="Copy code"
+  >
+    <div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"></div>
+<div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"></div>
+  </button>
+</div>
+</div>
+<p>This gives your assistant structured access via functions like <code>query_graph</code>, <code>get_node</code>, <code>get_neighbors</code>, <code>shortest_path</code>.</p>
+<h2>Team and versioning<span class="hx:absolute hx:-mt-20" id="team-and-versioning"></span>
+    <a href="#team-and-versioning" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Graphify was designed for teamwork. The <code>graphify-out/</code> directory is meant to be committed to git. The recommended workflow:</p>
+<ol>
+<li>One person runs <code>/graphify .</code> and commits <code>graphify-out/</code></li>
+<li>Everyone pulls — their assistants read the graph immediately</li>
+<li>Run <code>graphify hook install</code> for auto-rebuild on every commit</li>
+<li>When docs or papers change, run <code>/graphify --update</code></li>
+</ol>
+<p>There&rsquo;s even a merge driver to avoid conflicts in <code>graph.json</code> when two devs commit in parallel.</p>
+<h2>Privacy<span class="hx:absolute hx:-mt-20" id="privacy"></span>
+    <a href="#privacy" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>One thing I care about is privacy. Here&rsquo;s how it works:</p>
+<ul>
+<li><strong>Code files</strong> — processed locally via tree-sitter. Nothing leaves your machine.</li>
+<li><strong>Video/audio</strong> — transcribed locally with faster-whisper. Nothing leaves your machine.</li>
+<li><strong>Docs, PDFs, images</strong> — sent to your AI assistant for semantic extraction (using your IDE session&rsquo;s model).</li>
+</ul>
+<p>No telemetry, no tracking, no analytics.</p>
+<h2>Why this matters<span class="hx:absolute hx:-mt-20" id="why-this-matters"></span>
+    <a href="#why-this-matters" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>For me, Graphify&rsquo;s value is in three places:</p>
+<p><strong>First, efficiency.</strong> Instead of letting the agent open dozens of files looking for context, it navigates a structured graph. Less tokens spent, faster responses.</p>
+<p><strong>Second, discovery.</strong> The graph shows connections you might not have noticed. That utility function used in 15 different places. That module that bridges two seemingly disconnected domains.</p>
+<p><strong>Third, onboarding.</strong> When someone new joins the project, the graph is a map. Instead of reading thousands of files, you explore the graph. See the god nodes, understand the architecture, discover the patterns.</p>
+<h2>Final considerations<span class="hx:absolute hx:-mt-20" id="final-considerations"></span>
+    <a href="#final-considerations" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Graphify is one of those tools that seems obvious after you use it. Transforming code into a knowledge graph makes total sense when you work with AI agents. It&rsquo;s like giving them a map instead of letting them explore in the dark.</p>
+<p>If you work with large projects and use code agents regularly, it&rsquo;s worth trying. The learning curve is practically zero — install, run <code>/graphify .</code>, and start using.</p>
+<p>The repository has 45k+ stars and an active community. It&rsquo;s constantly evolving with support for new platforms and file formats.</p>
+<hr>
+<p><strong>Links:</strong></p>
+<ul>
+<li><a href="https://github.com/safishamsi/graphify"target="_blank" rel="noopener">Graphify on GitHub</a></li>
+<li><a href="https://github.com/safishamsi/graphify/blob/v7/docs/how-it-works.md"target="_blank" rel="noopener">Complete documentation</a></li>
+<li><a href="https://graphifylabs.ai"target="_blank" rel="noopener">Official website</a></li>
+</ul>
+]]></content:encoded>
+        
+            <category>ai</category>
+            <category>knowledge-graph</category>
+            <category>graphify</category>
+            <category>claude-code</category>
+            <category>codex</category>
+            <category>opencode</category>
+        
+      </item>
+    
+      <item>
+        <title>Awesome Design: A catalog of design systems ready to use with AI agents</title>
+        <link>https://www.orapha.dev/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</guid>
+        <pubDate>Sat, 09 May 2026 10:00:00 GMT</pubDate>
+        <description>&lt;h1&gt;Awesome Design: A catalog of design systems ready to use with AI agents&lt;/h1&gt;&lt;p&gt;There&amp;rsquo;s something that&amp;rsquo;s always bothered me when working with code agents: visual inconsistency. You ask the agent to &amp;ldquo;create a dashboard screen,&amp;rdquo; it delivers something functional, but the visual&amp;hellip; well, the visual looks like it was made by someone who&amp;rsquo;s never heard of a design system. Each screen becomes an island, each component has its own personality, and in the end you have a visual Frankenstein that works but doesn&amp;rsquo;t give that professional product feeling.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1>Awesome Design: A catalog of design systems ready to use with AI agents</h1><p>There&rsquo;s something that&rsquo;s always bothered me when working with code agents: visual inconsistency. You ask the agent to &ldquo;create a dashboard screen,&rdquo; it delivers something functional, but the visual&hellip; well, the visual looks like it was made by someone who&rsquo;s never heard of a design system. Each screen becomes an island, each component has its own personality, and in the end you have a visual Frankenstein that works but doesn&rsquo;t give that professional product feeling.</p>
 <p>I&rsquo;ve tried various approaches. I&rsquo;ve shared Figma links, I&rsquo;ve described colors and typography in detail, I&rsquo;ve even sent screenshots with annotations. It works, but it&rsquo;s tedious. And the worst part: with each new feature, the conversation starts from scratch.</p>
 <p>That&rsquo;s when I discovered <a href="https://github.com/voltagent/awesome-design-md"target="_blank" rel="noopener"><strong>Awesome Design</strong></a>.</p>
 <h2>What is DESIGN.md?<span class="hx:absolute hx:-mt-20" id="what-is-designmd"></span>
@@ -92,8 +338,24 @@
 <li><a href="https://stitch.withgoogle.com/docs/design-md/overview/"target="_blank" rel="noopener">DESIGN.md Documentation on Google Stitch</a></li>
 <li><a href="https://getdesign.md/"target="_blank" rel="noopener">Site with design system previews</a></li>
 </ul>
-]]></content:encoded><category>ai</category><category>design-systems</category><category>design-md</category><category>frontend</category><category>voltagent</category></item><item><title>Demystifying the OpenSpec Propose Process: What Happens Behind the Scenes?</title><link>https://www.orapha.dev/en/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/</guid><pubDate>Wed, 29 Apr 2026 23:22:42 GMT</pubDate><description>&lt;p&gt;When we execute the proposal creation command (propose) in OpenSpec — for example, when starting the &lt;code&gt;add-course-enrollment-module&lt;/code&gt; functionality —, the system works behind the scenes to generate a series of fundamental files for development success.&lt;/p&gt;
-&lt;p&gt;If you&amp;rsquo;ve ever wondered what each of these artifacts is for, this article is for you. Let&amp;rsquo;s explore the anatomy of each generated document and how they ensure team alignment: from business vision to coding.&lt;/p&gt;</description><content:encoded><![CDATA[<p>When we execute the proposal creation command (propose) in OpenSpec — for example, when starting the <code>add-course-enrollment-module</code> functionality —, the system works behind the scenes to generate a series of fundamental files for development success.</p>
+]]></content:encoded>
+        
+            <category>ai</category>
+            <category>design-systems</category>
+            <category>design-md</category>
+            <category>frontend</category>
+            <category>voltagent</category>
+        
+      </item>
+    
+      <item>
+        <title>Demystifying the OpenSpec Propose Process: What Happens Behind the Scenes?</title>
+        <link>https://www.orapha.dev/en/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/</guid>
+        <pubDate>Wed, 29 Apr 2026 23:22:42 GMT</pubDate>
+        <description>&lt;p&gt;When we execute the proposal creation command (propose) in OpenSpec — for example, when starting the &lt;code&gt;add-course-enrollment-module&lt;/code&gt; functionality —, the system works behind the scenes to generate a series of fundamental files for development success.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve ever wondered what each of these artifacts is for, this article is for you. Let&amp;rsquo;s explore the anatomy of each generated document and how they ensure team alignment: from business vision to coding.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>When we execute the proposal creation command (propose) in OpenSpec — for example, when starting the <code>add-course-enrollment-module</code> functionality —, the system works behind the scenes to generate a series of fundamental files for development success.</p>
 <p>If you&rsquo;ve ever wondered what each of these artifacts is for, this article is for you. Let&rsquo;s explore the anatomy of each generated document and how they ensure team alignment: from business vision to coding.</p>
 <hr>
 <h2>1. The Proposal (<code>proposal.md</code>): The &ldquo;Why&rdquo; and the &ldquo;What&rdquo;<span class="hx:absolute hx:-mt-20" id="1-the-proposal-proposalmd-the-why-and-the-what"></span>
@@ -127,8 +389,23 @@
     <a href="#conclusion" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Having a brilliant idea is great, but transforming it into software running in production requires method.</p>
 <p>With the OpenSpec <strong>Propose</strong> process, all the heavy lifting of planning, architectural organization, and task division is done fluidly. The result are extremely predictable development cycles (sprints), always living documentation, and an intelligently reduced <em>time-to-market</em> in a standardized way.</p>
 <p>Next time OpenSpec generates these artifacts, you&rsquo;ll know exactly the importance of each piece of this gear!</p>
-]]></content:encoded><category>openspec</category><category>software-engineering</category><category>spec-driven-development</category><category>architecture</category></item><item><title>From Feature to Deploy Hands-Free: Architecture of a Software Factory with AI Using Spec-Driven Development</title><link>https://www.orapha.dev/en/2026/04/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/</guid><pubDate>Wed, 15 Apr 2026 23:18:03 GMT</pubDate><description>&lt;h1&gt;From Feature to Deploy Hands-Free: Architecture of a Software Factory with AI Using Spec-Driven Development&lt;/h1&gt;&lt;h2&gt;Introduction: What the Software Industry Was Like Before AI&lt;span class="hx:absolute hx:-mt-20" id="introduction-what-the-software-industry-was-like-before-ai"&gt;&lt;/span&gt;
-&lt;a href="#introduction-what-the-software-industry-was-like-before-ai" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;For decades, software development was operated as a high-specialization artisanal process. This isn&amp;rsquo;t a demerit: this model built practically everything we use today. The problem is that it depends on constant human synchronization. Refinement, implementation, review, QA, security, and deploy are stages with fragile interfaces, many times based on tacit context.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>From Feature to Deploy Hands-Free: Architecture of a Software Factory with AI Using Spec-Driven Development</h1><h2>Introduction: What the Software Industry Was Like Before AI<span class="hx:absolute hx:-mt-20" id="introduction-what-the-software-industry-was-like-before-ai"></span>
+]]></content:encoded>
+        
+            <category>openspec</category>
+            <category>software-engineering</category>
+            <category>spec-driven-development</category>
+            <category>architecture</category>
+        
+      </item>
+    
+      <item>
+        <title>From Feature to Deploy Hands-Free: Architecture of a Software Factory with AI Using Spec-Driven Development</title>
+        <link>https://www.orapha.dev/en/2026/04/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2026/04/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/</guid>
+        <pubDate>Wed, 15 Apr 2026 23:18:03 GMT</pubDate>
+        <description>&lt;h1&gt;From Feature to Deploy Hands-Free: Architecture of a Software Factory with AI Using Spec-Driven Development&lt;/h1&gt;&lt;h2&gt;Introduction: What the Software Industry Was Like Before AI&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;introduction-what-the-software-industry-was-like-before-ai&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#introduction-what-the-software-industry-was-like-before-ai&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;For decades, software development was operated as a high-specialization artisanal process. This isn&amp;rsquo;t a demerit: this model built practically everything we use today. The problem is that it depends on constant human synchronization. Refinement, implementation, review, QA, security, and deploy are stages with fragile interfaces, many times based on tacit context.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1>From Feature to Deploy Hands-Free: Architecture of a Software Factory with AI Using Spec-Driven Development</h1><h2>Introduction: What the Software Industry Was Like Before AI<span class="hx:absolute hx:-mt-20" id="introduction-what-the-software-industry-was-like-before-ai"></span>
     <a href="#introduction-what-the-software-industry-was-like-before-ai" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>For decades, software development was operated as a high-specialization artisanal process. This isn&rsquo;t a demerit: this model built practically everything we use today. The problem is that it depends on constant human synchronization. Refinement, implementation, review, QA, security, and deploy are stages with fragile interfaces, many times based on tacit context.</p>
 <p>In daily life, this appears in known symptoms: card that changes scope mid-execution, large PR with slow review, bugs discovered late, bottleneck in key people, and difficulty predicting real lead time. When the company grows, this model tends to saturate.</p>
 <p>In industrial terms, it&rsquo;s like a factory that depends on master craftsmen for each station on the line. Quality can be excellent, but variation between batches is high and throughput doesn&rsquo;t scale linearly. In software, variability becomes rework; rework becomes cost; cost becomes strategic slowness.</p>
@@ -289,8 +566,24 @@
     <a href="#conclusion" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The software factory with AI isn&rsquo;t an abstract promise. It&rsquo;s an operational model possible now for organizations that already have board, PR, and CI/CD discipline. The leap comes from treating specification as contract, agents as specialized cells, and quality as a flow property.</p>
 <p>If traditional development was a high-skill workshop, the next stage is a precision factory with strategic human supervision. It&rsquo;s not about automating for automation&rsquo;s sake. It&rsquo;s about building a delivery system that scales without losing reliability.</p>
 <p>The question is no longer whether AI will enter the development cycle. The question is: will your engineering operate AI as a point tool or as a production architecture?</p>
-]]></content:encoded><category>software-engineering</category><category>ai</category><category>spec-driven-development</category><category>devops</category><category>platform-engineering</category></item><item><title>OpenSpec in Practice: Installation, Usage, Complete Flow, and Optional Commands</title><link>https://www.orapha.dev/en/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/</guid><pubDate>Wed, 08 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;OpenSpec in Practice: Installation, Usage, Complete Flow, and Optional Commands&lt;/h1&gt;&lt;p&gt;If you already use a code agent in your daily life, you&amp;rsquo;ve already noticed the pattern: when intention is vague, output is also vague. That&amp;rsquo;s why I started studying &lt;strong&gt;Spec-Driven Development (SDD)&lt;/strong&gt; tools more closely and, on this journey, &lt;strong&gt;OpenSpec&lt;/strong&gt; became a very interesting option.&lt;/p&gt;
-&lt;p&gt;Its proposal is simple: before going out implementing, you organize the change in clear artifacts (proposal, specs, tasks and, when necessary, design), execute with more predictability, and maintain history of what changed in the system&amp;rsquo;s expected behavior.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>OpenSpec in Practice: Installation, Usage, Complete Flow, and Optional Commands</h1><p>If you already use a code agent in your daily life, you&rsquo;ve already noticed the pattern: when intention is vague, output is also vague. That&rsquo;s why I started studying <strong>Spec-Driven Development (SDD)</strong> tools more closely and, on this journey, <strong>OpenSpec</strong> became a very interesting option.</p>
+]]></content:encoded>
+        
+            <category>software-engineering</category>
+            <category>ai</category>
+            <category>spec-driven-development</category>
+            <category>devops</category>
+            <category>platform-engineering</category>
+        
+      </item>
+    
+      <item>
+        <title>OpenSpec in Practice: Installation, Usage, Complete Flow, and Optional Commands</title>
+        <link>https://www.orapha.dev/en/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/</guid>
+        <pubDate>Wed, 08 Apr 2026 10:00:00 GMT</pubDate>
+        <description>&lt;h1&gt;OpenSpec in Practice: Installation, Usage, Complete Flow, and Optional Commands&lt;/h1&gt;&lt;p&gt;If you already use a code agent in your daily life, you&amp;rsquo;ve already noticed the pattern: when intention is vague, output is also vague. That&amp;rsquo;s why I started studying &lt;strong&gt;Spec-Driven Development (SDD)&lt;/strong&gt; tools more closely and, on this journey, &lt;strong&gt;OpenSpec&lt;/strong&gt; became a very interesting option.&lt;/p&gt;
+&lt;p&gt;Its proposal is simple: before going out implementing, you organize the change in clear artifacts (proposal, specs, tasks and, when necessary, design), execute with more predictability, and maintain history of what changed in the system&amp;rsquo;s expected behavior.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1>OpenSpec in Practice: Installation, Usage, Complete Flow, and Optional Commands</h1><p>If you already use a code agent in your daily life, you&rsquo;ve already noticed the pattern: when intention is vague, output is also vague. That&rsquo;s why I started studying <strong>Spec-Driven Development (SDD)</strong> tools more closely and, on this journey, <strong>OpenSpec</strong> became a very interesting option.</p>
 <p>Its proposal is simple: before going out implementing, you organize the change in clear artifacts (proposal, specs, tasks and, when necessary, design), execute with more predictability, and maintain history of what changed in the system&rsquo;s expected behavior.</p>
 <p>In this article, I&rsquo;ll detail everything you asked for, in a practical way:</p>
 <ol>
@@ -633,9 +926,25 @@
 <h2>Closing<span class="hx:absolute hx:-mt-20" id="closing"></span>
     <a href="#closing" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>When you install, initialize, and follow a minimal flow of proposal, review, application, and archiving, the quality of execution with agents rises a lot.</p>
 <p>And the best: you maintain real traceability of technical intention, without depending on chat memory.</p>
-]]></content:encoded><category>ai</category><category>openspec</category><category>spec-driven-development</category><category>software-engineering</category><category>development</category></item><item><title>In Spec-Driven Development, `implement` is where everything else turns into code</title><link>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</guid><pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;In Spec-Driven Development, &lt;code&gt;implement&lt;/code&gt; is where everything else turns into code&lt;/h1&gt;&lt;p&gt;In the text &lt;a href="https://www.orapha.dev/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/"&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/a&gt;, I talked about the &lt;code&gt;constitution&lt;/code&gt; stage, where I define the principles that will govern the project&amp;rsquo;s decisions.&lt;/p&gt;
-&lt;p&gt;Then, in &lt;a href="https://www.orapha.dev/en/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/"&gt;In Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; is where ambiguity starts to die&lt;/a&gt;, I showed the point where demand gains clearer expected behavior.&lt;/p&gt;
-&lt;p&gt;In sequence, in &lt;a href="https://www.orapha.dev/en/2026/04/06/3-no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/"&gt;In Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; is where specification turns into execution strategy&lt;/a&gt;, I entered the stage that organizes the crossing with order, dependency, and sense of risk.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>In Spec-Driven Development, <code>implement</code> is where everything else turns into code</h1><p>In the text <a href="/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/">In Spec-Driven Development, Everything Starts with Principles</a>, I talked about the <code>constitution</code> stage, where I define the principles that will govern the project&rsquo;s decisions.</p>
+]]></content:encoded>
+        
+            <category>ai</category>
+            <category>openspec</category>
+            <category>spec-driven-development</category>
+            <category>software-engineering</category>
+            <category>development</category>
+        
+      </item>
+    
+      <item>
+        <title>In Spec-Driven Development, `implement` is where everything else turns into code</title>
+        <link>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</guid>
+        <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
+        <description>&lt;h1&gt;In Spec-Driven Development, &lt;code&gt;implement&lt;/code&gt; is where everything else turns into code&lt;/h1&gt;&lt;p&gt;In the text &lt;a href=&#34;https://www.orapha.dev/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/a&gt;, I talked about the &lt;code&gt;constitution&lt;/code&gt; stage, where I define the principles that will govern the project&amp;rsquo;s decisions.&lt;/p&gt;
+&lt;p&gt;Then, in &lt;a href=&#34;https://www.orapha.dev/en/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/&#34;&gt;In Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; is where ambiguity starts to die&lt;/a&gt;, I showed the point where demand gains clearer expected behavior.&lt;/p&gt;
+&lt;p&gt;In sequence, in &lt;a href=&#34;https://www.orapha.dev/en/2026/04/06/3-no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/&#34;&gt;In Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; is where specification turns into execution strategy&lt;/a&gt;, I entered the stage that organizes the crossing with order, dependency, and sense of risk.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1>In Spec-Driven Development, <code>implement</code> is where everything else turns into code</h1><p>In the text <a href="/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/">In Spec-Driven Development, Everything Starts with Principles</a>, I talked about the <code>constitution</code> stage, where I define the principles that will govern the project&rsquo;s decisions.</p>
 <p>Then, in <a href="/en/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/">In Spec-Driven Development, <code>specify</code> is where ambiguity starts to die</a>, I showed the point where demand gains clearer expected behavior.</p>
 <p>In sequence, in <a href="/en/2026/04/06/3-no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/">In Spec-Driven Development, <code>plan</code> is where specification turns into execution strategy</a>, I entered the stage that organizes the crossing with order, dependency, and sense of risk.</p>
 <p>After that, in <a href="/en/2026/04/06/4-no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/">In Spec-Driven Development, <code>tasks</code> is where the plan turns into concrete work units</a>, I talked about the break that transforms strategy into executable blocks.</p>
@@ -708,9 +1017,25 @@ move forward</p>
 <p>I like this structure precisely because it isn&rsquo;t rigid in the bad sense. It&rsquo;s atomic. Each part exists with a clear function, but none of them needs to be treated as a sacred or immutable piece. If the project evolves, the structure can evolve along. If context changes, principles can change along. If the way of executing improves, the flow can also be adjusted.</p>
 <p>For me, this is one of the strongest points of this approach: it organizes work without pretending that the project will remain the same forever.</p>
 <p>Thanks for reading this far.</p>
-]]></content:encoded><category>ai</category><category>spec-driven-development</category><category>implement</category><category>implementation</category><category>software-engineering</category></item><item><title>In Spec-Driven Development, `tasks` is where the plan turns into concrete work units</title><link>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</guid><pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;In Spec-Driven Development, &lt;code&gt;tasks&lt;/code&gt; is where the plan turns into concrete work units&lt;/h1&gt;&lt;p&gt;In the text &lt;a href="https://www.orapha.dev/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/"&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/a&gt;, I focused on the &lt;code&gt;constitution&lt;/code&gt; stage, where I define the criteria that will guide the project&amp;rsquo;s decisions.&lt;/p&gt;
-&lt;p&gt;Then, in &lt;a href="https://www.orapha.dev/en/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/"&gt;In Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; is where ambiguity starts to die&lt;/a&gt;, I entered the stage where demand stops being vague intention and starts having clearer expected behavior.&lt;/p&gt;
-&lt;p&gt;In sequence, in &lt;a href="https://www.orapha.dev/en/2026/04/06/3-no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/"&gt;In Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; is where specification turns into execution strategy&lt;/a&gt;, I talked about the stage that organizes the work crossing with order, dependency, and sense of risk.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>In Spec-Driven Development, <code>tasks</code> is where the plan turns into concrete work units</h1><p>In the text <a href="/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/">In Spec-Driven Development, Everything Starts with Principles</a>, I focused on the <code>constitution</code> stage, where I define the criteria that will guide the project&rsquo;s decisions.</p>
+]]></content:encoded>
+        
+            <category>ai</category>
+            <category>spec-driven-development</category>
+            <category>implement</category>
+            <category>implementation</category>
+            <category>software-engineering</category>
+        
+      </item>
+    
+      <item>
+        <title>In Spec-Driven Development, `tasks` is where the plan turns into concrete work units</title>
+        <link>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</guid>
+        <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
+        <description>&lt;h1&gt;In Spec-Driven Development, &lt;code&gt;tasks&lt;/code&gt; is where the plan turns into concrete work units&lt;/h1&gt;&lt;p&gt;In the text &lt;a href=&#34;https://www.orapha.dev/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/a&gt;, I focused on the &lt;code&gt;constitution&lt;/code&gt; stage, where I define the criteria that will guide the project&amp;rsquo;s decisions.&lt;/p&gt;
+&lt;p&gt;Then, in &lt;a href=&#34;https://www.orapha.dev/en/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/&#34;&gt;In Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; is where ambiguity starts to die&lt;/a&gt;, I entered the stage where demand stops being vague intention and starts having clearer expected behavior.&lt;/p&gt;
+&lt;p&gt;In sequence, in &lt;a href=&#34;https://www.orapha.dev/en/2026/04/06/3-no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/&#34;&gt;In Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; is where specification turns into execution strategy&lt;/a&gt;, I talked about the stage that organizes the work crossing with order, dependency, and sense of risk.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1>In Spec-Driven Development, <code>tasks</code> is where the plan turns into concrete work units</h1><p>In the text <a href="/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/">In Spec-Driven Development, Everything Starts with Principles</a>, I focused on the <code>constitution</code> stage, where I define the criteria that will guide the project&rsquo;s decisions.</p>
 <p>Then, in <a href="/en/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/">In Spec-Driven Development, <code>specify</code> is where ambiguity starts to die</a>, I entered the stage where demand stops being vague intention and starts having clearer expected behavior.</p>
 <p>In sequence, in <a href="/en/2026/04/06/3-no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/">In Spec-Driven Development, <code>plan</code> is where specification turns into execution strategy</a>, I talked about the stage that organizes the work crossing with order, dependency, and sense of risk.</p>
 <p>But plan, by itself, still isn&rsquo;t executable work.</p>
@@ -878,9 +1203,25 @@ move forward</p>
 <p>For me, this matters because good execution doesn&rsquo;t just depend on knowing where to go. It also depends on knowing which piece makes sense to attack now, with clear boundary and minimally honest completion criterion.</p>
 <p>When this break is well done, implementation gains rhythm without losing coherence.</p>
 <p>In the next text, I want to enter the <code>implement</code> stage, which is when this whole chain finally turns into code.</p>
-]]></content:encoded><category>ai</category><category>spec-driven-development</category><category>tasks</category><category>tarefas</category><category>software-engineering</category></item><item><title>In Spec-Driven Development, `plan` is where specification turns into execution strategy</title><link>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</guid><pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;In Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; is where specification turns into execution strategy&lt;/h1&gt;&lt;p&gt;In the text &lt;a href="https://www.orapha.dev/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/"&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/a&gt;, I talked about the &lt;code&gt;constitution&lt;/code&gt; stage, where I define the criteria that will guide the project.&lt;/p&gt;
-&lt;p&gt;Then, in &lt;a href="https://www.orapha.dev/en/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/"&gt;In Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; is where ambiguity starts to die&lt;/a&gt;, I entered the stage where demand stops being vague intention and starts having clearer expected behavior.&lt;/p&gt;
-&lt;p&gt;But an important bridge is still missing between understanding the problem and going out implementing.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>In Spec-Driven Development, <code>plan</code> is where specification turns into execution strategy</h1><p>In the text <a href="/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/">In Spec-Driven Development, Everything Starts with Principles</a>, I talked about the <code>constitution</code> stage, where I define the criteria that will guide the project.</p>
+]]></content:encoded>
+        
+            <category>ai</category>
+            <category>spec-driven-development</category>
+            <category>tasks</category>
+            <category>tarefas</category>
+            <category>software-engineering</category>
+        
+      </item>
+    
+      <item>
+        <title>In Spec-Driven Development, `plan` is where specification turns into execution strategy</title>
+        <link>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</guid>
+        <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
+        <description>&lt;h1&gt;In Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; is where specification turns into execution strategy&lt;/h1&gt;&lt;p&gt;In the text &lt;a href=&#34;https://www.orapha.dev/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/a&gt;, I talked about the &lt;code&gt;constitution&lt;/code&gt; stage, where I define the criteria that will guide the project.&lt;/p&gt;
+&lt;p&gt;Then, in &lt;a href=&#34;https://www.orapha.dev/en/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/&#34;&gt;In Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; is where ambiguity starts to die&lt;/a&gt;, I entered the stage where demand stops being vague intention and starts having clearer expected behavior.&lt;/p&gt;
+&lt;p&gt;But an important bridge is still missing between understanding the problem and going out implementing.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1>In Spec-Driven Development, <code>plan</code> is where specification turns into execution strategy</h1><p>In the text <a href="/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/">In Spec-Driven Development, Everything Starts with Principles</a>, I talked about the <code>constitution</code> stage, where I define the criteria that will guide the project.</p>
 <p>Then, in <a href="/en/2026/04/06/2-no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/">In Spec-Driven Development, <code>specify</code> is where ambiguity starts to die</a>, I entered the stage where demand stops being vague intention and starts having clearer expected behavior.</p>
 <p>But an important bridge is still missing between understanding the problem and going out implementing.</p>
 <p>This bridge is the <code>plan</code> stage.</p>
@@ -1074,11 +1415,27 @@ let&rsquo;s go breaking into prompt and deliver quickly</p>
 <p>Because execution isn&rsquo;t just doing. Execution is also choosing the right order to do.</p>
 <p>And, in the end, much bad implementation isn&rsquo;t born from bad specification. It&rsquo;s born from bad sequence.</p>
 <p>In the next text, I want to enter the <code>tasks</code> stage, which is when this plan starts to turn into concrete work units.</p>
-]]></content:encoded><category>ai</category><category>spec-driven-development</category><category>plan</category><category>planning</category><category>software-engineering</category></item><item><title>In Spec-Driven Development, `specify` is where ambiguity starts to die</title><link>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</guid><pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;In Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; is where ambiguity starts to die&lt;/h1&gt;&lt;p&gt;In the text &lt;a href="https://www.orapha.dev/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/"&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/a&gt;, I focused on the &lt;code&gt;constitution&lt;/code&gt; stage, where I define the criteria that will guide the project.&lt;/p&gt;
+]]></content:encoded>
+        
+            <category>ai</category>
+            <category>spec-driven-development</category>
+            <category>plan</category>
+            <category>planning</category>
+            <category>software-engineering</category>
+        
+      </item>
+    
+      <item>
+        <title>In Spec-Driven Development, `specify` is where ambiguity starts to die</title>
+        <link>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</guid>
+        <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
+        <description>&lt;h1&gt;In Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; is where ambiguity starts to die&lt;/h1&gt;&lt;p&gt;In the text &lt;a href=&#34;https://www.orapha.dev/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/a&gt;, I focused on the &lt;code&gt;constitution&lt;/code&gt; stage, where I define the criteria that will guide the project.&lt;/p&gt;
 &lt;p&gt;But principles alone don&amp;rsquo;t deliver system.&lt;/p&gt;
 &lt;p&gt;After saying how the project should think, comes the time to say what it needs to build.&lt;/p&gt;
 &lt;p&gt;That&amp;rsquo;s where the &lt;code&gt;specify&lt;/code&gt; stage enters.&lt;/p&gt;
-&lt;p&gt;And, for me, this is one of the most important parts of the entire flow. Because, in practice, it&amp;rsquo;s here that the work of a new demand begins.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>In Spec-Driven Development, <code>specify</code> is where ambiguity starts to die</h1><p>In the text <a href="/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/">In Spec-Driven Development, Everything Starts with Principles</a>, I focused on the <code>constitution</code> stage, where I define the criteria that will guide the project.</p>
+&lt;p&gt;And, for me, this is one of the most important parts of the entire flow. Because, in practice, it&amp;rsquo;s here that the work of a new demand begins.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1>In Spec-Driven Development, <code>specify</code> is where ambiguity starts to die</h1><p>In the text <a href="/en/2026/04/06/1-no-spec-driven-development-tudo-comeca-pelos-principios/">In Spec-Driven Development, Everything Starts with Principles</a>, I focused on the <code>constitution</code> stage, where I define the criteria that will guide the project.</p>
 <p>But principles alone don&rsquo;t deliver system.</p>
 <p>After saying how the project should think, comes the time to say what it needs to build.</p>
 <p>That&rsquo;s where the <code>specify</code> stage enters.</p>
@@ -1265,9 +1622,25 @@ add notification</p>
 <p>For me, this is the point where ambiguity really starts to lose space.</p>
 <p>Because, in the end, specifying well isn&rsquo;t producing bureaucracy. It&rsquo;s making the problem understandable enough so that implementation, review, and validation work on the same reality.</p>
 <p>In the next deep dive, the natural path is to enter the stage that takes this specification and transforms it into an execution plan.</p>
-]]></content:encoded><category>ai</category><category>spec-driven-development</category><category>specify</category><category>specification</category><category>software-engineering</category></item><item><title>In Spec-Driven Development, Everything Starts with Principles</title><link>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</guid><pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/h1&gt;&lt;p&gt;In the article &lt;a href="https://www.orapha.dev/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/"&gt;How I&amp;rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects&lt;/a&gt;, I went through the flow stages in a more general way.&lt;/p&gt;
+]]></content:encoded>
+        
+            <category>ai</category>
+            <category>spec-driven-development</category>
+            <category>specify</category>
+            <category>specification</category>
+            <category>software-engineering</category>
+        
+      </item>
+    
+      <item>
+        <title>In Spec-Driven Development, Everything Starts with Principles</title>
+        <link>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</guid>
+        <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
+        <description>&lt;h1&gt;In Spec-Driven Development, Everything Starts with Principles&lt;/h1&gt;&lt;p&gt;In the article &lt;a href=&#34;https://www.orapha.dev/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/&#34;&gt;How I&amp;rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects&lt;/a&gt;, I went through the flow stages in a more general way.&lt;/p&gt;
 &lt;p&gt;But I thought it was worth going back calmly to each of them, in separate texts, because there&amp;rsquo;s stuff there that deserves to be properly dissected.&lt;/p&gt;
-&lt;p&gt;If the idea is to gradually deepen this flow, it makes sense to open precisely at the stage where I define the project principles.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>In Spec-Driven Development, Everything Starts with Principles</h1><p>In the article <a href="/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/">How I&rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects</a>, I went through the flow stages in a more general way.</p>
+&lt;p&gt;If the idea is to gradually deepen this flow, it makes sense to open precisely at the stage where I define the project principles.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1>In Spec-Driven Development, Everything Starts with Principles</h1><p>In the article <a href="/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/">How I&rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects</a>, I went through the flow stages in a more general way.</p>
 <p>But I thought it was worth going back calmly to each of them, in separate texts, because there&rsquo;s stuff there that deserves to be properly dissected.</p>
 <p>If the idea is to gradually deepen this flow, it makes sense to open precisely at the stage where I define the project principles.</p>
 <p>I&rsquo;m talking about <code>constitution</code>.</p>
@@ -1450,7 +1823,23 @@ now improve architecture</p>
 <p>That&rsquo;s why I like this stage so much. Before discussing screen, endpoint, database, stack, or task, I can define what will really command decisions.</p>
 <p>For me, this is the moment when the project stops being just a request and starts to become a system with technical identity.</p>
 <p>In the next deep dive, the natural path is to enter the <code>specify</code> stage, which is when the conversation leaves principles and enters what really needs to be built.</p>
-]]></content:encoded><category>ai</category><category>spec-driven-development</category><category>constitution</category><category>software-engineering</category><category>principles</category></item><item><title>How I've Been Using Spec-Driven Development with Spec Kit in My Projects</title><link>https://www.orapha.dev/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</guid><pubDate>Fri, 03 Apr 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;How I&amp;rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects&lt;/h1&gt;&lt;p&gt;If you&amp;rsquo;ve ever tried to build software with a code agent, you&amp;rsquo;ve probably been on this roller coaster. Some days things go really well. On others, the agent delivers half of what you asked for, invents a structure that makes no sense, breaks the build, or even does something that seems to work, but with a foundation that you yourself wouldn&amp;rsquo;t do that way.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>How I&rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects</h1><p>If you&rsquo;ve ever tried to build software with a code agent, you&rsquo;ve probably been on this roller coaster. Some days things go really well. On others, the agent delivers half of what you asked for, invents a structure that makes no sense, breaks the build, or even does something that seems to work, but with a foundation that you yourself wouldn&rsquo;t do that way.</p>
+]]></content:encoded>
+        
+            <category>ai</category>
+            <category>spec-driven-development</category>
+            <category>constitution</category>
+            <category>software-engineering</category>
+            <category>principles</category>
+        
+      </item>
+    
+      <item>
+        <title>How I&#39;ve Been Using Spec-Driven Development with Spec Kit in My Projects</title>
+        <link>https://www.orapha.dev/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</guid>
+        <pubDate>Fri, 03 Apr 2026 10:00:00 GMT</pubDate>
+        <description>&lt;h1&gt;How I&amp;rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects&lt;/h1&gt;&lt;p&gt;If you&amp;rsquo;ve ever tried to build software with a code agent, you&amp;rsquo;ve probably been on this roller coaster. Some days things go really well. On others, the agent delivers half of what you asked for, invents a structure that makes no sense, breaks the build, or even does something that seems to work, but with a foundation that you yourself wouldn&amp;rsquo;t do that way.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1>How I&rsquo;ve Been Using Spec-Driven Development with Spec Kit in My Projects</h1><p>If you&rsquo;ve ever tried to build software with a code agent, you&rsquo;ve probably been on this roller coaster. Some days things go really well. On others, the agent delivers half of what you asked for, invents a structure that makes no sense, breaks the build, or even does something that seems to work, but with a foundation that you yourself wouldn&rsquo;t do that way.</p>
 <p>I&rsquo;ve been thinking a lot about this. And, for me, the problem is almost never just in the model. Most of the time, the problem is in the way we ask. Loose request generates loose response. Poorly tied context generates crooked decision. And, when there&rsquo;s no clear way to say what needs to be built and how it will be validated, the chance of turning into improvisation is too high.</p>
 <p>That&rsquo;s why I started looking more closely at <strong>Spec-Driven Development</strong>, or simply <strong>SDD</strong>. And, within that, a tool that caught my attention was <strong>Spec Kit</strong>, an open source toolkit created precisely to organize this workflow with agents.</p>
 <p>In this text, I want to show you how I&rsquo;ve been seeing this process in practice. Not as pretty talk, but as a more serious way of working with AI in development. The idea here is to get out of the thrown prompt in the chat and enter a flow with principles, specification, plan, tasks, and implementation.</p>
@@ -2096,11 +2485,27 @@ It&rsquo;s about creating a process in which I continue to think as an engineer,
 <p><a href="/en/2026/04/06/5-no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/">In Spec-Driven Development, <code>implement</code> is where everything else turns into code</a></p>
 </li>
 </ul>
-]]></content:encoded><category>ai</category><category>spec-driven-development</category><category>spec-kit</category><category>software-engineering</category><category>development</category></item><item><title>Are You Feeling Like Crap With the Emergence of AI?</title><link>https://www.orapha.dev/en/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</guid><pubDate>Sun, 22 Mar 2026 10:00:00 GMT</pubDate><description>&lt;h1&gt;Are You Feeling Like Crap With the Emergence of AI?&lt;/h1&gt;&lt;p&gt;Last week I was feeling a bit down.&lt;/p&gt;
+]]></content:encoded>
+        
+            <category>ai</category>
+            <category>spec-driven-development</category>
+            <category>spec-kit</category>
+            <category>software-engineering</category>
+            <category>development</category>
+        
+      </item>
+    
+      <item>
+        <title>Are You Feeling Like Crap With the Emergence of AI?</title>
+        <link>https://www.orapha.dev/en/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</guid>
+        <pubDate>Sun, 22 Mar 2026 10:00:00 GMT</pubDate>
+        <description>&lt;h1&gt;Are You Feeling Like Crap With the Emergence of AI?&lt;/h1&gt;&lt;p&gt;Last week I was feeling a bit down.&lt;/p&gt;
 &lt;p&gt;Receiving demands, creating prompts, reviewing changes, approving or denying responses, rewriting prompts, adjusting context, and repeating this cycle over and over.&lt;/p&gt;
 &lt;p&gt;At some point, this started to corrode me inside.&lt;/p&gt;
 &lt;p&gt;Because I like to program.&lt;/p&gt;
-&lt;p&gt;I like to create algorithms, connect classes, think about modeling, do dependency inversion, organize responsibility, name an abstraction well, and see an architecture start to breathe. There&amp;rsquo;s a very alive part of my relationship with software that has always gone through this: hand-written code.&lt;/p&gt;</description><content:encoded><![CDATA[<h1>Are You Feeling Like Crap With the Emergence of AI?</h1><p>Last week I was feeling a bit down.</p>
+&lt;p&gt;I like to create algorithms, connect classes, think about modeling, do dependency inversion, organize responsibility, name an abstraction well, and see an architecture start to breathe. There&amp;rsquo;s a very alive part of my relationship with software that has always gone through this: hand-written code.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1>Are You Feeling Like Crap With the Emergence of AI?</h1><p>Last week I was feeling a bit down.</p>
 <p>Receiving demands, creating prompts, reviewing changes, approving or denying responses, rewriting prompts, adjusting context, and repeating this cycle over and over.</p>
 <p>At some point, this started to corrode me inside.</p>
 <p>Because I like to program.</p>
@@ -2217,13 +2622,30 @@ It&rsquo;s about creating a process in which I continue to think as an engineer,
 <p>I feel in transition.</p>
 <p>And, for this moment in my life, that&rsquo;s already a lot.</p>
 <p>My thanks to <strong>Chad Fowler</strong> for the article. Some readings don&rsquo;t completely resolve the crisis, but they put a name to what was hurting. And, sometimes, that&rsquo;s exactly where recovery begins.</p>
-]]></content:encoded><category>ai</category><category>software-engineering</category><category>career</category><category>development</category><category>reflection</category></item><item><title>Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work</title><link>https://www.orapha.dev/en/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</guid><pubDate>Fri, 20 Mar 2026 11:15:00 GMT</pubDate><description>&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; this text is a &lt;strong&gt;Portuguese translation&lt;/strong&gt; of the original article by &lt;strong&gt;Mohit Sewak, Ph.D.&lt;/strong&gt;, published in &lt;strong&gt;Level Up Coding&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Original article:&lt;/strong&gt; &lt;a href="https://levelup.gitconnected.com/vibe-coding-is-dead-why-autonomous-ai-requires-strict-deterministic-fences-to-actually-work-4b8a3ebb6fc1"target="_blank" rel="noopener"&gt;Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work&lt;/a&gt;&lt;/p&gt;
+]]></content:encoded>
+        
+            <category>ai</category>
+            <category>software-engineering</category>
+            <category>career</category>
+            <category>development</category>
+            <category>reflection</category>
+        
+      </item>
+    
+      <item>
+        <title>Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work</title>
+        <link>https://www.orapha.dev/en/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</guid>
+        <pubDate>Fri, 20 Mar 2026 11:15:00 GMT</pubDate>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; this text is a &lt;strong&gt;Portuguese translation&lt;/strong&gt; of the original article by &lt;strong&gt;Mohit Sewak, Ph.D.&lt;/strong&gt;, published in &lt;strong&gt;Level Up Coding&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Original article:&lt;/strong&gt; &lt;a href=&#34;https://levelup.gitconnected.com/vibe-coding-is-dead-why-autonomous-ai-requires-strict-deterministic-fences-to-actually-work-4b8a3ebb6fc1&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work&lt;/a&gt;&lt;/p&gt;
+
 &lt;/blockquote&gt;
 &lt;h1&gt;Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work&lt;/h1&gt;&lt;p&gt;&lt;em&gt;The era of deploying &amp;ldquo;naked&amp;rdquo; models is over. Welcome to the era of AI Harness Engineering.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Mohit Sewak, Ph.D.&lt;/p&gt;
-&lt;p&gt;11 min read&lt;/p&gt;</description><content:encoded><![CDATA[<blockquote>
+&lt;p&gt;11 min read&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<blockquote>
   <p><strong>Note:</strong> this text is a <strong>Portuguese translation</strong> of the original article by <strong>Mohit Sewak, Ph.D.</strong>, published in <strong>Level Up Coding</strong>.</p>
 <p><strong>Original article:</strong> <a href="https://levelup.gitconnected.com/vibe-coding-is-dead-why-autonomous-ai-requires-strict-deterministic-fences-to-actually-work-4b8a3ebb6fc1"target="_blank" rel="noopener">Vibe Coding is Dead: Why Autonomous AI Requires Strict Deterministic Fences to Actually Work</a></p>
 
@@ -2373,9 +2795,25 @@ It&rsquo;s about creating a process in which I continue to think as an engineer,
 <p>Sewak, M. (2026). <em>What is AI Harness Engineering? Your Guide to Controlling Autonomous Systems</em>. Medium. <a href="https://medium.com/"target="_blank" rel="noopener">https://medium.com/</a></p>
 <p>Siebert, L. C., Lupetti, M. L., Aizenberg, E., Beckers, N., … Lagendijk, R. L. (2021). <em>Meaningful human control: actionable properties for AI system development</em>. arXiv. <a href="https://arxiv.org/pdf/2112.01298v2"target="_blank" rel="noopener">https://arxiv.org/pdf/2112.01298v2</a></p>
 <p><strong>Legal notice:</strong> opinions expressed in this article are personal and don&rsquo;t necessarily reflect the official policy or position of any affiliated organization. AI assistance was used in the research and writing of this article, as well as in generating any accompanying images. Licensed under <code>CC BY-ND 4.0</code>.</p>
-]]></content:encoded><category>ai</category><category>agents</category><category>software-engineering</category><category>security</category><category>mcp</category></item><item><title>Do You Still Remember the Principles of Software Engineering?</title><link>https://www.orapha.dev/en/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</guid><pubDate>Thu, 19 Mar 2026 10:30:00 GMT</pubDate><description>&lt;p&gt;We&amp;rsquo;re living through a curious phase of technology. It&amp;rsquo;s never been so easy to generate code, create tests, ask for architecture suggestions, or fix bugs with AI help. In a few seconds, a tool answers what before would take hours of research, trial, and error.&lt;/p&gt;
+]]></content:encoded>
+        
+            <category>ai</category>
+            <category>agents</category>
+            <category>software-engineering</category>
+            <category>security</category>
+            <category>mcp</category>
+        
+      </item>
+    
+      <item>
+        <title>Do You Still Remember the Principles of Software Engineering?</title>
+        <link>https://www.orapha.dev/en/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</guid>
+        <pubDate>Thu, 19 Mar 2026 10:30:00 GMT</pubDate>
+        <description>&lt;p&gt;We&amp;rsquo;re living through a curious phase of technology. It&amp;rsquo;s never been so easy to generate code, create tests, ask for architecture suggestions, or fix bugs with AI help. In a few seconds, a tool answers what before would take hours of research, trial, and error.&lt;/p&gt;
 &lt;p&gt;This seems great, and in many cases it really is. The problem starts when speed comes to be confused with engineering.&lt;/p&gt;
-&lt;p&gt;Many people today present themselves as software developers or software engineers, but faced with so much automation it&amp;rsquo;s worth revisiting a simple question: do you still remember the principles of software engineering?&lt;/p&gt;</description><content:encoded><![CDATA[<p>We&rsquo;re living through a curious phase of technology. It&rsquo;s never been so easy to generate code, create tests, ask for architecture suggestions, or fix bugs with AI help. In a few seconds, a tool answers what before would take hours of research, trial, and error.</p>
+&lt;p&gt;Many people today present themselves as software developers or software engineers, but faced with so much automation it&amp;rsquo;s worth revisiting a simple question: do you still remember the principles of software engineering?&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>We&rsquo;re living through a curious phase of technology. It&rsquo;s never been so easy to generate code, create tests, ask for architecture suggestions, or fix bugs with AI help. In a few seconds, a tool answers what before would take hours of research, trial, and error.</p>
 <p>This seems great, and in many cases it really is. The problem starts when speed comes to be confused with engineering.</p>
 <p>Many people today present themselves as software developers or software engineers, but faced with so much automation it&rsquo;s worth revisiting a simple question: do you still remember the principles of software engineering?</p>
 <p>In the end, AI accelerates execution. But foundation continues to be what sustains software when the rush passes.</p>
@@ -2429,10 +2867,25 @@ It&rsquo;s about creating a process in which I continue to think as an engineer,
     <a href="#so-do-you-consider-yourself-a-software-engineer" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>If you consider yourself a software engineer, you need to remember that your value isn&rsquo;t just in writing code quickly. Your value is in making good decisions, building with clarity, maintaining simplicity, testing rigorously, and delivering solutions that continue to make sense after the initial excitement.</p>
 <p>With AI&rsquo;s help, perhaps you&rsquo;re producing more. But perhaps you&rsquo;re also forgetting what really matters.</p>
 <p>And what really matters continues to be the same: think well, build right, and don&rsquo;t abandon the principles that sustain software engineering.</p>
-]]></content:encoded><category>software-engineering</category><category>ai</category><category>development</category><category>technology</category></item><item><title>Agent Engineering + Agentic Flow Engineering: A More Organized View</title><link>https://www.orapha.dev/en/2026/03/19/agent-engineering-e-agentic-flow-engineering/</link><guid isPermaLink="true">https://www.orapha.dev/en/2026/03/19/agent-engineering-e-agentic-flow-engineering/</guid><pubDate>Thu, 19 Mar 2026 01:00:00 GMT</pubDate><description>&lt;p&gt;The two texts below talk, at their core, about the same transition: moving away from AI used as an isolated assistant and starting to treat it as an organized system. One emphasizes the structure of agent teams, with roles, capabilities, and collaboration. The other emphasizes something even more important in production: flow, orchestration, governance, fault tolerance, and observability.&lt;/p&gt;
+]]></content:encoded>
+        
+            <category>software-engineering</category>
+            <category>ai</category>
+            <category>development</category>
+            <category>technology</category>
+        
+      </item>
+    
+      <item>
+        <title>Agent Engineering + Agentic Flow Engineering: A More Organized View</title>
+        <link>https://www.orapha.dev/en/2026/03/19/agent-engineering-e-agentic-flow-engineering/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2026/03/19/agent-engineering-e-agentic-flow-engineering/</guid>
+        <pubDate>Thu, 19 Mar 2026 01:00:00 GMT</pubDate>
+        <description>&lt;p&gt;The two texts below talk, at their core, about the same transition: moving away from AI used as an isolated assistant and starting to treat it as an organized system. One emphasizes the structure of agent teams, with roles, capabilities, and collaboration. The other emphasizes something even more important in production: flow, orchestration, governance, fault tolerance, and observability.&lt;/p&gt;
 &lt;p&gt;Putting both together, the central idea can be summarized like this:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;The value is not in having &amp;ldquo;more agents,&amp;rdquo; but in designing a system in which specialized agents work with clear contracts, explicit flows, and real operational control.&lt;/p&gt;</description><content:encoded><![CDATA[<p>The two texts below talk, at their core, about the same transition: moving away from AI used as an isolated assistant and starting to treat it as an organized system. One emphasizes the structure of agent teams, with roles, capabilities, and collaboration. The other emphasizes something even more important in production: flow, orchestration, governance, fault tolerance, and observability.</p>
+  &lt;p&gt;The value is not in having &amp;ldquo;more agents,&amp;rdquo; but in designing a system in which specialized agents work with clear contracts, explicit flows, and real operational control.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>The two texts below talk, at their core, about the same transition: moving away from AI used as an isolated assistant and starting to treat it as an organized system. One emphasizes the structure of agent teams, with roles, capabilities, and collaboration. The other emphasizes something even more important in production: flow, orchestration, governance, fault tolerance, and observability.</p>
 <p>Putting both together, the central idea can be summarized like this:</p>
 <blockquote>
   <p>The value is not in having &ldquo;more agents,&rdquo; but in designing a system in which specialized agents work with clear contracts, explicit flows, and real operational control.</p>
@@ -2639,8 +3092,24 @@ Agentic Flow Engineering organizes how the system really works.</p>
 <li><a href="https://www.linkedin.com/pulse/complete-agent-engineering-playbook-agentsmd-skillsmd-zeelan-shaik-dzpic/"target="_blank" rel="noopener">The Complete Agent Engineering Playbook (Agents.md + Skills.md + Agent Teams)</a></li>
 <li><a href="https://www.linkedin.com/pulse/agentic-flow-engineering-why-matters-what-who-needs-how-baipalli-jowsf/"target="_blank" rel="noopener">Agentic Flow Engineering: Why It Matters, What It Is, Who Needs It, and How to Build It</a></li>
 </ul>
-]]></content:encoded><category>ai</category><category>agents</category><category>llm</category><category>software-engineering</category><category>architecture</category></item><item><title>Teaching Copilot to Speak Your Repository's Language</title><link>https://www.orapha.dev/en/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</link><guid isPermaLink="true">https://www.orapha.dev/en/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</guid><pubDate>Wed, 29 Oct 2025 14:46:13 GMT</pubDate><description>&lt;p&gt;Working for over 14 years with software development, I always find myself thinking about trends and new technologies that can be used to &lt;strong&gt;reduce friction in the dev&amp;rsquo;s daily life&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Did you know there&amp;rsquo;s the possibility of adding &lt;strong&gt;personalized instructions directly in your repository for AI agents?&lt;/strong&gt; Basically, you can &amp;ldquo;teach&amp;rdquo; Copilot about the rules, patterns, and styles of your project, and it will generate suggestions much more aligned with what you and your team really need.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Working for over 14 years with software development, I always find myself thinking about trends and new technologies that can be used to <strong>reduce friction in the dev&rsquo;s daily life</strong>.</p>
+]]></content:encoded>
+        
+            <category>ai</category>
+            <category>agents</category>
+            <category>llm</category>
+            <category>software-engineering</category>
+            <category>architecture</category>
+        
+      </item>
+    
+      <item>
+        <title>Teaching Copilot to Speak Your Repository&#39;s Language</title>
+        <link>https://www.orapha.dev/en/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</guid>
+        <pubDate>Wed, 29 Oct 2025 14:46:13 GMT</pubDate>
+        <description>&lt;p&gt;Working for over 14 years with software development, I always find myself thinking about trends and new technologies that can be used to &lt;strong&gt;reduce friction in the dev&amp;rsquo;s daily life&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Did you know there&amp;rsquo;s the possibility of adding &lt;strong&gt;personalized instructions directly in your repository for AI agents?&lt;/strong&gt; Basically, you can &amp;ldquo;teach&amp;rdquo; Copilot about the rules, patterns, and styles of your project, and it will generate suggestions much more aligned with what you and your team really need.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>Working for over 14 years with software development, I always find myself thinking about trends and new technologies that can be used to <strong>reduce friction in the dev&rsquo;s daily life</strong>.</p>
 <p>Did you know there&rsquo;s the possibility of adding <strong>personalized instructions directly in your repository for AI agents?</strong> Basically, you can &ldquo;teach&rdquo; Copilot about the rules, patterns, and styles of your project, and it will generate suggestions much more aligned with what you and your team really need.</p>
 <p>It&rsquo;s like having a coworker who has already read all the project documentation and knows exactly what should or shouldn&rsquo;t be suggested—and this coworker doesn&rsquo;t sleep, doesn&rsquo;t get tired, and is always ready to help you code.</p>
 <p>This feature is an incredible step to transform Copilot into something more than just an &ldquo;intelligent autocomplete&rdquo;: it becomes an <strong>active member of the team</strong>, shaped by the context you provide.</p>
@@ -2790,8 +3259,23 @@ With specific instructions, you create files inside .github/instructions/ and us
 <li>LinkedIn: <a href="https://www.linkedin.com/in/raphaelkennedy"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li>YouTube: <a href="https://youtube.com/@raphaelpontes"target="_blank" rel="noopener">@raphaelpontes</a></li>
 </ul>
-]]></content:encoded><category>github-copilot</category><category>ai</category><category>developer-experience</category><category>customization</category></item><item><title>How I Structure My Entities in Flutter and Why It Changed My Way of Programming</title><link>https://www.orapha.dev/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</link><guid isPermaLink="true">https://www.orapha.dev/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</guid><pubDate>Mon, 17 Mar 2025 18:22:49 GMT</pubDate><description>&lt;p&gt;Hey dev!&lt;/p&gt;
-&lt;p&gt;If you&amp;rsquo;ve ever needed to consume multiple APIs in a Flutter app, you know the mess can start quickly. At first, it seems simple: you get the data from the API, throw it directly into the model, and done! But then comes that moment when you need to integrate a second API, deal with unexpected backend changes, or even optimize data loading. And suddenly&amp;hellip; BOOM💥! Your code turns into a real Frankenstein, hard to understand and even harder to maintain.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Hey dev!</p>
+]]></content:encoded>
+        
+            <category>github-copilot</category>
+            <category>ai</category>
+            <category>developer-experience</category>
+            <category>customization</category>
+        
+      </item>
+    
+      <item>
+        <title>How I Structure My Entities in Flutter and Why It Changed My Way of Programming</title>
+        <link>https://www.orapha.dev/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</guid>
+        <pubDate>Mon, 17 Mar 2025 18:22:49 GMT</pubDate>
+        <description>&lt;p&gt;Hey dev!&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve ever needed to consume multiple APIs in a Flutter app, you know the mess can start quickly. At first, it seems simple: you get the data from the API, throw it directly into the model, and done! But then comes that moment when you need to integrate a second API, deal with unexpected backend changes, or even optimize data loading. And suddenly&amp;hellip; BOOM💥! Your code turns into a real Frankenstein, hard to understand and even harder to maintain.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>Hey dev!</p>
 <p>If you&rsquo;ve ever needed to consume multiple APIs in a Flutter app, you know the mess can start quickly. At first, it seems simple: you get the data from the API, throw it directly into the model, and done! But then comes that moment when you need to integrate a second API, deal with unexpected backend changes, or even optimize data loading. And suddenly&hellip; BOOM💥! Your code turns into a real Frankenstein, hard to understand and even harder to maintain.</p>
 <p>That&rsquo;s exactly what happened to me at the beginning of my journey. Until I discovered the importance of <strong>Entities</strong>, <strong>Adapters</strong>, and <strong>DTOs</strong>. These three layers changed my way of programming and made my apps more organized and easier to scale.</p>
 <p>Today I want to tell you how I structure all this and why this approach can save your code too.</p>
@@ -2958,7 +3442,22 @@ With specific instructions, you create files inside .github/instructions/ and us
 <li>LinkedIn: <a href="https://www.linkedin.com/in/raphaelkennedy"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li>YouTube: <a href="https://youtube.com/@raphaelpontes"target="_blank" rel="noopener">@raphaelpontes</a></li>
 </ul>
-]]></content:encoded><category>flutter</category><category>architecture</category><category>entities</category><category>clean-architecture</category></item><item><title>Moral Concerns in Technology Development</title><link>https://www.orapha.dev/en/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</link><guid isPermaLink="true">https://www.orapha.dev/en/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</guid><pubDate>Fri, 02 Aug 2024 02:30:50 GMT</pubDate><description>&lt;p&gt;Folks, before starting this article, I would like to introduce myself: I am a Software Engineer with a curious mind, always traveling in reflections that I want to share with you. Recently, I watched a movie about the scientist who developed the atomic bomb, and this sparked a series of thoughts I hadn&amp;rsquo;t considered before. I decided to write this article because I believe my concerns may &amp;ldquo;open the eyes&amp;rdquo; of many of you who are reading me.&lt;/p&gt;</description><content:encoded><![CDATA[<p>Folks, before starting this article, I would like to introduce myself: I am a Software Engineer with a curious mind, always traveling in reflections that I want to share with you. Recently, I watched a movie about the scientist who developed the atomic bomb, and this sparked a series of thoughts I hadn&rsquo;t considered before. I decided to write this article because I believe my concerns may &ldquo;open the eyes&rdquo; of many of you who are reading me.</p>
+]]></content:encoded>
+        
+            <category>flutter</category>
+            <category>architecture</category>
+            <category>entities</category>
+            <category>clean-architecture</category>
+        
+      </item>
+    
+      <item>
+        <title>Moral Concerns in Technology Development</title>
+        <link>https://www.orapha.dev/en/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</guid>
+        <pubDate>Fri, 02 Aug 2024 02:30:50 GMT</pubDate>
+        <description>&lt;p&gt;Folks, before starting this article, I would like to introduce myself: I am a Software Engineer with a curious mind, always traveling in reflections that I want to share with you. Recently, I watched a movie about the scientist who developed the atomic bomb, and this sparked a series of thoughts I hadn&amp;rsquo;t considered before. I decided to write this article because I believe my concerns may &amp;ldquo;open the eyes&amp;rdquo; of many of you who are reading me.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<p>Folks, before starting this article, I would like to introduce myself: I am a Software Engineer with a curious mind, always traveling in reflections that I want to share with you. Recently, I watched a movie about the scientist who developed the atomic bomb, and this sparked a series of thoughts I hadn&rsquo;t considered before. I decided to write this article because I believe my concerns may &ldquo;open the eyes&rdquo; of many of you who are reading me.</p>
 <p><img src="https://cdn-images-1.medium.com/max/310/1*JNmRSfjJQHuXj3xFelGegQ@2x.jpeg" alt=""  loading="lazy" /></p>
 <h3>Contextualizing<span class="hx:absolute hx:-mt-20" id="contextualizing"></span>
     <a href="#contextualizing" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>As presented in the film &ldquo;Oppenheimer,&rdquo; we can reflect on the responsibility of the Manhattan Project, which resulted in the creation of the atomic bomb. This invention ended thousands of lives both in the short and long term. The moral responsibility of those who develop technologies with destructive potential is a crucial topic that we need to discuss.</p>
@@ -2990,10 +3489,24 @@ With specific instructions, you create files inside .github/instructions/ and us
 <li>LinkedIn: <a href="https://www.linkedin.com/in/raphaelkennedy"target="_blank" rel="noopener">raphaelkennedy</a></li>
 <li>YouTube: <a href="https://youtube.com/@raphaelpontes"target="_blank" rel="noopener">raphaelpontes</a></li>
 </ul>
-]]></content:encoded><category>software-development</category><category>technology</category><category>artificial-intelligence</category></item><item><title>About</title><link>https://www.orapha.dev/en/about/</link><guid isPermaLink="true">https://www.orapha.dev/en/about/</guid><pubDate>Mon, 01 Jan 0001 00:00:00 GMT</pubDate><description>&lt;h2&gt;Who I am&lt;span class="hx:absolute hx:-mt-20" id="who-i-am"&gt;&lt;/span&gt;
-&lt;a href="#who-i-am" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;I am Raphael Pontes, a senior software engineer with over a decade of experience building products, participating in startups, leading technical initiatives, and delivering software in very different contexts, from freelance to production products.&lt;/p&gt;
-&lt;h2&gt;My journey&lt;span class="hx:absolute hx:-mt-20" id="my-journey"&gt;&lt;/span&gt;
-&lt;a href="#my-journey" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;My background spans web and mobile development, with a strong focus on Flutter, Laravel, REST APIs, and software architecture. Over the years, I&amp;rsquo;ve also worked with technical leadership, business intelligence, testing, clean architecture, relational and non-relational databases, Firebase, cloud functions, UI/UX, and project planning and execution.&lt;/p&gt;</description><content:encoded><![CDATA[<h2>Who I am<span class="hx:absolute hx:-mt-20" id="who-i-am"></span>
+]]></content:encoded>
+        
+            <category>software-development</category>
+            <category>technology</category>
+            <category>artificial-intelligence</category>
+        
+      </item>
+    
+      <item>
+        <title>About</title>
+        <link>https://www.orapha.dev/en/about/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/en/about/</guid>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 GMT</pubDate>
+        <description>&lt;h2&gt;Who I am&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;who-i-am&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#who-i-am&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;I am Raphael Pontes, a senior software engineer with over a decade of experience building products, participating in startups, leading technical initiatives, and delivering software in very different contexts, from freelance to production products.&lt;/p&gt;
+&lt;h2&gt;My journey&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;my-journey&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#my-journey&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;My background spans web and mobile development, with a strong focus on Flutter, Laravel, REST APIs, and software architecture. Over the years, I&amp;rsquo;ve also worked with technical leadership, business intelligence, testing, clean architecture, relational and non-relational databases, Firebase, cloud functions, UI/UX, and project planning and execution.&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h2>Who I am<span class="hx:absolute hx:-mt-20" id="who-i-am"></span>
     <a href="#who-i-am" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>I am Raphael Pontes, a senior software engineer with over a decade of experience building products, participating in startups, leading technical initiatives, and delivering software in very different contexts, from freelance to production products.</p>
 <h2>My journey<span class="hx:absolute hx:-mt-20" id="my-journey"></span>
     <a href="#my-journey" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>My background spans web and mobile development, with a strong focus on Flutter, Laravel, REST APIs, and software architecture. Over the years, I&rsquo;ve also worked with technical leadership, business intelligence, testing, clean architecture, relational and non-relational databases, Firebase, cloud functions, UI/UX, and project planning and execution.</p>
@@ -3009,4 +3522,10 @@ With specific instructions, you create files inside .github/instructions/ and us
 <li>YouTube: <a href="https://www.youtube.com/raphaelpontes"target="_blank" rel="noopener">youtube.com/raphaelpontes</a></li>
 <li>Instagram: <a href="http://instagram.com/raphaelkennedy"target="_blank" rel="noopener">@raphaelkennedy</a></li>
 </ul>
-]]></content:encoded></item></channel></rss>
+]]></content:encoded>
+        
+      </item>
+    
+  </channel>
+</rss>
+

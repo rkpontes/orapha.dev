@@ -1,1 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>https://www.orapha.dev/pt-br/sitemap.xml</loc><lastmod>2026-05-09T10:00:00-03:00</lastmod></sitemap><sitemap><loc>https://www.orapha.dev/en/sitemap.xml</loc><lastmod>2026-05-09T10:00:00-03:00</lastmod></sitemap></sitemapindex>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>https://www.orapha.dev/pt-br/sitemap.xml</loc>
+    
+      <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://www.orapha.dev/en/sitemap.xml</loc>
+    
+      <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    
+  </sitemap>
+  
+</sitemapindex>
