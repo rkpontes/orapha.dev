@@ -12,6 +12,7 @@ enableEmoji: true
 languageCode: "pt-BR"
 defaultContentLanguage: "pt-br"
 baseURL: "https://www.orapha.dev/"
+buildFuture: true
 
 languages:
   pt-br:

@@ -2,743 +2,938 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.orapha.dev/en/2026/</loc>
-    <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    <loc>http://localhost:1313/en/2026/</loc>
+    <lastmod>2026-05-14T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/"
+                href="http://localhost:1313/2026/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2026/"
+                href="http://localhost:1313/en/2026/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/ai/</loc>
-    <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    <loc>http://localhost:1313/en/tags/ai-agents/</loc>
+    <lastmod>2026-05-14T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/ai/"
+                href="http://localhost:1313/tags/ai-agents/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/ai/"
+                href="http://localhost:1313/en/tags/ai-agents/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/claude-code/</loc>
-    <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    <loc>http://localhost:1313/en/tags/descope/</loc>
+    <lastmod>2026-05-14T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/claude-code/"
+                href="http://localhost:1313/tags/descope/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/claude-code/"
+                href="http://localhost:1313/en/tags/descope/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/codex/</loc>
-    <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    <loc>http://localhost:1313/en/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/</loc>
+    <lastmod>2026-05-14T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/codex/"
+                href="http://localhost:1313/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/codex/"
+                href="http://localhost:1313/en/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/graphify/</loc>
-    <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    <loc>http://localhost:1313/en/tags/oauth/</loc>
+    <lastmod>2026-05-14T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/graphify/"
+                href="http://localhost:1313/tags/oauth/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/graphify/"
+                href="http://localhost:1313/en/tags/oauth/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/2026/05/10/graphify-transformando-seu-projeto-em-grafo-de-conhecimento-para-agentes-de-ia/</loc>
-    <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    <loc>http://localhost:1313/en/</loc>
+    <lastmod>2026-05-14T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/05/10/graphify-transformando-seu-projeto-em-grafo-de-conhecimento-para-agentes-de-ia/"
+                href="http://localhost:1313/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2026/05/10/graphify-transformando-seu-projeto-em-grafo-de-conhecimento-para-agentes-de-ia/"
+                href="http://localhost:1313/en/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/knowledge-graph/</loc>
-    <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    <loc>http://localhost:1313/en/tags/outbound-apps/</loc>
+    <lastmod>2026-05-14T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/knowledge-graph/"
+                href="http://localhost:1313/tags/outbound-apps/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/knowledge-graph/"
+                href="http://localhost:1313/en/tags/outbound-apps/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/opencode/</loc>
-    <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    <loc>http://localhost:1313/en/tags/security/</loc>
+    <lastmod>2026-05-14T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/opencode/"
+                href="http://localhost:1313/tags/security/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/opencode/"
+                href="http://localhost:1313/en/tags/security/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/</loc>
-    <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    <loc>http://localhost:1313/en/tags/</loc>
+    <lastmod>2026-05-14T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/"
+                href="http://localhost:1313/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/"
+                href="http://localhost:1313/en/tags/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/</loc>
-    <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    <loc>http://localhost:1313/en/2026/05/13/agentic-coding-gsd-vs-spec-kit-vs-openspec-vs-taskmaster-ai-onde-as-ferramentas-sdd-divergem/</loc>
+    <lastmod>2026-05-13T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/"
+                href="http://localhost:1313/2026/05/13/agentic-coding-gsd-vs-spec-kit-vs-openspec-vs-taskmaster-ai-onde-as-ferramentas-sdd-divergem/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/"
+                href="http://localhost:1313/en/2026/05/13/agentic-coding-gsd-vs-spec-kit-vs-openspec-vs-taskmaster-ai-onde-as-ferramentas-sdd-divergem/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</loc>
+    <loc>http://localhost:1313/en/tags/ai/</loc>
+    <lastmod>2026-05-13T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/ai/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/ai/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/claude-code/</loc>
+    <lastmod>2026-05-13T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/claude-code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/claude-code/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/gsd/</loc>
+    <lastmod>2026-05-13T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/gsd/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/gsd/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/openspec/</loc>
+    <lastmod>2026-05-13T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/openspec/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/openspec/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/spec-driven-development/</loc>
+    <lastmod>2026-05-13T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/spec-driven-development/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/spec-driven-development/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/spec-kit/</loc>
+    <lastmod>2026-05-13T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/spec-kit/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/spec-kit/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/taskmaster-ai/</loc>
+    <lastmod>2026-05-13T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/taskmaster-ai/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/taskmaster-ai/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/context-engineering/</loc>
+    <lastmod>2026-05-12T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/context-engineering/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/context-engineering/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/2026/05/12/get-shit-done-meta-prompting-e-spec-driven-development-para-agentes-de-ia/</loc>
+    <lastmod>2026-05-12T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/2026/05/12/get-shit-done-meta-prompting-e-spec-driven-development-para-agentes-de-ia/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/2026/05/12/get-shit-done-meta-prompting-e-spec-driven-development-para-agentes-de-ia/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/meta-prompting/</loc>
+    <lastmod>2026-05-12T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/meta-prompting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/meta-prompting/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/cursor/</loc>
+    <lastmod>2026-05-11T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/cursor/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/cursor/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/design-systems/</loc>
+    <lastmod>2026-05-11T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/design-systems/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/design-systems/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/2026/05/11/ui-ux-pro-max-design-intelligence-para-agentes-de-ia/</loc>
+    <lastmod>2026-05-11T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/2026/05/11/ui-ux-pro-max-design-intelligence-para-agentes-de-ia/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/2026/05/11/ui-ux-pro-max-design-intelligence-para-agentes-de-ia/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/ui-design/</loc>
+    <lastmod>2026-05-11T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/ui-design/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/ui-design/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/ux-design/</loc>
+    <lastmod>2026-05-11T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/ux-design/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/ux-design/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/codex/</loc>
+    <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/codex/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/codex/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/graphify/</loc>
+    <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/graphify/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/graphify/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/2026/05/10/graphify-transformando-seu-projeto-em-grafo-de-conhecimento-para-agentes-de-ia/</loc>
+    <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/2026/05/10/graphify-transformando-seu-projeto-em-grafo-de-conhecimento-para-agentes-de-ia/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/2026/05/10/graphify-transformando-seu-projeto-em-grafo-de-conhecimento-para-agentes-de-ia/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/knowledge-graph/</loc>
+    <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/knowledge-graph/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/knowledge-graph/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/tags/opencode/</loc>
+    <lastmod>2026-05-10T10:00:00-03:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/tags/opencode/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/tags/opencode/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</loc>
     <lastmod>2026-05-09T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/"
+                href="http://localhost:1313/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/"
+                href="http://localhost:1313/en/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/design-md/</loc>
+    <loc>http://localhost:1313/en/tags/design-md/</loc>
     <lastmod>2026-05-09T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/design-md/"
+                href="http://localhost:1313/tags/design-md/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/design-md/"
+                href="http://localhost:1313/en/tags/design-md/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/design-systems/</loc>
+    <loc>http://localhost:1313/en/tags/frontend/</loc>
     <lastmod>2026-05-09T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/design-systems/"
+                href="http://localhost:1313/tags/frontend/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/design-systems/"
+                href="http://localhost:1313/en/tags/frontend/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/frontend/</loc>
+    <loc>http://localhost:1313/en/tags/voltagent/</loc>
     <lastmod>2026-05-09T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/frontend/"
+                href="http://localhost:1313/tags/voltagent/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/frontend/"
+                href="http://localhost:1313/en/tags/voltagent/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/voltagent/</loc>
-    <lastmod>2026-05-09T10:00:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/voltagent/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.orapha.dev/en/tags/voltagent/"
-                />
-  </url><url>
-    <loc>https://www.orapha.dev/en/tags/architecture/</loc>
+    <loc>http://localhost:1313/en/tags/architecture/</loc>
     <lastmod>2026-04-29T23:22:42-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/architecture/"
+                href="http://localhost:1313/tags/architecture/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/architecture/"
+                href="http://localhost:1313/en/tags/architecture/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/</loc>
+    <loc>http://localhost:1313/en/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/</loc>
     <lastmod>2026-04-29T23:22:42-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/"
+                href="http://localhost:1313/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/"
+                href="http://localhost:1313/en/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/openspec/</loc>
+    <loc>http://localhost:1313/en/tags/software-engineering/</loc>
     <lastmod>2026-04-29T23:22:42-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/openspec/"
+                href="http://localhost:1313/tags/software-engineering/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/openspec/"
+                href="http://localhost:1313/en/tags/software-engineering/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/software-engineering/</loc>
-    <lastmod>2026-04-29T23:22:42-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/software-engineering/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.orapha.dev/en/tags/software-engineering/"
-                />
-  </url><url>
-    <loc>https://www.orapha.dev/en/tags/spec-driven-development/</loc>
-    <lastmod>2026-04-29T23:22:42-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/spec-driven-development/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.orapha.dev/en/tags/spec-driven-development/"
-                />
-  </url><url>
-    <loc>https://www.orapha.dev/en/tags/devops/</loc>
+    <loc>http://localhost:1313/en/tags/devops/</loc>
     <lastmod>2026-04-15T23:18:03-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/devops/"
+                href="http://localhost:1313/tags/devops/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/devops/"
+                href="http://localhost:1313/en/tags/devops/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/2026/05/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/</loc>
+    <loc>http://localhost:1313/en/2026/05/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/</loc>
     <lastmod>2026-04-15T23:18:03-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/05/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/"
+                href="http://localhost:1313/2026/05/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2026/05/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/"
+                href="http://localhost:1313/en/2026/05/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/platform-engineering/</loc>
+    <loc>http://localhost:1313/en/tags/platform-engineering/</loc>
     <lastmod>2026-04-15T23:18:03-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/platform-engineering/"
+                href="http://localhost:1313/tags/platform-engineering/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/platform-engineering/"
+                href="http://localhost:1313/en/tags/platform-engineering/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/development/</loc>
+    <loc>http://localhost:1313/en/tags/development/</loc>
     <lastmod>2026-04-08T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/development/"
+                href="http://localhost:1313/tags/development/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/development/"
+                href="http://localhost:1313/en/tags/development/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/</loc>
+    <loc>http://localhost:1313/en/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/</loc>
     <lastmod>2026-04-08T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/"
+                href="http://localhost:1313/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/"
+                href="http://localhost:1313/en/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/implement/</loc>
+    <loc>http://localhost:1313/en/tags/implement/</loc>
     <lastmod>2026-04-06T10:00:00-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/implement/"
+                href="http://localhost:1313/tags/implement/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/implement/"
+                href="http://localhost:1313/en/tags/implement/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/implementation/</loc>
+    <loc>http://localhost:1313/en/tags/implementation/</loc>
     <lastmod>2026-04-06T10:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</loc>
+    <loc>http://localhost:1313/en/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</loc>
     <lastmod>2026-04-06T10:00:00-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/"
+                href="http://localhost:1313/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/"
+                href="http://localhost:1313/en/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</loc>
+    <loc>http://localhost:1313/en/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</loc>
     <lastmod>2026-04-06T10:00:00-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/"
+                href="http://localhost:1313/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/"
+                href="http://localhost:1313/en/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/tarefas/</loc>
+    <loc>http://localhost:1313/en/tags/tarefas/</loc>
     <lastmod>2026-04-06T10:00:00-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/tarefas/"
+                href="http://localhost:1313/tags/tarefas/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/tarefas/"
+                href="http://localhost:1313/en/tags/tarefas/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/tasks/</loc>
+    <loc>http://localhost:1313/en/tags/tasks/</loc>
     <lastmod>2026-04-06T10:00:00-06:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/tasks/"
+                href="http://localhost:1313/tags/tasks/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/tasks/"
+                href="http://localhost:1313/en/tags/tasks/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</loc>
+    <loc>http://localhost:1313/en/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</loc>
     <lastmod>2026-04-06T10:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/"
+                href="http://localhost:1313/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/"
+                href="http://localhost:1313/en/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/plan/</loc>
+    <loc>http://localhost:1313/en/tags/plan/</loc>
     <lastmod>2026-04-06T10:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/plan/"
+                href="http://localhost:1313/tags/plan/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/plan/"
+                href="http://localhost:1313/en/tags/plan/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/planning/</loc>
+    <loc>http://localhost:1313/en/tags/planning/</loc>
     <lastmod>2026-04-06T10:00:00-05:00</lastmod>
   </url><url>
-    <loc>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</loc>
+    <loc>http://localhost:1313/en/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</loc>
     <lastmod>2026-04-06T10:00:00-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/"
+                href="http://localhost:1313/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/"
+                href="http://localhost:1313/en/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/specification/</loc>
+    <loc>http://localhost:1313/en/tags/specification/</loc>
     <lastmod>2026-04-06T10:00:00-04:00</lastmod>
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/specify/</loc>
+    <loc>http://localhost:1313/en/tags/specify/</loc>
     <lastmod>2026-04-06T10:00:00-04:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/specify/"
+                href="http://localhost:1313/tags/specify/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/specify/"
+                href="http://localhost:1313/en/tags/specify/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/constitution/</loc>
+    <loc>http://localhost:1313/en/tags/constitution/</loc>
     <lastmod>2026-04-06T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/constitution/"
+                href="http://localhost:1313/tags/constitution/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/constitution/"
+                href="http://localhost:1313/en/tags/constitution/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</loc>
+    <loc>http://localhost:1313/en/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</loc>
     <lastmod>2026-04-06T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/"
+                href="http://localhost:1313/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/"
+                href="http://localhost:1313/en/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/principles/</loc>
+    <loc>http://localhost:1313/en/tags/principles/</loc>
     <lastmod>2026-04-06T10:00:00-03:00</lastmod>
   </url><url>
-    <loc>https://www.orapha.dev/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</loc>
+    <loc>http://localhost:1313/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</loc>
     <lastmod>2026-04-03T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/"
+                href="http://localhost:1313/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/"
+                href="http://localhost:1313/en/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/spec-kit/</loc>
-    <lastmod>2026-04-03T10:00:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/spec-kit/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.orapha.dev/en/tags/spec-kit/"
-                />
-  </url><url>
-    <loc>https://www.orapha.dev/en/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</loc>
+    <loc>http://localhost:1313/en/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</loc>
     <lastmod>2026-03-22T10:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/"
+                href="http://localhost:1313/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/"
+                href="http://localhost:1313/en/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/career/</loc>
+    <loc>http://localhost:1313/en/tags/career/</loc>
     <lastmod>2026-03-22T10:00:00-03:00</lastmod>
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/reflection/</loc>
+    <loc>http://localhost:1313/en/tags/reflection/</loc>
     <lastmod>2026-03-22T10:00:00-03:00</lastmod>
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/agents/</loc>
+    <loc>http://localhost:1313/en/tags/agents/</loc>
     <lastmod>2026-03-20T11:15:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/agents/"
+                href="http://localhost:1313/tags/agents/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/agents/"
+                href="http://localhost:1313/en/tags/agents/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/mcp/</loc>
+    <loc>http://localhost:1313/en/tags/mcp/</loc>
     <lastmod>2026-03-20T11:15:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/mcp/"
+                href="http://localhost:1313/tags/mcp/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/mcp/"
+                href="http://localhost:1313/en/tags/mcp/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/security/</loc>
+    <loc>http://localhost:1313/en/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</loc>
     <lastmod>2026-03-20T11:15:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/security/"
+                href="http://localhost:1313/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/security/"
+                href="http://localhost:1313/en/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</loc>
-    <lastmod>2026-03-20T11:15:00-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.orapha.dev/en/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/"
-                />
-  </url><url>
-    <loc>https://www.orapha.dev/en/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</loc>
+    <loc>http://localhost:1313/en/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</loc>
     <lastmod>2026-03-19T10:30:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/"
+                href="http://localhost:1313/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/"
+                href="http://localhost:1313/en/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/technology/</loc>
+    <loc>http://localhost:1313/en/tags/technology/</loc>
     <lastmod>2026-03-19T10:30:00-03:00</lastmod>
   </url><url>
-    <loc>https://www.orapha.dev/en/2026/03/19/agent-engineering-e-agentic-flow-engineering/</loc>
+    <loc>http://localhost:1313/en/2026/03/19/agent-engineering-e-agentic-flow-engineering/</loc>
     <lastmod>2026-03-19T01:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2026/03/19/agent-engineering-e-agentic-flow-engineering/"
+                href="http://localhost:1313/2026/03/19/agent-engineering-e-agentic-flow-engineering/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2026/03/19/agent-engineering-e-agentic-flow-engineering/"
+                href="http://localhost:1313/en/2026/03/19/agent-engineering-e-agentic-flow-engineering/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/llm/</loc>
+    <loc>http://localhost:1313/en/tags/llm/</loc>
     <lastmod>2026-03-19T01:00:00-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/llm/"
+                href="http://localhost:1313/tags/llm/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/llm/"
+                href="http://localhost:1313/en/tags/llm/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/2025/</loc>
+    <loc>http://localhost:1313/en/2025/</loc>
     <lastmod>2025-10-29T14:46:13-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2025/"
+                href="http://localhost:1313/2025/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2025/"
+                href="http://localhost:1313/en/2025/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/customization/</loc>
+    <loc>http://localhost:1313/en/tags/customization/</loc>
     <lastmod>2025-10-29T14:46:13-03:00</lastmod>
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/developer-experience/</loc>
+    <loc>http://localhost:1313/en/tags/developer-experience/</loc>
     <lastmod>2025-10-29T14:46:13-03:00</lastmod>
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/github-copilot/</loc>
+    <loc>http://localhost:1313/en/tags/github-copilot/</loc>
     <lastmod>2025-10-29T14:46:13-03:00</lastmod>
   </url><url>
-    <loc>https://www.orapha.dev/en/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</loc>
+    <loc>http://localhost:1313/en/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/</loc>
     <lastmod>2025-10-29T14:46:13-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/"
+                href="http://localhost:1313/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/"
+                href="http://localhost:1313/en/2025/10/29/ensinando-o-copilot-a-falar-a-linguagem-do-seu-repositorio/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/clean-architecture/</loc>
+    <loc>http://localhost:1313/en/tags/clean-architecture/</loc>
     <lastmod>2025-03-17T18:22:49-03:00</lastmod>
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/entities/</loc>
+    <loc>http://localhost:1313/en/tags/entities/</loc>
     <lastmod>2025-03-17T18:22:49-03:00</lastmod>
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/flutter/</loc>
+    <loc>http://localhost:1313/en/tags/flutter/</loc>
     <lastmod>2025-03-17T18:22:49-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/flutter/"
+                href="http://localhost:1313/tags/flutter/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/flutter/"
+                href="http://localhost:1313/en/tags/flutter/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</loc>
+    <loc>http://localhost:1313/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/</loc>
     <lastmod>2025-03-17T18:22:49-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/"
+                href="http://localhost:1313/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/"
+                href="http://localhost:1313/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/tags/artificial-intelligence/</loc>
+    <loc>http://localhost:1313/en/tags/artificial-intelligence/</loc>
     <lastmod>2024-08-02T02:30:50-03:00</lastmod>
   </url><url>
-    <loc>https://www.orapha.dev/en/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</loc>
-    <lastmod>2024-08-02T02:30:50-03:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-BR"
-                href="https://www.orapha.dev/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.orapha.dev/en/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/"
-                />
-  </url><url>
-    <loc>https://www.orapha.dev/en/tags/software-development/</loc>
+    <loc>http://localhost:1313/en/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/</loc>
     <lastmod>2024-08-02T02:30:50-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/tags/software-development/"
+                href="http://localhost:1313/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/tags/software-development/"
+                href="http://localhost:1313/en/2024/08/02/as-preocupacoes-morais-no-desenvolvimento-de-tecnologias/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/about/</loc>
+    <loc>http://localhost:1313/en/tags/software-development/</loc>
+    <lastmod>2024-08-02T02:30:50-03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/about/"
+                href="http://localhost:1313/tags/software-development/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/about/"
+                href="http://localhost:1313/en/tags/software-development/"
                 />
   </url><url>
-    <loc>https://www.orapha.dev/en/categories/</loc>
+    <loc>http://localhost:1313/en/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-BR"
-                href="https://www.orapha.dev/categories/"
+                href="http://localhost:1313/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.orapha.dev/en/categories/"
+                href="http://localhost:1313/en/about/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/en/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-BR"
+                href="http://localhost:1313/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/categories/"
                 />
   </url>
 </urlset>
