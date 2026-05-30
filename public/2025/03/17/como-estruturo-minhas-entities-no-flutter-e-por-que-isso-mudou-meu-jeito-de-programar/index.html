@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-br" dir="ltr"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang="pt-br" dir="ltr"><head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" id="favicon-svg" />
 <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Como estruturo minhas Entities no Flutter e por que isso mudou meu jeito de programar – orapha.dev</title>
-  <meta name="description" content="Fala, dev! Se você já precisou consumir múltiplas APIs em um app Flutter, sabe que a bagunça pode começar rápido. No começo, parece simples: você pega os dad..." /><link rel="canonical" href="http://localhost:1313/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/" itemprop="url" />
+  <meta name="description" content="Fala, dev! Se você já precisou consumir múltiplas APIs em um app Flutter, sabe que a bagunça pode começar rápido. No começo, parece simples: você pega os dad..." /><link rel="canonical" href="https://www.orapha.dev/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/" itemprop="url" />
 
 <meta property="og:title" content="Como estruturo minhas Entities no Flutter e por que isso mudou meu jeito de programar">
 <meta
@@ -22,7 +22,7 @@
   content="
     article
   ">
-<meta property="og:url" content="http://localhost:1313/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/"><meta property="article:section" content="2025">
+<meta property="og:url" content="https://www.orapha.dev/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/"><meta property="article:section" content="2025">
 
 <meta
   property="article:published_time"
@@ -34,15 +34,19 @@
   content="2025-03-17T18:22:49-03:00">
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Raphael Pontes","url":"http://localhost:1313/"},"dateModified":"2025-03-17T18:22:49-03:00","datePublished":"2025-03-17T18:22:49-03:00","description":"Fala, dev! Se você já precisou consumir múltiplas APIs em um app Flutter, sabe que a bagunça pode começar rápido. No começo, parece simples: você pega os dad...","headline":"Como estruturo minhas Entities no Flutter e por que isso mudou meu jeito de programar","mainEntityOfPage":{"@id":"http://localhost:1313/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/","@type":"WebPage"},"publisher":{"@type":"Organization","name":"orapha.dev","url":"http://localhost:1313/"},"url":"http://localhost:1313/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/"}</script><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Raphael Pontes","url":"https://www.orapha.dev/"},"dateModified":"2025-03-17T18:22:49-03:00","datePublished":"2025-03-17T18:22:49-03:00","description":"Fala, dev! Se você já precisou consumir múltiplas APIs em um app Flutter, sabe que a bagunça pode começar rápido. No começo, parece simples: você pega os dad...","headline":"Como estruturo minhas Entities no Flutter e por que isso mudou meu jeito de programar","mainEntityOfPage":{"@id":"https://www.orapha.dev/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/","@type":"WebPage"},"publisher":{"@type":"Organization","name":"orapha.dev","url":"https://www.orapha.dev/"},"url":"https://www.orapha.dev/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/"}</script><meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@ORaphaDev">
 <meta name="twitter:creator" content="@ORaphaDev">
 <meta name="twitter:title" content="Como estruturo minhas Entities no Flutter e por que isso mudou meu jeito de programar">
-<meta name="twitter:description" content="Fala, dev! Se você já precisou consumir múltiplas APIs em um app Flutter, sabe que a bagunça pode começar rápido. No começo, parece simples: você pega os dad..."><link href="/css/compiled/main.css" rel="stylesheet" />
-    <link href="/css/variables.css" rel="stylesheet" />
-    <link href="/css/custom.css" rel="stylesheet" />
+<meta name="twitter:description" content="Fala, dev! Se você já precisou consumir múltiplas APIs em um app Flutter, sabe que a bagunça pode começar rápido. No começo, parece simples: você pega os dad...">
+    <link rel="preload" href="/css/compiled/main.min.860421afd86baea436520550e3f5b912c5d0ca8bfec32b073ac5871b3ae0ca74.css" as="style" integrity="sha256-hgQhr9hrrqQ2UgVQ4/W5EsXQyov&#43;wysHOsWHGzrgynQ=" />
+    <link href="/css/compiled/main.min.860421afd86baea436520550e3f5b912c5d0ca8bfec32b073ac5871b3ae0ca74.css" rel="stylesheet" integrity="sha256-hgQhr9hrrqQ2UgVQ4/W5EsXQyov&#43;wysHOsWHGzrgynQ=" />
 
   
+
+
+
+
 
 
   <script>
@@ -74,7 +78,7 @@
 
   
   
-  <link rel="alternate" type="application/rss+xml" title="orapha.dev RSS Feed" href="http://localhost:1313/index.xml" />
+  <link rel="alternate" type="application/rss+xml" title="orapha.dev RSS Feed" href="https://www.orapha.dev/index.xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -561,6 +565,14 @@
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><a
     class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+    href="/2026/05/29/obra-superpowers-um-framework-de-skills-e-metodologia-para-coding-agents/"
+    
+  >superpowers: um framework de skills e metodologia para coding agents
+    </a>
+              
+            </li><li class="hx:flex hx:flex-col "><a
+    class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
     href="/2026/05/15/bmad-method-desenvolvimento-agil-com-ia/"
     
   >BMAD Method: Um Framework Completo para Desenvolvimento Ágil com IA
@@ -1007,7 +1019,7 @@
         <span class="hx:mx-1 hx:text-gray-400">|</span>
         
         
-          <a href="http://localhost:1313/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/" class="hx:text-gray-500 hx:dark:text-gray-400 hx:hover:text-primary-600 hx:dark:hover:text-primary-400">EN</a>
+          <a href="https://www.orapha.dev/en/2025/03/17/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar/" class="hx:text-gray-500 hx:dark:text-gray-400 hx:hover:text-primary-600 hx:dark:hover:text-primary-400">EN</a>
         
       </div>
       
@@ -1026,7 +1038,7 @@
       
       
       
-      <div class="audio-player-container " data-audio-url="http://localhost:1313/audio/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar.mp3" data-audio-exists="true" data-i18n-listen="Ouça este artigo" data-i18n-continue="Continuar ouvindo" data-i18n-playing="Tocando..." data-i18n-error-load="Erro ao carregar áudio" data-i18n-error-play="Erro ao reproduzir">
+      <div class="audio-player-container " data-audio-url="https://www.orapha.dev/audio/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar.mp3" data-audio-exists="true" data-i18n-listen="Ouça este artigo" data-i18n-continue="Continuar ouvindo" data-i18n-playing="Tocando..." data-i18n-error-load="Erro ao carregar áudio" data-i18n-error-play="Erro ao reproduzir">
         <div class="audio-player-wrapper">
           <button class="audio-play-btn" aria-label="Ouvir artigo">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -1221,9 +1233,9 @@
 <script>
     (function() {
         var shortname = 'oraphadev';
-        var pageUrl = 'http:\/\/localhost:1313\/2025\/03\/17\/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar\/';
+        var pageUrl = 'https:\/\/www.orapha.dev\/2025\/03\/17\/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar\/';
         var pageIdentifier = '\/2025\/03\/17\/como-estruturo-minhas-entities-no-flutter-e-por-que-isso-mudou-meu-jeito-de-programar\/';
-        var isDev = true;
+        var isDev = false;
 
         var iframeContent = `
 <!DOCTYPE html>
@@ -1464,8 +1476,8 @@
   </a></div><div class="hx:mt-6 hx:text-xs">© 2026 Raphael Pontes - All Rights Reserved</div></div>
     </div></footer>
     
-    <script defer src="/js/main.js" integrity=""></script>
-<script defer src="/js/flexsearch.9f5b5908f93ae86f1ecd4b043b799f580c2d1654e703dd9357d568ac41b2547a.js" integrity="sha256-n1tZCPk66G8ezUsEO3mfWAwtFlTnA92TV9VorEGyVHo=" crossorigin="anonymous"></script>
-        <script defer src="/pt-br.search.js" integrity=""></script>
+    <script defer src="/js/main.min.aec568c7def21902f0688ccfb381bda5d1ef3db58d3e62d0f3bc61b637d8a2d2.js" integrity="sha256-rsVox97yGQLwaIzPs4G9pdHvPbWNPmLQ87xhtjfYotI="></script>
+<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script>
+        <script defer src="/pt-br.search.min.a9af84626d6b626e08cc4829434e6d4ef98875ff97a6cbf7ef3ba6345b5cb536.js" integrity="sha256-qa&#43;EYm1rYm4IzEgpQ05tTvmIdf&#43;Xpsv37zumNFtctTY="></script>
   </body>
 </html>

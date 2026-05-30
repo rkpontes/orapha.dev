@@ -3,17 +3,156 @@
      xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>orapha.dev</title>
-    <link>http://localhost:1313/</link>
+    <link>https://www.orapha.dev/</link>
     <description>Meu Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Tue, 12 May 2026 14:34:55 GMT</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Fri, 29 May 2026 23:39:52 GMT</lastBuildDate>
+    <atom:link href="https://www.orapha.dev/index.xml" rel="self" type="application/rss+xml"/>
+    
+      <item>
+        <title>superpowers: um framework de skills e metodologia para coding agents</title>
+        <link>https://www.orapha.dev/2026/05/29/obra-superpowers-um-framework-de-skills-e-metodologia-para-coding-agents/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/05/29/obra-superpowers-um-framework-de-skills-e-metodologia-para-coding-agents/</guid>
+        <pubDate>Fri, 29 May 2026 10:00:00 GMT</pubDate>
+        <description>&lt;h1&gt;Superpowers: uma proposta séria para reduzir aleatoriedade em agents&lt;/h1&gt;&lt;p&gt;O repositório &lt;a href=&#34;https://github.com/obra/superpowers&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;obra/superpowers&lt;/code&gt;&lt;/a&gt; se define como uma metodologia completa de desenvolvimento para coding agents, construída sobre skills composáveis e instruções iniciais que forçam um fluxo disciplinado.&lt;/p&gt;
+&lt;p&gt;A ideia central não é “fazer o agent codar mais rápido”. É fazer o agent &lt;strong&gt;pensar com estrutura&lt;/strong&gt; antes de sair escrevendo código.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://images.pexels.com/photos/34600/pexels-photo.jpg?cs=srgb&amp;amp;dl=pexels-negativespace-34600.jpg&amp;amp;fm=jpg&#34; alt=&#34;Código em um notebook durante trabalho de desenvolvimento&#34;  loading=&#34;lazy&#34; /&gt;
+&lt;em&gt;Fonte: &lt;a href=&#34;https://www.pexels.com/photo/black-and-gray-laptop-computer-turned-on-doing-computer-codes-1181271/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pexels&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;O problema que ele tenta resolver&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;o-problema-que-ele-tenta-resolver&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#o-problema-que-ele-tenta-resolver&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Quem usa agents no dia a dia já viu este padrão:&lt;/p&gt;</description>
+        <content:encoded><![CDATA[<h1>Superpowers: uma proposta séria para reduzir aleatoriedade em agents</h1><p>O repositório <a href="https://github.com/obra/superpowers"target="_blank" rel="noopener"><code>obra/superpowers</code></a> se define como uma metodologia completa de desenvolvimento para coding agents, construída sobre skills composáveis e instruções iniciais que forçam um fluxo disciplinado.</p>
+<p>A ideia central não é “fazer o agent codar mais rápido”. É fazer o agent <strong>pensar com estrutura</strong> antes de sair escrevendo código.</p>
+<p><img src="https://images.pexels.com/photos/34600/pexels-photo.jpg?cs=srgb&amp;dl=pexels-negativespace-34600.jpg&amp;fm=jpg" alt="Código em um notebook durante trabalho de desenvolvimento"  loading="lazy" />
+<em>Fonte: <a href="https://www.pexels.com/photo/black-and-gray-laptop-computer-turned-on-doing-computer-codes-1181271/"target="_blank" rel="noopener">Pexels</a></em></p>
+<h2>O problema que ele tenta resolver<span class="hx:absolute hx:-mt-20" id="o-problema-que-ele-tenta-resolver"></span>
+    <a href="#o-problema-que-ele-tenta-resolver" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Quem usa agents no dia a dia já viu este padrão:</p>
+<ol>
+<li>o agent começa implementando cedo demais,</li>
+<li>inventa requisitos não pedidos,</li>
+<li>faz mudanças amplas sem fronteira clara,</li>
+<li>entrega algo “quase certo”, mas difícil de confiar.</li>
+</ol>
+<p>O <code>superpowers</code> ataca isso com um pipeline explícito:</p>
+<ol>
+<li><code>brainstorming</code>: clarifica intenção e transforma conversa em especificação,</li>
+<li><code>using-git-worktrees</code>: isola contexto de execução em branch/worktree,</li>
+<li><code>writing-plans</code>: quebra execução em tarefas pequenas e verificáveis,</li>
+<li>execução com subagents + revisão contínua.</li>
+</ol>
+<p>Na prática, é uma tentativa de transformar LLM coding em um processo menos improvisado e mais auditável.</p>
+<h2>O que chama atenção no projeto<span class="hx:absolute hx:-mt-20" id="o-que-chama-atenção-no-projeto"></span>
+    <a href="#o-que-chama-aten%c3%a7%c3%a3o-no-projeto" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>Suporte a múltiplos harnesses/ambientes: Claude Code, Codex CLI/App, Gemini CLI, Cursor, OpenCode e outros.</li>
+<li>Instalação orientada por marketplace/plugin, em vez de “copiar prompt gigante”.</li>
+<li>Foco forte em TDD, YAGNI e DRY no texto da metodologia.</li>
+<li>Ênfase em workflow com validação humana entre etapas (não apenas “auto mode”).</li>
+</ul>
+<p>Esse último ponto é importante: o valor real não está só nas skills, mas no <strong>ritmo de decisão</strong> que elas impõem.</p>
+<p><img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?cs=srgb&amp;dl=pexels-thisisengineering-3861958.jpg&amp;fm=jpg" alt="Pessoa desenvolvedora codando em múltiplos monitores"  loading="lazy" />
+<em>Fonte: <a href="https://www.pexels.com/photo/female-software-engineer-coding-on-computer-3861972/"target="_blank" rel="noopener">Pexels</a></em></p>
+<h2>Onde esse tipo de abordagem funciona melhor<span class="hx:absolute hx:-mt-20" id="onde-esse-tipo-de-abordagem-funciona-melhor"></span>
+    <a href="#onde-esse-tipo-de-abordagem-funciona-melhor" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>O <code>superpowers</code> tende a performar melhor quando:</p>
+<ul>
+<li>o problema tem escopo razoavelmente definido,</li>
+<li>existe base de testes (ou pelo menos estratégia de validação),</li>
+<li>o time aceita investir alguns minutos em especificação antes da implementação,</li>
+<li>existe custo alto para regressão silenciosa.</li>
+</ul>
+<p>Exemplos típicos: refactors incrementais, features de backend com regras claras, automação interna e manutenção de sistemas legados.</p>
+<h2>Onde ele pode frustrar<span class="hx:absolute hx:-mt-20" id="onde-ele-pode-frustrar"></span>
+    <a href="#onde-ele-pode-frustrar" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Nem todo contexto precisa dessa camada de método. Alguns trade-offs:</p>
+<ul>
+<li>para microtarefas, o overhead de processo pode parecer burocrático;</li>
+<li>sem disciplina de revisão humana, qualquer metodologia vira ritual vazio;</li>
+<li>se a codebase já é caótica e sem testes, o ganho cai bastante.</li>
+</ul>
+<p>Ou seja: não é “plugou, milagrou”. É um acelerador de times que já querem operar com rigor.</p>
+<h2>Como usar na prática (passo a passo + exemplo real)<span class="hx:absolute hx:-mt-20" id="como-usar-na-prática-passo-a-passo--exemplo-real"></span>
+    <a href="#como-usar-na-pr%c3%a1tica-passo-a-passo--exemplo-real" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Vamos supor uma tarefa real: <strong>adicionar paginação e filtro por status em uma listagem de pedidos</strong> de um sistema já em produção.</p>
+<p><img src="https://images.pexels.com/photos/5474296/pexels-photo-5474296.jpeg?cs=srgb&amp;dl=pexels-cottonbro-5474296.jpg&amp;fm=jpg" alt="Mãos digitando código em notebook"  loading="lazy" />
+<em>Fonte: <a href="https://www.pexels.com/photo/coding-on-a-laptop-5483075/"target="_blank" rel="noopener">Pexels</a></em></p>
+<ol>
+<li>
+<p>Defina o objetivo e os limites da tarefa.
+Objetivo: paginação + filtro por status.<br>
+Limites: sem redesenhar arquitetura, sem mexer em autenticação, sem alterar contratos não relacionados.</p>
+</li>
+<li>
+<p>Rode a etapa de <code>brainstorming</code> para transformar conversa em especificação.
+O resultado esperado aqui é uma especificação com:</p>
+</li>
+</ol>
+<ul>
+<li>regras de negócio (status válidos, paginação default, ordenação);</li>
+<li>critérios de aceite (ex.: endpoint retorna <code>total</code>, <code>page</code>, <code>items</code>);</li>
+<li>riscos conhecidos (impacto em performance e queries).</li>
+</ul>
+<ol start="3">
+<li>
+<p>Isole o trabalho com <code>using-git-worktrees</code>.
+Crie uma worktree/branch só para essa feature.<br>
+Isso evita misturar contexto e reduz chance de mudanças acidentais fora do escopo.</p>
+</li>
+<li>
+<p>Converta a spec em plano executável com <code>writing-plans</code>.
+Quebre em tarefas pequenas, por exemplo:</p>
+</li>
+</ol>
+<ul>
+<li>adaptar query no repositório;</li>
+<li>ajustar service com validação de parâmetros;</li>
+<li>atualizar endpoint/handler;</li>
+<li>criar testes de unidade e integração;</li>
+<li>revisar logs e métricas básicas de performance.</li>
+</ul>
+<ol start="5">
+<li>Execute em ciclos curtos com validação entre etapas.
+Em vez de “fazer tudo e ver no final”, valide a cada bloco:</li>
+</ol>
+<ul>
+<li>terminou query -&gt; roda testes de repositório;</li>
+<li>terminou service -&gt; roda testes de regra;</li>
+<li>terminou endpoint -&gt; roda testes de integração.</li>
+</ul>
+<ol start="6">
+<li>Faça revisão orientada a risco.
+Antes de considerar pronto, revise com foco em:</li>
+</ol>
+<ul>
+<li>regressão funcional (filtros antigos continuam corretos?);</li>
+<li>performance (query com paginação usa índice?);</li>
+<li>contrato de API (clientes existentes quebram?).</li>
+</ul>
+<ol start="7">
+<li>Compare resultado com seu fluxo anterior.
+Meça no mínimo:</li>
+</ol>
+<ul>
+<li>retrabalho (quantas idas e voltas após PR);</li>
+<li>regressões encontradas depois do merge;</li>
+<li>lead time da tarefa até produção.</li>
+</ul>
+<p>Esse passo a passo funciona porque transforma “usar agent” em uma execução com checkpoints objetivos.</p>
+<h2>Conclusão<span class="hx:absolute hx:-mt-20" id="conclusão"></span>
+    <a href="#conclus%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>O <code>superpowers</code> é um framework de processo: ele não substitui engenharia, ele força engenharia.</p>
+<p>Se você aplicar o método em tarefas reais, com escopo claro e validação por etapas, o ganho aparece em previsibilidade, redução de retrabalho e menos regressão silenciosa.</p>
+<p>Para times que já entenderam que o problema não é “escrever código”, mas manter consistência de decisão durante a entrega, vale adotar como padrão operacional.</p>
+<p>Repositório: <a href="https://github.com/obra/superpowers"target="_blank" rel="noopener"><code>https://github.com/obra/superpowers</code></a></p>
+]]></content:encoded>
+        
+            <category>ai-agents</category>
+            <category>coding-agents</category>
+            <category>developer-tools</category>
+            <category>workflow</category>
+            <category>superpowers</category>
+        
+      </item>
     
       <item>
         <title>BMAD Method: Um Framework Completo para Desenvolvimento Ágil com IA</title>
-        <link>http://localhost:1313/2026/05/15/bmad-method-desenvolvimento-agil-com-ia/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/05/15/bmad-method-desenvolvimento-agil-com-ia/</guid>
+        <link>https://www.orapha.dev/2026/05/15/bmad-method-desenvolvimento-agil-com-ia/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/05/15/bmad-method-desenvolvimento-agil-com-ia/</guid>
         <pubDate>Fri, 15 May 2026 10:00:00 GMT</pubDate>
         <description>&lt;h1&gt;BMAD Method: Um Framework Completo para Desenvolvimento Ágil com IA&lt;/h1&gt;&lt;p&gt;O &lt;a href=&#34;https://github.com/bmad-code-org/BMAD-METHOD&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BMAD Method&lt;/a&gt; surge como uma resposta madura a uma questão que tem permeado o desenvolvimento de software nos últimos anos: &lt;strong&gt;como transformar a IA de uma ferramenta que apenas executa comandos em um verdadeiro colaborador técnico?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Enquanto muitos desenvolvedores ainda usam agentes de IA de forma improvisada — pedindo features aqui, corrigindo bugs ali —, o BMAD propõe uma estrutura completa que abraça a complexidade do desenvolvimento moderno sem sacrificar a agilidade.&lt;/p&gt;</description>
@@ -135,8 +274,8 @@
     
       <item>
         <title>Descope Outbound Apps: Tokens descartáveis para agents de IA</title>
-        <link>http://localhost:1313/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/</guid>
+        <link>https://www.orapha.dev/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/05/14/descope-outbound-apps-tokens-descartaveis-para-agents-de-ia/</guid>
         <pubDate>Thu, 14 May 2026 10:00:00 GMT</pubDate>
         <description>&lt;h1&gt;Entendendo Outbound Apps: Arquitetura de Token Vault para OAuth&lt;/h1&gt;&lt;h2&gt;O Problema: Gestão de Credenciais de Terceiros&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;o-problema-gestão-de-credenciais-de-terceiros&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#o-problema-gest%c3%a3o-de-credenciais-de-terceiros&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Quando sua aplicação precisa acessar dados de usuários em serviços externos (Google Calendar, Salesforce, HubSpot), você enfrenta um desafio arquitetural: &lt;strong&gt;como armazenar e gerenciar tokens de acesso de forma segura?&lt;/strong&gt;&lt;/p&gt;
@@ -946,8 +1085,8 @@ Sua app só:
     
       <item>
         <title>Agentic Coding: GSD vs Spec Kit vs OpenSpec vs Taskmaster AI — Onde as ferramentas SDD divergem</title>
-        <link>http://localhost:1313/2026/05/13/agentic-coding-gsd-vs-spec-kit-vs-openspec-vs-taskmaster-ai-onde-as-ferramentas-sdd-divergem/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/05/13/agentic-coding-gsd-vs-spec-kit-vs-openspec-vs-taskmaster-ai-onde-as-ferramentas-sdd-divergem/</guid>
+        <link>https://www.orapha.dev/2026/05/13/agentic-coding-gsd-vs-spec-kit-vs-openspec-vs-taskmaster-ai-onde-as-ferramentas-sdd-divergem/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/05/13/agentic-coding-gsd-vs-spec-kit-vs-openspec-vs-taskmaster-ai-onde-as-ferramentas-sdd-divergem/</guid>
         <pubDate>Wed, 13 May 2026 10:00:00 GMT</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; este texto é uma &lt;strong&gt;tradução em português&lt;/strong&gt; do artigo original de &lt;strong&gt;Rick Hightower&lt;/strong&gt;, publicado na &lt;strong&gt;Spillwave Solutions&lt;/strong&gt;.&lt;/p&gt;
@@ -1216,8 +1355,8 @@ Sua app só:
     
       <item>
         <title>Get Shit Done: Meta-prompting e spec-driven development que realmente funciona</title>
-        <link>http://localhost:1313/2026/05/12/get-shit-done-meta-prompting-e-spec-driven-development-para-agentes-de-ia/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/05/12/get-shit-done-meta-prompting-e-spec-driven-development-para-agentes-de-ia/</guid>
+        <link>https://www.orapha.dev/2026/05/12/get-shit-done-meta-prompting-e-spec-driven-development-para-agentes-de-ia/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/05/12/get-shit-done-meta-prompting-e-spec-driven-development-para-agentes-de-ia/</guid>
         <pubDate>Tue, 12 May 2026 10:00:00 GMT</pubDate>
         <description>&lt;h1&gt;Get Shit Done: Meta-prompting e spec-driven development que realmente funciona&lt;/h1&gt;&lt;p&gt;Sessões longas com agentes de IA têm um problema silencioso: &lt;strong&gt;context rot&lt;/strong&gt;. Quanto mais você usa o agente, mais a qualidade degrada. O contexto vai enchendo, o agente começa a esquecer coisas que vocês discutiram no início, as respostas ficam mais genéricas, os erros mais frequentes.&lt;/p&gt;
 &lt;p&gt;Eu já passei por isso. Você começa uma sessão animado, o agente entrega código excelente nas primeiras horas, mas depois de umas 10-15 interações, a coisa desanda. Ele sugere soluções que contradizem o que vocês combinaram, propõe refatorações desnecessárias, ou simplesmente perde o rumo do que você queria construir.&lt;/p&gt;</description>
@@ -1478,8 +1617,8 @@ Sua app só:
     
       <item>
         <title>UI UX Pro Max: Design intelligence para agentes de IA construírem interfaces profissionais</title>
-        <link>http://localhost:1313/2026/05/11/ui-ux-pro-max-design-intelligence-para-agentes-de-ia/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/05/11/ui-ux-pro-max-design-intelligence-para-agentes-de-ia/</guid>
+        <link>https://www.orapha.dev/2026/05/11/ui-ux-pro-max-design-intelligence-para-agentes-de-ia/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/05/11/ui-ux-pro-max-design-intelligence-para-agentes-de-ia/</guid>
         <pubDate>Mon, 11 May 2026 10:00:00 GMT</pubDate>
         <description>&lt;h1&gt;UI UX Pro Max: Design intelligence para agentes de IA construírem interfaces profissionais&lt;/h1&gt;&lt;p&gt;Tem um problema recorrente quando peço para agentes de IA criarem interfaces: eles sabem codar, mas nem sempre sabem &lt;strong&gt;design&lt;/strong&gt;. Você pede &amp;ldquo;uma landing page para meu SaaS&amp;rdquo; e recebe algo funcional, genérico, com aquela vibe de template Bootstrap de 2015. As cores não conversam, a tipografia é aleatória, o espaçamento parece ter sido decidido no feeling.&lt;/p&gt;
 &lt;p&gt;Eu já passei por isso inúmeras vezes. E a solução óbvia — descrever detalhadamente cada aspecto do design — é trabalhosa. Perde-se a graça de usar IA se você precisa escrever um brief de design completo a cada prompt.&lt;/p&gt;</description>
@@ -1738,8 +1877,8 @@ Make a mobile app UI for e-commerce</code></pre></div><div class="hextra-code-co
     
       <item>
         <title>Graphify: Transformando seu projeto em um grafo de conhecimento que agentes de IA entendem</title>
-        <link>http://localhost:1313/2026/05/10/graphify-transformando-seu-projeto-em-grafo-de-conhecimento-para-agentes-de-ia/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/05/10/graphify-transformando-seu-projeto-em-grafo-de-conhecimento-para-agentes-de-ia/</guid>
+        <link>https://www.orapha.dev/2026/05/10/graphify-transformando-seu-projeto-em-grafo-de-conhecimento-para-agentes-de-ia/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/05/10/graphify-transformando-seu-projeto-em-grafo-de-conhecimento-para-agentes-de-ia/</guid>
         <pubDate>Sun, 10 May 2026 10:00:00 GMT</pubDate>
         <description>&lt;h1&gt;Graphify: Transformando seu projeto em um grafo de conhecimento que agentes de IA entendem&lt;/h1&gt;&lt;p&gt;Trabalhar com projetos grandes usando agentes de IA tem um problema clássico: o contexto. Você abre o chat, faz uma pergunta sobre como a autenticação funciona no seu sistema, e o agente começa a grep-ar por aí, abrindo arquivos aleatórios, perdendo tempo com código irrelevante. Quando seu projeto tem milhares de arquivos, essa abordagem de &amp;ldquo;procurar no escuro&amp;rdquo; não escala.&lt;/p&gt;</description>
         <content:encoded><![CDATA[<h1>Graphify: Transformando seu projeto em um grafo de conhecimento que agentes de IA entendem</h1><p>Trabalhar com projetos grandes usando agentes de IA tem um problema clássico: o contexto. Você abre o chat, faz uma pergunta sobre como a autenticação funciona no seu sistema, e o agente começa a grep-ar por aí, abrindo arquivos aleatórios, perdendo tempo com código irrelevante. Quando seu projeto tem milhares de arquivos, essa abordagem de &ldquo;procurar no escuro&rdquo; não escala.</p>
@@ -1965,8 +2104,8 @@ Make a mobile app UI for e-commerce</code></pre></div><div class="hextra-code-co
     
       <item>
         <title>Awesome Design: Um catálogo de design systems prontos para usar com agentes de IA</title>
-        <link>http://localhost:1313/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</guid>
+        <link>https://www.orapha.dev/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/05/09/awesome-design-md-o-catalogo-de-design-systems-para-agentes-de-ia/</guid>
         <pubDate>Sat, 09 May 2026 10:00:00 GMT</pubDate>
         <description>&lt;h1&gt;Awesome Design: Um catálogo de design systems prontos para usar com agentes de IA&lt;/h1&gt;&lt;p&gt;Tem uma coisa que sempre me incomodou quando trabalho com agentes de código: a inconsistência visual. Você pede para o agente &amp;ldquo;criar uma tela de dashboard&amp;rdquo;, ele entrega algo funcional, mas o visual&amp;hellip; bom, o visual parece que foi feito por quem nunca ouviu falar de design system. Cada tela vira uma ilha, cada componente tem sua própria personalidade, e no final você tem um frankenstein visual que funciona, mas não passa aquela sensação de produto profissional.&lt;/p&gt;</description>
         <content:encoded><![CDATA[<h1>Awesome Design: Um catálogo de design systems prontos para usar com agentes de IA</h1><p>Tem uma coisa que sempre me incomodou quando trabalho com agentes de código: a inconsistência visual. Você pede para o agente &ldquo;criar uma tela de dashboard&rdquo;, ele entrega algo funcional, mas o visual&hellip; bom, o visual parece que foi feito por quem nunca ouviu falar de design system. Cada tela vira uma ilha, cada componente tem sua própria personalidade, e no final você tem um frankenstein visual que funciona, mas não passa aquela sensação de produto profissional.</p>
@@ -2075,8 +2214,8 @@ Make a mobile app UI for e-commerce</code></pre></div><div class="hextra-code-co
     
       <item>
         <title>Desmistificando o processo de Propose no OpenSpec: O que acontece nos bastidores?</title>
-        <link>http://localhost:1313/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/</guid>
+        <link>https://www.orapha.dev/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/04/29/desmistificando-o-processo-de-propose-no-openspec/</guid>
         <pubDate>Wed, 29 Apr 2026 23:22:42 GMT</pubDate>
         <description>&lt;p&gt;Quando executamos o comando de criação de uma nova proposta (propose) no OpenSpec — como por exemplo, ao iniciar a funcionalidade &lt;code&gt;add-course-enrollment-module&lt;/code&gt; —, o sistema trabalha nos bastidores para gerar uma série de arquivos fundamentais para o sucesso do desenvolvimento.&lt;/p&gt;
 &lt;p&gt;Se você já se perguntou para que serve cada um desses artefatos, este artigo é para você. Vamos explorar a anatomia de cada documento gerado e como eles garantem o alinhamento da equipe: desde a visão de negócios até a codificação.&lt;/p&gt;</description>
@@ -2125,8 +2264,8 @@ Make a mobile app UI for e-commerce</code></pre></div><div class="hextra-code-co
     
       <item>
         <title>Da feature ao deploy sem mãos: arquitetura de uma software factory com IA usando Spec-Driven Development</title>
-        <link>http://localhost:1313/2026/05/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/05/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/</guid>
+        <link>https://www.orapha.dev/2026/05/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/05/15/da-feature-ao-deploy-sem-maos-arquitetura-de-uma-software-factory-com-ia-usando-spec-driven-development/</guid>
         <pubDate>Wed, 15 Apr 2026 23:18:03 GMT</pubDate>
         <description>&lt;h1&gt;Da feature ao deploy sem mãos: arquitetura de uma software factory com IA usando Spec-Driven Development&lt;/h1&gt;&lt;h2&gt;Introdução: como era a indústria de software antes da IA&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;introdução-como-era-a-indústria-de-software-antes-da-ia&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#introdu%c3%a7%c3%a3o-como-era-a-ind%c3%bastria-de-software-antes-da-ia&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Por décadas, o desenvolvimento de software foi operado como um processo artesanal de alta especialização. Não é um demérito: esse modelo construiu praticamente tudo o que usamos hoje. O problema é que ele depende de sincronização humana constante. Refinamento, implementação, review, QA, segurança e deploy são etapas com interfaces frágeis, muitas vezes baseadas em contexto tácito.&lt;/p&gt;</description>
@@ -2303,8 +2442,8 @@ Make a mobile app UI for e-commerce</code></pre></div><div class="hextra-code-co
     
       <item>
         <title>OpenSpec na prática: instalação, uso, fluxo completo e comandos opcionais</title>
-        <link>http://localhost:1313/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/</guid>
+        <link>https://www.orapha.dev/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/04/08/openspec-na-pratica-instalacao-uso-fluxo-completo-e-comandos-opcionais/</guid>
         <pubDate>Wed, 08 Apr 2026 10:00:00 GMT</pubDate>
         <description>&lt;h1&gt;OpenSpec na prática: instalação, uso, fluxo completo e comandos opcionais&lt;/h1&gt;&lt;p&gt;Se você já usa agente de código no dia a dia, já percebeu o padrão: quando a intenção está vaga, a saída também fica vaga. Foi por isso que comecei a estudar com mais atenção ferramentas de &lt;strong&gt;Spec-Driven Development (SDD)&lt;/strong&gt; e, nessa jornada, o &lt;strong&gt;OpenSpec&lt;/strong&gt; virou uma opção bem interessante.&lt;/p&gt;
 &lt;p&gt;A proposta dele é simples: antes de sair implementando, você organiza a mudança em artefatos claros (proposta, specs, tarefas e, quando necessário, design), executa com mais previsibilidade e mantém histórico do que mudou no comportamento esperado do sistema.&lt;/p&gt;</description>
@@ -2663,12 +2802,12 @@ Make a mobile app UI for e-commerce</code></pre></div><div class="hextra-code-co
     
       <item>
         <title>No Spec-Driven Development, `implement` é onde todo o resto vira código</title>
-        <link>http://localhost:1313/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</guid>
+        <link>https://www.orapha.dev/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/04/06/no-spec-driven-development-implement-e-onde-todo-o-resto-vira-codigo/</guid>
         <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;implement&lt;/code&gt; é onde todo o resto vira código&lt;/h1&gt;&lt;p&gt;No texto &lt;a href=&#34;http://localhost:1313/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu falei da etapa de &lt;code&gt;constitution&lt;/code&gt;, em que eu defino os princípios que vão governar as decisões do projeto.&lt;/p&gt;
-&lt;p&gt;Depois, em &lt;a href=&#34;http://localhost:1313/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/&#34;&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/a&gt;, eu mostrei o ponto em que a demanda ganha comportamento esperado mais claro.&lt;/p&gt;
-&lt;p&gt;Na sequência, em &lt;a href=&#34;http://localhost:1313/2026/04/24/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/&#34;&gt;No Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; é onde a especificação vira estratégia de execução&lt;/a&gt;, eu entrei na etapa que organiza a travessia com ordem, dependência e noção de risco.&lt;/p&gt;</description>
+        <description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;implement&lt;/code&gt; é onde todo o resto vira código&lt;/h1&gt;&lt;p&gt;No texto &lt;a href=&#34;https://www.orapha.dev/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu falei da etapa de &lt;code&gt;constitution&lt;/code&gt;, em que eu defino os princípios que vão governar as decisões do projeto.&lt;/p&gt;
+&lt;p&gt;Depois, em &lt;a href=&#34;https://www.orapha.dev/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/&#34;&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/a&gt;, eu mostrei o ponto em que a demanda ganha comportamento esperado mais claro.&lt;/p&gt;
+&lt;p&gt;Na sequência, em &lt;a href=&#34;https://www.orapha.dev/2026/04/24/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/&#34;&gt;No Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; é onde a especificação vira estratégia de execução&lt;/a&gt;, eu entrei na etapa que organiza a travessia com ordem, dependência e noção de risco.&lt;/p&gt;</description>
         <content:encoded><![CDATA[<h1>No Spec-Driven Development, <code>implement</code> é onde todo o resto vira código</h1><p>No texto <a href="/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/">No Spec-Driven Development, tudo começa pelos princípios</a>, eu falei da etapa de <code>constitution</code>, em que eu defino os princípios que vão governar as decisões do projeto.</p>
 <p>Depois, em <a href="/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/">No Spec-Driven Development, <code>specify</code> é onde a ambiguidade começa a morrer</a>, eu mostrei o ponto em que a demanda ganha comportamento esperado mais claro.</p>
 <p>Na sequência, em <a href="/2026/04/24/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/">No Spec-Driven Development, <code>plan</code> é onde a especificação vira estratégia de execução</a>, eu entrei na etapa que organiza a travessia com ordem, dependência e noção de risco.</p>
@@ -2754,11 +2893,11 @@ segue adiante</p>
     
       <item>
         <title>No Spec-Driven Development, `tasks` é onde o plano vira unidades concretas de trabalho</title>
-        <link>http://localhost:1313/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</guid>
+        <link>https://www.orapha.dev/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/04/06/no-spec-driven-development-tasks-e-onde-o-plano-vira-unidades-concretas-de-trabalho/</guid>
         <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;tasks&lt;/code&gt; é onde o plano vira unidades concretas de trabalho&lt;/h1&gt;&lt;p&gt;No texto &lt;a href=&#34;http://localhost:1313/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu foquei na etapa de &lt;code&gt;constitution&lt;/code&gt;, em que eu defino os critérios que vão orientar as decisões do projeto.&lt;/p&gt;
-&lt;p&gt;Depois, em &lt;a href=&#34;http://localhost:1313/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/&#34;&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/a&gt;, eu entrei na fase em que a demanda deixa de ser intenção vaga e passa a ter comportamento esperado mais claro.&lt;/p&gt;</description>
+        <description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;tasks&lt;/code&gt; é onde o plano vira unidades concretas de trabalho&lt;/h1&gt;&lt;p&gt;No texto &lt;a href=&#34;https://www.orapha.dev/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu foquei na etapa de &lt;code&gt;constitution&lt;/code&gt;, em que eu defino os critérios que vão orientar as decisões do projeto.&lt;/p&gt;
+&lt;p&gt;Depois, em &lt;a href=&#34;https://www.orapha.dev/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/&#34;&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/a&gt;, eu entrei na fase em que a demanda deixa de ser intenção vaga e passa a ter comportamento esperado mais claro.&lt;/p&gt;</description>
         <content:encoded><![CDATA[<h1>No Spec-Driven Development, <code>tasks</code> é onde o plano vira unidades concretas de trabalho</h1><p>No texto <a href="/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/">No Spec-Driven Development, tudo começa pelos princípios</a>, eu foquei na etapa de <code>constitution</code>, em que eu defino os critérios que vão orientar as decisões do projeto.</p>
 <p>Depois, em <a href="/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/">No Spec-Driven Development, <code>specify</code> é onde a ambiguidade começa a morrer</a>, eu entrei na fase em que a demanda deixa de ser intenção vaga e passa a ter comportamento esperado mais claro.</p>
 <p>Na sequência, em <a href="/2026/04/24/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/">No Spec-Driven Development, <code>plan</code> é onde a especificação vira estratégia de execução</a>, eu falei da etapa que organiza a travessia do trabalho com ordem, dependência e noção de risco.</p>
@@ -2939,11 +3078,11 @@ segue adiante</p>
     
       <item>
         <title>No Spec-Driven Development, `plan` é onde a especificação vira estratégia de execução</title>
-        <link>http://localhost:1313/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</guid>
+        <link>https://www.orapha.dev/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/04/06/no-spec-driven-development-plan-e-onde-a-especificacao-vira-estrategia-de-execucao/</guid>
         <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; é onde a especificação vira estratégia de execução&lt;/h1&gt;&lt;p&gt;No texto &lt;a href=&#34;http://localhost:1313/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu falei da etapa de &lt;code&gt;constitution&lt;/code&gt;, em que eu defino os critérios que vão orientar o projeto.&lt;/p&gt;
-&lt;p&gt;Depois, em &lt;a href=&#34;http://localhost:1313/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/&#34;&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/a&gt;, eu entrei na etapa em que a demanda deixa de ser intenção vaga e passa a ter comportamento esperado mais claro.&lt;/p&gt;
+        <description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;plan&lt;/code&gt; é onde a especificação vira estratégia de execução&lt;/h1&gt;&lt;p&gt;No texto &lt;a href=&#34;https://www.orapha.dev/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu falei da etapa de &lt;code&gt;constitution&lt;/code&gt;, em que eu defino os critérios que vão orientar o projeto.&lt;/p&gt;
+&lt;p&gt;Depois, em &lt;a href=&#34;https://www.orapha.dev/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/&#34;&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/a&gt;, eu entrei na etapa em que a demanda deixa de ser intenção vaga e passa a ter comportamento esperado mais claro.&lt;/p&gt;
 &lt;p&gt;Só que ainda falta uma ponte importante entre entender o problema e sair implementando.&lt;/p&gt;</description>
         <content:encoded><![CDATA[<h1>No Spec-Driven Development, <code>plan</code> é onde a especificação vira estratégia de execução</h1><p>No texto <a href="/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/">No Spec-Driven Development, tudo começa pelos princípios</a>, eu falei da etapa de <code>constitution</code>, em que eu defino os critérios que vão orientar o projeto.</p>
 <p>Depois, em <a href="/2026/04/17/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/">No Spec-Driven Development, <code>specify</code> é onde a ambiguidade começa a morrer</a>, eu entrei na etapa em que a demanda deixa de ser intenção vaga e passa a ter comportamento esperado mais claro.</p>
@@ -3151,10 +3290,10 @@ vamos sair quebrando em prompt e entregar logo</p>
     
       <item>
         <title>No Spec-Driven Development, `specify` é onde a ambiguidade começa a morrer</title>
-        <link>http://localhost:1313/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</guid>
+        <link>https://www.orapha.dev/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/04/06/no-spec-driven-development-specify-e-onde-a-ambiguidade-comeca-a-morrer/</guid>
         <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/h1&gt;&lt;p&gt;No texto &lt;a href=&#34;http://localhost:1313/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu foquei na etapa de &lt;code&gt;constitution&lt;/code&gt;, que é onde eu defino os critérios que vão governar o projeto.&lt;/p&gt;
+        <description>&lt;h1&gt;No Spec-Driven Development, &lt;code&gt;specify&lt;/code&gt; é onde a ambiguidade começa a morrer&lt;/h1&gt;&lt;p&gt;No texto &lt;a href=&#34;https://www.orapha.dev/2026/04/10/no-spec-driven-development-tudo-comeca-pelos-principios/&#34;&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/a&gt;, eu foquei na etapa de &lt;code&gt;constitution&lt;/code&gt;, que é onde eu defino os critérios que vão governar o projeto.&lt;/p&gt;
 &lt;p&gt;Mas princípio sozinho não entrega sistema.&lt;/p&gt;
 &lt;p&gt;Depois de dizer como o projeto deve pensar, chega a hora de dizer o que ele precisa construir.&lt;/p&gt;
 &lt;p&gt;É aí que entra a etapa de &lt;code&gt;specify&lt;/code&gt;.&lt;/p&gt;
@@ -3358,10 +3497,10 @@ coloca notificação</p>
     
       <item>
         <title>No Spec-Driven Development, tudo começa pelos princípios</title>
-        <link>http://localhost:1313/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</guid>
+        <link>https://www.orapha.dev/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/04/06/no-spec-driven-development-tudo-comeca-pelos-principios/</guid>
         <pubDate>Mon, 06 Apr 2026 10:00:00 GMT</pubDate>
-        <description>&lt;h1&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/h1&gt;&lt;p&gt;No artigo &lt;a href=&#34;http://localhost:1313/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/&#34;&gt;Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos&lt;/a&gt;, eu passei pelas etapas do fluxo de forma mais geral.&lt;/p&gt;
+        <description>&lt;h1&gt;No Spec-Driven Development, tudo começa pelos princípios&lt;/h1&gt;&lt;p&gt;No artigo &lt;a href=&#34;https://www.orapha.dev/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/&#34;&gt;Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos&lt;/a&gt;, eu passei pelas etapas do fluxo de forma mais geral.&lt;/p&gt;
 &lt;p&gt;Mas eu achei que valia a pena voltar com calma em cada uma delas, em textos separados, porque tem coisa ali que merece ser dissecada direito.&lt;/p&gt;
 &lt;p&gt;Se a ideia é aprofundar esse fluxo aos poucos, faz sentido abrir justamente pela etapa em que eu defino os princípios do projeto.&lt;/p&gt;</description>
         <content:encoded><![CDATA[<h1>No Spec-Driven Development, tudo começa pelos princípios</h1><p>No artigo <a href="/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/">Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos</a>, eu passei pelas etapas do fluxo de forma mais geral.</p>
@@ -3559,8 +3698,8 @@ agora melhora a arquitetura</p>
     
       <item>
         <title>Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos</title>
-        <link>http://localhost:1313/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</guid>
+        <link>https://www.orapha.dev/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/04/03/como-eu-tenho-usado-spec-driven-development-com-o-spec-kit-nos-meus-projetos/</guid>
         <pubDate>Fri, 03 Apr 2026 10:00:00 GMT</pubDate>
         <description>&lt;h1&gt;Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos&lt;/h1&gt;&lt;p&gt;Se você já tentou construir software com agente de código, provavelmente já passou por essa montanha-russa. Tem dia que a coisa anda bem demais. Em outro, o agente entrega metade do que você pediu, inventa uma estrutura nada a ver, quebra a build ou até faz algo que parece funcionar, mas com uma base que você mesmo não faria daquele jeito.&lt;/p&gt;</description>
         <content:encoded><![CDATA[<h1>Como eu tenho usado Spec-Driven Development com o Spec Kit nos meus projetos</h1><p>Se você já tentou construir software com agente de código, provavelmente já passou por essa montanha-russa. Tem dia que a coisa anda bem demais. Em outro, o agente entrega metade do que você pediu, inventa uma estrutura nada a ver, quebra a build ou até faz algo que parece funcionar, mas com uma base que você mesmo não faria daquele jeito.</p>
@@ -4221,8 +4360,8 @@ Se trata de criar um processo em que eu continuo pensando como engenheiro, mas u
     
       <item>
         <title>Você está se sentindo um bosta com o surgimento da IA?</title>
-        <link>http://localhost:1313/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</guid>
+        <link>https://www.orapha.dev/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/03/22/voce-esta-se-sentindo-um-bosta-com-o-surgimento-da-ia/</guid>
         <pubDate>Sun, 22 Mar 2026 10:00:00 GMT</pubDate>
         <description>&lt;h1&gt;Você está se sentindo um bosta com o surgimento da IA?&lt;/h1&gt;&lt;p&gt;Semana passada eu estava meio mal.&lt;/p&gt;
 &lt;p&gt;Recebendo demanda, criando prompt, revisando alteração, aprovando ou negando resposta, reescrevendo prompt, ajustando contexto e repetindo esse ciclo de novo e de novo.&lt;/p&gt;
@@ -4358,8 +4497,8 @@ Se trata de criar um processo em que eu continuo pensando como engenheiro, mas u
     
       <item>
         <title>Vibe Coding está morto: por que a IA autônoma exige cercas determinísticas rígidas para realmente funcionar</title>
-        <link>http://localhost:1313/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</guid>
+        <link>https://www.orapha.dev/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/03/20/vibe-coding-esta-morto-por-que-a-ia-autonoma-exige-cercas-deterministicas-rigidas-para-realmente-funcionar/</guid>
         <pubDate>Fri, 20 Mar 2026 11:15:00 GMT</pubDate>
         <description>&lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; este texto é uma &lt;strong&gt;tradução em português&lt;/strong&gt; do artigo original de &lt;strong&gt;Mohit Sewak, Ph.D.&lt;/strong&gt;, publicado em &lt;strong&gt;Level Up Coding&lt;/strong&gt;.&lt;/p&gt;
@@ -4531,8 +4670,8 @@ Se trata de criar um processo em que eu continuo pensando como engenheiro, mas u
     
       <item>
         <title>Você ainda lembra dos princípios da engenharia de software?</title>
-        <link>http://localhost:1313/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</guid>
+        <link>https://www.orapha.dev/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</link>
+        <guid isPermaLink="true">https://www.orapha.dev/2026/03/19/voce-ainda-lembra-dos-principios-da-engenharia-de-software/</guid>
         <pubDate>Thu, 19 Mar 2026 10:30:00 GMT</pubDate>
         <description>&lt;p&gt;Estamos vivendo uma fase curiosa da tecnologia. Nunca foi tão fácil gerar código, criar testes, pedir sugestões de arquitetura ou corrigir bugs com ajuda de IA. Em poucos segundos, uma ferramenta responde o que antes levaria horas de pesquisa, tentativa e erro.&lt;/p&gt;
 &lt;p&gt;Isso parece ótimo, e em muitos casos realmente é. O problema começa quando velocidade passa a ser confundida com engenharia.&lt;/p&gt;
@@ -4597,230 +4736,6 @@ Se trata de criar um processo em que eu continuo pensando como engenheiro, mas u
             <category>ai</category>
             <category>desenvolvimento</category>
             <category>tecnologia</category>
-        
-      </item>
-    
-      <item>
-        <title>Agent Engineering + Agentic Flow Engineering: uma visão mais organizada</title>
-        <link>http://localhost:1313/2026/03/19/agent-engineering-e-agentic-flow-engineering/</link>
-        <guid isPermaLink="true">http://localhost:1313/2026/03/19/agent-engineering-e-agentic-flow-engineering/</guid>
-        <pubDate>Thu, 19 Mar 2026 01:00:00 GMT</pubDate>
-        <description>&lt;p&gt;Os dois textos abaixo falam, no fundo, da mesma transição: sair da IA usada como assistente isolado e começar a tratá-la como sistema organizado. Um deles enfatiza a estrutura de times de agentes, com papéis, capacidades e colaboração. O outro enfatiza algo ainda mais importante em produção: o fluxo, a orquestração, a governança, a tolerância a falhas e a observabilidade.&lt;/p&gt;
-&lt;p&gt;Juntando os dois, dá para resumir a ideia central assim:&lt;/p&gt;</description>
-        <content:encoded><![CDATA[<p>Os dois textos abaixo falam, no fundo, da mesma transição: sair da IA usada como assistente isolado e começar a tratá-la como sistema organizado. Um deles enfatiza a estrutura de times de agentes, com papéis, capacidades e colaboração. O outro enfatiza algo ainda mais importante em produção: o fluxo, a orquestração, a governança, a tolerância a falhas e a observabilidade.</p>
-<p>Juntando os dois, dá para resumir a ideia central assim:</p>
-<blockquote>
-  <p>O valor não está em ter &ldquo;mais agentes&rdquo;, mas em desenhar um sistema em que agentes especializados trabalham com contratos claros, fluxos explícitos e controle operacional de verdade.</p>
-
-</blockquote>
-<h2>A mudança de paradigma<span class="hx:absolute hx:-mt-20" id="a-mudança-de-paradigma"></span>
-    <a href="#a-mudan%c3%a7a-de-paradigma" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Durante muito tempo, usamos IA como copiloto: você escreve um prompt, recebe uma resposta, aproveita o que for útil e segue o trabalho manualmente.</p>
-<p>Esse modelo ajuda produtividade, mas não cria um sistema. Ele só melhora uma etapa.</p>
-<p>O próximo estágio é tratar IA como parte da arquitetura do software. Em vez de um modelo genérico tentando fazer tudo, você define:</p>
-<ul>
-<li>quem são os agentes</li>
-<li>o que cada um pode fazer</li>
-<li>como eles se comunicam</li>
-<li>como as decisões avançam no fluxo</li>
-<li>como falhas são detectadas e contidas</li>
-<li>como o sistema é auditado</li>
-</ul>
-<p>É por isso que os autores falam em uma mudança comparável à passagem de programas simples para sistemas distribuídos. Quando a autonomia aumenta, a necessidade de arquitetura também aumenta.</p>
-<h2>O papel de <code>Agents.md</code><span class="hx:absolute hx:-mt-20" id="o-papel-de-agentsmd"></span>
-    <a href="#o-papel-de-agentsmd" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>O conceito de <code>Agents.md</code> é simples: ele funciona como o organograma do sistema.</p>
-<p>Em vez de deixar um agente genérico improvisar papel, escopo e responsabilidade a cada execução, você documenta explicitamente:</p>
-<ul>
-<li>quais agentes existem</li>
-<li>qual é a responsabilidade de cada um</li>
-<li>quais entregas ele produz</li>
-<li>quais são seus limites de atuação</li>
-<li>com quais outros agentes ele interage</li>
-</ul>
-<p>Na prática, <code>Agents.md</code> reduz ambiguidade. Ele impede que todo agente tente virar um &ldquo;super agente&rdquo; e cria separação de responsabilidades.</p>
-<p>Um exemplo típico seria algo assim:</p>
-<ul>
-<li><code>ProductAgent</code>: traduz necessidade de negócio em especificação</li>
-<li><code>ArchitectureAgent</code>: define estrutura técnica e contratos</li>
-<li><code>BackendAgent</code>: implementa serviços e regras</li>
-<li><code>FrontendAgent</code>: constrói a interface</li>
-<li><code>QAAgent</code>: valida comportamento e qualidade</li>
-<li><code>DevOpsAgent</code>: entrega, monitora e opera</li>
-</ul>
-<p>O ponto importante aqui é que papel não é capacidade. Papel é responsabilidade.</p>
-<h2>O papel de <code>Skills.md</code><span class="hx:absolute hx:-mt-20" id="o-papel-de-skillsmd"></span>
-    <a href="#o-papel-de-skillsmd" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Se <code>Agents.md</code> responde &ldquo;quem faz o quê&rdquo;, <code>Skills.md</code> responde &ldquo;com quais capacidades isso é feito&rdquo;.</p>
-<p>As skills são capacidades reutilizáveis que podem ser compartilhadas por vários agentes, por exemplo:</p>
-<ul>
-<li>geração de código</li>
-<li>revisão de código</li>
-<li>criação de testes</li>
-<li>análise de segurança</li>
-<li>otimização de performance</li>
-<li>desenho de arquitetura</li>
-</ul>
-<p>Separar papel de capacidade é uma boa decisão arquitetural por três motivos.</p>
-<p>Primeiro, evita duplicação conceitual. Você não precisa redefinir as mesmas capacidades em todo agente.</p>
-<p>Segundo, facilita composição. Dois agentes diferentes podem usar a mesma skill em contextos diferentes.</p>
-<p>Terceiro, melhora manutenção. Você evolui uma capability central e todos os agentes que dependem dela se beneficiam.</p>
-<p>Em termos práticos, <code>Skills.md</code> é o toolkit do sistema.</p>
-<h2>Times de agentes não bastam sem fluxo<span class="hx:absolute hx:-mt-20" id="times-de-agentes-não-bastam-sem-fluxo"></span>
-    <a href="#times-de-agentes-n%c3%a3o-bastam-sem-fluxo" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Aqui entra a contribuição mais forte do texto sobre Agentic Flow Engineering.</p>
-<p>Definir agentes e skills é necessário, mas ainda insuficiente. Um sistema autônomo real não quebra porque faltou um papel bonito no papel. Ele quebra porque:</p>
-<ul>
-<li>o contexto veio incompleto</li>
-<li>uma ferramenta externa falhou</li>
-<li>dois agentes chegaram a conclusões incompatíveis</li>
-<li>o custo disparou</li>
-<li>a decisão não ficou explicável</li>
-<li>ninguém consegue reconstruir por que o sistema fez o que fez</li>
-</ul>
-<p>Ou seja: o problema central não é só a existência dos agentes. É o desenho do fluxo entre eles.</p>
-<p>Agentic Flow Engineering é justamente a disciplina de projetar workflows multiagentes que sejam:</p>
-<ul>
-<li>autônomos, mas previsíveis</li>
-<li>flexíveis, mas controlados</li>
-<li>inteligentes, mas auditáveis</li>
-<li>adaptativos, mas operáveis</li>
-</ul>
-<p>Se MLOps tornou modelos utilizáveis em produção, Agentic Flow Engineering tenta fazer o mesmo com autonomia.</p>
-<h2>O erro de começar pelo agente<span class="hx:absolute hx:-mt-20" id="o-erro-de-começar-pelo-agente"></span>
-    <a href="#o-erro-de-come%c3%a7ar-pelo-agente" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Um dos melhores pontos do segundo artigo é este: não comece perguntando &ldquo;qual agente eu deveria construir?&rdquo;.</p>
-<p>Comece perguntando:</p>
-<ul>
-<li>qual decisão precisa ser tomada com confiabilidade</li>
-<li>qual resultado precisa ser produzido</li>
-<li>quais restrições de negócio, custo, segurança e tempo existem</li>
-<li>quais são os caminhos de sucesso e de falha</li>
-</ul>
-<p>Isso muda completamente o desenho.</p>
-<p>Quando você começa pelo agente, tende a criar entidades genéricas demais.</p>
-<p>Quando você começa pela intenção e pelo resultado esperado, tende a desenhar um fluxo melhor, com menos improviso e mais critérios de validação.</p>
-<h2>Especialização vence improviso<span class="hx:absolute hx:-mt-20" id="especialização-vence-improviso"></span>
-    <a href="#especializa%c3%a7%c3%a3o-vence-improviso" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Os dois textos convergem nesse ponto: sistemas multiagentes funcionam melhor quando os agentes têm escopo claro e contexto limitado.</p>
-<p>Isso significa que cada agente precisa de:</p>
-<ul>
-<li>responsabilidade explícita</li>
-<li>contexto delimitado</li>
-<li>entradas definidas</li>
-<li>saídas definidas</li>
-<li>critérios de handoff</li>
-</ul>
-<p>Essa clareza melhora qualidade, reduz custo e facilita depuração.</p>
-<p>Em outras palavras: especialização escala melhor do que inteligência genérica irrestrita.</p>
-<h2>Orquestração explícita<span class="hx:absolute hx:-mt-20" id="orquestração-explícita"></span>
-    <a href="#orquestra%c3%a7%c3%a3o-expl%c3%adcita" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Outro ponto central é que agentes não deveriam &ldquo;improvisar&rdquo; a colaboração toda vez.</p>
-<p>Fluxos bons costumam assumir padrões explícitos, como:</p>
-<ul>
-<li>cadeias sequenciais de raciocínio</li>
-<li>execução paralela com consenso</li>
-<li>hierarquias supervisor-worker</li>
-<li>gatilhos baseados em eventos</li>
-</ul>
-<p>Isso aproxima a arquitetura de agentes de máquinas de estado, grafos de execução e sistemas distribuídos mais tradicionais.</p>
-<p>A vantagem é simples: quando o fluxo é explícito, ele pode ser testado, observado e evoluído.</p>
-<p>Quando o fluxo depende apenas de prompt implícito, ele vira comportamento emergente demais para um ambiente sério.</p>
-<h2>Falha precisa ser tratada como parte do design<span class="hx:absolute hx:-mt-20" id="falha-precisa-ser-tratada-como-parte-do-design"></span>
-    <a href="#falha-precisa-ser-tratada-como-parte-do-design" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Esse talvez seja o trecho mais importante de todos.</p>
-<p>Em sistemas agentic, você deve assumir desde o início que:</p>
-<ul>
-<li>ferramentas vão falhar</li>
-<li>agentes vão alucinar</li>
-<li>contexto vai chegar incompleto</li>
-<li>respostas vão variar</li>
-</ul>
-<p>Se isso é verdade, então a arquitetura precisa incluir:</p>
-<ul>
-<li>políticas de retry</li>
-<li>thresholds de confiança</li>
-<li>caminhos determinísticos de fallback</li>
-<li>validação intermediária</li>
-<li>escalonamento para humano quando necessário</li>
-</ul>
-<p>Resiliência aqui não é detalhe operacional. É requisito de produto.</p>
-<h2>Observabilidade: sem isso, não existe confiança<span class="hx:absolute hx:-mt-20" id="observabilidade-sem-isso-não-existe-confiança"></span>
-    <a href="#observabilidade-sem-isso-n%c3%a3o-existe-confian%c3%a7a" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Um sistema com agentes não pode ser uma caixa-preta elegante.</p>
-<p>Você precisa observar pelo menos:</p>
-<ul>
-<li>qual caminho de decisão foi seguido</li>
-<li>quais ferramentas foram chamadas</li>
-<li>quanto token foi gasto</li>
-<li>quanto tempo cada agente levou</li>
-<li>qual foi o resultado final</li>
-<li>qual foi o nível de confiança</li>
-<li>onde o fluxo falhou</li>
-</ul>
-<p>Esse ponto é relevante porque muita gente fala de DevOps, MLOps e LLMOps, mas o texto acerta ao destacar algo mais específico: <code>AgentOps</code>.</p>
-<p>Quando autonomia entra em cena, operação não é só uptime. Operação passa a incluir comportamento, justificativa, custo e qualidade de decisão.</p>
-<h2>Governança: prompts não são contratos<span class="hx:absolute hx:-mt-20" id="governança-prompts-não-são-contratos"></span>
-    <a href="#governan%c3%a7a-prompts-n%c3%a3o-s%c3%a3o-contratos" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Outro acerto do segundo texto é a crítica implícita à ideia de que um bom prompt basta.</p>
-<p>Não basta.</p>
-<p>Prompts orientam comportamento, mas não substituem contrato. Em produção, você precisa de:</p>
-<ul>
-<li>schemas de entrada e saída</li>
-<li>regras de validação</li>
-<li>restrições de política</li>
-<li>fronteiras de segurança</li>
-<li>trilhas de auditoria</li>
-</ul>
-<p>Sem isso, o sistema até pode funcionar em demo, mas dificilmente será confiável em contexto corporativo, regulado ou crítico.</p>
-<h2>Quem precisa se importar com isso<span class="hx:absolute hx:-mt-20" id="quem-precisa-se-importar-com-isso"></span>
-    <a href="#quem-precisa-se-importar-com-isso" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Essa discussão não interessa só para engenheiros de IA.</p>
-<p>Ela interessa para:</p>
-<ul>
-<li>líderes de engenharia, porque define escala, risco e arquitetura</li>
-<li>times de produto, porque autonomia sem KPI vira custo sem retorno</li>
-<li>platform teams, porque alguém precisa operar isso como sistema</li>
-<li>stakeholders de negócio, porque auditabilidade e explicabilidade importam</li>
-<li>engenheiros de software, porque esse modelo muda a forma de estruturar aplicações</li>
-</ul>
-<p>Na prática, a conversa deixa de ser &ldquo;qual modelo vamos usar?&rdquo; e passa a ser &ldquo;qual sistema vamos conseguir sustentar?&rdquo;.</p>
-<h2>Uma forma mais madura de pensar o stack<span class="hx:absolute hx:-mt-20" id="uma-forma-mais-madura-de-pensar-o-stack"></span>
-    <a href="#uma-forma-mais-madura-de-pensar-o-stack" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>O primeiro artigo sugere que o stack nativo de IA passa a incluir, além de código e infraestrutura:</p>
-<ul>
-<li><code>Agents.md</code></li>
-<li><code>Skills.md</code></li>
-<li>times de agentes</li>
-</ul>
-<p>Eu adicionaria, com base no segundo texto:</p>
-<ul>
-<li>contratos de fluxo</li>
-<li>observabilidade</li>
-<li>políticas de falha e fallback</li>
-<li>governança operacional</li>
-</ul>
-<p>Ou seja, o stack de software com IA não é só modelo + API + prompt.</p>
-<p>Ele passa a ser algo mais próximo de:</p>
-<ol>
-<li>código e infraestrutura</li>
-<li>papéis e capacidades dos agentes</li>
-<li>orquestração explícita de fluxos</li>
-<li>validação, observabilidade e governança</li>
-</ol>
-<p>Sem essas quatro camadas, a maior parte das implementações agentic continua parecendo protótipo.</p>
-<h2>Conclusão<span class="hx:absolute hx:-mt-20" id="conclusão"></span>
-    <a href="#conclus%c3%a3o" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Se eu tivesse que condensar os dois artigos em uma única tese, seria esta:</p>
-<blockquote>
-  <p>Agent Engineering organiza quem participa do sistema.<br>
-Agentic Flow Engineering organiza como o sistema realmente funciona.</p>
-
-</blockquote>
-<p>O primeiro dá estrutura organizacional para a autonomia.</p>
-<p>O segundo dá rigor operacional para que essa autonomia não vire caos.</p>
-<p>É por isso que a vantagem competitiva não estará em simplesmente adicionar agentes a um produto. Ela estará em desenhar sistemas nos quais agentes especializados operem com contexto delimitado, contratos claros, observabilidade real e fluxos resilientes.</p>
-<p>O futuro provavelmente não será &ldquo;IA em todo lugar&rdquo; de forma amorfa.</p>
-<p>Será autonomia bem orquestrada.</p>
-<h2>Fontes<span class="hx:absolute hx:-mt-20" id="fontes"></span>
-    <a href="#fontes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
-<li><a href="https://www.linkedin.com/pulse/complete-agent-engineering-playbook-agentsmd-skillsmd-zeelan-shaik-dzpic/"target="_blank" rel="noopener">The Complete Agent Engineering Playbook (Agents.md + Skills.md + Agent Teams)</a></li>
-<li><a href="https://www.linkedin.com/pulse/agentic-flow-engineering-why-matters-what-who-needs-how-baipalli-jowsf/"target="_blank" rel="noopener">Agentic Flow Engineering: Why It Matters, What It Is, Who Needs It, and How to Build It</a></li>
-</ul>
-]]></content:encoded>
-        
-            <category>ai</category>
-            <category>agents</category>
-            <category>llm</category>
-            <category>software-engineering</category>
-            <category>architecture</category>
         
       </item>
     
